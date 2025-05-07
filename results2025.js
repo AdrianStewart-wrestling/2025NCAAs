@@ -5,7 +5,8 @@ const resultData = [
   round: "Prelims",
   weight: "125",
   school: "Cornell",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "1"
 },
 {
   winner: "Hunter Leake",
@@ -13,7 +14,8 @@ const resultData = [
   round: "Prelims",
   weight: "133",
   school: "California Baptist",
-  result: "Fall 2:28"
+  result: "Fall 2:28",
+  bout: "2"
 },
 {
   winner: "Nash Singleton",
@@ -21,7 +23,8 @@ const resultData = [
   round: "Prelims",
   weight: "141",
   school: "Oregon State",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "3"
 },
 {
   winner: "Teague Travis",
@@ -29,7 +32,8 @@ const resultData = [
   round: "Prelims",
   weight: "149",
   school: "Oklahoma State",
-  result: "MD 11-1"
+  result: "MD 11-1",
+  bout: "4"
 },
 {
   winner: "Landen Johnson",
@@ -37,7 +41,8 @@ const resultData = [
   round: "Prelims",
   weight: "157",
   school: "Northern Illinois",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "5"
 },
 {
   winner: "Chandler Amaker",
@@ -45,7 +50,8 @@ const resultData = [
   round: "Prelims",
   weight: "165",
   school: "Central Michigan",
-  result: "SV-1 8-5"
+  result: "SV-1 8-5",
+  bout: "6"
 },
 {
   winner: "Michael Wilson",
@@ -53,7 +59,8 @@ const resultData = [
   round: "Prelims",
   weight: "174",
   school: "Rider",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "7"
 },
 {
   winner: "Caden Rogers",
@@ -61,7 +68,8 @@ const resultData = [
   round: "Prelims",
   weight: "184",
   school: "Lehigh",
-  result: "Dec 6-3"
+  result: "Dec 6-3",
+  bout: "8"
 },
 {
   winner: "Wolfgang Frable",
@@ -69,7 +77,8 @@ const resultData = [
   round: "Prelims",
   weight: "197",
   school: "Army West Point",
-  result: "Dec 12-8"
+  result: "Dec 12-8",
+  bout: "9"
 },
 {
   winner: "Hayden Filipovich",
@@ -77,7 +86,8 @@ const resultData = [
   round: "Prelims",
   weight: "285",
   school: "Purdue",
-  result: "MD 9-0"
+  result: "MD 9-0",
+  bout: "10"
 },
 {
   winner: "Luke Lilledahl",
@@ -85,7 +95,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Penn State",
-  result: "TF 4:25 ;19-4"
+  result: "TF 4:25 ;19-4",
+  bout: "11"
 },
 {
   winner: "Blake West",
@@ -93,7 +104,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Northern Illinois",
-  result: "Dec 6-5"
+  result: "Dec 6-5",
+  bout: "12"
 },
 {
   winner: "Caleb Smith",
@@ -101,7 +113,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Nebraska",
-  result: "SV-1 3-0"
+  result: "SV-1 3-0",
+  bout: "13"
 },
 {
   winner: "Sheldon Seymour",
@@ -109,7 +122,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Lehigh",
-  result: "Dec 7-0"
+  result: "Dec 7-0",
+  bout: "14"
 },
 {
   winner: "Richard Figueroa",
@@ -117,7 +131,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Arizona State",
-  result: "Dec 12-7"
+  result: "Dec 12-7",
+  bout: "15"
 },
 {
   winner: "Dean Peterson",
@@ -125,7 +140,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Rutgers",
-  result: "Dec 6-5"
+  result: "Dec 6-5",
+  bout: "16"
 },
 {
   winner: "Marc-Anthony McGowan",
@@ -133,7 +149,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Princeton",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "17"
 },
 {
   winner: "Vincent Robinson",
@@ -141,7 +158,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "NC State",
-  result: "MD 12-1"
+  result: "MD 12-1",
+  bout: "18"
 },
 {
   winner: "Eddie Ventresca",
@@ -149,7 +167,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Virginia Tech",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "19"
 },
 {
   winner: "Spencer Moore",
@@ -157,7 +176,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "North Carolina",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "20"
 },
 {
   winner: "Nicolar Rivera",
@@ -165,7 +185,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Wisconsin",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "21"
 },
 {
   winner: "Jett Strickenberger",
@@ -173,7 +194,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "West Virginia",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "22"
 },
 {
   winner: "Troy Spratley",
@@ -181,7 +203,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Oklahoma State",
-  result: "TF 4:18 ;15-0"
+  result: "TF 4:18 ;15-0",
+  bout: "23"
 },
 {
   winner: "Stevo Poulin",
@@ -189,7 +212,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Northern Colorado",
-  result: "Dec 9-5"
+  result: "Dec 9-5",
+  bout: "24"
 },
 {
   winner: "Jacob Moran",
@@ -197,7 +221,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Indiana",
-  result: "Dec 7-6"
+  result: "Dec 7-6",
+  bout: "25"
 },
 {
   winner: "Matt Ramos",
@@ -205,7 +230,8 @@ const resultData = [
   round: "ChampR1",
   weight: "125",
   school: "Purdue",
-  result: "MD 11-3"
+  result: "MD 11-3",
+  bout: "26"
 },
 {
   winner: "Lucas Byrd",
@@ -213,7 +239,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Illinois",
-  result: "Dec 3-2"
+  result: "Dec 3-2",
+  bout: "27"
 },
 {
   winner: "Ryan Miller",
@@ -221,7 +248,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Pennsylvania",
-  result: "Dec 8-4"
+  result: "Dec 8-4",
+  bout: "28"
 },
 {
   winner: "Braxton Brown",
@@ -229,7 +257,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Maryland",
-  result: "Dec 3-2"
+  result: "Dec 3-2",
+  bout: "29"
 },
 {
   winner: "Braeden Davis",
@@ -237,7 +266,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Penn State",
-  result: "MD 12-4"
+  result: "MD 12-4",
+  bout: "30"
 },
 {
   winner: "Dominick Serrano",
@@ -245,7 +275,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Northern Colorado",
-  result: "Dec 8-6"
+  result: "Dec 8-6",
+  bout: "31"
 },
 {
   winner: "Angelo Rini",
@@ -253,7 +284,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Indiana",
-  result: "Dec 7-1"
+  result: "Dec 7-1",
+  bout: "32"
 },
 {
   winner: "Tyler Knox",
@@ -261,7 +293,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Stanford",
-  result: "SV-1 6-3"
+  result: "SV-1 6-3",
+  bout: "33"
 },
 {
   winner: "Zeth Romney",
@@ -269,7 +302,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Cal Poly",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "34"
 },
 {
   winner: "Nasir Bailey",
@@ -277,7 +311,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Little Rock",
-  result: "Dec 9-8"
+  result: "Dec 9-8",
+  bout: "35"
 },
 {
   winner: "Zan Fugitt",
@@ -285,7 +320,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Wisconsin",
-  result: "Dec 12-5"
+  result: "Dec 12-5",
+  bout: "36"
 },
 {
   winner: "Evan Frost",
@@ -293,7 +329,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Iowa State",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "37"
 },
 {
   winner: "Connor McGonagle",
@@ -301,7 +338,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Virginia Tech",
-  result: "Dec 1-0"
+  result: "Dec 1-0",
+  bout: "38"
 },
 {
   winner: "Nic Bouzakis",
@@ -309,7 +347,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Ohio State",
-  result: "Fall 2:12"
+  result: "Fall 2:12",
+  bout: "39"
 },
 {
   winner: "Sean Spidle",
@@ -317,7 +356,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Central Michigan",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "40"
 },
 {
   winner: "Julian Farber",
@@ -325,7 +365,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Northern Iowa",
-  result: "Dec 9-8"
+  result: "Dec 9-8",
+  bout: "41"
 },
 {
   winner: "Drake Ayala",
@@ -333,7 +374,8 @@ const resultData = [
   round: "ChampR1",
   weight: "133",
   school: "Iowa",
-  result: "TF 5:30 ;21-5"
+  result: "TF 5:30 ;21-5",
+  bout: "42"
 },
 {
   winner: "Brock Hardy",
@@ -341,7 +383,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Nebraska",
-  result: "MD 12-3"
+  result: "MD 12-3",
+  bout: "43"
 },
 {
   winner: "Wyatt Henson",
@@ -349,7 +392,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Lock Haven",
-  result: "MD 9-1"
+  result: "MD 9-1",
+  bout: "44"
 },
 {
   winner: "Jacob Frost",
@@ -357,7 +401,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Iowa State",
-  result: "TF 6:29 ;16-1"
+  result: "TF 6:29 ;16-1",
+  bout: "45"
 },
 {
   winner: "Andrew Alirez",
@@ -365,7 +410,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Northern Colorado",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "46"
 },
 {
   winner: "Cael Happel",
@@ -373,7 +419,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Northern Iowa",
-  result: "Fall 5:51"
+  result: "Fall 5:51",
+  bout: "47"
 },
 {
   winner: "Dylan Chappell",
@@ -381,7 +428,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Bucknell",
-  result: "Dec 7-4"
+  result: "Dec 7-4",
+  bout: "48"
 },
 {
   winner: "Joshua Saunders",
@@ -389,7 +437,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Cornell",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "49"
 },
 {
   winner: "Josh Koderhandt",
@@ -397,7 +446,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Navy",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "50"
 },
 {
   winner: "Jesse Mendez",
@@ -405,7 +455,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Ohio State",
-  result: "TF 5:41 ;21-5"
+  result: "TF 5:41 ;21-5",
+  bout: "51"
 },
 {
   winner: "Sergio Lemley",
@@ -413,7 +464,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Michigan",
-  result: "Fall 6:23"
+  result: "Fall 6:23",
+  bout: "52"
 },
 {
   winner: "Dylan Cedeno",
@@ -421,7 +473,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Virginia",
-  result: "MD 11-1"
+  result: "MD 11-1",
+  bout: "53"
 },
 {
   winner: "Vance VomBaur",
@@ -429,7 +482,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Minnesota",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "54"
 },
 {
   winner: "Tagen Jamison",
@@ -437,7 +491,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Oklahoma State",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "55"
 },
 {
   winner: "CJ Composto",
@@ -445,7 +500,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Pennsylvania",
-  result: "SV-1 8-5"
+  result: "SV-1 8-5",
+  bout: "56"
 },
 {
   winner: "Julian Tagg",
@@ -453,7 +509,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "South Dakota State",
-  result: "MD 13-3"
+  result: "MD 13-3",
+  bout: "57"
 },
 {
   winner: "Beau Bartlett",
@@ -461,7 +518,8 @@ const resultData = [
   round: "ChampR1",
   weight: "141",
   school: "Penn State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "58"
 },
 {
   winner: "Caleb Henson",
@@ -469,7 +527,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Virginia Tech",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "59"
 },
 {
   winner: "Jaden Abas",
@@ -477,7 +536,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Stanford",
-  result: "Dec 11-7"
+  result: "Dec 11-7",
+  bout: "60"
 },
 {
   winner: "Cross Wasilewski",
@@ -485,7 +545,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Pennsylvania",
-  result: "Fall 6:04"
+  result: "Fall 6:04",
+  bout: "61"
 },
 {
   winner: "Jordan Williams",
@@ -493,7 +554,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Little Rock",
-  result: "Fall 1:43"
+  result: "Fall 1:43",
+  bout: "62"
 },
 {
   winner: "Kyle Parco",
@@ -501,7 +563,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Iowa",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "63"
 },
 {
   winner: "Ethan Stiles",
@@ -509,7 +572,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Oregon State",
-  result: "Dec 6-4"
+  result: "Dec 6-4",
+  bout: "64"
 },
 {
   winner: "Dylan D`Emilio",
@@ -517,7 +581,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Ohio State",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "65"
 },
 {
   winner: "Jack Gioffre",
@@ -525,7 +590,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Virginia",
-  result: "TB-1 5-2"
+  result: "TB-1 5-2",
+  bout: "66"
 },
 {
   winner: "Shayne Van Ness",
@@ -533,7 +599,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Penn State",
-  result: "Fall 4:12"
+  result: "Fall 4:12",
+  bout: "67"
 },
 {
   winner: "Andrew Clark",
@@ -541,7 +608,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Rutgers",
-  result: "Dec 8-3"
+  result: "Dec 8-3",
+  bout: "68"
 },
 {
   winner: "Sammy Alvarez",
@@ -549,7 +617,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Rider",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "69"
 },
 {
   winner: "Lachlan McNeil",
@@ -557,7 +626,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "North Carolina",
-  result: "MD 10-0"
+  result: "MD 10-0",
+  bout: "70"
 },
 {
   winner: "Kannon Webster",
@@ -565,7 +635,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Illinois",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "71"
 },
 {
   winner: "Colin Realbuto",
@@ -573,7 +644,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Northern Iowa",
-  result: "Dec 11-6"
+  result: "Dec 11-6",
+  bout: "72"
 },
 {
   winner: "Ty Whalen",
@@ -581,7 +653,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Princeton",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "73"
 },
 {
   winner: "Ridge Lovett",
@@ -589,7 +662,8 @@ const resultData = [
   round: "ChampR1",
   weight: "149",
   school: "Nebraska",
-  result: "Dec 10-8"
+  result: "Dec 10-8",
+  bout: "74"
 },
 {
   winner: "Tyler Kasak",
@@ -597,7 +671,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Penn State",
-  result: "Fall 1:39"
+  result: "Fall 1:39",
+  bout: "75"
 },
 {
   winner: "Cody Chittum",
@@ -605,7 +680,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Iowa State",
-  result: "Dec 8-1"
+  result: "Dec 8-1",
+  bout: "76"
 },
 {
   winner: "Tommy Askey",
@@ -613,7 +689,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Minnesota",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "77"
 },
 {
   winner: "Joey Blaze",
@@ -621,7 +698,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Purdue",
-  result: "Dec 7-0"
+  result: "Dec 7-0",
+  bout: "78"
 },
 {
   winner: "Brandon Cannon",
@@ -629,7 +707,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Ohio State",
-  result: "Dec 9-5"
+  result: "Dec 9-5",
+  bout: "79"
 },
 {
   winner: "Caleb Fish",
@@ -637,7 +716,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Oklahoma State",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "80"
 },
 {
   winner: "Trevor Chumbley",
@@ -645,7 +725,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Northwestern",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "81"
 },
 {
   winner: "Rafael Hipolito",
@@ -653,7 +734,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Virginia Tech",
-  result: "Dec 10-3"
+  result: "Dec 10-3",
+  bout: "82"
 },
 {
   winner: "Antrell Taylor",
@@ -661,7 +743,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Nebraska",
-  result: "TF 7:00 ;20-4"
+  result: "TF 7:00 ;20-4",
+  bout: "83"
 },
 {
   winner: "Jude Swisher",
@@ -669,7 +752,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Pennsylvania",
-  result: "Fall 1:56"
+  result: "Fall 1:56",
+  bout: "84"
 },
 {
   winner: "Matty Bianchi",
@@ -677,7 +761,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Little Rock",
-  result: "SV-1 5-2"
+  result: "SV-1 5-2",
+  bout: "85"
 },
 {
   winner: "Ryder Downey",
@@ -685,7 +770,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Northern Iowa",
-  result: "MD 12-1"
+  result: "MD 12-1",
+  bout: "86"
 },
 {
   winner: "Vinny Zerban",
@@ -693,7 +779,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Northern Colorado",
-  result: "Fall 6:49"
+  result: "Fall 6:49",
+  bout: "87"
 },
 {
   winner: "Chase Saldate",
@@ -701,7 +788,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Michigan",
-  result: "Fall 6:50"
+  result: "Fall 6:50",
+  bout: "88"
 },
 {
   winner: "Johnny Lovett",
@@ -709,7 +797,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Central Michigan",
-  result: "MD 11-3"
+  result: "MD 11-3",
+  bout: "89"
 },
 {
   winner: "Meyer Shapiro",
@@ -717,7 +806,8 @@ const resultData = [
   round: "ChampR1",
   weight: "157",
   school: "Cornell",
-  result: "TF 4:30 ;20-2"
+  result: "TF 4:30 ;20-2",
+  bout: "90"
 },
 {
   winner: "Mitchell Mesenbrink",
@@ -725,7 +815,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Penn State",
-  result: "TF 3:32 ;16-0"
+  result: "TF 3:32 ;16-0",
+  bout: "91"
 },
 {
   winner: "Kyle Mosher",
@@ -733,7 +824,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Hofstra",
-  result: "Fall 3:29"
+  result: "Fall 3:29",
+  bout: "92"
 },
 {
   winner: "Cam Steed",
@@ -741,7 +833,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Missouri",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "93"
 },
 {
   winner: "Cameron Amine",
@@ -749,7 +842,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Oklahoma State",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "94"
 },
 {
   winner: "Julian Ramirez",
@@ -757,7 +851,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Cornell",
-  result: "MD 11-2"
+  result: "MD 11-2",
+  bout: "95"
 },
 {
   winner: "Christopher Minto",
@@ -765,7 +860,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Nebraska",
-  result: "MD 13-1"
+  result: "MD 13-1",
+  bout: "96"
 },
 {
   winner: "Will Miller",
@@ -773,7 +869,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Appalachian State",
-  result: "Fall 4:59"
+  result: "Fall 4:59",
+  bout: "97"
 },
 {
   winner: "Terrell Barraclough",
@@ -781,7 +878,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Utah Valley",
-  result: "TF 7:00 ;15-0"
+  result: "TF 7:00 ;15-0",
+  bout: "98"
 },
 {
   winner: "Mike Caliendo",
@@ -789,7 +887,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Iowa",
-  result: "MD 11-3"
+  result: "MD 11-3",
+  bout: "99"
 },
 {
   winner: "Jack Thomsen",
@@ -797,7 +896,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Northern Iowa",
-  result: "Dec 13-8"
+  result: "Dec 13-8",
+  bout: "100"
 },
 {
   winner: "Braeden Scoles",
@@ -805,7 +905,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Illinois",
-  result: "Fall 4:27"
+  result: "Fall 4:27",
+  bout: "101"
 },
 {
   winner: "Beau Mantanona",
@@ -813,7 +914,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Michigan",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "102"
 },
 {
   winner: "Hunter Garvin",
@@ -821,7 +923,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Stanford",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "103"
 },
 {
   winner: "Andrew Sparks",
@@ -829,7 +932,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Minnesota",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "104"
 },
 {
   winner: "Maxx Mayfield",
@@ -837,7 +941,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "Northwestern",
-  result: "Dec 7-6"
+  result: "Dec 7-6",
+  bout: "105"
 },
 {
   winner: "Peyton Hall",
@@ -845,7 +950,8 @@ const resultData = [
   round: "ChampR1",
   weight: "165",
   school: "West Virginia",
-  result: "TF 5:22 ;19-1"
+  result: "TF 5:22 ;19-1",
+  bout: "106"
 },
 {
   winner: "Keegan O`Toole",
@@ -853,7 +959,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Missouri",
-  result: "Fall 4:24"
+  result: "Fall 4:24",
+  bout: "107"
 },
 {
   winner: "Lorenzo Norman",
@@ -861,7 +968,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Stanford",
-  result: "MD 14-3"
+  result: "MD 14-3",
+  bout: "108"
 },
 {
   winner: "Lennox Wolak",
@@ -869,7 +977,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Virginia Tech",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "109"
 },
 {
   winner: "Dalton Harkins",
@@ -877,7 +986,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Army West Point",
-  result: "Dec 6-1"
+  result: "Dec 6-1",
+  bout: "110"
 },
 {
   winner: "Simon Ruiz",
@@ -885,7 +995,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Cornell",
-  result: "TF 7:00 ;17-2"
+  result: "TF 7:00 ;17-2",
+  bout: "111"
 },
 {
   winner: "Joshua Ogunsanya",
@@ -893,7 +1004,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "North Carolina",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "112"
 },
 {
   winner: "Cade DeVos",
@@ -901,7 +1013,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "South Dakota State",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "113"
 },
 {
   winner: "Garrett Thompson",
@@ -909,7 +1022,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Ohio",
-  result: "TF 4:11 ;16-1"
+  result: "TF 4:11 ;16-1",
+  bout: "114"
 },
 {
   winner: "Dean Hamiti",
@@ -917,7 +1031,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Oklahoma State",
-  result: "TF 5:09 ;18-1"
+  result: "TF 5:09 ;18-1",
+  bout: "115"
 },
 {
   winner: "Matthew Singleton",
@@ -925,7 +1040,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "NC State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "116"
 },
 {
   winner: "Patrick Kennedy",
@@ -933,7 +1049,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Iowa",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "117"
 },
 {
   winner: "Brevin Cassella",
@@ -941,7 +1058,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Binghamton",
-  result: "Dec 3-1"
+  result: "Dec 3-1",
+  bout: "118"
 },
 {
   winner: "Danny Wask",
@@ -949,7 +1067,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Navy",
-  result: "TF 6:41 ;15-0"
+  result: "TF 6:41 ;15-0",
+  bout: "119"
 },
 {
   winner: "MJ Gaitan",
@@ -957,7 +1076,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Iowa State",
-  result: "MD 13-2"
+  result: "MD 13-2",
+  bout: "120"
 },
 {
   winner: "Gaven Sax",
@@ -965,7 +1085,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Oklahoma",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "121"
 },
 {
   winner: "Levi Haines",
@@ -973,7 +1094,8 @@ const resultData = [
   round: "ChampR1",
   weight: "174",
   school: "Penn State",
-  result: "Fall 2:46"
+  result: "Fall 2:46",
+  bout: "122"
 },
 {
   winner: "Carter Starocci",
@@ -981,7 +1103,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Penn State",
-  result: "TF 6:20 ;18-2"
+  result: "TF 6:20 ;18-2",
+  bout: "123"
 },
 {
   winner: "Shane Cartagena-Walsh",
@@ -989,7 +1112,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Rutgers",
-  result: "MD 11-3"
+  result: "MD 11-3",
+  bout: "124"
 },
 {
   winner: "Reece Heller",
@@ -997,7 +1121,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Pittsburgh",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "125"
 },
 {
   winner: "Jaxon Smith",
@@ -1005,7 +1130,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Maryland",
-  result: "Fall 2:48"
+  result: "Fall 2:48",
+  bout: "126"
 },
 {
   winner: "Bennett Berge",
@@ -1013,7 +1139,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "South Dakota State",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "127"
 },
 {
   winner: "Silas Allred",
@@ -1021,7 +1148,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Nebraska",
-  result: "Fall 6:38"
+  result: "Fall 6:38",
+  bout: "128"
 },
 {
   winner: "Nick Fine",
@@ -1029,7 +1157,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Columbia",
-  result: "Fall 6:49"
+  result: "Fall 6:49",
+  bout: "129"
 },
 {
   winner: "Dustin Plott",
@@ -1037,7 +1166,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Oklahoma State",
-  result: "TF 5:42 ;18-1"
+  result: "TF 5:42 ;18-1",
+  bout: "130"
 },
 {
   winner: "Max McEnelly",
@@ -1045,7 +1175,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Minnesota",
-  result: "TF 3:52 ;19-4"
+  result: "TF 3:52 ;19-4",
+  bout: "131"
 },
 {
   winner: "DJ Parker",
@@ -1053,7 +1184,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Oklahoma",
-  result: "MD 10-0"
+  result: "MD 10-0",
+  bout: "132"
 },
 {
   winner: "Gabe Arnold",
@@ -1061,7 +1193,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Iowa",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "133"
 },
 {
   winner: "Chris Foca",
@@ -1069,7 +1202,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Cornell",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "134"
 },
 {
   winner: "Isaac Dean",
@@ -1077,7 +1211,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Rider",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "135"
 },
 {
   winner: "Edmond Ruth",
@@ -1085,7 +1220,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Illinois",
-  result: "MD 10-2"
+  result: "MD 10-2",
+  bout: "136"
 },
 {
   winner: "Dylan Fishback",
@@ -1093,7 +1229,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "NC State",
-  result: "Dec 10-3"
+  result: "Dec 10-3",
+  bout: "137"
 },
 {
   winner: "Parker Keckeisen",
@@ -1101,7 +1238,8 @@ const resultData = [
   round: "ChampR1",
   weight: "184",
   school: "Northern Iowa",
-  result: "TF 6:35 ;19-4"
+  result: "TF 6:35 ;19-4",
+  bout: "138"
 },
 {
   winner: "Jacob Cardenas",
@@ -1109,7 +1247,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Michigan",
-  result: "MD 10-0"
+  result: "MD 10-0",
+  bout: "139"
 },
 {
   winner: "Evan Bates",
@@ -1117,7 +1256,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Northwestern",
-  result: "Dec 13-10"
+  result: "Dec 13-10",
+  bout: "140"
 },
 {
   winner: "Gabe Sollars",
@@ -1125,7 +1265,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Indiana",
-  result: "Dec 6-5"
+  result: "Dec 6-5",
+  bout: "141"
 },
 {
   winner: "Patrick Brophy",
@@ -1133,7 +1274,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "The Citadel",
-  result: "MD 18-7"
+  result: "MD 18-7",
+  bout: "142"
 },
 {
   winner: "Michael Beard",
@@ -1141,7 +1283,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Lehigh",
-  result: "TF 3:45 ;19-4"
+  result: "TF 3:45 ;19-4",
+  bout: "143"
 },
 {
   winner: "Stephen Little",
@@ -1149,7 +1292,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Little Rock",
-  result: "Dec 10-6"
+  result: "Dec 10-6",
+  bout: "144"
 },
 {
   winner: "Trey Munoz",
@@ -1157,7 +1301,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Oregon State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "145"
 },
 {
   winner: "Josh Barr",
@@ -1165,7 +1310,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Penn State",
-  result: "MD 9-1"
+  result: "MD 9-1",
+  bout: "146"
 },
 {
   winner: "AJ Ferrari",
@@ -1173,7 +1319,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "CSU Bakersfield",
-  result: "Dec 8-1"
+  result: "Dec 8-1",
+  bout: "147"
 },
 {
   winner: "Andy Smith",
@@ -1181,7 +1328,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Virginia Tech",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "148"
 },
 {
   winner: "Luke Stout",
@@ -1189,7 +1337,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Princeton",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "149"
 },
 {
   winner: "Mac Stout",
@@ -1197,7 +1346,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Pittsburgh",
-  result: "MD 12-0"
+  result: "MD 12-0",
+  bout: "150"
 },
 {
   winner: "Brock Zurawski",
@@ -1205,7 +1355,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Rider",
-  result: "SV-1 5-2"
+  result: "SV-1 5-2",
+  bout: "151"
 },
 {
   winner: "Seth Shumate",
@@ -1213,7 +1364,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Ohio State",
-  result: "Fall 4:12"
+  result: "Fall 4:12",
+  bout: "152"
 },
 {
   winner: "Joseph Novak",
@@ -1221,7 +1373,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Wyoming",
-  result: "Dec 8-1"
+  result: "Dec 8-1",
+  bout: "153"
 },
 {
   winner: "Stephen Buchanan",
@@ -1229,7 +1382,8 @@ const resultData = [
   round: "ChampR1",
   weight: "197",
   school: "Iowa",
-  result: "MD 22-9"
+  result: "MD 22-9",
+  bout: "154"
 },
 {
   winner: "Gable Steveson",
@@ -1237,7 +1391,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Minnesota",
-  result: "Fall 1:25"
+  result: "Fall 1:25",
+  bout: "155"
 },
 {
   winner: "Yaraslau Slavikouski",
@@ -1245,7 +1400,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Rutgers",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "156"
 },
 {
   winner: "Cohlton Schultz",
@@ -1253,7 +1409,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Arizona State",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "157"
 },
 {
   winner: "Luke Luffman",
@@ -1261,7 +1418,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Illinois",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "158"
 },
 {
   winner: "Ben Kueter",
@@ -1269,7 +1427,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Iowa",
-  result: "Dec 6-0"
+  result: "Dec 6-0",
+  bout: "159"
 },
 {
   winner: "Nick Feldman",
@@ -1277,7 +1436,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Ohio State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "160"
 },
 {
   winner: "Seth Nevills",
@@ -1285,7 +1445,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Maryland",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "161"
 },
 {
   winner: "Owen Trephan",
@@ -1293,7 +1454,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Lehigh",
-  result: "TF 5:40 ;17-2"
+  result: "TF 5:40 ;17-2",
+  bout: "162"
 },
 {
   winner: "Greg Kerkvliet",
@@ -1301,7 +1463,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Penn State",
-  result: "TF 5:31 ;15-0"
+  result: "TF 5:31 ;15-0",
+  bout: "163"
 },
 {
   winner: "Gavin Hoffman",
@@ -1309,7 +1472,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Lock Haven",
-  result: "MD 10-2"
+  result: "MD 10-2",
+  bout: "164"
 },
 {
   winner: "Brady Colbert",
@@ -1317,7 +1481,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Army West Point",
-  result: "Dec 8-1"
+  result: "Dec 8-1",
+  bout: "165"
 },
 {
   winner: "Joshua Heindselman",
@@ -1325,7 +1490,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Michigan",
-  result: "Fall 1:03"
+  result: "Fall 1:03",
+  bout: "166"
 },
 {
   winner: "Isaac Trumble",
@@ -1333,7 +1499,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "NC State",
-  result: "TF 6:12 ;18-2"
+  result: "TF 6:12 ;18-2",
+  bout: "167"
 },
 {
   winner: "Dayton Pitzer",
@@ -1341,7 +1508,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Pittsburgh",
-  result: "Dec 6-2"
+  result: "Dec 6-2",
+  bout: "168"
 },
 {
   winner: "Trevor Tinker",
@@ -1349,7 +1517,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Cal Poly",
-  result: "MD 15-2"
+  result: "MD 15-2",
+  bout: "169"
 },
 {
   winner: "Wyatt Hendrickson",
@@ -1357,7 +1526,8 @@ const resultData = [
   round: "ChampR1",
   weight: "285",
   school: "Oklahoma State",
-  result: "Fall 1:18"
+  result: "Fall 1:18",
+  bout: "170"
 },
 {
   winner: "Luke Lilledahl",
@@ -1365,7 +1535,8 @@ const resultData = [
   round: "ChampR2",
   weight: "125",
   school: "Penn State",
-  result: "TF 6:53 ;19-3"
+  result: "TF 6:53 ;19-3",
+  bout: "171"
 },
 {
   winner: "Sheldon Seymour",
@@ -1373,7 +1544,8 @@ const resultData = [
   round: "ChampR2",
   weight: "125",
   school: "Lehigh",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "172"
 },
 {
   winner: "Dean Peterson",
@@ -1381,7 +1553,8 @@ const resultData = [
   round: "ChampR2",
   weight: "125",
   school: "Rutgers",
-  result: "Fall 5:42"
+  result: "Fall 5:42",
+  bout: "173"
 },
 {
   winner: "Vincent Robinson",
@@ -1389,7 +1562,8 @@ const resultData = [
   round: "ChampR2",
   weight: "125",
   school: "NC State",
-  result: "Dec 6-4"
+  result: "Dec 6-4",
+  bout: "174"
 },
 {
   winner: "Eddie Ventresca",
@@ -1397,7 +1571,8 @@ const resultData = [
   round: "ChampR2",
   weight: "125",
   school: "Virginia Tech",
-  result: "Dec 6-3"
+  result: "Dec 6-3",
+  bout: "175"
 },
 {
   winner: "Jett Strickenberger",
@@ -1405,7 +1580,8 @@ const resultData = [
   round: "ChampR2",
   weight: "125",
   school: "West Virginia",
-  result: "MD 18-6"
+  result: "MD 18-6",
+  bout: "176"
 },
 {
   winner: "Troy Spratley",
@@ -1413,7 +1589,8 @@ const resultData = [
   round: "ChampR2",
   weight: "125",
   school: "Oklahoma State",
-  result: "Dec 2-1"
+  result: "Dec 2-1",
+  bout: "177"
 },
 {
   winner: "Matt Ramos",
@@ -1421,7 +1598,8 @@ const resultData = [
   round: "ChampR2",
   weight: "125",
   school: "Purdue",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "178"
 },
 {
   winner: "Lucas Byrd",
@@ -1429,7 +1607,8 @@ const resultData = [
   round: "ChampR2",
   weight: "133",
   school: "Illinois",
-  result: "MD 9-0"
+  result: "MD 9-0",
+  bout: "179"
 },
 {
   winner: "Braeden Davis",
@@ -1437,7 +1616,8 @@ const resultData = [
   round: "ChampR2",
   weight: "133",
   school: "Penn State",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "180"
 },
 {
   winner: "Angelo Rini",
@@ -1445,7 +1625,8 @@ const resultData = [
   round: "ChampR2",
   weight: "133",
   school: "Indiana",
-  result: "MD 15-7"
+  result: "MD 15-7",
+  bout: "181"
 },
 {
   winner: "Zeth Romney",
@@ -1453,7 +1634,8 @@ const resultData = [
   round: "ChampR2",
   weight: "133",
   school: "Cal Poly",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "182"
 },
 {
   winner: "Zan Fugitt",
@@ -1461,7 +1643,8 @@ const resultData = [
   round: "ChampR2",
   weight: "133",
   school: "Wisconsin",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "183"
 },
 {
   winner: "Connor McGonagle",
@@ -1469,7 +1652,8 @@ const resultData = [
   round: "ChampR2",
   weight: "133",
   school: "Virginia Tech",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "184"
 },
 {
   winner: "Nic Bouzakis",
@@ -1477,7 +1661,8 @@ const resultData = [
   round: "ChampR2",
   weight: "133",
   school: "Ohio State",
-  result: "Dec 9-4"
+  result: "Dec 9-4",
+  bout: "185"
 },
 {
   winner: "Drake Ayala",
@@ -1485,7 +1670,8 @@ const resultData = [
   round: "ChampR2",
   weight: "133",
   school: "Iowa",
-  result: "MD 13-4"
+  result: "MD 13-4",
+  bout: "186"
 },
 {
   winner: "Brock Hardy",
@@ -1493,7 +1679,8 @@ const resultData = [
   round: "ChampR2",
   weight: "141",
   school: "Nebraska",
-  result: "TF 6:17 ;19-3"
+  result: "TF 6:17 ;19-3",
+  bout: "187"
 },
 {
   winner: "Jacob Frost",
@@ -1501,7 +1688,8 @@ const resultData = [
   round: "ChampR2",
   weight: "141",
   school: "Iowa State",
-  result: "Dec 6-1"
+  result: "Dec 6-1",
+  bout: "188"
 },
 {
   winner: "Cael Happel",
@@ -1509,7 +1697,8 @@ const resultData = [
   round: "ChampR2",
   weight: "141",
   school: "Northern Iowa",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "189"
 },
 {
   winner: "Josh Koderhandt",
@@ -1517,7 +1706,8 @@ const resultData = [
   round: "ChampR2",
   weight: "141",
   school: "Navy",
-  result: "Fall 3:32"
+  result: "Fall 3:32",
+  bout: "190"
 },
 {
   winner: "Jesse Mendez",
@@ -1525,7 +1715,8 @@ const resultData = [
   round: "ChampR2",
   weight: "141",
   school: "Ohio State",
-  result: "MD 11-2"
+  result: "MD 11-2",
+  bout: "191"
 },
 {
   winner: "Vance VomBaur",
@@ -1533,7 +1724,8 @@ const resultData = [
   round: "ChampR2",
   weight: "141",
   school: "Minnesota",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "192"
 },
 {
   winner: "CJ Composto",
@@ -1541,7 +1733,8 @@ const resultData = [
   round: "ChampR2",
   weight: "141",
   school: "Pennsylvania",
-  result: "Dec 6-4"
+  result: "Dec 6-4",
+  bout: "193"
 },
 {
   winner: "Beau Bartlett",
@@ -1549,7 +1742,8 @@ const resultData = [
   round: "ChampR2",
   weight: "141",
   school: "Penn State",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "194"
 },
 {
   winner: "Caleb Henson",
@@ -1557,7 +1751,8 @@ const resultData = [
   round: "ChampR2",
   weight: "149",
   school: "Virginia Tech",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "195"
 },
 {
   winner: "Jordan Williams",
@@ -1565,7 +1760,8 @@ const resultData = [
   round: "ChampR2",
   weight: "149",
   school: "Little Rock",
-  result: "Dec 10-3"
+  result: "Dec 10-3",
+  bout: "196"
 },
 {
   winner: "Ethan Stiles",
@@ -1573,7 +1769,8 @@ const resultData = [
   round: "ChampR2",
   weight: "149",
   school: "Oregon State",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "197"
 },
 {
   winner: "Dylan D`Emilio",
@@ -1581,7 +1778,8 @@ const resultData = [
   round: "ChampR2",
   weight: "149",
   school: "Ohio State",
-  result: "Dec 8-5"
+  result: "Dec 8-5",
+  bout: "198"
 },
 {
   winner: "Shayne Van Ness",
@@ -1589,7 +1787,8 @@ const resultData = [
   round: "ChampR2",
   weight: "149",
   school: "Penn State",
-  result: "MD 11-1"
+  result: "MD 11-1",
+  bout: "199"
 },
 {
   winner: "Lachlan McNeil",
@@ -1597,7 +1796,8 @@ const resultData = [
   round: "ChampR2",
   weight: "149",
   school: "North Carolina",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "200"
 },
 {
   winner: "Kannon Webster",
@@ -1605,7 +1805,8 @@ const resultData = [
   round: "ChampR2",
   weight: "149",
   school: "Illinois",
-  result: "Dec 8-3"
+  result: "Dec 8-3",
+  bout: "201"
 },
 {
   winner: "Ridge Lovett",
@@ -1613,7 +1814,8 @@ const resultData = [
   round: "ChampR2",
   weight: "149",
   school: "Nebraska",
-  result: "TF 6:09 ;15-0"
+  result: "TF 6:09 ;15-0",
+  bout: "202"
 },
 {
   winner: "Tyler Kasak",
@@ -1621,7 +1823,8 @@ const resultData = [
   round: "ChampR2",
   weight: "157",
   school: "Penn State",
-  result: "Dec 8-3"
+  result: "Dec 8-3",
+  bout: "203"
 },
 {
   winner: "Joey Blaze",
@@ -1629,7 +1832,8 @@ const resultData = [
   round: "ChampR2",
   weight: "157",
   school: "Purdue",
-  result: "TB-1 2-2"
+  result: "TB-1 2-2",
+  bout: "204"
 },
 {
   winner: "Caleb Fish",
@@ -1637,7 +1841,8 @@ const resultData = [
   round: "ChampR2",
   weight: "157",
   school: "Oklahoma State",
-  result: "SV-1 10-7"
+  result: "SV-1 10-7",
+  bout: "205"
 },
 {
   winner: "Trevor Chumbley",
@@ -1645,7 +1850,8 @@ const resultData = [
   round: "ChampR2",
   weight: "157",
   school: "Northwestern",
-  result: "TB-1 2-1"
+  result: "TB-1 2-1",
+  bout: "206"
 },
 {
   winner: "Antrell Taylor",
@@ -1653,7 +1859,8 @@ const resultData = [
   round: "ChampR2",
   weight: "157",
   school: "Nebraska",
-  result: "Fall 2:16"
+  result: "Fall 2:16",
+  bout: "207"
 },
 {
   winner: "Matty Bianchi",
@@ -1661,7 +1868,8 @@ const resultData = [
   round: "ChampR2",
   weight: "157",
   school: "Little Rock",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "208"
 },
 {
   winner: "Vinny Zerban",
@@ -1669,7 +1877,8 @@ const resultData = [
   round: "ChampR2",
   weight: "157",
   school: "Northern Colorado",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "209"
 },
 {
   winner: "Meyer Shapiro",
@@ -1677,7 +1886,8 @@ const resultData = [
   round: "ChampR2",
   weight: "157",
   school: "Cornell",
-  result: "Dec 10-4"
+  result: "Dec 10-4",
+  bout: "210"
 },
 {
   winner: "Mitchell Mesenbrink",
@@ -1685,7 +1895,8 @@ const resultData = [
   round: "ChampR2",
   weight: "165",
   school: "Penn State",
-  result: "TF 4:16 ;22-6"
+  result: "TF 4:16 ;22-6",
+  bout: "211"
 },
 {
   winner: "Cameron Amine",
@@ -1693,7 +1904,8 @@ const resultData = [
   round: "ChampR2",
   weight: "165",
   school: "Oklahoma State",
-  result: "Dec 3-1"
+  result: "Dec 3-1",
+  bout: "212"
 },
 {
   winner: "Christopher Minto",
@@ -1701,7 +1913,8 @@ const resultData = [
   round: "ChampR2",
   weight: "165",
   school: "Nebraska",
-  result: "MD 11-1"
+  result: "MD 11-1",
+  bout: "213"
 },
 {
   winner: "Terrell Barraclough",
@@ -1709,7 +1922,8 @@ const resultData = [
   round: "ChampR2",
   weight: "165",
   school: "Utah Valley",
-  result: "MD 11-1"
+  result: "MD 11-1",
+  bout: "214"
 },
 {
   winner: "Mike Caliendo",
@@ -1717,7 +1931,8 @@ const resultData = [
   round: "ChampR2",
   weight: "165",
   school: "Iowa",
-  result: "MD 15-3"
+  result: "MD 15-3",
+  bout: "215"
 },
 {
   winner: "Beau Mantanona",
@@ -1725,7 +1940,8 @@ const resultData = [
   round: "ChampR2",
   weight: "165",
   school: "Michigan",
-  result: "Dec 8-5"
+  result: "Dec 8-5",
+  bout: "216"
 },
 {
   winner: "Hunter Garvin",
@@ -1733,7 +1949,8 @@ const resultData = [
   round: "ChampR2",
   weight: "165",
   school: "Stanford",
-  result: "MD 14-4"
+  result: "MD 14-4",
+  bout: "217"
 },
 {
   winner: "Peyton Hall",
@@ -1741,7 +1958,8 @@ const resultData = [
   round: "ChampR2",
   weight: "165",
   school: "West Virginia",
-  result: "TF 5:36 ;20-4"
+  result: "TF 5:36 ;20-4",
+  bout: "218"
 },
 {
   winner: "Keegan O`Toole",
@@ -1749,7 +1967,8 @@ const resultData = [
   round: "ChampR2",
   weight: "174",
   school: "Missouri",
-  result: "Dec 10-8"
+  result: "Dec 10-8",
+  bout: "219"
 },
 {
   winner: "Lennox Wolak",
@@ -1757,7 +1976,8 @@ const resultData = [
   round: "ChampR2",
   weight: "174",
   school: "Virginia Tech",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "220"
 },
 {
   winner: "Simon Ruiz",
@@ -1765,7 +1985,8 @@ const resultData = [
   round: "ChampR2",
   weight: "174",
   school: "Cornell",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "221"
 },
 {
   winner: "Cade DeVos",
@@ -1773,7 +1994,8 @@ const resultData = [
   round: "ChampR2",
   weight: "174",
   school: "South Dakota State",
-  result: "Dec 9-3"
+  result: "Dec 9-3",
+  bout: "222"
 },
 {
   winner: "Dean Hamiti",
@@ -1781,7 +2003,8 @@ const resultData = [
   round: "ChampR2",
   weight: "174",
   school: "Oklahoma State",
-  result: "MD 15-3"
+  result: "MD 15-3",
+  bout: "223"
 },
 {
   winner: "Patrick Kennedy",
@@ -1789,7 +2012,8 @@ const resultData = [
   round: "ChampR2",
   weight: "174",
   school: "Iowa",
-  result: "Dec 3-0"
+  result: "Dec 3-0",
+  bout: "224"
 },
 {
   winner: "Danny Wask",
@@ -1797,7 +2021,8 @@ const resultData = [
   round: "ChampR2",
   weight: "174",
   school: "Navy",
-  result: "MD 12-4"
+  result: "MD 12-4",
+  bout: "225"
 },
 {
   winner: "Levi Haines",
@@ -1805,7 +2030,8 @@ const resultData = [
   round: "ChampR2",
   weight: "174",
   school: "Penn State",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "226"
 },
 {
   winner: "Carter Starocci",
@@ -1813,7 +2039,8 @@ const resultData = [
   round: "ChampR2",
   weight: "184",
   school: "Penn State",
-  result: "TF 4:24 ;15-0"
+  result: "TF 4:24 ;15-0",
+  bout: "227"
 },
 {
   winner: "Jaxon Smith",
@@ -1821,7 +2048,8 @@ const resultData = [
   round: "ChampR2",
   weight: "184",
   school: "Maryland",
-  result: "Fall 2:45"
+  result: "Fall 2:45",
+  bout: "228"
 },
 {
   winner: "Silas Allred",
@@ -1829,7 +2057,8 @@ const resultData = [
   round: "ChampR2",
   weight: "184",
   school: "Nebraska",
-  result: "Fall 6:42"
+  result: "Fall 6:42",
+  bout: "229"
 },
 {
   winner: "Dustin Plott",
@@ -1837,7 +2066,8 @@ const resultData = [
   round: "ChampR2",
   weight: "184",
   school: "Oklahoma State",
-  result: "MD 12-2"
+  result: "MD 12-2",
+  bout: "230"
 },
 {
   winner: "Max McEnelly",
@@ -1845,7 +2075,8 @@ const resultData = [
   round: "ChampR2",
   weight: "184",
   school: "Minnesota",
-  result: "MD 11-3"
+  result: "MD 11-3",
+  bout: "231"
 },
 {
   winner: "Chris Foca",
@@ -1853,7 +2084,8 @@ const resultData = [
   round: "ChampR2",
   weight: "184",
   school: "Cornell",
-  result: "MD 12-1"
+  result: "MD 12-1",
+  bout: "232"
 },
 {
   winner: "Edmond Ruth",
@@ -1861,7 +2093,8 @@ const resultData = [
   round: "ChampR2",
   weight: "184",
   school: "Illinois",
-  result: "TB-2 ;RT"
+  result: "TB-2 ;RT",
+  bout: "233"
 },
 {
   winner: "Parker Keckeisen",
@@ -1869,7 +2102,8 @@ const resultData = [
   round: "ChampR2",
   weight: "184",
   school: "Northern Iowa",
-  result: "MD 14-3"
+  result: "MD 14-3",
+  bout: "234"
 },
 {
   winner: "Jacob Cardenas",
@@ -1877,7 +2111,8 @@ const resultData = [
   round: "ChampR2",
   weight: "197",
   school: "Michigan",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "235"
 },
 {
   winner: "Gabe Sollars",
@@ -1885,7 +2120,8 @@ const resultData = [
   round: "ChampR2",
   weight: "197",
   school: "Indiana",
-  result: "MD 13-4"
+  result: "MD 13-4",
+  bout: "236"
 },
 {
   winner: "Michael Beard",
@@ -1893,7 +2129,8 @@ const resultData = [
   round: "ChampR2",
   weight: "197",
   school: "Lehigh",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "237"
 },
 {
   winner: "Josh Barr",
@@ -1901,7 +2138,8 @@ const resultData = [
   round: "ChampR2",
   weight: "197",
   school: "Penn State",
-  result: "SV-1 5-2"
+  result: "SV-1 5-2",
+  bout: "238"
 },
 {
   winner: "AJ Ferrari",
@@ -1909,7 +2147,8 @@ const resultData = [
   round: "ChampR2",
   weight: "197",
   school: "CSU Bakersfield",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "239"
 },
 {
   winner: "Mac Stout",
@@ -1917,7 +2156,8 @@ const resultData = [
   round: "ChampR2",
   weight: "197",
   school: "Pittsburgh",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "240"
 },
 {
   winner: "Seth Shumate",
@@ -1925,7 +2165,8 @@ const resultData = [
   round: "ChampR2",
   weight: "197",
   school: "Ohio State",
-  result: "Dec 11-6"
+  result: "Dec 11-6",
+  bout: "241"
 },
 {
   winner: "Stephen Buchanan",
@@ -1933,7 +2174,8 @@ const resultData = [
   round: "ChampR2",
   weight: "197",
   school: "Iowa",
-  result: "TF 7:00 ;16-1"
+  result: "TF 7:00 ;16-1",
+  bout: "242"
 },
 {
   winner: "Gable Steveson",
@@ -1941,7 +2183,8 @@ const resultData = [
   round: "ChampR2",
   weight: "285",
   school: "Minnesota",
-  result: "Fall"
+  result: "Fall",
+  bout: "243"
 },
 {
   winner: "Cohlton Schultz",
@@ -1949,7 +2192,8 @@ const resultData = [
   round: "ChampR2",
   weight: "285",
   school: "Arizona State",
-  result: "Dec 7-0"
+  result: "Dec 7-0",
+  bout: "244"
 },
 {
   winner: "Ben Kueter",
@@ -1957,7 +2201,8 @@ const resultData = [
   round: "ChampR2",
   weight: "285",
   school: "Iowa",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "245"
 },
 {
   winner: "Owen Trephan",
@@ -1965,7 +2210,8 @@ const resultData = [
   round: "ChampR2",
   weight: "285",
   school: "Lehigh",
-  result: "Dec 8-3"
+  result: "Dec 8-3",
+  bout: "246"
 },
 {
   winner: "Greg Kerkvliet",
@@ -1973,7 +2219,8 @@ const resultData = [
   round: "ChampR2",
   weight: "285",
   school: "Penn State",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "247"
 },
 {
   winner: "Joshua Heindselman",
@@ -1981,7 +2228,8 @@ const resultData = [
   round: "ChampR2",
   weight: "285",
   school: "Michigan",
-  result: "TF 4:29 ;17-2"
+  result: "TF 4:29 ;17-2",
+  bout: "248"
 },
 {
   winner: "Isaac Trumble",
@@ -1989,7 +2237,8 @@ const resultData = [
   round: "ChampR2",
   weight: "285",
   school: "NC State",
-  result: "Dec 5-2"
+  result: "Dec 5-2",
+  bout: "249"
 },
 {
   winner: "Wyatt Hendrickson",
@@ -1997,7 +2246,8 @@ const resultData = [
   round: "ChampR2",
   weight: "285",
   school: "Oklahoma State",
-  result: "Fall 3:52"
+  result: "Fall 3:52",
+  bout: "250"
 },
 {
   winner: "Caleb Weiand",
@@ -2005,7 +2255,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "125",
   school: "Michigan State",
-  result: "Dec 8-4"
+  result: "Dec 8-4",
+  bout: "251"
 },
 {
   winner: "Derrick Cardinal",
@@ -2013,7 +2264,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "133",
   school: "South Dakota State",
-  result: "Dec 10-7"
+  result: "Dec 10-7",
+  bout: "252"
 },
 {
   winner: "Briar Priest",
@@ -2021,7 +2273,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "141",
   school: "Pittsburgh",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "253"
 },
 {
   winner: "Wynton Denkins",
@@ -2029,7 +2282,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "149",
   school: "Campbell",
-  result: "SV-1 17-14"
+  result: "SV-1 17-14",
+  bout: "254"
 },
 {
   winner: "James Conway",
@@ -2037,7 +2291,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "157",
   school: "Missouri",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "255"
 },
 {
   winner: "Aiden Riggins",
@@ -2045,7 +2300,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "165",
   school: "Iowa State",
-  result: "Dec 7-6"
+  result: "Dec 7-6",
+  bout: "256"
 },
 {
   winner: "Avery Bassett",
@@ -2053,7 +2309,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "174",
   school: "Lock Haven",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "257"
 },
 {
   winner: "TJ McDonnell",
@@ -2061,7 +2318,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "184",
   school: "Oregon State",
-  result: "TF-1.5 5:27"
+  result: "TF-1.5 5:27",
+  bout: "258"
 },
 {
   winner: "Ian Bush",
@@ -2069,7 +2327,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "197",
   school: "West Virginia",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "259"
 },
 {
   winner: "Sam Mitchell",
@@ -2077,7 +2336,8 @@ const resultData = [
   round: "ConsPrelims",
   weight: "285",
   school: "Wyoming",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "260"
 },
 {
   winner: "Max Gallagher",
@@ -2085,7 +2345,8 @@ const resultData = [
   round: "ConsR1",
   weight: "125",
   school: "Pennsylvania",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "261"
 },
 {
   winner: "Charlie Farmer",
@@ -2093,7 +2354,8 @@ const resultData = [
   round: "ConsR1",
   weight: "125",
   school: "Army West Point",
-  result: "Dec 7-4"
+  result: "Dec 7-4",
+  bout: "262"
 },
 {
   winner: "Antonio Lorenzo",
@@ -2101,7 +2363,8 @@ const resultData = [
   round: "ConsR1",
   weight: "125",
   school: "Oklahoma",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "263"
 },
 {
   winner: "Brendan McCrone",
@@ -2109,7 +2372,8 @@ const resultData = [
   round: "ConsR1",
   weight: "125",
   school: "Ohio State",
-  result: "MD 12-4"
+  result: "MD 12-4",
+  bout: "264"
 },
 {
   winner: "Cooper Flynn",
@@ -2117,7 +2381,8 @@ const resultData = [
   round: "ConsR1",
   weight: "125",
   school: "Minnesota",
-  result: "Fall 2:48"
+  result: "Fall 2:48",
+  bout: "265"
 },
 {
   winner: "Trever Anderson",
@@ -2125,7 +2390,8 @@ const resultData = [
   round: "ConsR1",
   weight: "125",
   school: "Northern Iowa",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "266"
 },
 {
   winner: "Tanner Jordan",
@@ -2133,7 +2399,8 @@ const resultData = [
   round: "ConsR1",
   weight: "125",
   school: "South Dakota State",
-  result: "MD 11-2"
+  result: "MD 11-2",
+  bout: "267"
 },
 {
   winner: "Maximo Renteria",
@@ -2141,7 +2408,8 @@ const resultData = [
   round: "ConsR1",
   weight: "125",
   school: "Oregon State",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "268"
 },
 {
   winner: "Jacob Van Dee",
@@ -2149,7 +2417,8 @@ const resultData = [
   round: "ConsR1",
   weight: "133",
   school: "Nebraska",
-  result: "MD 13-2"
+  result: "MD 13-2",
+  bout: "269"
 },
 {
   winner: "Kurt Phipps",
@@ -2157,7 +2426,8 @@ const resultData = [
   round: "ConsR1",
   weight: "133",
   school: "Bucknell",
-  result: "Dec 6-5"
+  result: "Dec 6-5",
+  bout: "270"
 },
 {
   winner: "Ethan Oakley",
@@ -2165,7 +2435,8 @@ const resultData = [
   round: "ConsR1",
   weight: "133",
   school: "North Carolina",
-  result: "Dec 15-11"
+  result: "Dec 15-11",
+  bout: "271"
 },
 {
   winner: "Tyler Ferrara",
@@ -2173,7 +2444,8 @@ const resultData = [
   round: "ConsR1",
   weight: "133",
   school: "Cornell",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "272"
 },
 {
   winner: "Derrick Cardinal",
@@ -2181,7 +2453,8 @@ const resultData = [
   round: "ConsR1",
   weight: "133",
   school: "South Dakota State",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "273"
 },
 {
   winner: "Tyler Wells",
@@ -2189,7 +2462,8 @@ const resultData = [
   round: "ConsR1",
   weight: "133",
   school: "Minnesota",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "274"
 },
 {
   winner: "Dylan Shawver",
@@ -2197,7 +2471,8 @@ const resultData = [
   round: "ConsR1",
   weight: "133",
   school: "Rutgers",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "275"
 },
 {
   winner: "Anthony Noto",
@@ -2205,7 +2480,8 @@ const resultData = [
   round: "ConsR1",
   weight: "133",
   school: "Lock Haven",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "276"
 },
 {
   winner: "Nash Singleton",
@@ -2213,7 +2489,8 @@ const resultData = [
   round: "ConsR1",
   weight: "141",
   school: "Oregon State",
-  result: "TB-1 2-1"
+  result: "TB-1 2-1",
+  bout: "277"
 },
 {
   winner: "Jason Miranda",
@@ -2221,7 +2498,8 @@ const resultData = [
   round: "ConsR1",
   weight: "141",
   school: "Stanford",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "278"
 },
 {
   winner: "Danny Pucino",
@@ -2229,7 +2507,8 @@ const resultData = [
   round: "ConsR1",
   weight: "141",
   school: "Illinois",
-  result: "Dec 12-8"
+  result: "Dec 12-8",
+  bout: "279"
 },
 {
   winner: "Jayden Scott",
@@ -2237,7 +2516,8 @@ const resultData = [
   round: "ConsR1",
   weight: "141",
   school: "North Carolina",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "280"
 },
 {
   winner: "Mosha Schwartz",
@@ -2245,7 +2525,8 @@ const resultData = [
   round: "ConsR1",
   weight: "141",
   school: "Oklahoma",
-  result: "Dec 9-5"
+  result: "Dec 9-5",
+  bout: "281"
 },
 {
   winner: "Greyson Clark",
@@ -2253,7 +2534,8 @@ const resultData = [
   round: "ConsR1",
   weight: "141",
   school: "Purdue",
-  result: "MD 13-3"
+  result: "MD 13-3",
+  bout: "282"
 },
 {
   winner: "Eligh Rivera",
@@ -2261,7 +2543,8 @@ const resultData = [
   round: "ConsR1",
   weight: "141",
   school: "Princeton",
-  result: "SV-1 8-5"
+  result: "SV-1 8-5",
+  bout: "283"
 },
 {
   winner: "Joseph Olivieri",
@@ -2269,7 +2552,8 @@ const resultData = [
   round: "ConsR1",
   weight: "141",
   school: "Rutgers",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "284"
 },
 {
   winner: "Teague Travis",
@@ -2277,7 +2561,8 @@ const resultData = [
   round: "ConsR1",
   weight: "149",
   school: "Oklahoma State",
-  result: "MD 17-4"
+  result: "MD 17-4",
+  bout: "285"
 },
 {
   winner: "Malyke Hines",
@@ -2285,7 +2570,8 @@ const resultData = [
   round: "ConsR1",
   weight: "149",
   school: "Lehigh",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "286"
 },
 {
   winner: "Willie McDougald",
@@ -2293,7 +2579,8 @@ const resultData = [
   round: "ConsR1",
   weight: "149",
   school: "Oklahoma",
-  result: "SV-1 8-5"
+  result: "SV-1 8-5",
+  bout: "287"
 },
 {
   winner: "Paniro Johnson",
@@ -2301,7 +2588,8 @@ const resultData = [
   round: "ConsR1",
   weight: "149",
   school: "Iowa State",
-  result: "TB-1 1-1"
+  result: "TB-1 1-1",
+  bout: "288"
 },
 {
   winner: "Chance Lamer",
@@ -2309,7 +2597,8 @@ const resultData = [
   round: "ConsR1",
   weight: "149",
   school: "Cal Poly",
-  result: "MD 11-3"
+  result: "MD 11-3",
+  bout: "289"
 },
 {
   winner: "Gavin Drexler",
@@ -2317,7 +2606,8 @@ const resultData = [
   round: "ConsR1",
   weight: "149",
   school: "North Dakota State",
-  result: "MD 13-1"
+  result: "MD 13-1",
+  bout: "290"
 },
 {
   winner: "Carson DesRosier",
@@ -2325,7 +2615,8 @@ const resultData = [
   round: "ConsR1",
   weight: "149",
   school: "The Citadel",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "291"
 },
 {
   winner: "Ethan Fernandez",
@@ -2333,7 +2624,8 @@ const resultData = [
   round: "ConsR1",
   weight: "149",
   school: "Cornell",
-  result: "Dec 3-2"
+  result: "Dec 3-2",
+  bout: "292"
 },
 {
   winner: "DJ McGee",
@@ -2341,7 +2633,8 @@ const resultData = [
   round: "ConsR1",
   weight: "157",
   school: "George Mason",
-  result: "Dec 3-2"
+  result: "Dec 3-2",
+  bout: "293"
 },
 {
   winner: "Dylan Evans",
@@ -2349,7 +2642,8 @@ const resultData = [
   round: "ConsR1",
   weight: "157",
   school: "Pittsburgh",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "294"
 },
 {
   winner: "Logan Rozynski",
@@ -2357,7 +2651,8 @@ const resultData = [
   round: "ConsR1",
   weight: "157",
   school: "Lehigh",
-  result: "Dec 7-3;19-3"
+  result: "Dec 7-3;19-3",
+  bout: "295"
 },
 {
   winner: "James Harrington",
@@ -2365,7 +2660,8 @@ const resultData = [
   round: "ConsR1",
   weight: "157",
   school: "Harvard",
-  result: "Fall 5:46"
+  result: "Fall 5:46",
+  bout: "296"
 },
 {
   winner: "Cobe Siebrecht",
@@ -2373,7 +2669,8 @@ const resultData = [
   round: "ConsR1",
   weight: "157",
   school: "South Dakota State",
-  result: "Dec 7-5"
+  result: "Dec 7-5",
+  bout: "297"
 },
 {
   winner: "Ed Scott",
@@ -2381,7 +2678,8 @@ const resultData = [
   round: "ConsR1",
   weight: "157",
   school: "NC State",
-  result: "TF 6:08 ;19-4"
+  result: "TF 6:08 ;19-4",
+  bout: "298"
 },
 {
   winner: "Ethen Miller",
@@ -2389,7 +2687,8 @@ const resultData = [
   round: "ConsR1",
   weight: "157",
   school: "Maryland",
-  result: "MD 14-2"
+  result: "MD 14-2",
+  bout: "299"
 },
 {
   winner: "Noah Castillo",
@@ -2397,7 +2696,8 @@ const resultData = [
   round: "ConsR1",
   weight: "157",
   school: "Chattanooga",
-  result: "Dec 8-5"
+  result: "Dec 8-5",
+  bout: "300"
 },
 {
   winner: "Chandler Amaker",
@@ -2405,7 +2705,8 @@ const resultData = [
   round: "ConsR1",
   weight: "165",
   school: "Central Michigan",
-  result: "Dec 8-6"
+  result: "Dec 8-6",
+  bout: "301"
 },
 {
   winner: "Nick Hamilton",
@@ -2413,7 +2714,8 @@ const resultData = [
   round: "ConsR1",
   weight: "165",
   school: "Virginia",
-  result: "Dec 10-3"
+  result: "Dec 10-3",
+  bout: "302"
 },
 {
   winner: "Mac Church",
@@ -2421,7 +2723,8 @@ const resultData = [
   round: "ConsR1",
   weight: "165",
   school: "Virginia Tech",
-  result: "MD 12-4"
+  result: "MD 12-4",
+  bout: "303"
 },
 {
   winner: "Gunner Filipowicz",
@@ -2429,7 +2732,8 @@ const resultData = [
   round: "ConsR1",
   weight: "165",
   school: "Army West Point",
-  result: "Dec 9-8"
+  result: "Dec 9-8",
+  bout: "304"
 },
 {
   winner: "Aiden Riggins",
@@ -2437,7 +2741,8 @@ const resultData = [
   round: "ConsR1",
   weight: "165",
   school: "Iowa State",
-  result: "Dec 9-3;RT"
+  result: "Dec 9-3;RT",
+  bout: "305"
 },
 {
   winner: "Tyler Lillard",
@@ -2445,7 +2750,8 @@ const resultData = [
   round: "ConsR1",
   weight: "165",
   school: "Indiana",
-  result: "Fall 3:49"
+  result: "Fall 3:49",
+  bout: "306"
 },
 {
   winner: "Thomas Snipes",
@@ -2453,7 +2759,8 @@ const resultData = [
   round: "ConsR1",
   weight: "165",
   school: "The Citadel",
-  result: "TB-2"
+  result: "TB-2",
+  bout: "307"
 },
 {
   winner: "Nicco Ruiz",
@@ -2461,7 +2768,8 @@ const resultData = [
   round: "ConsR1",
   weight: "165",
   school: "Arizona State",
-  result: "MD 16-3;17-2"
+  result: "MD 16-3;17-2",
+  bout: "308"
 },
 {
   winner: "Sergio Desiante",
@@ -2469,7 +2777,8 @@ const resultData = [
   round: "ConsR1",
   weight: "174",
   school: "Chattanooga",
-  result: "TF 4:22"
+  result: "TF 4:22",
+  bout: "309"
 },
 {
   winner: "Lenny Pinto",
@@ -2477,7 +2786,8 @@ const resultData = [
   round: "ConsR1",
   weight: "174",
   school: "Nebraska",
-  result: "SV-1 12-7"
+  result: "SV-1 12-7",
+  bout: "310"
 },
 {
   winner: "Clayton Whiting",
@@ -2485,7 +2795,8 @@ const resultData = [
   round: "ConsR1",
   weight: "174",
   school: "Minnesota",
-  result: "Dec 11-9"
+  result: "Dec 11-9",
+  bout: "311"
 },
 {
   winner: "Dan Braunagel",
@@ -2493,7 +2804,8 @@ const resultData = [
   round: "ConsR1",
   weight: "174",
   school: "Illinois",
-  result: "MD 18-9"
+  result: "MD 18-9",
+  bout: "312"
 },
 {
   winner: "Jared Simma",
@@ -2501,7 +2813,8 @@ const resultData = [
   round: "ConsR1",
   weight: "174",
   school: "Northern Iowa",
-  result: "MD 11-0"
+  result: "MD 11-0",
+  bout: "313"
 },
 {
   winner: "Nick Incontrera",
@@ -2509,7 +2822,8 @@ const resultData = [
   round: "ConsR1",
   weight: "174",
   school: "Pennsylvania",
-  result: "Dec 3-0"
+  result: "Dec 3-0",
+  bout: "314"
 },
 {
   winner: "Brody Baumann",
@@ -2517,7 +2831,8 @@ const resultData = [
   round: "ConsR1",
   weight: "174",
   school: "Purdue",
-  result: "Dec 3-2"
+  result: "Dec 3-2",
+  bout: "315"
 },
 {
   winner: "Luca Augustine",
@@ -2525,7 +2840,8 @@ const resultData = [
   round: "ConsR1",
   weight: "174",
   school: "Pittsburgh",
-  result: "MD 11-2"
+  result: "MD 11-2",
+  bout: "316"
 },
 {
   winner: "Gavin Kane",
@@ -2533,7 +2849,8 @@ const resultData = [
   round: "ConsR1",
   weight: "184",
   school: "North Carolina",
-  result: "MD 9-1"
+  result: "MD 9-1",
+  bout: "317"
 },
 {
   winner: "Jared McGill",
@@ -2541,7 +2858,8 @@ const resultData = [
   round: "ConsR1",
   weight: "184",
   school: "Edinboro",
-  result: "Dec 6-0"
+  result: "Dec 6-0",
+  bout: "318"
 },
 {
   winner: "Malachi DuVall",
@@ -2549,7 +2867,8 @@ const resultData = [
   round: "ConsR1",
   weight: "184",
   school: "George Mason",
-  result: "MD 13-0"
+  result: "MD 13-0",
+  bout: "319"
 },
 {
   winner: "Kole Mulhauser",
@@ -2557,7 +2876,8 @@ const resultData = [
   round: "ConsR1",
   weight: "184",
   school: "Princeton",
-  result: "Dec 12-5"
+  result: "Dec 12-5",
+  bout: "320"
 },
 {
   winner: "Eddie Neitenbach",
@@ -2565,7 +2885,8 @@ const resultData = [
   round: "ConsR1",
   weight: "184",
   school: "Wyoming",
-  result: "Fall 1:08"
+  result: "Fall 1:08",
+  bout: "321"
 },
 {
   winner: "Donnell Washington",
@@ -2573,7 +2894,8 @@ const resultData = [
   round: "ConsR1",
   weight: "184",
   school: "Indiana",
-  result: "Dec 10-8"
+  result: "Dec 10-8",
+  bout: "322"
 },
 {
   winner: "Aidan Brenot",
@@ -2581,7 +2903,8 @@ const resultData = [
   round: "ConsR1",
   weight: "184",
   school: "North Dakota State",
-  result: "Dec 13-7"
+  result: "Dec 13-7",
+  bout: "323"
 },
 {
   winner: "Maximus Hale",
@@ -2589,7 +2912,8 @@ const resultData = [
   round: "ConsR1",
   weight: "184",
   school: "Pennsylvania",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "324"
 },
 {
   winner: "Nikolas Stemmet",
@@ -2597,7 +2921,8 @@ const resultData = [
   round: "ConsR1",
   weight: "197",
   school: "Stanford",
-  result: "Dec 9-8"
+  result: "Dec 9-8",
+  bout: "325"
 },
 {
   winner: "Zac Braunagel",
@@ -2605,7 +2930,8 @@ const resultData = [
   round: "ConsR1",
   weight: "197",
   school: "Illinois",
-  result: "MD 14-3"
+  result: "MD 14-3",
+  bout: "326"
 },
 {
   winner: "Levi Hopkins",
@@ -2613,7 +2939,8 @@ const resultData = [
   round: "ConsR1",
   weight: "197",
   school: "Campbell",
-  result: "MD 14-4"
+  result: "MD 14-4",
+  bout: "327"
 },
 {
   winner: "Camden McDanel",
@@ -2621,7 +2948,8 @@ const resultData = [
   round: "ConsR1",
   weight: "197",
   school: "Nebraska",
-  result: "MD 13-2"
+  result: "MD 13-2",
+  bout: "328"
 },
 {
   winner: "Zach Glazier",
@@ -2629,7 +2957,8 @@ const resultData = [
   round: "ConsR1",
   weight: "197",
   school: "South Dakota State",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "329"
 },
 {
   winner: "Michael Dellagatta",
@@ -2637,7 +2966,8 @@ const resultData = [
   round: "ConsR1",
   weight: "197",
   school: "Cornell",
-  result: "MD 10-0"
+  result: "MD 10-0",
+  bout: "330"
 },
 {
   winner: "Wyatt Voelker",
@@ -2645,7 +2975,8 @@ const resultData = [
   round: "ConsR1",
   weight: "197",
   school: "Northern Iowa",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "331"
 },
 {
   winner: "Dillon Bechtold",
@@ -2653,7 +2984,8 @@ const resultData = [
   round: "ConsR1",
   weight: "197",
   school: "Bucknell",
-  result: "Fall 0:58"
+  result: "Fall 0:58",
+  bout: "332"
 },
 {
   winner: "Jake Andrews",
@@ -2661,7 +2993,8 @@ const resultData = [
   round: "ConsR1",
   weight: "285",
   school: "CSU Bakersfield",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "333"
 },
 {
   winner: "Luke Rasmussen",
@@ -2669,7 +3002,8 @@ const resultData = [
   round: "ConsR1",
   weight: "285",
   school: "South Dakota State",
-  result: "Dec 10-6"
+  result: "Dec 10-6",
+  bout: "334"
 },
 {
   winner: "Jacob Bullock",
@@ -2677,7 +3011,8 @@ const resultData = [
   round: "ConsR1",
   weight: "285",
   school: "Indiana",
-  result: "Dec 7-1"
+  result: "Dec 7-1",
+  bout: "335"
 },
 {
   winner: "Ashton Davis",
@@ -2685,7 +3020,8 @@ const resultData = [
   round: "ConsR1",
   weight: "285",
   school: "Cornell",
-  result: "Dec 7-1"
+  result: "Dec 7-1",
+  bout: "336"
 },
 {
   winner: "Cory Day",
@@ -2693,7 +3029,8 @@ const resultData = [
   round: "ConsR1",
   weight: "285",
   school: "Binghamton",
-  result: "Fall 5:58"
+  result: "Fall 5:58",
+  bout: "337"
 },
 {
   winner: "Jimmy Mullen",
@@ -2701,7 +3038,8 @@ const resultData = [
   round: "ConsR1",
   weight: "285",
   school: "Virginia Tech",
-  result: "Dec 9-6"
+  result: "Dec 9-6",
+  bout: "338"
 },
 {
   winner: "Peter Ming",
@@ -2709,7 +3047,8 @@ const resultData = [
   round: "ConsR1",
   weight: "285",
   school: "Stanford",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "339"
 },
 {
   winner: "Lance Runyon",
@@ -2717,7 +3056,8 @@ const resultData = [
   round: "ConsR1",
   weight: "285",
   school: "Northern Iowa",
-  result: "MD 11-2"
+  result: "MD 11-2",
+  bout: "340"
 },
 {
   winner: "Sheldon Seymour",
@@ -2725,7 +3065,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "125",
   school: "Lehigh",
-  result: "TB-1 2-2"
+  result: "TB-1 2-2",
+  bout: "341"
 },
 {
   winner: "Vincent Robinson",
@@ -2733,7 +3074,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "125",
   school: "NC State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "342"
 },
 {
   winner: "Eddie Ventresca",
@@ -2741,7 +3083,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "125",
   school: "Virginia Tech",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "343"
 },
 {
   winner: "Troy Spratley",
@@ -2749,7 +3092,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "125",
   school: "Oklahoma State",
-  result: "Dec 5-2"
+  result: "Dec 5-2",
+  bout: "344"
 },
 {
   winner: "Lucas Byrd",
@@ -2757,7 +3101,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "133",
   school: "Illinois",
-  result: "MD 12-1"
+  result: "MD 12-1",
+  bout: "345"
 },
 {
   winner: "Zeth Romney",
@@ -2765,7 +3110,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "133",
   school: "Cal Poly",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "346"
 },
 {
   winner: "Zan Fugitt",
@@ -2773,7 +3119,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "133",
   school: "Wisconsin",
-  result: "Fall 2:30"
+  result: "Fall 2:30",
+  bout: "347"
 },
 {
   winner: "Drake Ayala",
@@ -2781,7 +3128,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "133",
   school: "Iowa",
-  result: "MD 23-10"
+  result: "MD 23-10",
+  bout: "348"
 },
 {
   winner: "Brock Hardy",
@@ -2789,7 +3137,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "141",
   school: "Nebraska",
-  result: "Fall 4:13"
+  result: "Fall 4:13",
+  bout: "349"
 },
 {
   winner: "Cael Happel",
@@ -2797,7 +3146,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "141",
   school: "Northern Iowa",
-  result: "TB-1 2-1"
+  result: "TB-1 2-1",
+  bout: "350"
 },
 {
   winner: "Jesse Mendez",
@@ -2805,7 +3155,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "141",
   school: "Ohio State",
-  result: "MD 17-5"
+  result: "MD 17-5",
+  bout: "351"
 },
 {
   winner: "Beau Bartlett",
@@ -2813,7 +3164,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "141",
   school: "Penn State",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "352"
 },
 {
   winner: "Caleb Henson",
@@ -2821,7 +3173,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "149",
   school: "Virginia Tech",
-  result: "SV-1 8-5"
+  result: "SV-1 8-5",
+  bout: "353"
 },
 {
   winner: "Dylan D`Emilio",
@@ -2829,7 +3182,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "149",
   school: "Ohio State",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "354"
 },
 {
   winner: "Shayne Van Ness",
@@ -2837,7 +3191,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "149",
   school: "Penn State",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "355"
 },
 {
   winner: "Ridge Lovett",
@@ -2845,7 +3200,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "149",
   school: "Nebraska",
-  result: "MD 12-0"
+  result: "MD 12-0",
+  bout: "356"
 },
 {
   winner: "Joey Blaze",
@@ -2853,7 +3209,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "157",
   school: "Purdue",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "357"
 },
 {
   winner: "Trevor Chumbley",
@@ -2861,7 +3218,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "157",
   school: "Northwestern",
-  result: "Dec 6-4"
+  result: "Dec 6-4",
+  bout: "358"
 },
 {
   winner: "Antrell Taylor",
@@ -2869,7 +3227,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "157",
   school: "Nebraska",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "359"
 },
 {
   winner: "Meyer Shapiro",
@@ -2877,7 +3236,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "157",
   school: "Cornell",
-  result: "Dec 9-4"
+  result: "Dec 9-4",
+  bout: "360"
 },
 {
   winner: "Mitchell Mesenbrink",
@@ -2885,7 +3245,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "165",
   school: "Penn State",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "361"
 },
 {
   winner: "Christopher Minto",
@@ -2893,7 +3254,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "165",
   school: "Nebraska",
-  result: "Dec 8-7"
+  result: "Dec 8-7",
+  bout: "362"
 },
 {
   winner: "Mike Caliendo",
@@ -2901,7 +3263,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "165",
   school: "Iowa",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "363"
 },
 {
   winner: "Peyton Hall",
@@ -2909,7 +3272,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "165",
   school: "West Virginia",
-  result: "Dec 6-5"
+  result: "Dec 6-5",
+  bout: "364"
 },
 {
   winner: "Keegan O`Toole",
@@ -2917,7 +3281,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "174",
   school: "Missouri",
-  result: "MD 13-1"
+  result: "MD 13-1",
+  bout: "365"
 },
 {
   winner: "Cade DeVos",
@@ -2925,7 +3290,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "174",
   school: "South Dakota State",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "366"
 },
 {
   winner: "Dean Hamiti",
@@ -2933,7 +3299,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "174",
   school: "Oklahoma State",
-  result: "Dec 8-6"
+  result: "Dec 8-6",
+  bout: "367"
 },
 {
   winner: "Levi Haines",
@@ -2941,7 +3308,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "174",
   school: "Penn State",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "368"
 },
 {
   winner: "Carter Starocci",
@@ -2949,7 +3317,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "184",
   school: "Penn State",
-  result: "MD 9-1"
+  result: "MD 9-1",
+  bout: "369"
 },
 {
   winner: "Dustin Plott",
@@ -2957,7 +3326,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "184",
   school: "Oklahoma State",
-  result: "Dec 12-5"
+  result: "Dec 12-5",
+  bout: "370"
 },
 {
   winner: "Max McEnelly",
@@ -2965,7 +3335,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "184",
   school: "Minnesota",
-  result: "Dec 10-7"
+  result: "Dec 10-7",
+  bout: "371"
 },
 {
   winner: "Parker Keckeisen",
@@ -2973,7 +3344,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "184",
   school: "Northern Iowa",
-  result: "MD 13-5;18-3"
+  result: "MD 13-5;18-3",
+  bout: "372"
 },
 {
   winner: "Jacob Cardenas",
@@ -2981,7 +3353,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "197",
   school: "Michigan",
-  result: "Dec 10-5"
+  result: "Dec 10-5",
+  bout: "373"
 },
 {
   winner: "Josh Barr",
@@ -2989,7 +3362,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "197",
   school: "Penn State",
-  result: "MD 14-3"
+  result: "MD 14-3",
+  bout: "374"
 },
 {
   winner: "AJ Ferrari",
@@ -2997,7 +3371,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "197",
   school: "CSU Bakersfield",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "375"
 },
 {
   winner: "Stephen Buchanan",
@@ -3005,7 +3380,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "197",
   school: "Iowa",
-  result: "TF 6:35"
+  result: "TF 6:35",
+  bout: "376"
 },
 {
   winner: "Gable Steveson",
@@ -3013,7 +3389,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "285",
   school: "Minnesota",
-  result: "TF 6:23"
+  result: "TF 6:23",
+  bout: "377"
 },
 {
   winner: "Owen Trephan",
@@ -3021,7 +3398,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "285",
   school: "Lehigh",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "378"
 },
 {
   winner: "Greg Kerkvliet",
@@ -3029,7 +3407,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "285",
   school: "Penn State",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "379"
 },
 {
   winner: "Wyatt Hendrickson",
@@ -3037,7 +3416,8 @@ const resultData = [
   round: "QtrFinals",
   weight: "285",
   school: "Oklahoma State",
-  result: "Fall 2:15"
+  result: "Fall 2:15",
+  bout: "380"
 },
 {
   winner: "Jacob Moran",
@@ -3045,7 +3425,8 @@ const resultData = [
   round: "ConsR2",
   weight: "125",
   school: "Indiana",
-  result: "Dec 10-4"
+  result: "Dec 10-4",
+  bout: "381"
 },
 {
   winner: "Stevo Poulin",
@@ -3053,7 +3434,8 @@ const resultData = [
   round: "ConsR2",
   weight: "125",
   school: "Northern Colorado",
-  result: "Dec 7-4"
+  result: "Dec 7-4",
+  bout: "382"
 },
 {
   winner: "Nicolar Rivera",
@@ -3061,7 +3443,8 @@ const resultData = [
   round: "ConsR2",
   weight: "125",
   school: "Wisconsin",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "383"
 },
 {
   winner: "Spencer Moore",
@@ -3069,7 +3452,8 @@ const resultData = [
   round: "ConsR2",
   weight: "125",
   school: "North Carolina",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "384"
 },
 {
   winner: "Cooper Flynn",
@@ -3077,7 +3461,8 @@ const resultData = [
   round: "ConsR2",
   weight: "125",
   school: "Minnesota",
-  result: "Dec 2-1"
+  result: "Dec 2-1",
+  bout: "385"
 },
 {
   winner: "Trever Anderson",
@@ -3085,7 +3470,8 @@ const resultData = [
   round: "ConsR2",
   weight: "125",
   school: "Northern Iowa",
-  result: "MD 17-8"
+  result: "MD 17-8",
+  bout: "386"
 },
 {
   winner: "Caleb Smith",
@@ -3093,7 +3479,8 @@ const resultData = [
   round: "ConsR2",
   weight: "125",
   school: "Nebraska",
-  result: "SV-1 7-4"
+  result: "SV-1 7-4",
+  bout: "387"
 },
 {
   winner: "Blake West",
@@ -3101,7 +3488,8 @@ const resultData = [
   round: "ConsR2",
   weight: "125",
   school: "Northern Illinois",
-  result: "Dec 10-8"
+  result: "Dec 10-8",
+  bout: "388"
 },
 {
   winner: "Jacob Van Dee",
@@ -3109,7 +3497,8 @@ const resultData = [
   round: "ConsR2",
   weight: "133",
   school: "Nebraska",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "389"
 },
 {
   winner: "Sean Spidle",
@@ -3117,7 +3506,8 @@ const resultData = [
   round: "ConsR2",
   weight: "133",
   school: "Central Michigan",
-  result: "Dec 3-0"
+  result: "Dec 3-0",
+  bout: "390"
 },
 {
   winner: "Evan Frost",
@@ -3125,7 +3515,8 @@ const resultData = [
   round: "ConsR2",
   weight: "133",
   school: "Iowa State",
-  result: "Dec 8-4"
+  result: "Dec 8-4",
+  bout: "391"
 },
 {
   winner: "Nasir Bailey",
@@ -3133,7 +3524,8 @@ const resultData = [
   round: "ConsR2",
   weight: "133",
   school: "Little Rock",
-  result: "Dec 2-1"
+  result: "Dec 2-1",
+  bout: "392"
 },
 {
   winner: "Tyler Knox",
@@ -3141,7 +3533,8 @@ const resultData = [
   round: "ConsR2",
   weight: "133",
   school: "Stanford",
-  result: "MD 9-0"
+  result: "MD 9-0",
+  bout: "393"
 },
 {
   winner: "Tyler Wells",
@@ -3149,7 +3542,8 @@ const resultData = [
   round: "ConsR2",
   weight: "133",
   school: "Minnesota",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "394"
 },
 {
   winner: "Dylan Shawver",
@@ -3157,7 +3551,8 @@ const resultData = [
   round: "ConsR2",
   weight: "133",
   school: "Rutgers",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "395"
 },
 {
   winner: "Anthony Noto",
@@ -3165,7 +3560,8 @@ const resultData = [
   round: "ConsR2",
   weight: "133",
   school: "Lock Haven",
-  result: "Dec 9-5"
+  result: "Dec 9-5",
+  bout: "396"
 },
 {
   winner: "Julian Tagg",
@@ -3173,7 +3569,8 @@ const resultData = [
   round: "ConsR2",
   weight: "141",
   school: "South Dakota State",
-  result: "Dec 10-3"
+  result: "Dec 10-3",
+  bout: "397"
 },
 {
   winner: "Tagen Jamison",
@@ -3181,7 +3578,8 @@ const resultData = [
   round: "ConsR2",
   weight: "141",
   school: "Oklahoma State",
-  result: "Fall 5:46"
+  result: "Fall 5:46",
+  bout: "398"
 },
 {
   winner: "Danny Pucino",
@@ -3189,7 +3587,8 @@ const resultData = [
   round: "ConsR2",
   weight: "141",
   school: "Illinois",
-  result: "Fall 4:15"
+  result: "Fall 4:15",
+  bout: "399"
 },
 {
   winner: "Sergio Lemley",
@@ -3197,7 +3596,8 @@ const resultData = [
   round: "ConsR2",
   weight: "141",
   school: "Michigan",
-  result: "Dec 2-1"
+  result: "Dec 2-1",
+  bout: "400"
 },
 {
   winner: "Mosha Schwartz",
@@ -3205,7 +3605,8 @@ const resultData = [
   round: "ConsR2",
   weight: "141",
   school: "Oklahoma",
-  result: "Dec 13-8"
+  result: "Dec 13-8",
+  bout: "401"
 },
 {
   winner: "Dylan Chappell",
@@ -3213,7 +3614,8 @@ const resultData = [
   round: "ConsR2",
   weight: "141",
   school: "Bucknell",
-  result: "Dec 8-5"
+  result: "Dec 8-5",
+  bout: "402"
 },
 {
   winner: "Eligh Rivera",
@@ -3221,7 +3623,8 @@ const resultData = [
   round: "ConsR2",
   weight: "141",
   school: "Princeton",
-  result: "Dec 11-6"
+  result: "Dec 11-6",
+  bout: "403"
 },
 {
   winner: "Joseph Olivieri",
@@ -3229,7 +3632,8 @@ const resultData = [
   round: "ConsR2",
   weight: "141",
   school: "Rutgers",
-  result: "Dec 5-2"
+  result: "Dec 5-2",
+  bout: "404"
 },
 {
   winner: "Teague Travis",
@@ -3237,7 +3641,8 @@ const resultData = [
   round: "ConsR2",
   weight: "149",
   school: "Oklahoma State",
-  result: "MD 12-2"
+  result: "MD 12-2",
+  bout: "405"
 },
 {
   winner: "Malyke Hines",
@@ -3245,7 +3650,8 @@ const resultData = [
   round: "ConsR2",
   weight: "149",
   school: "Lehigh",
-  result: "Dec 10-7"
+  result: "Dec 10-7",
+  bout: "406"
 },
 {
   winner: "Sammy Alvarez",
@@ -3253,7 +3659,8 @@ const resultData = [
   round: "ConsR2",
   weight: "149",
   school: "Rider",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "407"
 },
 {
   winner: "Paniro Johnson",
@@ -3261,7 +3668,8 @@ const resultData = [
   round: "ConsR2",
   weight: "149",
   school: "Iowa State",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "408"
 },
 {
   winner: "Jack Gioffre",
@@ -3269,7 +3677,8 @@ const resultData = [
   round: "ConsR2",
   weight: "149",
   school: "Virginia",
-  result: "MD 12-2;20-5"
+  result: "MD 12-2;20-5",
+  bout: "409"
 },
 {
   winner: "Gavin Drexler",
@@ -3277,7 +3686,8 @@ const resultData = [
   round: "ConsR2",
   weight: "149",
   school: "North Dakota State",
-  result: "M. For."
+  result: "M. For.",
+  bout: "410"
 },
 {
   winner: "Cross Wasilewski",
@@ -3285,7 +3695,8 @@ const resultData = [
   round: "ConsR2",
   weight: "149",
   school: "Pennsylvania",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "411"
 },
 {
   winner: "Ethan Fernandez",
@@ -3293,7 +3704,8 @@ const resultData = [
   round: "ConsR2",
   weight: "149",
   school: "Cornell",
-  result: "Fall 1:21"
+  result: "Fall 1:21",
+  bout: "412"
 },
 {
   winner: "DJ McGee",
@@ -3301,7 +3713,8 @@ const resultData = [
   round: "ConsR2",
   weight: "157",
   school: "George Mason",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "413"
 },
 {
   winner: "Chase Saldate",
@@ -3309,7 +3722,8 @@ const resultData = [
   round: "ConsR2",
   weight: "157",
   school: "Michigan",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "414"
 },
 {
   winner: "Ryder Downey",
@@ -3317,7 +3731,8 @@ const resultData = [
   round: "ConsR2",
   weight: "157",
   school: "Northern Iowa",
-  result: "Dec 1-0"
+  result: "Dec 1-0",
+  bout: "415"
 },
 {
   winner: "Jude Swisher",
@@ -3325,7 +3740,8 @@ const resultData = [
   round: "ConsR2",
   weight: "157",
   school: "Pennsylvania",
-  result: "TF 5:09 ;19-4"
+  result: "TF 5:09 ;19-4",
+  bout: "416"
 },
 {
   winner: "Cobe Siebrecht",
@@ -3333,7 +3749,8 @@ const resultData = [
   round: "ConsR2",
   weight: "157",
   school: "South Dakota State",
-  result: "Fall 4:47"
+  result: "Fall 4:47",
+  bout: "417"
 },
 {
   winner: "Brandon Cannon",
@@ -3341,7 +3758,8 @@ const resultData = [
   round: "ConsR2",
   weight: "157",
   school: "Ohio State",
-  result: "Dec 8-3"
+  result: "Dec 8-3",
+  bout: "418"
 },
 {
   winner: "Tommy Askey",
@@ -3349,7 +3767,8 @@ const resultData = [
   round: "ConsR2",
   weight: "157",
   school: "Minnesota",
-  result: "TB-1 1-1"
+  result: "TB-1 1-1",
+  bout: "419"
 },
 {
   winner: "Cody Chittum",
@@ -3357,7 +3776,8 @@ const resultData = [
   round: "ConsR2",
   weight: "157",
   school: "Iowa State",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "420"
 },
 {
   winner: "Maxx Mayfield",
@@ -3365,7 +3785,8 @@ const resultData = [
   round: "ConsR2",
   weight: "165",
   school: "Northwestern",
-  result: "TB-1 2-2"
+  result: "TB-1 2-2",
+  bout: "421"
 },
 {
   winner: "Nick Hamilton",
@@ -3373,7 +3794,8 @@ const resultData = [
   round: "ConsR2",
   weight: "165",
   school: "Virginia",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "422"
 },
 {
   winner: "Braeden Scoles",
@@ -3381,7 +3803,8 @@ const resultData = [
   round: "ConsR2",
   weight: "165",
   school: "Illinois",
-  result: "MD 10-1"
+  result: "MD 10-1",
+  bout: "423"
 },
 {
   winner: "Jack Thomsen",
@@ -3389,7 +3812,8 @@ const resultData = [
   round: "ConsR2",
   weight: "165",
   school: "Northern Iowa",
-  result: "MD 13-5"
+  result: "MD 13-5",
+  bout: "424"
 },
 {
   winner: "Aiden Riggins",
@@ -3397,7 +3821,8 @@ const resultData = [
   round: "ConsR2",
   weight: "165",
   school: "Iowa State",
-  result: "MD 9-1"
+  result: "MD 9-1",
+  bout: "425"
 },
 {
   winner: "Julian Ramirez",
@@ -3405,7 +3830,8 @@ const resultData = [
   round: "ConsR2",
   weight: "165",
   school: "Cornell",
-  result: "Dec 6-1"
+  result: "Dec 6-1",
+  bout: "426"
 },
 {
   winner: "Cam Steed",
@@ -3413,7 +3839,8 @@ const resultData = [
   round: "ConsR2",
   weight: "165",
   school: "Missouri",
-  result: "Fall 2:37"
+  result: "Fall 2:37",
+  bout: "427"
 },
 {
   winner: "Kyle Mosher",
@@ -3421,7 +3848,8 @@ const resultData = [
   round: "ConsR2",
   weight: "165",
   school: "Hofstra",
-  result: "Fall 3:50"
+  result: "Fall 3:50",
+  bout: "428"
 },
 {
   winner: "Sergio Desiante",
@@ -3429,7 +3857,8 @@ const resultData = [
   round: "ConsR2",
   weight: "174",
   school: "Chattanooga",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "429"
 },
 {
   winner: "Lenny Pinto",
@@ -3437,7 +3866,8 @@ const resultData = [
   round: "ConsR2",
   weight: "174",
   school: "Nebraska",
-  result: "TF 1:53 ;18-1"
+  result: "TF 1:53 ;18-1",
+  bout: "430"
 },
 {
   winner: "Brevin Cassella",
@@ -3445,7 +3875,8 @@ const resultData = [
   round: "ConsR2",
   weight: "174",
   school: "Binghamton",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "431"
 },
 {
   winner: "Matthew Singleton",
@@ -3453,7 +3884,8 @@ const resultData = [
   round: "ConsR2",
   weight: "174",
   school: "NC State",
-  result: "MD 14-6"
+  result: "MD 14-6",
+  bout: "432"
 },
 {
   winner: "Garrett Thompson",
@@ -3461,7 +3893,8 @@ const resultData = [
   round: "ConsR2",
   weight: "174",
   school: "Ohio",
-  result: "Dec 8-1"
+  result: "Dec 8-1",
+  bout: "433"
 },
 {
   winner: "Nick Incontrera",
@@ -3469,7 +3902,8 @@ const resultData = [
   round: "ConsR2",
   weight: "174",
   school: "Pennsylvania",
-  result: "Dec 8-4"
+  result: "Dec 8-4",
+  bout: "434"
 },
 {
   winner: "Dalton Harkins",
@@ -3477,7 +3911,8 @@ const resultData = [
   round: "ConsR2",
   weight: "174",
   school: "Army West Point",
-  result: "Dec 6-5"
+  result: "Dec 6-5",
+  bout: "435"
 },
 {
   winner: "Luca Augustine",
@@ -3485,7 +3920,8 @@ const resultData = [
   round: "ConsR2",
   weight: "174",
   school: "Pittsburgh",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "436"
 },
 {
   winner: "Dylan Fishback",
@@ -3493,7 +3929,8 @@ const resultData = [
   round: "ConsR2",
   weight: "184",
   school: "NC State",
-  result: "Dec 6-4"
+  result: "Dec 6-4",
+  bout: "437"
 },
 {
   winner: "Isaac Dean",
@@ -3501,7 +3938,8 @@ const resultData = [
   round: "ConsR2",
   weight: "184",
   school: "Rider",
-  result: "SV-2 6-3"
+  result: "SV-2 6-3",
+  bout: "438"
 },
 {
   winner: "Gabe Arnold",
@@ -3509,7 +3947,8 @@ const resultData = [
   round: "ConsR2",
   weight: "184",
   school: "Iowa",
-  result: "Dec 8-4"
+  result: "Dec 8-4",
+  bout: "439"
 },
 {
   winner: "DJ Parker",
@@ -3517,7 +3956,8 @@ const resultData = [
   round: "ConsR2",
   weight: "184",
   school: "Oklahoma",
-  result: "TF 5:16 ;16-1"
+  result: "TF 5:16 ;16-1",
+  bout: "440"
 },
 {
   winner: "Eddie Neitenbach",
@@ -3525,7 +3965,8 @@ const resultData = [
   round: "ConsR2",
   weight: "184",
   school: "Wyoming",
-  result: "SV-1 9-6"
+  result: "SV-1 9-6",
+  bout: "441"
 },
 {
   winner: "Donnell Washington",
@@ -3533,7 +3974,8 @@ const resultData = [
   round: "ConsR2",
   weight: "184",
   school: "Indiana",
-  result: "MD 12-0"
+  result: "MD 12-0",
+  bout: "442"
 },
 {
   winner: "Aidan Brenot",
@@ -3541,7 +3983,8 @@ const resultData = [
   round: "ConsR2",
   weight: "184",
   school: "North Dakota State",
-  result: "Fall 2:35"
+  result: "Fall 2:35",
+  bout: "443"
 },
 {
   winner: "Shane Cartagena-Walsh",
@@ -3549,7 +3992,8 @@ const resultData = [
   round: "ConsR2",
   weight: "184",
   school: "Rutgers",
-  result: "Dec 6-4"
+  result: "Dec 6-4",
+  bout: "444"
 },
 {
   winner: "Joseph Novak",
@@ -3557,7 +4001,8 @@ const resultData = [
   round: "ConsR2",
   weight: "197",
   school: "Wyoming",
-  result: "Fall 4:23"
+  result: "Fall 4:23",
+  bout: "445"
 },
 {
   winner: "Zac Braunagel",
@@ -3565,7 +4010,8 @@ const resultData = [
   round: "ConsR2",
   weight: "197",
   school: "Illinois",
-  result: "MD 10-2"
+  result: "MD 10-2",
+  bout: "446"
 },
 {
   winner: "Luke Stout",
@@ -3573,7 +4019,8 @@ const resultData = [
   round: "ConsR2",
   weight: "197",
   school: "Princeton",
-  result: "TF 7:00 ;22-6"
+  result: "TF 7:00 ;22-6",
+  bout: "447"
 },
 {
   winner: "Camden McDanel",
@@ -3581,7 +4028,8 @@ const resultData = [
   round: "ConsR2",
   weight: "197",
   school: "Nebraska",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "448"
 },
 {
   winner: "Trey Munoz",
@@ -3589,7 +4037,8 @@ const resultData = [
   round: "ConsR2",
   weight: "197",
   school: "Oregon State",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "449"
 },
 {
   winner: "Stephen Little",
@@ -3597,7 +4046,8 @@ const resultData = [
   round: "ConsR2",
   weight: "197",
   school: "Little Rock",
-  result: "MD 16-5"
+  result: "MD 16-5",
+  bout: "450"
 },
 {
   winner: "Wyatt Voelker",
@@ -3605,7 +4055,8 @@ const resultData = [
   round: "ConsR2",
   weight: "197",
   school: "Northern Iowa",
-  result: "Dec 8-6"
+  result: "Dec 8-6",
+  bout: "451"
 },
 {
   winner: "Dillon Bechtold",
@@ -3613,7 +4064,8 @@ const resultData = [
   round: "ConsR2",
   weight: "197",
   school: "Bucknell",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "452"
 },
 {
   winner: "Trevor Tinker",
@@ -3621,7 +4073,8 @@ const resultData = [
   round: "ConsR2",
   weight: "285",
   school: "Cal Poly",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "453"
 },
 {
   winner: "Dayton Pitzer",
@@ -3629,7 +4082,8 @@ const resultData = [
   round: "ConsR2",
   weight: "285",
   school: "Pittsburgh",
-  result: "MD 9-0"
+  result: "MD 9-0",
+  bout: "454"
 },
 {
   winner: "Jacob Bullock",
@@ -3637,7 +4091,8 @@ const resultData = [
   round: "ConsR2",
   weight: "285",
   school: "Indiana",
-  result: "Dec 8-1"
+  result: "Dec 8-1",
+  bout: "455"
 },
 {
   winner: "Gavin Hoffman",
@@ -3645,7 +4100,8 @@ const resultData = [
   round: "ConsR2",
   weight: "285",
   school: "Lock Haven",
-  result: "MD 14-5"
+  result: "MD 14-5",
+  bout: "456"
 },
 {
   winner: "Seth Nevills",
@@ -3653,7 +4109,8 @@ const resultData = [
   round: "ConsR2",
   weight: "285",
   school: "Maryland",
-  result: "TF 5:47 ;17-2"
+  result: "TF 5:47 ;17-2",
+  bout: "457"
 },
 {
   winner: "Nick Feldman",
@@ -3661,7 +4118,8 @@ const resultData = [
   round: "ConsR2",
   weight: "285",
   school: "Ohio State",
-  result: "MD 12-1"
+  result: "MD 12-1",
+  bout: "458"
 },
 {
   winner: "Luke Luffman",
@@ -3669,7 +4127,8 @@ const resultData = [
   round: "ConsR2",
   weight: "285",
   school: "Illinois",
-  result: "Dec 7-6"
+  result: "Dec 7-6",
+  bout: "459"
 },
 {
   winner: "Yaraslau Slavikouski",
@@ -3677,7 +4136,8 @@ const resultData = [
   round: "ConsR2",
   weight: "285",
   school: "Rutgers",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "460"
 },
 {
   winner: "Stevo Poulin",
@@ -3685,7 +4145,8 @@ const resultData = [
   round: "ConsR3",
   weight: "125",
   school: "Northern Colorado",
-  result: "Dec 1-0"
+  result: "Dec 1-0",
+  bout: "461"
 },
 {
   winner: "Nicolar Rivera",
@@ -3693,7 +4154,8 @@ const resultData = [
   round: "ConsR3",
   weight: "125",
   school: "Wisconsin",
-  result: "MD 11-3"
+  result: "MD 11-3",
+  bout: "462"
 },
 {
   winner: "Trever Anderson",
@@ -3701,7 +4163,8 @@ const resultData = [
   round: "ConsR3",
   weight: "125",
   school: "Northern Iowa",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "463"
 },
 {
   winner: "Caleb Smith",
@@ -3709,7 +4172,8 @@ const resultData = [
   round: "ConsR3",
   weight: "125",
   school: "Nebraska",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "464"
 },
 {
   winner: "Jacob Van Dee",
@@ -3717,7 +4181,8 @@ const resultData = [
   round: "ConsR3",
   weight: "133",
   school: "Nebraska",
-  result: "Dec 9-3"
+  result: "Dec 9-3",
+  bout: "465"
 },
 {
   winner: "Evan Frost",
@@ -3725,7 +4190,8 @@ const resultData = [
   round: "ConsR3",
   weight: "133",
   school: "Iowa State",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "466"
 },
 {
   winner: "Tyler Knox",
@@ -3733,7 +4199,8 @@ const resultData = [
   round: "ConsR3",
   weight: "133",
   school: "Stanford",
-  result: "Dec 1-0"
+  result: "Dec 1-0",
+  bout: "467"
 },
 {
   winner: "Dylan Shawver",
@@ -3741,7 +4208,8 @@ const resultData = [
   round: "ConsR3",
   weight: "133",
   school: "Rutgers",
-  result: "TB-1 9-5"
+  result: "TB-1 9-5",
+  bout: "468"
 },
 {
   winner: "Tagen Jamison",
@@ -3749,7 +4217,8 @@ const resultData = [
   round: "ConsR3",
   weight: "141",
   school: "Oklahoma State",
-  result: "TF 6:54 ;17-2"
+  result: "TF 6:54 ;17-2",
+  bout: "469"
 },
 {
   winner: "Sergio Lemley",
@@ -3757,7 +4226,8 @@ const resultData = [
   round: "ConsR3",
   weight: "141",
   school: "Michigan",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "470"
 },
 {
   winner: "Dylan Chappell",
@@ -3765,7 +4235,8 @@ const resultData = [
   round: "ConsR3",
   weight: "141",
   school: "Bucknell",
-  result: "Fall 6:18"
+  result: "Fall 6:18",
+  bout: "471"
 },
 {
   winner: "Joseph Olivieri",
@@ -3773,7 +4244,8 @@ const resultData = [
   round: "ConsR3",
   weight: "141",
   school: "Rutgers",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "472"
 },
 {
   winner: "Malyke Hines",
@@ -3781,7 +4253,8 @@ const resultData = [
   round: "ConsR3",
   weight: "149",
   school: "Lehigh",
-  result: "Dec 12-6"
+  result: "Dec 12-6",
+  bout: "473"
 },
 {
   winner: "Sammy Alvarez",
@@ -3789,7 +4262,8 @@ const resultData = [
   round: "ConsR3",
   weight: "149",
   school: "Rider",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "474"
 },
 {
   winner: "Gavin Drexler",
@@ -3797,7 +4271,8 @@ const resultData = [
   round: "ConsR3",
   weight: "149",
   school: "North Dakota State",
-  result: "Dec 12-9"
+  result: "Dec 12-9",
+  bout: "475"
 },
 {
   winner: "Cross Wasilewski",
@@ -3805,7 +4280,8 @@ const resultData = [
   round: "ConsR3",
   weight: "149",
   school: "Pennsylvania",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "476"
 },
 {
   winner: "Chase Saldate",
@@ -3813,7 +4289,8 @@ const resultData = [
   round: "ConsR3",
   weight: "157",
   school: "Michigan",
-  result: "Fall 1:49"
+  result: "Fall 1:49",
+  bout: "477"
 },
 {
   winner: "Jude Swisher",
@@ -3821,7 +4298,8 @@ const resultData = [
   round: "ConsR3",
   weight: "157",
   school: "Pennsylvania",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "478"
 },
 {
   winner: "Brandon Cannon",
@@ -3829,7 +4307,8 @@ const resultData = [
   round: "ConsR3",
   weight: "157",
   school: "Ohio State",
-  result: "Dec 14-7"
+  result: "Dec 14-7",
+  bout: "479"
 },
 {
   winner: "Tommy Askey",
@@ -3837,7 +4316,8 @@ const resultData = [
   round: "ConsR3",
   weight: "157",
   school: "Minnesota",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "480"
 },
 {
   winner: "Nick Hamilton",
@@ -3845,7 +4325,8 @@ const resultData = [
   round: "ConsR3",
   weight: "165",
   school: "Virginia",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "481"
 },
 {
   winner: "Braeden Scoles",
@@ -3853,7 +4334,8 @@ const resultData = [
   round: "ConsR3",
   weight: "165",
   school: "Illinois",
-  result: "Fall 2:02"
+  result: "Fall 2:02",
+  bout: "482"
 },
 {
   winner: "Julian Ramirez",
@@ -3861,7 +4343,8 @@ const resultData = [
   round: "ConsR3",
   weight: "165",
   school: "Cornell",
-  result: "Fall 1:53"
+  result: "Fall 1:53",
+  bout: "483"
 },
 {
   winner: "Cam Steed",
@@ -3869,7 +4352,8 @@ const resultData = [
   round: "ConsR3",
   weight: "165",
   school: "Missouri",
-  result: "Fall 2:15"
+  result: "Fall 2:15",
+  bout: "484"
 },
 {
   winner: "Lenny Pinto",
@@ -3877,7 +4361,8 @@ const resultData = [
   round: "ConsR3",
   weight: "174",
   school: "Nebraska",
-  result: "MD 15-7"
+  result: "MD 15-7",
+  bout: "485"
 },
 {
   winner: "Matthew Singleton",
@@ -3885,7 +4370,8 @@ const resultData = [
   round: "ConsR3",
   weight: "174",
   school: "NC State",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "486"
 },
 {
   winner: "Nick Incontrera",
@@ -3893,7 +4379,8 @@ const resultData = [
   round: "ConsR3",
   weight: "174",
   school: "Pennsylvania",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "487"
 },
 {
   winner: "Luca Augustine",
@@ -3901,7 +4388,8 @@ const resultData = [
   round: "ConsR3",
   weight: "174",
   school: "Pittsburgh",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "488"
 },
 {
   winner: "Dylan Fishback",
@@ -3909,7 +4397,8 @@ const resultData = [
   round: "ConsR3",
   weight: "184",
   school: "NC State",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "489"
 },
 {
   winner: "DJ Parker",
@@ -3917,7 +4406,8 @@ const resultData = [
   round: "ConsR3",
   weight: "184",
   school: "Oklahoma",
-  result: "Fall 0:48"
+  result: "Fall 0:48",
+  bout: "490"
 },
 {
   winner: "Donnell Washington",
@@ -3925,7 +4415,8 @@ const resultData = [
   round: "ConsR3",
   weight: "184",
   school: "Indiana",
-  result: "TF 2:41 ;19-4"
+  result: "TF 2:41 ;19-4",
+  bout: "491"
 },
 {
   winner: "Aidan Brenot",
@@ -3933,7 +4424,8 @@ const resultData = [
   round: "ConsR3",
   weight: "184",
   school: "North Dakota State",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "492"
 },
 {
   winner: "Joseph Novak",
@@ -3941,7 +4433,8 @@ const resultData = [
   round: "ConsR3",
   weight: "197",
   school: "Wyoming",
-  result: "Fall 5:31"
+  result: "Fall 5:31",
+  bout: "493"
 },
 {
   winner: "Camden McDanel",
@@ -3949,7 +4442,8 @@ const resultData = [
   round: "ConsR3",
   weight: "197",
   school: "Nebraska",
-  result: "Dec 9-3"
+  result: "Dec 9-3",
+  bout: "494"
 },
 {
   winner: "Stephen Little",
@@ -3957,7 +4451,8 @@ const resultData = [
   round: "ConsR3",
   weight: "197",
   school: "Little Rock",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "495"
 },
 {
   winner: "Wyatt Voelker",
@@ -3965,7 +4460,8 @@ const resultData = [
   round: "ConsR3",
   weight: "197",
   school: "Northern Iowa",
-  result: "Dec 8-6"
+  result: "Dec 8-6",
+  bout: "496"
 },
 {
   winner: "Dayton Pitzer",
@@ -3973,7 +4469,8 @@ const resultData = [
   round: "ConsR3",
   weight: "285",
   school: "Pittsburgh",
-  result: "Fall 3:51"
+  result: "Fall 3:51",
+  bout: "497"
 },
 {
   winner: "Gavin Hoffman",
@@ -3981,7 +4478,8 @@ const resultData = [
   round: "ConsR3",
   weight: "285",
   school: "Lock Haven",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "498"
 },
 {
   winner: "Nick Feldman",
@@ -3989,7 +4487,8 @@ const resultData = [
   round: "ConsR3",
   weight: "285",
   school: "Ohio State",
-  result: "Fall 6:57"
+  result: "Fall 6:57",
+  bout: "499"
 },
 {
   winner: "Luke Luffman",
@@ -3997,7 +4496,8 @@ const resultData = [
   round: "ConsR3",
   weight: "285",
   school: "Illinois",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "500"
 },
 {
   winner: "Vincent Robinson",
@@ -4005,7 +4505,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "125",
   school: "NC State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "501"
 },
 {
   winner: "Troy Spratley",
@@ -4013,7 +4514,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "125",
   school: "Oklahoma State",
-  result: "TB-1 6-4"
+  result: "TB-1 6-4",
+  bout: "502"
 },
 {
   winner: "Lucas Byrd",
@@ -4021,7 +4523,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "133",
   school: "Illinois",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "503"
 },
 {
   winner: "Drake Ayala",
@@ -4029,7 +4532,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "133",
   school: "Iowa",
-  result: "Dec 6-1"
+  result: "Dec 6-1",
+  bout: "504"
 },
 {
   winner: "Brock Hardy",
@@ -4037,7 +4541,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "141",
   school: "Nebraska",
-  result: "Dec 11-4"
+  result: "Dec 11-4",
+  bout: "505"
 },
 {
   winner: "Jesse Mendez",
@@ -4045,7 +4550,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "141",
   school: "Ohio State",
-  result: "TB-1 2-1"
+  result: "TB-1 2-1",
+  bout: "506"
 },
 {
   winner: "Caleb Henson",
@@ -4053,7 +4559,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "149",
   school: "Virginia Tech",
-  result: "Dec 6-2"
+  result: "Dec 6-2",
+  bout: "507"
 },
 {
   winner: "Ridge Lovett",
@@ -4061,7 +4568,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "149",
   school: "Nebraska",
-  result: "Dec 14-8"
+  result: "Dec 14-8",
+  bout: "508"
 },
 {
   winner: "Joey Blaze",
@@ -4069,7 +4577,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "157",
   school: "Purdue",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "509"
 },
 {
   winner: "Antrell Taylor",
@@ -4077,7 +4586,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "157",
   school: "Nebraska",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "510"
 },
 {
   winner: "Mitchell Mesenbrink",
@@ -4085,7 +4595,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "165",
   school: "Penn State",
-  result: "MD 13-2"
+  result: "MD 13-2",
+  bout: "511"
 },
 {
   winner: "Mike Caliendo",
@@ -4093,7 +4604,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "165",
   school: "Iowa",
-  result: "Dec 14-10"
+  result: "Dec 14-10",
+  bout: "512"
 },
 {
   winner: "Keegan O`Toole",
@@ -4101,7 +4613,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "174",
   school: "Missouri",
-  result: "Dec 7-6"
+  result: "Dec 7-6",
+  bout: "513"
 },
 {
   winner: "Dean Hamiti",
@@ -4109,7 +4622,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "174",
   school: "Oklahoma State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "514"
 },
 {
   winner: "Carter Starocci",
@@ -4117,7 +4631,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "184",
   school: "Penn State",
-  result: "Dec 9-3"
+  result: "Dec 9-3",
+  bout: "515"
 },
 {
   winner: "Parker Keckeisen",
@@ -4125,7 +4640,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "184",
   school: "Northern Iowa",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "516"
 },
 {
   winner: "Josh Barr",
@@ -4133,7 +4649,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "197",
   school: "Penn State",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "517"
 },
 {
   winner: "Stephen Buchanan",
@@ -4141,7 +4658,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "197",
   school: "Iowa",
-  result: "Dec 3-0"
+  result: "Dec 3-0",
+  bout: "518"
 },
 {
   winner: "Gable Steveson",
@@ -4149,7 +4667,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "285",
   school: "Minnesota",
-  result: "MD 13-5"
+  result: "MD 13-5",
+  bout: "519"
 },
 {
   winner: "Wyatt Hendrickson",
@@ -4157,7 +4676,8 @@ const resultData = [
   round: "SemiFinals",
   weight: "285",
   school: "Oklahoma State",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "520"
 },
 {
   winner: "Stevo Poulin",
@@ -4165,7 +4685,8 @@ const resultData = [
   round: "ConsR4",
   weight: "125",
   school: "Northern Colorado",
-  result: "Dec 6-4"
+  result: "Dec 6-4",
+  bout: "521"
 },
 {
   winner: "Luke Lilledahl",
@@ -4173,7 +4694,8 @@ const resultData = [
   round: "ConsR4",
   weight: "125",
   school: "Penn State",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "522"
 },
 {
   winner: "Matt Ramos",
@@ -4181,7 +4703,8 @@ const resultData = [
   round: "ConsR4",
   weight: "125",
   school: "Purdue",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "523"
 },
 {
   winner: "Caleb Smith",
@@ -4189,7 +4712,8 @@ const resultData = [
   round: "ConsR4",
   weight: "125",
   school: "Nebraska",
-  result: "SV-1 12-9"
+  result: "SV-1 12-9",
+  bout: "524"
 },
 {
   winner: "Jacob Van Dee",
@@ -4197,7 +4721,8 @@ const resultData = [
   round: "ConsR4",
   weight: "133",
   school: "Nebraska",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "525"
 },
 {
   winner: "Braeden Davis",
@@ -4205,7 +4730,8 @@ const resultData = [
   round: "ConsR4",
   weight: "133",
   school: "Penn State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "526"
 },
 {
   winner: "Tyler Knox",
@@ -4213,7 +4739,8 @@ const resultData = [
   round: "ConsR4",
   weight: "133",
   school: "Stanford",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "527"
 },
 {
   winner: "Connor McGonagle",
@@ -4221,7 +4748,8 @@ const resultData = [
   round: "ConsR4",
   weight: "133",
   school: "Virginia Tech",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "528"
 },
 {
   winner: "Josh Koderhandt",
@@ -4229,7 +4757,8 @@ const resultData = [
   round: "ConsR4",
   weight: "141",
   school: "Navy",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "529"
 },
 {
   winner: "Jacob Frost",
@@ -4237,7 +4766,8 @@ const resultData = [
   round: "ConsR4",
   weight: "141",
   school: "Iowa State",
-  result: "Dec 9-8"
+  result: "Dec 9-8",
+  bout: "530"
 },
 {
   winner: "CJ Composto",
@@ -4245,7 +4775,8 @@ const resultData = [
   round: "ConsR4",
   weight: "141",
   school: "Pennsylvania",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "531"
 },
 {
   winner: "Vance VomBaur",
@@ -4253,7 +4784,8 @@ const resultData = [
   round: "ConsR4",
   weight: "141",
   school: "Minnesota",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "532"
 },
 {
   winner: "Ethan Stiles",
@@ -4261,7 +4793,8 @@ const resultData = [
   round: "ConsR4",
   weight: "149",
   school: "Oregon State",
-  result: "Fall 2:12"
+  result: "Fall 2:12",
+  bout: "533"
 },
 {
   winner: "Sammy Alvarez",
@@ -4269,7 +4802,8 @@ const resultData = [
   round: "ConsR4",
   weight: "149",
   school: "Rider",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "534"
 },
 {
   winner: "Gavin Drexler",
@@ -4277,7 +4811,8 @@ const resultData = [
   round: "ConsR4",
   weight: "149",
   school: "North Dakota State",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "535"
 },
 {
   winner: "Lachlan McNeil",
@@ -4285,7 +4820,8 @@ const resultData = [
   round: "ConsR4",
   weight: "149",
   school: "North Carolina",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "536"
 },
 {
   winner: "Caleb Fish",
@@ -4293,7 +4829,8 @@ const resultData = [
   round: "ConsR4",
   weight: "157",
   school: "Oklahoma State",
-  result: "SV-1 7-4"
+  result: "SV-1 7-4",
+  bout: "537"
 },
 {
   winner: "Tyler Kasak",
@@ -4301,7 +4838,8 @@ const resultData = [
   round: "ConsR4",
   weight: "157",
   school: "Penn State",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "538"
 },
 {
   winner: "Vinny Zerban",
@@ -4309,7 +4847,8 @@ const resultData = [
   round: "ConsR4",
   weight: "157",
   school: "Northern Colorado",
-  result: "Dec 11-6"
+  result: "Dec 11-6",
+  bout: "539"
 },
 {
   winner: "Matty Bianchi",
@@ -4317,7 +4856,8 @@ const resultData = [
   round: "ConsR4",
   weight: "157",
   school: "Little Rock",
-  result: "TB-1 2-1"
+  result: "TB-1 2-1",
+  bout: "540"
 },
 {
   winner: "Terrell Barraclough",
@@ -4325,7 +4865,8 @@ const resultData = [
   round: "ConsR4",
   weight: "165",
   school: "Utah Valley",
-  result: "Dec 5-0"
+  result: "Dec 5-0",
+  bout: "541"
 },
 {
   winner: "Cameron Amine",
@@ -4333,7 +4874,8 @@ const resultData = [
   round: "ConsR4",
   weight: "165",
   school: "Oklahoma State",
-  result: "SV-1 8-1"
+  result: "SV-1 8-1",
+  bout: "542"
 },
 {
   winner: "Hunter Garvin",
@@ -4341,7 +4883,8 @@ const resultData = [
   round: "ConsR4",
   weight: "165",
   school: "Stanford",
-  result: "Dec 16-12"
+  result: "Dec 16-12",
+  bout: "543"
 },
 {
   winner: "Cam Steed",
@@ -4349,7 +4892,8 @@ const resultData = [
   round: "ConsR4",
   weight: "165",
   school: "Missouri",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "544"
 },
 {
   winner: "Simon Ruiz",
@@ -4357,7 +4901,8 @@ const resultData = [
   round: "ConsR4",
   weight: "174",
   school: "Cornell",
-  result: "Dec 2-1"
+  result: "Dec 2-1",
+  bout: "545"
 },
 {
   winner: "Matthew Singleton",
@@ -4365,7 +4910,8 @@ const resultData = [
   round: "ConsR4",
   weight: "174",
   school: "NC State",
-  result: "Dec 13-8"
+  result: "Dec 13-8",
+  bout: "546"
 },
 {
   winner: "Danny Wask",
@@ -4373,7 +4919,8 @@ const resultData = [
   round: "ConsR4",
   weight: "174",
   school: "Navy",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "547"
 },
 {
   winner: "Patrick Kennedy",
@@ -4381,7 +4928,8 @@ const resultData = [
   round: "ConsR4",
   weight: "174",
   school: "Iowa",
-  result: "Dec 7-6"
+  result: "Dec 7-6",
+  bout: "548"
 },
 {
   winner: "Silas Allred",
@@ -4389,7 +4937,8 @@ const resultData = [
   round: "ConsR4",
   weight: "184",
   school: "Nebraska",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "549"
 },
 {
   winner: "Jaxon Smith",
@@ -4397,7 +4946,8 @@ const resultData = [
   round: "ConsR4",
   weight: "184",
   school: "Maryland",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "550"
 },
 {
   winner: "Donnell Washington",
@@ -4405,7 +4955,8 @@ const resultData = [
   round: "ConsR4",
   weight: "184",
   school: "Indiana",
-  result: "Dec 8-4"
+  result: "Dec 8-4",
+  bout: "551"
 },
 {
   winner: "Chris Foca",
@@ -4413,7 +4964,8 @@ const resultData = [
   round: "ConsR4",
   weight: "184",
   school: "Cornell",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "552"
 },
 {
   winner: "Joseph Novak",
@@ -4421,7 +4973,8 @@ const resultData = [
   round: "ConsR4",
   weight: "197",
   school: "Wyoming",
-  result: "MD 13-4"
+  result: "MD 13-4",
+  bout: "553"
 },
 {
   winner: "Camden McDanel",
@@ -4429,7 +4982,8 @@ const resultData = [
   round: "ConsR4",
   weight: "197",
   school: "Nebraska",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "554"
 },
 {
   winner: "Stephen Little",
@@ -4437,7 +4991,8 @@ const resultData = [
   round: "ConsR4",
   weight: "197",
   school: "Little Rock",
-  result: "TF 7:00 ;15-0"
+  result: "TF 7:00 ;15-0",
+  bout: "555"
 },
 {
   winner: "Mac Stout",
@@ -4445,7 +5000,8 @@ const resultData = [
   round: "ConsR4",
   weight: "197",
   school: "Pittsburgh",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "556"
 },
 {
   winner: "Ben Kueter",
@@ -4453,7 +5009,8 @@ const resultData = [
   round: "ConsR4",
   weight: "285",
   school: "Iowa",
-  result: "Dec 5-1"
+  result: "Dec 5-1",
+  bout: "557"
 },
 {
   winner: "Cohlton Schultz",
@@ -4461,7 +5018,8 @@ const resultData = [
   round: "ConsR4",
   weight: "285",
   school: "Arizona State",
-  result: "MD 15-5"
+  result: "MD 15-5",
+  bout: "558"
 },
 {
   winner: "Isaac Trumble",
@@ -4469,7 +5027,8 @@ const resultData = [
   round: "ConsR4",
   weight: "285",
   school: "NC State",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "559"
 },
 {
   winner: "Joshua Heindselman",
@@ -4477,7 +5036,8 @@ const resultData = [
   round: "ConsR4",
   weight: "285",
   school: "Michigan",
-  result: "TB-1 2-1"
+  result: "TB-1 2-1",
+  bout: "560"
 },
 {
   winner: "Luke Lilledahl",
@@ -4485,7 +5045,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "125",
   school: "Penn State",
-  result: "Dec 3-0"
+  result: "Dec 3-0",
+  bout: "561"
 },
 {
   winner: "Matt Ramos",
@@ -4493,7 +5054,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "125",
   school: "Purdue",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "562"
 },
 {
   winner: "Braeden Davis",
@@ -4501,7 +5063,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "133",
   school: "Penn State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "563"
 },
 {
   winner: "Connor McGonagle",
@@ -4509,7 +5072,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "133",
   school: "Virginia Tech",
-  result: "Dec 1-0"
+  result: "Dec 1-0",
+  bout: "564"
 },
 {
   winner: "Josh Koderhandt",
@@ -4517,7 +5081,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "141",
   school: "Navy",
-  result: "Fall 0:59"
+  result: "Fall 0:59",
+  bout: "565"
 },
 {
   winner: "CJ Composto",
@@ -4525,7 +5090,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "141",
   school: "Pennsylvania",
-  result: "Dec 8-6"
+  result: "Dec 8-6",
+  bout: "566"
 },
 {
   winner: "Ethan Stiles",
@@ -4533,7 +5099,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "149",
   school: "Oregon State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "567"
 },
 {
   winner: "Lachlan McNeil",
@@ -4541,7 +5108,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "149",
   school: "North Carolina",
-  result: "MD 10-2"
+  result: "MD 10-2",
+  bout: "568"
 },
 {
   winner: "Tyler Kasak",
@@ -4549,7 +5117,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "157",
   school: "Penn State",
-  result: "Fall 4:19"
+  result: "Fall 4:19",
+  bout: "569"
 },
 {
   winner: "Vinny Zerban",
@@ -4557,7 +5126,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "157",
   school: "Northern Colorado",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "570"
 },
 {
   winner: "Terrell Barraclough",
@@ -4565,7 +5135,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "165",
   school: "Utah Valley",
-  result: "Dec 9-7"
+  result: "Dec 9-7",
+  bout: "571"
 },
 {
   winner: "Hunter Garvin",
@@ -4573,7 +5144,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "165",
   school: "Stanford",
-  result: "Dec 4-0"
+  result: "Dec 4-0",
+  bout: "572"
 },
 {
   winner: "Simon Ruiz",
@@ -4581,7 +5153,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "174",
   school: "Cornell",
-  result: "MD 10-0"
+  result: "MD 10-0",
+  bout: "573"
 },
 {
   winner: "Patrick Kennedy",
@@ -4589,7 +5162,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "174",
   school: "Iowa",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "574"
 },
 {
   winner: "Jaxon Smith",
@@ -4597,7 +5171,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "184",
   school: "Maryland",
-  result: "Dec 8-1"
+  result: "Dec 8-1",
+  bout: "575"
 },
 {
   winner: "Chris Foca",
@@ -4605,7 +5180,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "184",
   school: "Cornell",
-  result: "TF 4:32 ;20-4"
+  result: "TF 4:32 ;20-4",
+  bout: "576"
 },
 {
   winner: "Joseph Novak",
@@ -4613,7 +5189,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "197",
   school: "Wyoming",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "577"
 },
 {
   winner: "Stephen Little",
@@ -4621,7 +5198,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "197",
   school: "Little Rock",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "578"
 },
 {
   winner: "Cohlton Schultz",
@@ -4629,7 +5207,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "285",
   school: "Arizona State",
-  result: "MD 10-2"
+  result: "MD 10-2",
+  bout: "579"
 },
 {
   winner: "Isaac Trumble",
@@ -4637,7 +5216,8 @@ const resultData = [
   round: "ConsQtr",
   weight: "285",
   school: "NC State",
-  result: "MD 9-0"
+  result: "MD 9-0",
+  bout: "580"
 },
 {
   winner: "Luke Lilledahl",
@@ -4645,7 +5225,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "125",
   school: "Penn State",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "581"
 },
 {
   winner: "Matt Ramos",
@@ -4653,7 +5234,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "125",
   school: "Purdue",
-  result: "Dec 9-2"
+  result: "Dec 9-2",
+  bout: "582"
 },
 {
   winner: "Zan Fugitt",
@@ -4661,7 +5243,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "133",
   school: "Wisconsin",
-  result: "Dec 8-5"
+  result: "Dec 8-5",
+  bout: "583"
 },
 {
   winner: "Zeth Romney",
@@ -4669,7 +5252,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "133",
   school: "Cal Poly",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "584"
 },
 {
   winner: "Beau Bartlett",
@@ -4677,7 +5261,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "141",
   school: "Penn State",
-  result: "SV-1 11-6"
+  result: "SV-1 11-6",
+  bout: "585"
 },
 {
   winner: "CJ Composto",
@@ -4685,7 +5270,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "141",
   school: "Pennsylvania",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "586"
 },
 {
   winner: "Shayne Van Ness",
@@ -4693,7 +5279,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "149",
   school: "Penn State",
-  result: "Fall 1:06"
+  result: "Fall 1:06",
+  bout: "587"
 },
 {
   winner: "Dylan D`Emilio",
@@ -4701,7 +5288,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "149",
   school: "Ohio State",
-  result: "Dec 7-1"
+  result: "Dec 7-1",
+  bout: "588"
 },
 {
   winner: "Tyler Kasak",
@@ -4709,7 +5297,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "157",
   school: "Penn State",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "589"
 },
 {
   winner: "Trevor Chumbley",
@@ -4717,7 +5306,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "157",
   school: "Northwestern",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "590"
 },
 {
   winner: "Peyton Hall",
@@ -4725,7 +5315,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "165",
   school: "West Virginia",
-  result: "Dec 7-5"
+  result: "Dec 7-5",
+  bout: "591"
 },
 {
   winner: "Christopher Minto",
@@ -4733,7 +5324,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "165",
   school: "Nebraska",
-  result: "Dec 8-4"
+  result: "Dec 8-4",
+  bout: "592"
 },
 {
   winner: "Levi Haines",
@@ -4741,7 +5333,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "174",
   school: "Penn State",
-  result: "Dec 4-1"
+  result: "Dec 4-1",
+  bout: "593"
 },
 {
   winner: "Patrick Kennedy",
@@ -4749,7 +5342,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "174",
   school: "Iowa",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "594"
 },
 {
   winner: "Max McEnelly",
@@ -4757,7 +5351,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "184",
   school: "Minnesota",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "595"
 },
 {
   winner: "Dustin Plott",
@@ -4765,7 +5360,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "184",
   school: "Oklahoma State",
-  result: "Dec 2-1"
+  result: "Dec 2-1",
+  bout: "596"
 },
 {
   winner: "AJ Ferrari",
@@ -4773,7 +5369,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "197",
   school: "CSU Bakersfield",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "597"
 },
 {
   winner: "Jacob Cardenas",
@@ -4781,7 +5378,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "197",
   school: "Michigan",
-  result: "Dec 5-2"
+  result: "Dec 5-2",
+  bout: "598"
 },
 {
   winner: "Cohlton Schultz",
@@ -4789,7 +5387,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "285",
   school: "Arizona State",
-  result: "MFFL"
+  result: "MFFL",
+  bout: "599"
 },
 {
   winner: "Isaac Trumble",
@@ -4797,7 +5396,8 @@ const resultData = [
   round: "ConsSemi",
   weight: "285",
   school: "NC State",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "600"
 },
 {
   winner: "Caleb Smith",
@@ -4805,7 +5405,8 @@ const resultData = [
   round: "7thPlace",
   weight: "125",
   school: "Nebraska",
-  result: "MD 18-5"
+  result: "MD 18-5",
+  bout: "601"
 },
 {
   winner: "Jacob Van Dee",
@@ -4813,7 +5414,8 @@ const resultData = [
   round: "7thPlace",
   weight: "133",
   school: "Nebraska",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "602"
 },
 {
   winner: "Jacob Frost",
@@ -4821,7 +5423,8 @@ const resultData = [
   round: "7thPlace",
   weight: "141",
   school: "Iowa State",
-  result: "MD 17-3"
+  result: "MD 17-3",
+  bout: "603"
 },
 {
   winner: "Sammy Alvarez",
@@ -4829,7 +5432,8 @@ const resultData = [
   round: "7thPlace",
   weight: "149",
   school: "Rider",
-  result: "SV-1 9-6"
+  result: "SV-1 9-6",
+  bout: "604"
 },
 {
   winner: "Matty Bianchi",
@@ -4837,7 +5441,8 @@ const resultData = [
   round: "7thPlace",
   weight: "157",
   school: "Little Rock",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "605"
 },
 {
   winner: "Cam Steed",
@@ -4845,7 +5450,8 @@ const resultData = [
   round: "7thPlace",
   weight: "165",
   school: "Missouri",
-  result: "Fall 2:08"
+  result: "Fall 2:08",
+  bout: "606"
 },
 {
   winner: "Matthew Singleton",
@@ -4853,7 +5459,8 @@ const resultData = [
   round: "7thPlace",
   weight: "174",
   school: "NC State",
-  result: "Dec 3-1"
+  result: "Dec 3-1",
+  bout: "607"
 },
 {
   winner: "Silas Allred",
@@ -4861,7 +5468,8 @@ const resultData = [
   round: "7thPlace",
   weight: "184",
   school: "Nebraska",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "608"
 },
 {
   winner: "Mac Stout",
@@ -4869,7 +5477,8 @@ const resultData = [
   round: "7thPlace",
   weight: "197",
   school: "Pittsburgh",
-  result: "MD 12-3"
+  result: "MD 12-3",
+  bout: "609"
 },
 {
   winner: "Joshua Heindselman",
@@ -4877,7 +5486,8 @@ const resultData = [
   round: "7thPlace",
   weight: "285",
   school: "Michigan",
-  result: "Dec 2-1"
+  result: "Dec 2-1",
+  bout: "610"
 },
 {
   winner: "Eddie Ventresca",
@@ -4885,7 +5495,8 @@ const resultData = [
   round: "5thPlace",
   weight: "125",
   school: "Virginia Tech",
-  result: "Dec 11-4"
+  result: "Dec 11-4",
+  bout: "611"
 },
 {
   winner: "Braeden Davis",
@@ -4893,7 +5504,8 @@ const resultData = [
   round: "5thPlace",
   weight: "133",
   school: "Penn State",
-  result: "Fall 2:33"
+  result: "Fall 2:33",
+  bout: "612"
 },
 {
   winner: "Cael Happel",
@@ -4901,7 +5513,8 @@ const resultData = [
   round: "5thPlace",
   weight: "141",
   school: "Northern Iowa",
-  result: "Dec 7-2"
+  result: "Dec 7-2",
+  bout: "613"
 },
 {
   winner: "Lachlan McNeil",
@@ -4909,7 +5522,8 @@ const resultData = [
   round: "5thPlace",
   weight: "149",
   school: "North Carolina",
-  result: "Dec 8-4"
+  result: "Dec 8-4",
+  bout: "614"
 },
 {
   winner: "Meyer Shapiro",
@@ -4917,7 +5531,8 @@ const resultData = [
   round: "5thPlace",
   weight: "157",
   school: "Cornell",
-  result: "MD 11-0"
+  result: "MD 11-0",
+  bout: "615"
 },
 {
   winner: "Terrell Barraclough",
@@ -4925,7 +5540,8 @@ const resultData = [
   round: "5thPlace",
   weight: "165",
   school: "Utah Valley",
-  result: "Dec 1-0"
+  result: "Dec 1-0",
+  bout: "616"
 },
 {
   winner: "Simon Ruiz",
@@ -4933,7 +5549,8 @@ const resultData = [
   round: "5thPlace",
   weight: "174",
   school: "Cornell",
-  result: "Dec 2-1"
+  result: "Dec 2-1",
+  bout: "617"
 },
 {
   winner: "Chris Foca",
@@ -4941,7 +5558,8 @@ const resultData = [
   round: "5thPlace",
   weight: "184",
   school: "Cornell",
-  result: "Dec 7-4"
+  result: "Dec 7-4",
+  bout: "618"
 },
 {
   winner: "Joseph Novak",
@@ -4949,7 +5567,8 @@ const resultData = [
   round: "5thPlace",
   weight: "197",
   school: "Wyoming",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "619"
 },
 {
   winner: "Owen Trephan",
@@ -4957,7 +5576,8 @@ const resultData = [
   round: "5thPlace",
   weight: "285",
   school: "Lehigh",
-  result: "M. For."
+  result: "M. For.",
+  bout: "620"
 },
 {
   winner: "Luke Lilledahl",
@@ -4965,7 +5585,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "125",
   school: "Penn State",
-  result: "Fall 6:18"
+  result: "Fall 6:18",
+  bout: "621"
 },
 {
   winner: "Zeth Romney",
@@ -4973,7 +5594,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "133",
   school: "Cal Poly",
-  result: "Dec 7-3"
+  result: "Dec 7-3",
+  bout: "622"
 },
 {
   winner: "Beau Bartlett",
@@ -4981,7 +5603,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "141",
   school: "Penn State",
-  result: "MD 11-2"
+  result: "MD 11-2",
+  bout: "623"
 },
 {
   winner: "Shayne Van Ness",
@@ -4989,7 +5612,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "149",
   school: "Penn State",
-  result: "MD 15-4"
+  result: "MD 15-4",
+  bout: "624"
 },
 {
   winner: "Tyler Kasak",
@@ -4997,7 +5621,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "157",
   school: "Penn State",
-  result: "MD 8-0"
+  result: "MD 8-0",
+  bout: "625"
 },
 {
   winner: "Peyton Hall",
@@ -5005,7 +5630,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "165",
   school: "West Virginia",
-  result: "MD 13-5"
+  result: "MD 13-5",
+  bout: "626"
 },
 {
   winner: "Levi Haines",
@@ -5013,7 +5639,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "174",
   school: "Penn State",
-  result: "MD 11-3"
+  result: "MD 11-3",
+  bout: "627"
 },
 {
   winner: "Max McEnelly",
@@ -5021,7 +5648,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "184",
   school: "Minnesota",
-  result: "Dec 6-5"
+  result: "Dec 6-5",
+  bout: "628"
 },
 {
   winner: "AJ Ferrari",
@@ -5029,7 +5657,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "197",
   school: "CSU Bakersfield",
-  result: "Dec 2-0"
+  result: "Dec 2-0",
+  bout: "629"
 },
 {
   winner: "Cohlton Schultz",
@@ -5037,7 +5666,8 @@ const resultData = [
   round: "3rdPlace",
   weight: "285",
   school: "Arizona State",
-  result: "Dec 5-3"
+  result: "Dec 5-3",
+  bout: "630"
 },
 {
   winner: "Vincent Robinson",
@@ -5045,7 +5675,8 @@ const resultData = [
   round: "Finals",
   weight: "125",
   school: "NC State",
-  result: "TB-1 2-1"
+  result: "TB-1 2-1",
+  bout: "631"
 },
 {
   winner: "Lucas Byrd",
@@ -5053,7 +5684,8 @@ const resultData = [
   round: "Finals",
   weight: "133",
   school: "Illinois",
-  result: "TB-2 ;RT"
+  result: "TB-2 ;RT",
+  bout: "632"
 },
 {
   winner: "Jesse Mendez",
@@ -5061,7 +5693,8 @@ const resultData = [
   round: "Finals",
   weight: "141",
   school: "Ohio State",
-  result: "Dec 12-9"
+  result: "Dec 12-9",
+  bout: "633"
 },
 {
   winner: "Ridge Lovett",
@@ -5069,7 +5702,8 @@ const resultData = [
   round: "Finals",
   weight: "149",
   school: "Nebraska",
-  result: "Dec 1-0"
+  result: "Dec 1-0",
+  bout: "634"
 },
 {
   winner: "Antrell Taylor",
@@ -5077,7 +5711,8 @@ const resultData = [
   round: "Finals",
   weight: "157",
   school: "Nebraska",
-  result: "Dec 4-2"
+  result: "Dec 4-2",
+  bout: "635"
 },
 {
   winner: "Mitchell Mesenbrink",
@@ -5085,7 +5720,8 @@ const resultData = [
   round: "Finals",
   weight: "165",
   school: "Penn State",
-  result: "Dec 8-2"
+  result: "Dec 8-2",
+  bout: "636"
 },
 {
   winner: "Dean Hamiti",
@@ -5093,7 +5729,8 @@ const resultData = [
   round: "Finals",
   weight: "174",
   school: "Oklahoma State",
-  result: "SV-1 4-1"
+  result: "SV-1 4-1",
+  bout: "637"
 },
 {
   winner: "Carter Starocci",
@@ -5101,7 +5738,8 @@ const resultData = [
   round: "Finals",
   weight: "184",
   school: "Penn State",
-  result: "Dec 4-3"
+  result: "Dec 4-3",
+  bout: "638"
 },
 {
   winner: "Stephen Buchanan",
@@ -5109,7 +5747,8 @@ const resultData = [
   round: "Finals",
   weight: "197",
   school: "Iowa",
-  result: "Dec 5-2"
+  result: "Dec 5-2",
+  bout: "639"
 },
 {
   winner: "Wyatt Hendrickson",
@@ -5117,7 +5756,8 @@ const resultData = [
   round: "Finals",
   weight: "285",
   school: "Oklahoma State",
-  result: "Dec 5-4"
+  result: "Dec 5-4",
+  bout: "640"
 }
 ];
 
@@ -5150,7 +5790,7 @@ function filterAndRender() {
     filtered.forEach(match => {
       const matchHtml = `
         <div class="border-b py-2">
-          <p class="font-semibold">${match.winner} def. ${match.loser} (${match.result})</p>
+          <p class="font-semibold">${match.bout}. ${match.winner} def. ${match.loser} (${match.result})</p>
           <p class="text-sm text-gray-600">${match.round} | ${match.weight} | ${match.school}</p>
         </div>
       `;
@@ -5165,3 +5805,35 @@ document.getElementById("roundSelect").addEventListener("change", filterAndRende
 document.getElementById("weightSelect").addEventListener("change", filterAndRender);
 document.getElementById("schoolSelect").addEventListener("change", filterAndRender);
 document.getElementById("searchInput").addEventListener("input", filterAndRender);
+
+function updateTeamStats() {
+  const stats = {};
+
+  resultData.forEach(match => {
+    if (!stats[match.school]) {
+      stats[match.school] = {
+        totalWins: 0,
+        falls: 0,
+        techs: 0,
+        majors: 0
+      };
+    }
+
+    stats[match.school].totalWins++;
+
+    const resultText = match.result.toLowerCase();
+    if (resultText.includes("fall")) stats[match.school].falls++;
+    else if (resultText.includes("tf") || resultText.includes("tech")) stats[match.school].techs++;
+    else if (resultText.includes("md") || resultText.includes("major")) stats[match.school].majors++;
+  });
+
+  const container = document.getElementById("teamStats");
+  let html = "<h2 class='text-lg font-bold mb-2'>🏆 Team Stats</h2>";
+  Object.entries(stats).forEach(([school, stat]) => {
+    html += `<p><strong>${school}</strong>: ${stat.totalWins} wins, ${stat.falls} falls, ${stat.techs} techs, ${stat.majors} majors</p>`;
+  });
+
+  container.innerHTML = html;
+}
+
+updateTeamStats();
