@@ -648,15 +648,6 @@ console.log("results2025.js loaded!");
 const resultsContainer = document.getElementById("resultsContainer");
 resultsContainer.innerHTML = "";
 
-resultData.forEach(match => {
-  const matchHtml = `
-    <div class="border-b py-2">
-      <p class="font-semibold">${match.wrestler1} vs ${match.wrestler2}</p>
-      <p class="text-sm text-gray-600">${match.round} | ${match.weight} | ${match.school}</p>
-    </div>
-  `;
-  resultsContainer.innerHTML += matchHtml;
-});
 
 function applyFilters() {
   const roundSelect = document.getElementById('roundSelect');
