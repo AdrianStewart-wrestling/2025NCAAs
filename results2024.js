@@ -643,16 +643,6 @@ const resultData = [
 const resultsContainer = document.getElementById("resultsContainer");
 resultsContainer.innerHTML = "";
 
-resultData.forEach(match => {
-  const matchHtml = `
-    <div class="border-b py-2">
-      <p class="font-semibold">${resultData.wrestler1} vs ${resultData.wrestler2}</p>
-      <p class="text-sm text-gray-600">${resultData.round} | ${resultData.weight} | ${resultData.school}</p>
-    </div>
-  `;
-  resultsContainer.innerHTML += matchHtml;
-});
-
 
 function applyFilters() {
   const roundSelect = document.getElementById('roundSelect');
