@@ -1,23 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta charset="UTF-8">
   <title> NCAA Wrestling Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-    <!-- Hero Header -->
-    <header class="bg-blue-900 text-white p-6 shadow-md">
-      <div class="max-w-5xl mx-auto">
-        <h1 class="text-3xl font-bold"> NCAA Wrestling Dashboard</h1>
-        <p class="text-lg mt-2">Results, Stats, and Team Pages – All in One Place 🏆</p>
-      </div>
-    </header>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#002D62" />
   <link rel="manifest" href="manifest.json">
@@ -26,29 +16,26 @@
     function loadYearScript(year) {
       const oldScript = document.getElementById('results-script');
       if (oldScript) oldScript.remove();
-  
+
       // Auto-version with cache busting
       const timestamp = new Date().getTime();
-  
+
       const script = document.createElement('script');
       script.id = 'results-script';
       script.src = `results${year}.js?v=${timestamp}`;
       document.body.appendChild(script);
     }
-  
+
     window.addEventListener('DOMContentLoaded', () => {
       const yearSelect = document.getElementById('yearSelect');
       loadYearScript(yearSelect.value); // Load default
-  
+
       yearSelect.addEventListener('change', (e) => {
         document.getElementById('resultsContainer').innerHTML = "<p class='text-gray-600 italic'>Loading results...</p>";
         loadYearScript(e.target.value);
       });
     });
   </script>
-  
-
- 
 
   <style>
     body { font-family: Arial, sans-serif; margin: 1em; }
@@ -64,16 +51,22 @@
     label { display: block; margin-top: 0.5em; }
   </style>
 </head>
-<body>
-  <div class="section">
-  
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Hero Header -->
+  <header class="bg-blue-900 text-white p-6 shadow-md">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-3xl font-bold"> NCAA Wrestling Dashboard</h1>
+      <p class="text-lg mt-2">Results, Stats, and Team Pages – All in One Place 🏆</p>
+    </div>
+  </header>
 
+  <div class="section">
     <select id="yearSelect" class="p-2 border rounded">
-  <option value="">All Years</option>
-  <option value="2025" selected>2025</option>
-  <option value="2024">2024</option>
-  <option value="2023">2023</option>
-</select>
+      <option value="">All Years</option>
+      <option value="2025" selected>2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+    </select>
 
     <label for="searchInput">Search:</label>
     <input type="text" id="searchInput" placeholder="Search wrestler, school, bout..." />
@@ -83,189 +76,64 @@
       <option value="All">All</option>
       <option value="Prelims">Prelims</option>
       <option value="ChampR1">ChampR1</option>
-<option value="ChampR2">ChampR2</option>
-<option value="ConsPrelims">ConsPrelims</option>
-<option value="ConsR1">ConsR1</option>
-<option value="ConsR2">ConsR2</option>    
+      <option value="ChampR2">ChampR2</option>
+      <option value="ConsPrelims">ConsPrelims</option>
+      <option value="ConsR1">ConsR1</option>
+      <option value="ConsR2">ConsR2</option>    
       <option value="QtrFinals">QtrFinals</option>
       <option value="ConsR3">ConsR3</option>
-<option value="ConsR4">ConsR4</option>  
-<option value="SemiFinals">SemiFinals</option>  
-<option value="ConsQtr">ConsQtr</option>
-<option value="ConsSemi">ConsSemi</option>     
-<option value="3rdPlace">3rdPlace</option>
-<option value="5thPlace">5thPlace</option>
-<option value="7thPlace">7thPlace</option>
-<option value="Finals">Finals</option>
-
+      <option value="ConsR4">ConsR4</option>  
+      <option value="SemiFinals">SemiFinals</option>  
+      <option value="ConsQtr">ConsQtr</option>
+      <option value="ConsSemi">ConsSemi</option>     
+      <option value="3rdPlace">3rdPlace</option>
+      <option value="5thPlace">5thPlace</option>
+      <option value="7thPlace">7thPlace</option>
+      <option value="Finals">Finals</option>
     </select>
 
     <label for="weightSelect">Weight:</label>
     <select id="weightSelect">
       <option value="All">All</option>
       <option value="125">125</option>
-<option value="133">133</option>
-<option value="141">141</option>
-<option value="149">149</option>
-<option value="157">157</option>
-<option value="165">165</option>
-<option value="174">174</option>
-<option value="184">184</option>
-<option value="197">197</option>
-<option value="285">285</option>
+      <option value="133">133</option>
+      <option value="141">141</option>
+      <option value="149">149</option>
+      <option value="157">157</option>
+      <option value="165">165</option>
+      <option value="174">174</option>
+      <option value="184">184</option>
+      <option value="197">197</option>
+      <option value="285">285</option>
     </select>
 
     <label for="schoolSelect">School:</label>
     <select id="schoolSelect">
       <option value="All">All</option>
       <option value="Appalachian State">Appalachian State</option>
-<option value="Arizona State">Arizona State</option>
-<option value="Army West Point">Army West Point</option>
-<option value="Bellarmine">Bellarmine</option>
-<option value="Binghamton">Binghamton</option>
-<option value="Brown">Brown</option>
-<option value="Bucknell">Bucknell</option>
-<option value="CSU Bakersfield">CSU Bakersfield</option>
-<option value="Cal Poly">Cal Poly</option>
-<option value="California Baptist">California Baptist</option>
-<option value="Campbell">Campbell</option>
-<option value="Central Michigan">Central Michigan</option>
-<option value="Chattanooga">Chattanooga</option>
-<option value="Citadel">Citadel</option>
-<option value="Cleveland State">Cleveland State</option>
-<option value="Columbia">Columbia</option>
-<option value="Cornell">Cornell</option>
-<option value="Drexel">Drexel</option>
-<option value="Duke">Duke</option>
-<option value="Edinboro">Edinboro</option>
-<option value="Gardner-Webb">Gardner-Webb</option>
-<option value="George Mason">George Mason</option>
-<option value="Harvard">Harvard</option>
-<option value="Hofstra">Hofstra</option>
-<option value="Illinois">Illinois</option>
-<option value="Indiana">Indiana</option>
-<option value="Iowa">Iowa</option>
-<option value="Iowa State">Iowa State</option>
-<option value="Lehigh">Lehigh</option>
-<option value="Little Rock">Little Rock</option>
-<option value="Lock Haven">Lock Haven</option>
-<option value="Maryland">Maryland</option>
-<option value="Michigan">Michigan</option>
-<option value="Michigan State">Michigan State</option>
-<option value="Minnesota">Minnesota</option>
-<option value="Missouri">Missouri</option>
-<option value="NC State">NC State</option>
-<option value="Navy">Navy</option>
-<option value="Nebraska">Nebraska</option>
-<option value="North Carolina">North Carolina</option>
-<option value="North Dakota State">North Dakota State</option>
-<option value="Northern Colorado">Northern Colorado</option>
-<option value="Northern Illinois">Northern Illinois</option>
-<option value="Northern Iowa">Northern Iowa</option>
-<option value="Northwestern">Northwestern</option>
-<option value="Ohio">Ohio</option>
-<option value="Ohio State">Ohio State</option>
-<option value="Oklahoma">Oklahoma</option>
-<option value="Oklahoma State">Oklahoma State</option>
-<option value="Oregon State">Oregon State</option>
-<option value="Penn State">Penn State</option>
-<option value="Pennsylvania">Pennsylvania</option>
-<option value="Pittsburgh">Pittsburgh</option>
-<option value="Princeton">Princeton</option>
-<option value="Purdue">Purdue</option>
-<option value="Rider">Rider</option>
-<option value="Rutgers">Rutgers</option>
-<option value="South Dakota State">South Dakota State</option>
-<option value="Stanford">Stanford</option>
-<option value="The Citadel">The Citadel</option>
-<option value="Utah Valley">Utah Valley</option>
-<option value="Virginia">Virginia</option>
-<option value="Virginia Tech">Virginia Tech</option>
-<option value="West Virginia">West Virginia</option>
-<option value="Wisconsin">Wisconsin</option>
-<option value="Wyoming">Wyoming</option>
+      <option value="Arizona State">Arizona State</option>
+      <option value="Army West Point">Army West Point</option>
+      <option value="Wisconsin">Wisconsin</option>
+      <option value="Wyoming">Wyoming</option>
     </select>
 
     <label for="teamSelect">Team Page:</label>
     <select id="teamSelect">
       <option value="All">All</option>
       <option value="Appalachian State">Appalachian State</option>
-<option value="Arizona State">Arizona State</option>
-<option value="Army West Point">Army West Point</option>
-<option value="Bellarmine">Bellarmine</option>
-<option value="Binghamton">Binghamton</option>
-<option value="Brown">Brown</option>
-<option value="Bucknell">Bucknell</option>
-<option value="CSU Bakersfield">CSU Bakersfield</option>
-<option value="Cal Poly">Cal Poly</option>
-<option value="California Baptist">California Baptist</option>
-<option value="Campbell">Campbell</option>
-<option value="Central Michigan">Central Michigan</option>
-<option value="Chattanooga">Chattanooga</option>
-<option value="Citadel">Citadel</option>
-<option value="Cleveland State">Cleveland State</option>
-<option value="Columbia">Columbia</option>
-<option value="Cornell">Cornell</option>
-<option value="Drexel">Drexel</option>
-<option value="Duke">Duke</option>
-<option value="Edinboro">Edinboro</option>
-<option value="Gardner-Webb">Gardner-Webb</option>
-<option value="George Mason">George Mason</option>
-<option value="Harvard">Harvard</option>
-<option value="Hofstra">Hofstra</option>
-<option value="Illinois">Illinois</option>
-<option value="Indiana">Indiana</option>
-<option value="Iowa">Iowa</option>
-<option value="Iowa State">Iowa State</option>
-<option value="Lehigh">Lehigh</option>
-<option value="Little Rock">Little Rock</option>
-<option value="Lock Haven">Lock Haven</option>
-<option value="Maryland">Maryland</option>
-<option value="Michigan">Michigan</option>
-<option value="Michigan State">Michigan State</option>
-<option value="Minnesota">Minnesota</option>
-<option value="Missouri">Missouri</option>
-<option value="NC State">NC State</option>
-<option value="Navy">Navy</option>
-<option value="Nebraska">Nebraska</option>
-<option value="North Carolina">North Carolina</option>
-<option value="North Dakota State">North Dakota State</option>
-<option value="Northern Colorado">Northern Colorado</option>
-<option value="Northern Illinois">Northern Illinois</option>
-<option value="Northern Iowa">Northern Iowa</option>
-<option value="Northwestern">Northwestern</option>
-<option value="Ohio">Ohio</option>
-<option value="Ohio State">Ohio State</option>
-<option value="Oklahoma">Oklahoma</option>
-<option value="Oklahoma State">Oklahoma State</option>
-<option value="Oregon State">Oregon State</option>
-<option value="Penn State">Penn State</option>
-<option value="Pennsylvania">Pennsylvania</option>
-<option value="Pittsburgh">Pittsburgh</option>
-<option value="Princeton">Princeton</option>
-<option value="Purdue">Purdue</option>
-<option value="Rider">Rider</option>
-<option value="Rutgers">Rutgers</option>
-<option value="South Dakota State">South Dakota State</option>
-<option value="Stanford">Stanford</option>
-<option value="The Citadel">The Citadel</option>
-<option value="Utah Valley">Utah Valley</option>
-<option value="Virginia">Virginia</option>
-<option value="Virginia Tech">Virginia Tech</option>
-<option value="West Virginia">West Virginia</option>
-<option value="Wisconsin">Wisconsin</option>
-<option value="Wyoming">Wyoming</option>
+      <option value="Arizona State">Arizona State</option>
+      <option value="Army West Point">Army West Point</option>
+      <option value="Wisconsin">Wisconsin</option>
+      <option value="Wyoming">Wyoming</option>
     </select>
   </div>
 
   <div class="section box highlight" id="teamStats"></div>
-  <div class="section box" id="resultBox">Loading results...</div>
+  <div class="section box" id="resultsContainer">Loading results...</div>
 
-    <!-- Footer -->
+  <!-- Footer -->
   <footer class="mt-12 p-4 text-center text-sm text-gray-500">
-    Built by Adrian Stewart 717-433-0381 </a>
+    Built by Adrian Stewart 717-433-0381
   </footer>
-
- 
 </body>
 </html>
