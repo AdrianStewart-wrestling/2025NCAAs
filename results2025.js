@@ -657,3 +657,63 @@ resultData.forEach(match => {
   `;
   resultsContainer.innerHTML += matchHtml;
 });
+
+function applyFilters() {
+  const roundSelect = document.getElementById('roundSelect');
+  const weightSelect = document.getElementById('weightSelect');
+  const schoolSelect = document.getElementById('schoolSelect');
+  const teamSelect = document.getElementById('teamSelect');
+  const searchInput = document.getElementById('searchInput');
+  const resultBox = document.getElementById('resultBox');
+  const statsBox = document.getElementById('teamStats');
+
+  if (!roundSelect || !weightSelect || !schoolSelect || !searchInput || !resultBox || !teamSelect) return;
+
+  const selectedRound = roundSelect.value;
+  const selectedWeight = weightSelect.value;
+  const selectedSchool = schoolSelect.value;
+  const selectedTeam = teamSelect.value;
+  const searchTerm = searchInput.value.toLowerCase();
+
+  const filtered = resultData.filter(item =>
+    (selectedRound === "All" || item.round === selectedRound) &&
+    (selectedWeight === "All" || item.weight === selectedWeight) &&
+    (selectedSchool === "All" || item.school === selectedSchool || item.opponent === selectedSchool) &&
+    (selectedTeam === "All" || item.school === selectedTeam || item.opponent === selectedTeam) &&
+    (item.line.toLowerCase().includes(searchTerm))
+  );
+
+  resultBox.textContent = filtered.length
+    ? filtered.map(item => item.line).join("\n")
+    : "No results found.";
+
+  if (selectedTeam !== "All") {
+    const teamMatches = resultData.filter(item =>
+      item.school === selectedTeam || item.opponent === selectedTeam
+    );
+    const wins = teamMatches.filter(item => item.school === selectedTeam).length;
+    const losses = teamMatches.filter(item => item.opponent === selectedTeam).length;
+    const total = wins + losses;
+    const pct = total > 0 ? ((wins / total) * 100).toFixed(1) : "0.0";
+
+    const falls = teamMatches.filter(item => item.school === selectedTeam && item.line.includes("Fall")).length;
+    const techs = teamMatches.filter(item => item.school === selectedTeam && /TF|Tech/i.test(item.line)).length;
+    const majors = teamMatches.filter(item => item.school === selectedTeam && /MD|Major/i.test(item.line)).length;
+
+    statsBox.innerText = `${selectedTeam}\nMatches: ${total} | Wins: ${wins} | Losses: ${losses} | Win%: ${pct}
+Falls: ${falls} | Tech Falls: ${techs} | Majors: ${majors}`;
+  } else {
+    statsBox.innerText = "";
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  applyFilters();
+  document.getElementById('roundSelect')?.addEventListener('change', applyFilters);
+  document.getElementById('weightSelect')?.addEventListener('change', applyFilters);
+  document.getElementById('schoolSelect')?.addEventListener('change', applyFilters);
+  document.getElementById('teamSelect')?.addEventListener('change', applyFilters);
+  document.getElementById('searchInput')?.addEventListener('input', applyFilters);
+});
+
