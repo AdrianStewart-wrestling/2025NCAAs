@@ -5804,9 +5804,8 @@ function filterAndRender() {
       .forEach(match => {
         const matchHtml = `
           <div class="ml-4 border-l-4 border-gray-300 pl-3 mb-2">
-            <p class="font-semibold">${match.bout}. ${match.winner} def. ${match.loser} (${match.result})</p>
-            <p class="text-sm text-gray-600">${match.weight} | ${match.school}</p>
-          </div>
+            <p class="text-sm text-gray-600">${match.bout}. ${match.weight} ${match.winner} ${match.school}def. ${match.loser} ${match.school}(${match.result})</p>
+            </div>
         `;
         resultsContainer.innerHTML += matchHtml;
       });
