@@ -5786,17 +5786,31 @@ function filterAndRender() {
   resultsContainer.innerHTML = "";
   if (filtered.length === 0) {
     resultsContainer.innerHTML = "<p class='italic text-gray-500'>No results found.</p>";
-  } else {
-    filtered.forEach(match => {
-      const matchHtml = `
-        <div class="border-b py-2">
-          <p class="font-semibold">${match.bout}. ${match.winner} def. ${match.loser} (${match.result})</p>
-          <p class="text-sm text-gray-600">${match.round} | ${match.weight} | ${match.school}</p>
-        </div>
-      `;
-      resultsContainer.innerHTML += matchHtml;
-    });
+    return;
   }
+
+  const grouped = {};
+  filtered.forEach(match => {
+    if (!grouped[match.round]) grouped[match.round] = [];
+    grouped[match.round].push(match);
+  });
+
+  const sortedRounds = Object.keys(grouped).sort();
+
+  sortedRounds.forEach(round => {
+    resultsContainer.innerHTML += `<h3 class='text-lg font-bold text-blue-800 mt-4 mb-2'>${round}</h3>`;
+    grouped[round]
+      .sort((a, b) => parseInt(a.bout) - parseInt(b.bout))
+      .forEach(match => {
+        const matchHtml = `
+          <div class="ml-4 border-l-4 border-gray-300 pl-3 mb-2">
+            <p class="font-semibold">${match.bout}. ${match.winner} def. ${match.loser} (${match.result})</p>
+            <p class="text-sm text-gray-600">${match.weight} | ${match.school}</p>
+          </div>
+        `;
+        resultsContainer.innerHTML += matchHtml;
+      });
+  });
 }
 
 function updateTeamStats() {
@@ -5804,7 +5818,7 @@ function updateTeamStats() {
   const container = document.getElementById("teamStats");
 
   if (selectedTeam === "All") {
-    container.innerHTML = ""; // Hide stats
+    container.innerHTML = "";
     return;
   }
 
@@ -5844,7 +5858,6 @@ function updateTeamStats() {
 }
 
 filterAndRender();
-
 document.getElementById("roundSelect").addEventListener("change", filterAndRender);
 document.getElementById("weightSelect").addEventListener("change", filterAndRender);
 document.getElementById("schoolSelect").addEventListener("change", filterAndRender);
