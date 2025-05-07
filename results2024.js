@@ -640,6 +640,19 @@ const resultData = [
   { round: `Finals`, weight: `197`, school: `Iowa`, opponent: `Penn State`, line: `Bout 639: Stephen Buchanan (Iowa) def. Josh Barr (Penn State), Dec 5-2 [197]` },
   { round: `Finals`, weight: `285`, school: `Oklahoma State`, opponent: `Minnesota`, line: `Bout 640: Wyatt Hendrickson (Oklahoma State) def. Gable Steveson (Minnesota), Dec 5-4 [285]` },
 ];
+const resultsContainer = document.getElementById("resultsContainer");
+resultsContainer.innerHTML = "";
+
+matches.forEach(match => {
+  const matchHtml = `
+    <div class="border-b py-2">
+      <p class="font-semibold">${match.wrestler1} vs ${match.wrestler2}</p>
+      <p class="text-sm text-gray-600">${match.round} | ${match.weight} | ${match.school}</p>
+    </div>
+  `;
+  resultsContainer.innerHTML += matchHtml;
+});
+
 
 function applyFilters() {
   const roundSelect = document.getElementById('roundSelect');
