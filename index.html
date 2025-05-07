@@ -22,31 +22,31 @@
   <meta name="theme-color" content="#002D62" />
   <link rel="manifest" href="manifest.json">
 
-   <script>
-  function loadYearScript(year) {
-    const oldScript = document.getElementById('results-script');
-    if (oldScript) oldScript.remove();
-
-    // Cache-busting with timestamp
-    const timestamp = new Date().getTime(); // e.g., 1715001234567
-
-    const script = document.createElement('script');
-    script.id = 'results-script';
-    script.src = `results$(year).js?v=${timestamp}`; // auto versioned
-    document.body.appendChild(script);
-  }
-
-  // Load default on page load
-  window.addEventListener('DOMContentLoaded', () => {
-    const yearSelect = document.getElementById('yearSelect');
-    loadYearScript(yearSelect.value);
-
-    yearSelect.addEventListener('change', (e) => {
-      document.getElementById('resultsContainer').innerHTML = "<p class='text-gray-600 italic'>Loading results...</p>";
-      loadYearScript(e.target.value);
+  <script>
+    function loadYearScript(year) {
+      const oldScript = document.getElementById('results-script');
+      if (oldScript) oldScript.remove();
+  
+      // Auto-version with cache busting
+      const timestamp = new Date().getTime();
+  
+      const script = document.createElement('script');
+      script.id = 'results-script';
+      script.src = `results${year}.js?v=${timestamp}`;
+      document.body.appendChild(script);
+    }
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      const yearSelect = document.getElementById('yearSelect');
+      loadYearScript(yearSelect.value); // Load default
+  
+      yearSelect.addEventListener('change', (e) => {
+        document.getElementById('resultsContainer').innerHTML = "<p class='text-gray-600 italic'>Loading results...</p>";
+        loadYearScript(e.target.value);
+      });
     });
-  });
-</script>
+  </script>
+  
 
  
 
