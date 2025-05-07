@@ -21,13 +21,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#002D62" />
   <link rel="manifest" href="manifest.json">
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js');
-      });
-    }
-  </script>
+
+   <script>
+  function loadYearScript(year) {
+    const oldScript = document.getElementById('results-script');
+    if (oldScript) oldScript.remove();
+
+    // Cache-busting with timestamp
+    const timestamp = new Date().getTime(); // e.g., 1715001234567
+
+    const script = document.createElement('script');
+    script.id = 'results-script';
+    script.src = `results.js?v=${timestamp}`; // auto versioned
+    document.body.appendChild(script);
+  }
+
+  // Load default on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const yearSelect = document.getElementById('yearSelect');
+    loadYearScript(yearSelect.value);
+
+    yearSelect.addEventListener('change', (e) => {
+      document.getElementById('resultsContainer').innerHTML = "<p class='text-gray-600 italic'>Loading results...</p>";
+      loadYearScript(e.target.value);
+    });
+  });
+</script>
+
+ 
+
   <style>
     body { font-family: Arial, sans-serif; margin: 1em; }
     .section { margin-bottom: 1.5em; }
