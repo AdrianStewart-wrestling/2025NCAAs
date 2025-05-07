@@ -1,646 +1,5124 @@
-
 const resultData = [
-  { round: `Prelims`, weight: `125`, school: `Bucknell`, opponent: `Fu State`, line: `Bout 1: Homie Slice (Buckneell) def. Willie Makeit (Fu State), SV-1 4-1 [125]` },
-  { round: `Prelims`, weight: `133`, school: `California Baptist`, opponent: `Michigan`, line: `Bout 2: Hunter Leake (California Baptist) def. Nolan Wertanen (Michigan), Fall 2:28 [133]` },
-  { round: `Prelims`, weight: `141`, school: `Oregon State`, opponent: `Columbia`, line: `Bout 3: Nash Singleton (Oregon State) def. Lorenzo Frezza (Columbia), MD 8-0 [141]` },
-  { round: `Prelims`, weight: `149`, school: `Oklahoma State`, opponent: `Campbell`, line: `Bout 4: Teague Travis (Oklahoma State) def. Wynton Denkins (Campbell), MD 11-1 [149]` },
-  { round: `Prelims`, weight: `157`, school: `Northern Illinois`, opponent: `Columbia`, line: `Bout 5: Landen Johnson (Northern Illinois) def. Richard Fedalen (Columbia), Dec 5-3 [157]` },
-  { round: `Prelims`, weight: `165`, school: `Central Michigan`, opponent: `Pittsburgh`, line: `Bout 6: Chandler Amaker (Central Michigan) def. Jared Keslar (Pittsburgh), SV-1 8-5 [165]` },
-  { round: `Prelims`, weight: `174`, school: `Rider`, opponent: `Columbia`, line: `Bout 7: Michael Wilson (Rider) def. Jack McGill (Columbia), SV-1 4-1 [174]` },
-  { round: `Prelims`, weight: `184`, school: `Lehigh`, opponent: `Oregon State`, line: `Bout 8: Caden Rogers (Lehigh) def. TJ McDonnell (Oregon State), Dec 6-3 [184]` },
-  { round: `Prelims`, weight: `197`, school: `Army West Point`, opponent: `Appalachian State`, line: `Bout 9: Wolfgang Frable (Army West Point) def. Carson Floyd (Appalachian State), Dec 12-8 [197]` },
-  { round: `Prelims`, weight: `285`, school: `Purdue`, opponent: `Appalachian State`, line: `Bout 10: Hayden Filipovich (Purdue) def. Stephan Monchery (Appalachian State), MD 9-0 [285]` },
-  { round: `ChampR1`, weight: `125`, school: `Penn State`, opponent: `Cornell`, line: `Bout 11: Luke Lilledahl (Penn State) def. Marcello Milani (Cornell), TF 4:25 ;19-4 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Northern Illinois`, opponent: `Pennsylvania`, line: `Bout 12: Blake West (Northern Illinois) def. Max Gallagher (Pennsylvania), Dec 6-5 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Nebraska`, opponent: `Pittsburgh`, line: `Bout 13: Caleb Smith (Nebraska) def. Nick Babin (Pittsburgh), SV-1 3-0 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Lehigh`, opponent: `Army West Point`, line: `Bout 14: Sheldon Seymour (Lehigh) def. Charlie Farmer (Army West Point), Dec 7-0 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Arizona State`, opponent: `Cal Poly`, line: `Bout 15: Richard Figueroa (Arizona State) def. Koda Holeman (Cal Poly), Dec 12-7 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Rutgers`, opponent: `Oklahoma`, line: `Bout 16: Dean Peterson (Rutgers) def. Antonio Lorenzo (Oklahoma), Dec 6-5 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Princeton`, opponent: `Ohio State`, line: `Bout 17: Marc-Anthony McGowan (Princeton) def. Brendan McCrone (Ohio State), Dec 4-3 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `NC State`, opponent: `Iowa`, line: `Bout 18: Vincent Robinson (NC State) def. Joey Cruz (Iowa), MD 12-1 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Virginia Tech`, opponent: `Citadel`, line: `Bout 19: Eddie Ventresca (Virginia Tech) def. Gylon Sims (Citadel), Dec 5-1 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `North Carolina`, opponent: `Minnesota`, line: `Bout 20: Spencer Moore (North Carolina) def. Cooper Flynn (Minnesota), Dec 2-0 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Wisconsin`, opponent: `Northern Iowa`, line: `Bout 21: Nicolar Rivera (Wisconsin) def. Trever Anderson (Northern Iowa), Dec 4-2 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `West Virginia`, opponent: `North Dakota State`, line: `Bout 22: Jett Strickenberger (West Virginia) def. Tristan Daugherty (North Dakota State), Dec 7-2 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Oklahoma State`, opponent: `Virginia`, line: `Bout 23: Troy Spratley (Oklahoma State) def. Keyveon Roller (Virginia), TF 4:18 ;15-0 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Northern Colorado`, opponent: `South Dakota State`, line: `Bout 24: Stevo Poulin (Northern Colorado) def. Tanner Jordan (South Dakota State), Dec 9-5 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Indiana`, opponent: `Oregon State`, line: `Bout 25: Jacob Moran (Indiana) def. Maximo Renteria (Oregon State), Dec 7-6 [125]` },
-  { round: `ChampR1`, weight: `125`, school: `Purdue`, opponent: `CSU Bakersfield`, line: `Bout 26: Matt Ramos (Purdue) def. Richard Castro-Sandoval (CSU Bakersfield), MD 11-3 [125]` },
-  { round: `ChampR1`, weight: `133`, school: `Illinois`, opponent: `California Baptist`, line: `Bout 27: Lucas Byrd (Illinois) def. Hunter Leake (California Baptist), Dec 3-2 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Pennsylvania`, opponent: `Nebraska`, line: `Bout 28: Ryan Miller (Pennsylvania) def. Jacob Van Dee (Nebraska), Dec 8-4 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Maryland`, opponent: `North Dakota State`, line: `Bout 29: Braxton Brown (Maryland) def. Kyle Burwick (North Dakota State), Dec 3-2 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Penn State`, opponent: `Bucknell`, line: `Bout 30: Braeden Davis (Penn State) def. Kurt Phipps (Bucknell), MD 12-4 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Northern Colorado`, opponent: `Edinboro`, line: `Bout 31: Dominick Serrano (Northern Colorado) def. Colton Camacho (Edinboro), Dec 8-6 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Indiana`, opponent: `North Carolina`, line: `Bout 32: Angelo Rini (Indiana) def. Ethan Oakley (North Carolina), Dec 7-1 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Stanford`, opponent: `Chattanooga`, line: `Bout 33: Tyler Knox (Stanford) def. Blake Boarman (Chattanooga), SV-1 6-3 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Cal Poly`, opponent: `Cornell`, line: `Bout 34: Zeth Romney (Cal Poly) def. Tyler Ferrara (Cornell), Dec 7-3 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Little Rock`, opponent: `South Dakota State`, line: `Bout 35: Nasir Bailey (Little Rock) def. Derrick Cardinal (South Dakota State), Dec 9-8 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Wisconsin`, opponent: `Gardner-Webb`, line: `Bout 36: Zan Fugitt (Wisconsin) def. Takeo Davis (Gardner-Webb), Dec 12-5 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Iowa State`, opponent: `Minnesota`, line: `Bout 37: Evan Frost (Iowa State) def. Tyler Wells (Minnesota), Dec 2-0 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Virginia Tech`, opponent: `Army West Point`, line: `Bout 38: Connor McGonagle (Virginia Tech) def. Ethan Berginc (Army West Point), Dec 1-0 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Ohio State`, opponent: `NC State`, line: `Bout 39: Nic Bouzakis (Ohio State) def. Kai Orine (NC State), Fall 2:12 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Central Michigan`, opponent: `Rutgers`, line: `Bout 40: Sean Spidle (Central Michigan) def. Dylan Shawver (Rutgers), Dec 4-1 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Northern Iowa`, opponent: `Lock Haven`, line: `Bout 41: Julian Farber (Northern Iowa) def. Anthony Noto (Lock Haven), Dec 9-8 [133]` },
-  { round: `ChampR1`, weight: `133`, school: `Iowa`, opponent: `Missouri`, line: `Bout 42: Drake Ayala (Iowa) def. Kade Moore (Missouri), TF 5:30 ;21-5 [133]` },
-  { round: `ChampR1`, weight: `141`, school: `Nebraska`, opponent: `Oregon State`, line: `Bout 43: Brock Hardy (Nebraska) def. Nash Singleton (Oregon State), MD 12-3 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Lock Haven`, opponent: `Campbell`, line: `Bout 44: Wyatt Henson (Lock Haven) def. Shannon Hanna (Campbell), MD 9-1 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Iowa State`, opponent: `Stanford`, line: `Bout 45: Jacob Frost (Iowa State) def. Jason Miranda (Stanford), TF 6:29 ;16-1 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Northern Colorado`, opponent: `Bellarmine`, line: `Bout 46: Andrew Alirez (Northern Colorado) def. AJ Rallo (Bellarmine), Dec 5-0 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Northern Iowa`, opponent: `Illinois`, line: `Bout 47: Cael Happel (Northern Iowa) def. Danny Pucino (Illinois), Fall 5:51 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Bucknell`, opponent: `Virginia Tech`, line: `Bout 48: Dylan Chappell (Bucknell) def. Sam Latona (Virginia Tech), Dec 7-4 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Cornell`, opponent: `Gardner-Webb`, line: `Bout 49: Joshua Saunders (Cornell) def. Todd Carter (Gardner-Webb), Dec 8-2 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Navy`, opponent: `North Carolina`, line: `Bout 50: Josh Koderhandt (Navy) def. Jayden Scott (North Carolina), SV-1 4-1 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Ohio State`, opponent: `Pittsburgh`, line: `Bout 51: Jesse Mendez (Ohio State) def. Briar Priest (Pittsburgh), TF 5:41 ;21-5 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Michigan`, opponent: `Oklahoma`, line: `Bout 52: Sergio Lemley (Michigan) def. Mosha Schwartz (Oklahoma), Fall 6:23 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Virginia`, opponent: `Drexel`, line: `Bout 53: Dylan Cedeno (Virginia) def. Jordan Soriano (Drexel), MD 11-1 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Minnesota`, opponent: `Purdue`, line: `Bout 54: Vance VomBaur (Minnesota) def. Greyson Clark (Purdue), Dec 2-0 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Oklahoma State`, opponent: `Princeton`, line: `Bout 55: Tagen Jamison (Oklahoma State) def. Eligh Rivera (Princeton), Dec 5-1 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Pennsylvania`, opponent: `Missouri`, line: `Bout 56: CJ Composto (Pennsylvania) def. Josh Edmond (Missouri), SV-1 8-5 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `South Dakota State`, opponent: `Rutgers`, line: `Bout 57: Julian Tagg (South Dakota State) def. Joseph Olivieri (Rutgers), MD 13-3 [141]` },
-  { round: `ChampR1`, weight: `141`, school: `Penn State`, opponent: `West Virginia`, line: `Bout 58: Beau Bartlett (Penn State) def. Jordan Titus (West Virginia), Dec 4-2 [141]` },
-  { round: `ChampR1`, weight: `149`, school: `Virginia Tech`, opponent: `Oklahoma State`, line: `Bout 59: Caleb Henson (Virginia Tech) def. Teague Travis (Oklahoma State), Dec 4-0 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Stanford`, opponent: `Army West Point`, line: `Bout 60: Jaden Abas (Stanford) def. Trae McDaniel (Army West Point), Dec 11-7 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Pennsylvania`, opponent: `Central Michigan`, line: `Bout 61: Cross Wasilewski (Pennsylvania) def. Mason Shrader (Central Michigan), Fall 6:04 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Little Rock`, opponent: `Lehigh`, line: `Bout 62: Jordan Williams (Little Rock) def. Malyke Hines (Lehigh), Fall 1:43 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Iowa`, opponent: `Michigan`, line: `Bout 63: Kyle Parco (Iowa) def. Dylan Gilcher (Michigan), Dec 7-2 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Oregon State`, opponent: `Oklahoma`, line: `Bout 64: Ethan Stiles (Oregon State) def. Willie McDougald (Oklahoma), Dec 6-4 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Ohio State`, opponent: `NC State`, line: `Bout 65: Dylan DEmilio (Ohio State) def. Koy Buesgens (NC State), Dec 5-1 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Virginia`, opponent: `Iowa State`, line: `Bout 66: Jack Gioffre (Virginia) def. Paniro Johnson (Iowa State), TB-1 5-2 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Penn State`, opponent: `Wyoming`, line: `Bout 67: Shayne Van Ness (Penn State) def. Gabe Willochell (Wyoming), Fall 4:12 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Rutgers`, opponent: `Cal Poly`, line: `Bout 68: Andrew Clark (Rutgers) def. Chance Lamer (Cal Poly), Dec 8-3 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Rider`, opponent: `North Dakota State`, line: `Bout 69: Sammy Alvarez (Rider) def. Gavin Drexler (North Dakota State), Dec 4-2 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `North Carolina`, opponent: `George Mason`, line: `Bout 70: Lachlan McNeil (North Carolina) def. Kaden Cassidy (George Mason), MD 10-0 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Illinois`, opponent: `Maryland`, line: `Bout 71: Kannon Webster (Illinois) def. Kal Miller (Maryland), MD 8-0 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Northern Iowa`, opponent: `Citadel`, line: `Bout 72: Colin Realbuto (Northern Iowa) def. Carson DesRosier (Citadel), Dec 11-6 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Princeton`, opponent: `Cornell`, line: `Bout 73: Ty Whalen (Princeton) def. Ethan Fernandez (Cornell), Dec 4-0 [149]` },
-  { round: `ChampR1`, weight: `149`, school: `Nebraska`, opponent: `Northwestern`, line: `Bout 74: Ridge Lovett (Nebraska) def. Sam Cartella (Northwestern), Dec 10-8 [149]` },
-  { round: `ChampR1`, weight: `157`, school: `Penn State`, opponent: `Northern Illinois`, line: `Bout 75: Tyler Kasak (Penn State) def. Landen Johnson (Northern Illinois), Fall 1:39 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Iowa State`, opponent: `George Mason`, line: `Bout 76: Cody Chittum (Iowa State) def. DJ McGee (George Mason), Dec 8-1 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Minnesota`, opponent: `Pittsburgh`, line: `Bout 77: Tommy Askey (Minnesota) def. Dylan Evans (Pittsburgh), Dec 7-2 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Purdue`, opponent: `North Carolina`, line: `Bout 78: Joey Blaze (Purdue) def. Sonny Santiago (North Carolina), Dec 7-0 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Ohio State`, opponent: `Oregon State`, line: `Bout 79: Brandon Cannon (Ohio State) def. Christopher Hamblin (Oregon State), Dec 9-5 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Oklahoma State`, opponent: `Lehigh`, line: `Bout 80: Caleb Fish (Oklahoma State) def. Logan Rozynski (Lehigh), Dec 2-0 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Northwestern`, opponent: `Wyoming`, line: `Bout 81: Trevor Chumbley (Northwestern) def. Jared Hill (Wyoming), Dec 2-0 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Virginia Tech`, opponent: `Harvard`, line: `Bout 82: Rafael Hipolito (Virginia Tech) def. James Harrington (Harvard), Dec 10-3 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Nebraska`, opponent: `Missouri`, line: `Bout 83: Antrell Taylor (Nebraska) def. James Conway (Missouri), TF 7:00 ;20-4 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Pennsylvania`, opponent: `South Dakota State`, line: `Bout 84: Jude Swisher (Pennsylvania) def. Cobe Siebrecht (South Dakota State), Fall 1:56 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Little Rock`, opponent: `NC State`, line: `Bout 85: Matty Bianchi (Little Rock) def. Ed Scott (NC State), SV-1 5-2 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Northern Iowa`, opponent: `Stanford`, line: `Bout 86: Ryder Downey (Northern Iowa) def. Grigor Cholakyan (Stanford), MD 12-1 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Northern Colorado`, opponent: `Brown`, line: `Bout 87: Vinny Zerban (Northern Colorado) def. Blake Saito (Brown), Fall 6:49 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Michigan`, opponent: `Maryland`, line: `Bout 88: Chase Saldate (Michigan) def. Ethen Miller (Maryland), Fall 6:50 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Central Michigan`, opponent: `Iowa`, line: `Bout 89: Johnny Lovett (Central Michigan) def. Jacori Teemer (Iowa), MD 11-3 [157]` },
-  { round: `ChampR1`, weight: `157`, school: `Cornell`, opponent: `Chattanooga`, line: `Bout 90: Meyer Shapiro (Cornell) def. Noah Castillo (Chattanooga), TF 4:30 ;20-2 [157]` },
-  { round: `ChampR1`, weight: `165`, school: `Penn State`, opponent: `Central Michigan`, line: `Bout 91: Mitchell Mesenbrink (Penn State) def. Chandler Amaker (Central Michigan), TF 3:32 ;16-0 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Hofstra`, opponent: `Bucknell`, line: `Bout 92: Kyle Mosher (Hofstra) def. Noah Mulvaney (Bucknell), Fall 3:29 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Missouri`, opponent: `Columbia`, line: `Bout 93: Cam Steed (Missouri) def. Cesar Alvan (Columbia), Dec 5-4 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Oklahoma State`, opponent: `Virginia`, line: `Bout 94: Cameron Amine (Oklahoma State) def. Nick Hamilton (Virginia), Dec 2-0 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Cornell`, opponent: `Virginia Tech`, line: `Bout 95: Julian Ramirez (Cornell) def. Mac Church (Virginia Tech), MD 11-2 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Nebraska`, opponent: `Little Rock`, line: `Bout 96: Christopher Minto (Nebraska) def. Joseph Bianchi (Little Rock), MD 13-1 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Appalachian State`, opponent: `Army West Point`, line: `Bout 97: Will Miller (Appalachian State) def. Gunner Filipowicz (Army West Point), Fall 4:59 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Utah Valley`, opponent: `NC State`, line: `Bout 98: Terrell Barraclough (Utah Valley) def. Derek Fields (NC State), TF 7:00 ;15-0 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Iowa`, opponent: `Iowa State`, line: `Bout 99: Mike Caliendo (Iowa) def. Aiden Riggins (Iowa State), MD 11-3 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Northern Iowa`, opponent: `South Dakota State`, line: `Bout 100: Jack Thomsen (Northern Iowa) def. Drake Rhodes (South Dakota State), Dec 13-8 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Illinois`, opponent: `Rider`, line: `Bout 101: Braeden Scoles (Illinois) def. Enrique Munguia (Rider), Fall 4:27 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Michigan`, opponent: `Indiana`, line: `Bout 102: Beau Mantanona (Michigan) def. Tyler Lillard (Indiana), Dec 7-3 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Stanford`, opponent: `Ohio State`, line: `Bout 103: Hunter Garvin (Stanford) def. Paddy Gallagher (Ohio State), Dec 7-2 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Minnesota`, opponent: `Citadel`, line: `Bout 104: Andrew Sparks (Minnesota) def. Thomas Snipes (Citadel), Dec 4-2 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `Northwestern`, opponent: `Arizona State`, line: `Bout 105: Maxx Mayfield (Northwestern) def. Nicco Ruiz (Arizona State), Dec 7-6 [165]` },
-  { round: `ChampR1`, weight: `165`, school: `West Virginia`, opponent: `Wisconsin`, line: `Bout 106: Peyton Hall (West Virginia) def. Cody Goebel (Wisconsin), TF 5:22 ;19-1 [165]` },
-  { round: `ChampR1`, weight: `174`, school: `Missouri`, opponent: `Rider`, line: `Bout 107: Keegan OToole (Missouri) def. Michael Wilson (Rider), Fall 4:24 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Stanford`, opponent: `Chattanooga`, line: `Bout 108: Lorenzo Norman (Stanford) def. Sergio Desiante (Chattanooga), MD 14-3 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Virginia Tech`, opponent: `Ohio State`, line: `Bout 109: Lennox Wolak (Virginia Tech) def. Carson Kharchla (Ohio State), Dec 4-2 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Army West Point`, opponent: `Nebraska`, line: `Bout 110: Dalton Harkins (Army West Point) def. Lenny Pinto (Nebraska), Dec 6-1 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Cornell`, opponent: `Minnesota`, line: `Bout 111: Simon Ruiz (Cornell) def. Clayton Whiting (Minnesota), TF 7:00 ;17-2 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `North Carolina`, opponent: `Bucknell`, line: `Bout 112: Joshua Ogunsanya (North Carolina) def. Myles Takats (Bucknell), SV-1 4-1 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `South Dakota State`, opponent: `Illinois`, line: `Bout 113: Cade DeVos (South Dakota State) def. Dan Braunagel (Illinois), Dec 5-4 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Ohio`, opponent: `Rutgers`, line: `Bout 114: Garrett Thompson (Ohio) def. Jackson Turley (Rutgers), TF 4:11 ;16-1 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Oklahoma State`, opponent: `Lock Haven`, line: `Bout 115: Dean Hamiti (Oklahoma State) def. Avery Bassett (Lock Haven), TF 5:09 ;18-1 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `NC State`, opponent: `Northern Iowa`, line: `Bout 116: Matthew Singleton (NC State) def. Jared Simma (Northern Iowa), Dec 4-2 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Iowa`, opponent: `Pennsylvania`, line: `Bout 117: Patrick Kennedy (Iowa) def. Nick Incontrera (Pennsylvania), Dec 4-2 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Binghamton`, opponent: `Drexel`, line: `Bout 118: Brevin Cassella (Binghamton) def. Jasiah Queen (Drexel), Dec 3-1 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Navy`, opponent: `Purdue`, line: `Bout 119: Danny Wask (Navy) def. Brody Baumann (Purdue), TF 6:41 ;15-0 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Iowa State`, opponent: `Pittsburgh`, line: `Bout 120: MJ Gaitan (Iowa State) def. Luca Augustine (Pittsburgh), MD 13-2 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Oklahoma`, opponent: `Central Michigan`, line: `Bout 121: Gaven Sax (Oklahoma) def. Alex Cramer (Central Michigan), Dec 5-0 [174]` },
-  { round: `ChampR1`, weight: `174`, school: `Penn State`, opponent: `Maryland`, line: `Bout 122: Levi Haines (Penn State) def. Branson John (Maryland), Fall 2:46 [174]` },
-  { round: `ChampR1`, weight: `184`, school: `Penn State`, opponent: `Lehigh`, line: `Bout 123: Carter Starocci (Penn State) def. Caden Rogers (Lehigh), TF 6:20 ;18-2 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Rutgers`, opponent: `North Carolina`, line: `Bout 124: Shane Cartagena-Walsh (Rutgers) def. Gavin Kane (North Carolina), MD 11-3 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Pittsburgh`, opponent: `Bellarmine`, line: `Bout 125: Reece Heller (Pittsburgh) def. Devan Hendricks (Bellarmine), Dec 2-0 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Maryland`, opponent: `Edinboro`, line: `Bout 126: Jaxon Smith (Maryland) def. Jared McGill (Edinboro), Fall 2:48 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `South Dakota State`, opponent: `West Virginia`, line: `Bout 127: Bennett Berge (South Dakota State) def. Dennis Robin (West Virginia), Dec 8-2 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Nebraska`, opponent: `George Mason`, line: `Bout 128: Silas Allred (Nebraska) def. Malachi DuVall (George Mason), Fall 6:38 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Columbia`, opponent: `Iowa State`, line: `Bout 129: Nick Fine (Columbia) def. Evan Bockman (Iowa State), Fall 6:49 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Oklahoma State`, opponent: `Princeton`, line: `Bout 130: Dustin Plott (Oklahoma State) def. Kole Mulhauser (Princeton), TF 5:42 ;18-1 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Minnesota`, opponent: `Lock Haven`, line: `Bout 131: Max McEnelly (Minnesota) def. Colin Fegley (Lock Haven), TF 3:52 ;19-4 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Oklahoma`, opponent: `Wyoming`, line: `Bout 132: DJ Parker (Oklahoma) def. Eddie Neitenbach (Wyoming), MD 10-0 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Iowa`, opponent: `Indiana`, line: `Bout 133: Gabe Arnold (Iowa) def. Donnell Washington (Indiana), Dec 4-1 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Cornell`, opponent: `Hofstra`, line: `Bout 134: Chris Foca (Cornell) def. Ross McFarland (Hofstra), Dec 5-3 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Rider`, opponent: `Ohio State`, line: `Bout 135: Isaac Dean (Rider) def. Ryder Rogotzke (Ohio State), Dec 7-3 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Illinois`, opponent: `North Dakota State`, line: `Bout 136: Edmond Ruth (Illinois) def. Aidan Brenot (North Dakota State), MD 10-2 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `NC State`, opponent: `Pennsylvania`, line: `Bout 137: Dylan Fishback (NC State) def. Maximus Hale (Pennsylvania), Dec 10-3 [184]` },
-  { round: `ChampR1`, weight: `184`, school: `Northern Iowa`, opponent: `Missouri`, line: `Bout 138: Parker Keckeisen (Northern Iowa) def. Colton Hawks (Missouri), TF 6:35 ;19-4 [184]` },
-  { round: `ChampR1`, weight: `197`, school: `Michigan`, opponent: `Army West Point`, line: `Bout 139: Jacob Cardenas (Michigan) def. Wolfgang Frable (Army West Point), MD 10-0 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Northwestern`, opponent: `Stanford`, line: `Bout 140: Evan Bates (Northwestern) def. Nikolas Stemmet (Stanford), Dec 13-10 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Indiana`, opponent: `Illinois`, line: `Bout 141: Gabe Sollars (Indiana) def. Zac Braunagel (Illinois), Dec 6-5 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `The Citadel`, opponent: `Citadel`, line: `Bout 142: Patrick Brophy (The Citadel) def. Luke Surber (Citadel), MD 18-7 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Lehigh`, opponent: `Navy`, line: `Bout 143: Michael Beard (Lehigh) def. Payton Thomas (Navy), TF 3:45 ;19-4 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Little Rock`, opponent: `Campbell`, line: `Bout 144: Stephen Little (Little Rock) def. Levi Hopkins (Campbell), Dec 10-6 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Oregon State`, opponent: `Nebraska`, line: `Bout 145: Trey Munoz (Oregon State) def. Camden McDanel (Nebraska), Dec 4-2 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Penn State`, opponent: `Lock Haven`, line: `Bout 146: Josh Barr (Penn State) def. Tucker Hogan (Lock Haven), MD 9-1 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `CSU Bakersfield`, opponent: `West Virginia`, line: `Bout 147: AJ Ferrari (CSU Bakersfield) def. Ian Bush (West Virginia), Dec 8-1 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Virginia Tech`, opponent: `South Dakota State`, line: `Bout 148: Andy Smith (Virginia Tech) def. Zach Glazier (South Dakota State), Dec 4-2 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Princeton`, opponent: `Drexel`, line: `Bout 149: Luke Stout (Princeton) def. Mickey OMalley (Drexel), Dec 4-3 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Pittsburgh`, opponent: `Cornell`, line: `Bout 150: Mac Stout (Pittsburgh) def. Michael Dellagatta (Cornell), MD 12-0 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Rider`, opponent: `Northern Iowa`, line: `Bout 151: Brock Zurawski (Rider) def. Wyatt Voelker (Northern Iowa), SV-1 5-2 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Ohio State`, opponent: `Minnesota`, line: `Bout 152: Seth Shumate (Ohio State) def. Isaiah Salazar (Minnesota), Fall 4:12 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Wyoming`, opponent: `Bucknell`, line: `Bout 153: Joseph Novak (Wyoming) def. Dillon Bechtold (Bucknell), Dec 8-1 [197]` },
-  { round: `ChampR1`, weight: `197`, school: `Iowa`, opponent: `Michigan State`, line: `Bout 154: Stephen Buchanan (Iowa) def. Remy Cotton (Michigan State), MD 22-9 [197]` },
-  { round: `ChampR1`, weight: `285`, school: `Minnesota`, opponent: `Purdue`, line: `Bout 155: Gable Steveson (Minnesota) def. Hayden Filipovich (Purdue), Fall 1:25 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Rutgers`, opponent: `CSU Bakersfield`, line: `Bout 156: Yaraslau Slavikouski (Rutgers) def. Jake Andrews (CSU Bakersfield), Dec 4-2 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Arizona State`, opponent: `North Carolina`, line: `Bout 157: Cohlton Schultz (Arizona State) def. Nolan Neves (North Carolina), MD 8-0 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Illinois`, opponent: `South Dakota State`, line: `Bout 158: Luke Luffman (Illinois) def. Luke Rasmussen (South Dakota State), Dec 8-2 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Iowa`, opponent: `Iowa State`, line: `Bout 159: Ben Kueter (Iowa) def. Daniel Herrera (Iowa State), Dec 6-0 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Ohio State`, opponent: `Indiana`, line: `Bout 160: Nick Feldman (Ohio State) def. Jacob Bullock (Indiana), Dec 4-2 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Maryland`, opponent: `Ohio`, line: `Bout 161: Seth Nevills (Maryland) def. Jordan Greer (Ohio), Dec 5-0 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Lehigh`, opponent: `Cornell`, line: `Bout 162: Owen Trephan (Lehigh) def. Ashton Davis (Cornell), TF 5:40 ;17-2 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Penn State`, opponent: `Wyoming`, line: `Bout 163: Greg Kerkvliet (Penn State) def. Sam Mitchell (Wyoming), TF 5:31 ;15-0 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Lock Haven`, opponent: `Binghamton`, line: `Bout 164: Gavin Hoffman (Lock Haven) def. Cory Day (Binghamton), MD 10-2 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Army West Point`, opponent: `Virginia Tech`, line: `Bout 165: Brady Colbert (Army West Point) def. Jimmy Mullen (Virginia Tech), Dec 8-1 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Michigan`, opponent: `Duke`, line: `Bout 166: Joshua Heindselman (Michigan) def. Connor Barket (Duke), Fall 1:03 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `NC State`, opponent: `Stanford`, line: `Bout 167: Isaac Trumble (NC State) def. Peter Ming (Stanford), TF 6:12 ;18-2 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Pittsburgh`, opponent: `Cleveland State`, line: `Bout 168: Dayton Pitzer (Pittsburgh) def. Daniel Bucknavich (Cleveland State), Dec 6-2 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Cal Poly`, opponent: `Northern Iowa`, line: `Bout 169: Trevor Tinker (Cal Poly) def. Lance Runyon (Northern Iowa), MD 15-2 [285]` },
-  { round: `ChampR1`, weight: `285`, school: `Oklahoma State`, opponent: `Michigan State`, line: `Bout 170: Wyatt Hendrickson (Oklahoma State) def. Max Vanadia (Michigan State), Fall 1:18 [285]` },
-  { round: `ChampR2`, weight: `125`, school: `Penn State`, opponent: `Northern Illinois`, line: `Bout 171: Luke Lilledahl (Penn State) def. Blake West (Northern Illinois), TF 6:53 ;19-3 [125]` },
-  { round: `ChampR2`, weight: `125`, school: `Lehigh`, opponent: `Nebraska`, line: `Bout 172: Sheldon Seymour (Lehigh) def. Caleb Smith (Nebraska), Dec 7-3 [125]` },
-  { round: `ChampR2`, weight: `125`, school: `Rutgers`, opponent: `Arizona State`, line: `Bout 173: Dean Peterson (Rutgers) def. Richard Figueroa (Arizona State), Fall 5:42 [125]` },
-  { round: `ChampR2`, weight: `125`, school: `NC State`, opponent: `Princeton`, line: `Bout 174: Vincent Robinson (NC State) def. Marc-Anthony McGowan (Princeton), Dec 6-4 [125]` },
-  { round: `ChampR2`, weight: `125`, school: `Virginia Tech`, opponent: `North Carolina`, line: `Bout 175: Eddie Ventresca (Virginia Tech) def. Spencer Moore (North Carolina), Dec 6-3 [125]` },
-  { round: `ChampR2`, weight: `125`, school: `West Virginia`, opponent: `Wisconsin`, line: `Bout 176: Jett Strickenberger (West Virginia) def. Nicolar Rivera (Wisconsin), MD 18-6 [125]` },
-  { round: `ChampR2`, weight: `125`, school: `Oklahoma State`, opponent: `Northern Colorado`, line: `Bout 177: Troy Spratley (Oklahoma State) def. Stevo Poulin (Northern Colorado), Dec 2-1 [125]` },
-  { round: `ChampR2`, weight: `125`, school: `Purdue`, opponent: `Indiana`, line: `Bout 178: Matt Ramos (Purdue) def. Jacob Moran (Indiana), MD 8-0 [125]` },
-  { round: `ChampR2`, weight: `133`, school: `Illinois`, opponent: `Pennsylvania`, line: `Bout 179: Lucas Byrd (Illinois) def. Ryan Miller (Pennsylvania), MD 9-0 [133]` },
-  { round: `ChampR2`, weight: `133`, school: `Penn State`, opponent: `Maryland`, line: `Bout 180: Braeden Davis (Penn State) def. Braxton Brown (Maryland), Dec 5-3 [133]` },
-  { round: `ChampR2`, weight: `133`, school: `Indiana`, opponent: `Northern Colorado`, line: `Bout 181: Angelo Rini (Indiana) def. Dominick Serrano (Northern Colorado), MD 15-7 [133]` },
-  { round: `ChampR2`, weight: `133`, school: `Cal Poly`, opponent: `Stanford`, line: `Bout 182: Zeth Romney (Cal Poly) def. Tyler Knox (Stanford), Dec 4-2 [133]` },
-  { round: `ChampR2`, weight: `133`, school: `Wisconsin`, opponent: `Little Rock`, line: `Bout 183: Zan Fugitt (Wisconsin) def. Nasir Bailey (Little Rock), SV-1 4-1 [133]` },
-  { round: `ChampR2`, weight: `133`, school: `Virginia Tech`, opponent: `Iowa State`, line: `Bout 184: Connor McGonagle (Virginia Tech) def. Evan Frost (Iowa State), Dec 5-0 [133]` },
-  { round: `ChampR2`, weight: `133`, school: `Ohio State`, opponent: `Central Michigan`, line: `Bout 185: Nic Bouzakis (Ohio State) def. Sean Spidle (Central Michigan), Dec 9-4 [133]` },
-  { round: `ChampR2`, weight: `133`, school: `Iowa`, opponent: `Northern Iowa`, line: `Bout 186: Drake Ayala (Iowa) def. Julian Farber (Northern Iowa), MD 13-4 [133]` },
-  { round: `ChampR2`, weight: `141`, school: `Nebraska`, opponent: `Lock Haven`, line: `Bout 187: Brock Hardy (Nebraska) def. Wyatt Henson (Lock Haven), TF 6:17 ;19-3 [141]` },
-  { round: `ChampR2`, weight: `141`, school: `Iowa State`, opponent: `Northern Colorado`, line: `Bout 188: Jacob Frost (Iowa State) def. Andrew Alirez (Northern Colorado), Dec 6-1 [141]` },
-  { round: `ChampR2`, weight: `141`, school: `Northern Iowa`, opponent: `Bucknell`, line: `Bout 189: Cael Happel (Northern Iowa) def. Dylan Chappell (Bucknell), Dec 5-4 [141]` },
-  { round: `ChampR2`, weight: `141`, school: `Navy`, opponent: `Cornell`, line: `Bout 190: Josh Koderhandt (Navy) def. Joshua Saunders (Cornell), Fall 3:32 [141]` },
-  { round: `ChampR2`, weight: `141`, school: `Ohio State`, opponent: `Michigan`, line: `Bout 191: Jesse Mendez (Ohio State) def. Sergio Lemley (Michigan), MD 11-2 [141]` },
-  { round: `ChampR2`, weight: `141`, school: `Minnesota`, opponent: `Virginia`, line: `Bout 192: Vance VomBaur (Minnesota) def. Dylan Cedeno (Virginia), Dec 4-0 [141]` },
-  { round: `ChampR2`, weight: `141`, school: `Pennsylvania`, opponent: `Oklahoma State`, line: `Bout 193: CJ Composto (Pennsylvania) def. Tagen Jamison (Oklahoma State), Dec 6-4 [141]` },
-  { round: `ChampR2`, weight: `141`, school: `Penn State`, opponent: `South Dakota State`, line: `Bout 194: Beau Bartlett (Penn State) def. Julian Tagg (South Dakota State), Dec 4-1 [141]` },
-  { round: `ChampR2`, weight: `149`, school: `Virginia Tech`, opponent: `Stanford`, line: `Bout 195: Caleb Henson (Virginia Tech) def. Jaden Abas (Stanford), Dec 5-1 [149]` },
-  { round: `ChampR2`, weight: `149`, school: `Little Rock`, opponent: `Pennsylvania`, line: `Bout 196: Jordan Williams (Little Rock) def. Cross Wasilewski (Pennsylvania), Dec 10-3 [149]` },
-  { round: `ChampR2`, weight: `149`, school: `Oregon State`, opponent: `Iowa`, line: `Bout 197: Ethan Stiles (Oregon State) def. Kyle Parco (Iowa), MD 8-0 [149]` },
-  { round: `ChampR2`, weight: `149`, school: `Ohio State`, opponent: `Virginia`, line: `Bout 198: Dylan DEmilio (Ohio State) def. Jack Gioffre (Virginia), Dec 8-5 [149]` },
-  { round: `ChampR2`, weight: `149`, school: `Penn State`, opponent: `Rutgers`, line: `Bout 199: Shayne Van Ness (Penn State) def. Andrew Clark (Rutgers), MD 11-1 [149]` },
-  { round: `ChampR2`, weight: `149`, school: `North Carolina`, opponent: `Rider`, line: `Bout 200: Lachlan McNeil (North Carolina) def. Sammy Alvarez (Rider), Dec 4-2 [149]` },
-  { round: `ChampR2`, weight: `149`, school: `Illinois`, opponent: `Northern Iowa`, line: `Bout 201: Kannon Webster (Illinois) def. Colin Realbuto (Northern Iowa), Dec 8-3 [149]` },
-  { round: `ChampR2`, weight: `149`, school: `Nebraska`, opponent: `Princeton`, line: `Bout 202: Ridge Lovett (Nebraska) def. Ty Whalen (Princeton), TF 6:09 ;15-0 [149]` },
-  { round: `ChampR2`, weight: `157`, school: `Penn State`, opponent: `Iowa State`, line: `Bout 203: Tyler Kasak (Penn State) def. Cody Chittum (Iowa State), Dec 8-3 [157]` },
-  { round: `ChampR2`, weight: `157`, school: `Purdue`, opponent: `Minnesota`, line: `Bout 204: Joey Blaze (Purdue) def. Tommy Askey (Minnesota), TB-1 2-2 [157]` },
-  { round: `ChampR2`, weight: `157`, school: `Oklahoma State`, opponent: `Ohio State`, line: `Bout 205: Caleb Fish (Oklahoma State) def. Brandon Cannon (Ohio State), SV-1 10-7 [157]` },
-  { round: `ChampR2`, weight: `157`, school: `Northwestern`, opponent: `Virginia Tech`, line: `Bout 206: Trevor Chumbley (Northwestern) def. Rafael Hipolito (Virginia Tech), TB-1 2-1 [157]` },
-  { round: `ChampR2`, weight: `157`, school: `Nebraska`, opponent: `Pennsylvania`, line: `Bout 207: Antrell Taylor (Nebraska) def. Jude Swisher (Pennsylvania), Fall 2:16 [157]` },
-  { round: `ChampR2`, weight: `157`, school: `Little Rock`, opponent: `Northern Iowa`, line: `Bout 208: Matty Bianchi (Little Rock) def. Ryder Downey (Northern Iowa), Dec 5-4 [157]` },
-  { round: `ChampR2`, weight: `157`, school: `Northern Colorado`, opponent: `Michigan`, line: `Bout 209: Vinny Zerban (Northern Colorado) def. Chase Saldate (Michigan), Dec 5-1 [157]` },
-  { round: `ChampR2`, weight: `157`, school: `Cornell`, opponent: `Central Michigan`, line: `Bout 210: Meyer Shapiro (Cornell) def. Johnny Lovett (Central Michigan), Dec 10-4 [157]` },
-  { round: `ChampR2`, weight: `165`, school: `Penn State`, opponent: `Hofstra`, line: `Bout 211: Mitchell Mesenbrink (Penn State) def. Kyle Mosher (Hofstra), TF 4:16 ;22-6 [165]` },
-  { round: `ChampR2`, weight: `165`, school: `Oklahoma State`, opponent: `Missouri`, line: `Bout 212: Cameron Amine (Oklahoma State) def. Cam Steed (Missouri), Dec 3-1 [165]` },
-  { round: `ChampR2`, weight: `165`, school: `Nebraska`, opponent: `Cornell`, line: `Bout 213: Christopher Minto (Nebraska) def. Julian Ramirez (Cornell), MD 11-1 [165]` },
-  { round: `ChampR2`, weight: `165`, school: `Utah Valley`, opponent: `Appalachian State`, line: `Bout 214: Terrell Barraclough (Utah Valley) def. Will Miller (Appalachian State), MD 11-1 [165]` },
-  { round: `ChampR2`, weight: `165`, school: `Iowa`, opponent: `Northern Iowa`, line: `Bout 215: Mike Caliendo (Iowa) def. Jack Thomsen (Northern Iowa), MD 15-3 [165]` },
-  { round: `ChampR2`, weight: `165`, school: `Michigan`, opponent: `Illinois`, line: `Bout 216: Beau Mantanona (Michigan) def. Braeden Scoles (Illinois), Dec 8-5 [165]` },
-  { round: `ChampR2`, weight: `165`, school: `Stanford`, opponent: `Minnesota`, line: `Bout 217: Hunter Garvin (Stanford) def. Andrew Sparks (Minnesota), MD 14-4 [165]` },
-  { round: `ChampR2`, weight: `165`, school: `West Virginia`, opponent: `Northwestern`, line: `Bout 218: Peyton Hall (West Virginia) def. Maxx Mayfield (Northwestern), TF 5:36 ;20-4 [165]` },
-  { round: `ChampR2`, weight: `174`, school: `Missouri`, opponent: `Stanford`, line: `Bout 219: Keegan OToole (Missouri) def. Lorenzo Norman (Stanford), Dec 10-8 [174]` },
-  { round: `ChampR2`, weight: `174`, school: `Virginia Tech`, opponent: `Army West Point`, line: `Bout 220: Lennox Wolak (Virginia Tech) def. Dalton Harkins (Army West Point), SV-1 4-1 [174]` },
-  { round: `ChampR2`, weight: `174`, school: `Cornell`, opponent: `North Carolina`, line: `Bout 221: Simon Ruiz (Cornell) def. Joshua Ogunsanya (North Carolina), Dec 4-2 [174]` },
-  { round: `ChampR2`, weight: `174`, school: `South Dakota State`, opponent: `Ohio`, line: `Bout 222: Cade DeVos (South Dakota State) def. Garrett Thompson (Ohio), Dec 9-3 [174]` },
-  { round: `ChampR2`, weight: `174`, school: `Oklahoma State`, opponent: `NC State`, line: `Bout 223: Dean Hamiti (Oklahoma State) def. Matthew Singleton (NC State), MD 15-3 [174]` },
-  { round: `ChampR2`, weight: `174`, school: `Iowa`, opponent: `Binghamton`, line: `Bout 224: Patrick Kennedy (Iowa) def. Brevin Cassella (Binghamton), Dec 3-0 [174]` },
-  { round: `ChampR2`, weight: `174`, school: `Navy`, opponent: `Iowa State`, line: `Bout 225: Danny Wask (Navy) def. MJ Gaitan (Iowa State), MD 12-4 [174]` },
-  { round: `ChampR2`, weight: `174`, school: `Penn State`, opponent: `Oklahoma`, line: `Bout 226: Levi Haines (Penn State) def. Gaven Sax (Oklahoma), Dec 4-0 [174]` },
-  { round: `ChampR2`, weight: `184`, school: `Penn State`, opponent: `Rutgers`, line: `Bout 227: Carter Starocci (Penn State) def. Shane Cartagena-Walsh (Rutgers), TF 4:24 ;15-0 [184]` },
-  { round: `ChampR2`, weight: `184`, school: `Maryland`, opponent: `Pittsburgh`, line: `Bout 228: Jaxon Smith (Maryland) def. Reece Heller (Pittsburgh), Fall 2:45 [184]` },
-  { round: `ChampR2`, weight: `184`, school: `Nebraska`, opponent: `South Dakota State`, line: `Bout 229: Silas Allred (Nebraska) def. Bennett Berge (South Dakota State), Fall 6:42 [184]` },
-  { round: `ChampR2`, weight: `184`, school: `Oklahoma State`, opponent: `Columbia`, line: `Bout 230: Dustin Plott (Oklahoma State) def. Nick Fine (Columbia), MD 12-2 [184]` },
-  { round: `ChampR2`, weight: `184`, school: `Minnesota`, opponent: `Oklahoma`, line: `Bout 231: Max McEnelly (Minnesota) def. DJ Parker (Oklahoma), MD 11-3 [184]` },
-  { round: `ChampR2`, weight: `184`, school: `Cornell`, opponent: `Iowa`, line: `Bout 232: Chris Foca (Cornell) def. Gabe Arnold (Iowa), MD 12-1 [184]` },
-  { round: `ChampR2`, weight: `184`, school: `Illinois`, opponent: `Rider`, line: `Bout 233: Edmond Ruth (Illinois) def. Isaac Dean (Rider), TB-2 ;RT [184]` },
-  { round: `ChampR2`, weight: `184`, school: `Northern Iowa`, opponent: `NC State`, line: `Bout 234: Parker Keckeisen (Northern Iowa) def. Dylan Fishback (NC State), MD 14-3 [184]` },
-  { round: `ChampR2`, weight: `197`, school: `Michigan`, opponent: `Northwestern`, line: `Bout 235: Jacob Cardenas (Michigan) def. Evan Bates (Northwestern), Dec 4-1 [197]` },
-  { round: `ChampR2`, weight: `197`, school: `Indiana`, opponent: `The Citadel`, line: `Bout 236: Gabe Sollars (Indiana) def. Patrick Brophy (The Citadel), MD 13-4 [197]` },
-  { round: `ChampR2`, weight: `197`, school: `Lehigh`, opponent: `Little Rock`, line: `Bout 237: Michael Beard (Lehigh) def. Stephen Little (Little Rock), Dec 4-1 [197]` },
-  { round: `ChampR2`, weight: `197`, school: `Penn State`, opponent: `Oregon State`, line: `Bout 238: Josh Barr (Penn State) def. Trey Munoz (Oregon State), SV-1 5-2 [197]` },
-  { round: `ChampR2`, weight: `197`, school: `CSU Bakersfield`, opponent: `Virginia Tech`, line: `Bout 239: AJ Ferrari (CSU Bakersfield) def. Andy Smith (Virginia Tech), Dec 5-1 [197]` },
-  { round: `ChampR2`, weight: `197`, school: `Pittsburgh`, opponent: `Princeton`, line: `Bout 240: Mac Stout (Pittsburgh) def. Luke Stout (Princeton), Dec 4-2 [197]` },
-  { round: `ChampR2`, weight: `197`, school: `Ohio State`, opponent: `Rider`, line: `Bout 241: Seth Shumate (Ohio State) def. Brock Zurawski (Rider), Dec 11-6 [197]` },
-  { round: `ChampR2`, weight: `197`, school: `Iowa`, opponent: `Wyoming`, line: `Bout 242: Stephen Buchanan (Iowa) def. Joseph Novak (Wyoming), TF 7:00 ;16-1 [197]` },
-  { round: `ChampR2`, weight: `285`, school: `Minnesota`, opponent: `Rutgers`, line: `Bout 243: Gable Steveson (Minnesota) def. Yaraslau Slavikouski (Rutgers), Fall [285]` },
-  { round: `ChampR2`, weight: `285`, school: `Arizona State`, opponent: `Illinois`, line: `Bout 244: Cohlton Schultz (Arizona State) def. Luke Luffman (Illinois), Dec 7-0 [285]` },
-  { round: `ChampR2`, weight: `285`, school: `Iowa`, opponent: `Ohio State`, line: `Bout 245: Ben Kueter (Iowa) def. Nick Feldman (Ohio State), Dec 8-2 [285]` },
-  { round: `ChampR2`, weight: `285`, school: `Lehigh`, opponent: `Maryland`, line: `Bout 246: Owen Trephan (Lehigh) def. Seth Nevills (Maryland), Dec 8-3 [285]` },
-  { round: `ChampR2`, weight: `285`, school: `Penn State`, opponent: `Lock Haven`, line: `Bout 247: Greg Kerkvliet (Penn State) def. Gavin Hoffman (Lock Haven), Dec 4-0 [285]` },
-  { round: `ChampR2`, weight: `285`, school: `Michigan`, opponent: `Army West Point`, line: `Bout 248: Joshua Heindselman (Michigan) def. Brady Colbert (Army West Point), TF 4:29 ;17-2 [285]` },
-  { round: `ChampR2`, weight: `285`, school: `NC State`, opponent: `Pittsburgh`, line: `Bout 249: Isaac Trumble (NC State) def. Dayton Pitzer (Pittsburgh), Dec 5-2 [285]` },
-  { round: `ChampR2`, weight: `285`, school: `Oklahoma State`, opponent: `Cal Poly`, line: `Bout 250: Wyatt Hendrickson (Oklahoma State) def. Trevor Tinker (Cal Poly), Fall 3:52 [285]` },
-  { round: `ConsPrelims`, weight: `125`, school: `Michigan State`, opponent: `Citadel`, line: `Bout 251: Caleb Weiand (Michigan State) def. Gylon Sims (Citadel), Dec 8-4 [125]` },
-  { round: `ConsPrelims`, weight: `133`, school: `South Dakota State`, opponent: `Michigan`, line: `Bout 252: Derrick Cardinal (South Dakota State) def. Nolan Wertanen (Michigan), Dec 10-7 [133]` },
-  { round: `ConsPrelims`, weight: `141`, school: `Pittsburgh`, opponent: `Columbia`, line: `Bout 253: Briar Priest (Pittsburgh) def. Lorenzo Frezza (Columbia), Dec 5-0 [141]` },
-  { round: `ConsPrelims`, weight: `149`, school: `Campbell`, opponent: `Wyoming`, line: `Bout 254: Wynton Denkins (Campbell) def. Gabe Willochell (Wyoming), SV-1 17-14 [149]` },
-  { round: `ConsPrelims`, weight: `157`, school: `Missouri`, opponent: `Columbia`, line: `Bout 255: James Conway (Missouri) def. Richard Fedalen (Columbia), Dec 7-3 [157]` },
-  { round: `ConsPrelims`, weight: `165`, school: `Iowa State`, opponent: `Pittsburgh`, line: `Bout 256: Aiden Riggins (Iowa State) def. Jared Keslar (Pittsburgh), Dec 7-6 [165]` },
-  { round: `ConsPrelims`, weight: `174`, school: `Lock Haven`, opponent: `Columbia`, line: `Bout 257: Avery Bassett (Lock Haven) def. Jack McGill (Columbia), Dec 4-3 [174]` },
-  { round: `ConsPrelims`, weight: `184`, school: `Oregon State`, opponent: `Lock Haven`, line: `Bout 258: TJ McDonnell (Oregon State) def. Colin Fegley (Lock Haven), TF-1.5 5:27 [184]` },
-  { round: `ConsPrelims`, weight: `197`, school: `West Virginia`, opponent: `Appalachian State`, line: `Bout 259: Ian Bush (West Virginia) def. Carson Floyd (Appalachian State), Dec 5-4 [197]` },
-  { round: `ConsPrelims`, weight: `285`, school: `Wyoming`, opponent: `Appalachian State`, line: `Bout 260: Sam Mitchell (Wyoming) def. Stephan Monchery (Appalachian State), Dec 5-0 [285]` },
-  { round: `ConsR1`, weight: `125`, school: `Pennsylvania`, opponent: `Cornell`, line: `Bout 261: Max Gallagher (Pennsylvania) def. Marcello Milani (Cornell), Dec 5-1 [125]` },
-  { round: `ConsR1`, weight: `125`, school: `Army West Point`, opponent: `Pittsburgh`, line: `Bout 262: Charlie Farmer (Army West Point) def. Nick Babin (Pittsburgh), Dec 7-4 [125]` },
-  { round: `ConsR1`, weight: `125`, school: `Oklahoma`, opponent: `Cal Poly`, line: `Bout 263: Antonio Lorenzo (Oklahoma) def. Koda Holeman (Cal Poly), MD 8-0 [125]` },
-  { round: `ConsR1`, weight: `125`, school: `Ohio State`, opponent: `Iowa`, line: `Bout 264: Brendan McCrone (Ohio State) def. Joey Cruz (Iowa), MD 12-4 [125]` },
-  { round: `ConsR1`, weight: `125`, school: `Minnesota`, opponent: `Michigan State`, line: `Bout 265: Cooper Flynn (Minnesota) def. Caleb Weiand (Michigan State), Fall 2:48 [125]` },
-  { round: `ConsR1`, weight: `125`, school: `Northern Iowa`, opponent: `North Dakota State`, line: `Bout 266: Trever Anderson (Northern Iowa) def. Tristan Daugherty (North Dakota State), Dec 2-0 [125]` },
-  { round: `ConsR1`, weight: `125`, school: `South Dakota State`, opponent: `Virginia`, line: `Bout 267: Tanner Jordan (South Dakota State) def. Keyveon Roller (Virginia), MD 11-2 [125]` },
-  { round: `ConsR1`, weight: `125`, school: `Oregon State`, opponent: `CSU Bakersfield`, line: `Bout 268: Maximo Renteria (Oregon State) def. Richard Castro-Sandoval (CSU Bakersfield), Dec 7-2 [125]` },
-  { round: `ConsR1`, weight: `133`, school: `Nebraska`, opponent: `California Baptist`, line: `Bout 269: Jacob Van Dee (Nebraska) def. Hunter Leake (California Baptist), MD 13-2 [133]` },
-  { round: `ConsR1`, weight: `133`, school: `Bucknell`, opponent: `North Dakota State`, line: `Bout 270: Kurt Phipps (Bucknell) def. Kyle Burwick (North Dakota State), Dec 6-5 [133]` },
-  { round: `ConsR1`, weight: `133`, school: `North Carolina`, opponent: `Edinboro`, line: `Bout 271: Ethan Oakley (North Carolina) def. Colton Camacho (Edinboro), Dec 15-11 [133]` },
-  { round: `ConsR1`, weight: `133`, school: `Cornell`, opponent: `Chattanooga`, line: `Bout 272: Tyler Ferrara (Cornell) def. Blake Boarman (Chattanooga), Dec 5-3 [133]` },
-  { round: `ConsR1`, weight: `133`, school: `South Dakota State`, opponent: `Lehigh`, line: `Bout 273: Derrick Cardinal (South Dakota State) def. Sheldon Seymour (Lehigh), Dec 5-4 [133]` },
-  { round: `ConsR1`, weight: `133`, school: `Minnesota`, opponent: `Army West Point`, line: `Bout 274: Tyler Wells (Minnesota) def. Ethan Berginc (Army West Point), Dec 5-1 [133]` },
-  { round: `ConsR1`, weight: `133`, school: `Rutgers`, opponent: `NC State`, line: `Bout 275: Dylan Shawver (Rutgers) def. Kai Orine (NC State), SV-1 4-1 [133]` },
-  { round: `ConsR1`, weight: `133`, school: `Lock Haven`, opponent: `Missouri`, line: `Bout 276: Anthony Noto (Lock Haven) def. Kade Moore (Missouri), Dec 8-2 [133]` },
-  { round: `ConsR1`, weight: `141`, school: `Oregon State`, opponent: `Campbell`, line: `Bout 277: Nash Singleton (Oregon State) def. Shannon Hanna (Campbell), TB-1 2-1 [141]` },
-  { round: `ConsR1`, weight: `141`, school: `Stanford`, opponent: `Bellarmine`, line: `Bout 278: Jason Miranda (Stanford) def. AJ Rallo (Bellarmine), Dec 4-1 [141]` },
-  { round: `ConsR1`, weight: `141`, school: `Illinois`, opponent: `Virginia Tech`, line: `Bout 279: Danny Pucino (Illinois) def. Sam Latona (Virginia Tech), Dec 12-8 [141]` },
-  { round: `ConsR1`, weight: `141`, school: `North Carolina`, opponent: `Gardner-Webb`, line: `Bout 280: Jayden Scott (North Carolina) def. Todd Carter (Gardner-Webb), Dec 5-4 [141]` },
-  { round: `ConsR1`, weight: `141`, school: `Oklahoma`, opponent: `Rutgers`, line: `Bout 281: Mosha Schwartz (Oklahoma) def. Dean Peterson (Rutgers), Dec 9-5 [141]` },
-  { round: `ConsR1`, weight: `141`, school: `Purdue`, opponent: `Drexel`, line: `Bout 282: Greyson Clark (Purdue) def. Jordan Soriano (Drexel), MD 13-3 [141]` },
-  { round: `ConsR1`, weight: `141`, school: `Princeton`, opponent: `Missouri`, line: `Bout 283: Eligh Rivera (Princeton) def. Josh Edmond (Missouri), SV-1 8-5 [141]` },
-  { round: `ConsR1`, weight: `141`, school: `Rutgers`, opponent: `West Virginia`, line: `Bout 284: Joseph Olivieri (Rutgers) def. Jordan Titus (West Virginia), SV-1 4-1 [141]` },
-  { round: `ConsR1`, weight: `149`, school: `Oklahoma State`, opponent: `Army West Point`, line: `Bout 285: Teague Travis (Oklahoma State) def. Trae McDaniel (Army West Point), MD 17-4 [149]` },
-  { round: `ConsR1`, weight: `149`, school: `Lehigh`, opponent: `Central Michigan`, line: `Bout 286: Malyke Hines (Lehigh) def. Mason Shrader (Central Michigan), Dec 7-3 [149]` },
-  { round: `ConsR1`, weight: `149`, school: `Oklahoma`, opponent: `Michigan`, line: `Bout 287: Willie McDougald (Oklahoma) def. Dylan Gilcher (Michigan), SV-1 8-5 [149]` },
-  { round: `ConsR1`, weight: `149`, school: `Iowa State`, opponent: `NC State`, line: `Bout 288: Paniro Johnson (Iowa State) def. Koy Buesgens (NC State), TB-1 1-1 [149]` },
-  { round: `ConsR1`, weight: `149`, school: `Cal Poly`, opponent: `NC State`, line: `Bout 289: Chance Lamer (Cal Poly) def. Vincent Robinson (NC State), MD 11-3 [149]` },
-  { round: `ConsR1`, weight: `149`, school: `North Dakota State`, opponent: `George Mason`, line: `Bout 290: Gavin Drexler (North Dakota State) def. Kaden Cassidy (George Mason), MD 13-1 [149]` },
-  { round: `ConsR1`, weight: `149`, school: `The Citadel`, opponent: `Maryland`, line: `Bout 291: Carson DesRosier (The Citadel) def. Kal Miller (Maryland), Dec 5-4 [149]` },
-  { round: `ConsR1`, weight: `149`, school: `Cornell`, opponent: `Northwestern`, line: `Bout 292: Ethan Fernandez (Cornell) def. Sam Cartella (Northwestern), Dec 3-2 [149]` },
-  { round: `ConsR1`, weight: `157`, school: `George Mason`, opponent: `Northern Illinois`, line: `Bout 293: DJ McGee (George Mason) def. Landen Johnson (Northern Illinois), Dec 3-2 [157]` },
-  { round: `ConsR1`, weight: `157`, school: `Pittsburgh`, opponent: `North Carolina`, line: `Bout 294: Dylan Evans (Pittsburgh) def. Sonny Santiago (North Carolina), SV-1 4-1 [157]` },
-  { round: `ConsR1`, weight: `157`, school: `Lehigh`, opponent: `Oregon State`, line: `Bout 295: Logan Rozynski (Lehigh) def. Christopher Hamblin (Oregon State), Dec 7-3;19-3 [157]` },
-  { round: `ConsR1`, weight: `157`, school: `Harvard`, opponent: `Wyoming`, line: `Bout 296: James Harrington (Harvard) def. Jared Hill (Wyoming), Fall 5:46 [157]` },
-  { round: `ConsR1`, weight: `157`, school: `South Dakota State`, opponent: `Virginia Tech`, line: `Bout 297: Cobe Siebrecht (South Dakota State) def. Eddie Ventresca (Virginia Tech), Dec 7-5 [157]` },
-  { round: `ConsR1`, weight: `157`, school: `NC State`, opponent: `Stanford`, line: `Bout 298: Ed Scott (NC State) def. Grigor Cholakyan (Stanford), TF 6:08 ;19-4 [157]` },
-  { round: `ConsR1`, weight: `157`, school: `Maryland`, opponent: `Brown`, line: `Bout 299: Ethen Miller (Maryland) def. Blake Saito (Brown), MD 14-2 [157]` },
-  { round: `ConsR1`, weight: `157`, school: `Chattanooga`, opponent: `Iowa`, line: `Bout 300: Noah Castillo (Chattanooga) def. Jacori Teemer (Iowa), Dec 8-5 [157]` },
-  { round: `ConsR1`, weight: `165`, school: `Central Michigan`, opponent: `Bucknell`, line: `Bout 301: Chandler Amaker (Central Michigan) def. Noah Mulvaney (Bucknell), Dec 8-6 [165]` },
-  { round: `ConsR1`, weight: `165`, school: `Virginia`, opponent: `Columbia`, line: `Bout 302: Nick Hamilton (Virginia) def. Cesar Alvan (Columbia), Dec 10-3 [165]` },
-  { round: `ConsR1`, weight: `165`, school: `Virginia Tech`, opponent: `Little Rock`, line: `Bout 303: Mac Church (Virginia Tech) def. Joseph Bianchi (Little Rock), MD 12-4 [165]` },
-  { round: `ConsR1`, weight: `165`, school: `Army West Point`, opponent: `NC State`, line: `Bout 304: Gunner Filipowicz (Army West Point) def. Derek Fields (NC State), Dec 9-8 [165]` },
-  { round: `ConsR1`, weight: `165`, school: `Iowa State`, opponent: `West Virginia`, line: `Bout 305: Aiden Riggins (Iowa State) def. Jett Strickenberger (West Virginia), Dec 9-3;RT [165]` },
-  { round: `ConsR1`, weight: `165`, school: `Indiana`, opponent: `Rider`, line: `Bout 306: Tyler Lillard (Indiana) def. Enrique Munguia (Rider), Fall 3:49 [165]` },
-  { round: `ConsR1`, weight: `165`, school: `The Citadel`, opponent: `Ohio State`, line: `Bout 307: Thomas Snipes (The Citadel) def. Paddy Gallagher (Ohio State), TB-2 [165]` },
-  { round: `ConsR1`, weight: `165`, school: `Arizona State`, opponent: `Wisconsin`, line: `Bout 308: Nicco Ruiz (Arizona State) def. Cody Goebel (Wisconsin), MD 16-3;17-2 [165]` },
-  { round: `ConsR1`, weight: `174`, school: `Chattanooga`, opponent: `Rider`, line: `Bout 309: Sergio Desiante (Chattanooga) def. Michael Wilson (Rider), TF 4:22 [174]` },
-  { round: `ConsR1`, weight: `174`, school: `Nebraska`, opponent: `Ohio State`, line: `Bout 310: Lenny Pinto (Nebraska) def. Carson Kharchla (Ohio State), SV-1 12-7 [174]` },
-  { round: `ConsR1`, weight: `174`, school: `Minnesota`, opponent: `Bucknell`, line: `Bout 311: Clayton Whiting (Minnesota) def. Myles Takats (Bucknell), Dec 11-9 [174]` },
-  { round: `ConsR1`, weight: `174`, school: `Illinois`, opponent: `Rutgers`, line: `Bout 312: Dan Braunagel (Illinois) def. Jackson Turley (Rutgers), MD 18-9 [174]` },
-  { round: `ConsR1`, weight: `174`, school: `Northern Iowa`, opponent: `Oklahoma State`, line: `Bout 313: Jared Simma (Northern Iowa) def. Troy Spratley (Oklahoma State), MD 11-0 [174]` },
-  { round: `ConsR1`, weight: `174`, school: `Pennsylvania`, opponent: `Drexel`, line: `Bout 314: Nick Incontrera (Pennsylvania) def. Jasiah Queen (Drexel), Dec 3-0 [174]` },
-  { round: `ConsR1`, weight: `174`, school: `Purdue`, opponent: `Pittsburgh`, line: `Bout 315: Brody Baumann (Purdue) def. Luca Augustine (Pittsburgh), Dec 3-2 [174]` },
-  { round: `ConsR1`, weight: `174`, school: `Pittsburgh`, opponent: `Central Michigan`, line: `Bout 316: Luca Augustine (Pittsburgh) def. Alex Cramer (Central Michigan), MD 11-2 [174]` },
-  { round: `ConsR1`, weight: `184`, school: `North Carolina`, opponent: `Lehigh`, line: `Bout 317: Gavin Kane (North Carolina) def. Caden Rogers (Lehigh), MD 9-1 [184]` },
-  { round: `ConsR1`, weight: `184`, school: `Edinboro`, opponent: `Bellarmine`, line: `Bout 318: Jared McGill (Edinboro) def. Devan Hendricks (Bellarmine), Dec 6-0 [184]` },
-  { round: `ConsR1`, weight: `184`, school: `George Mason`, opponent: `West Virginia`, line: `Bout 319: Malachi DuVall (George Mason) def. Dennis Robin (West Virginia), MD 13-0 [184]` },
-  { round: `ConsR1`, weight: `184`, school: `Princeton`, opponent: `Iowa State`, line: `Bout 320: Kole Mulhauser (Princeton) def. Evan Bockman (Iowa State), Dec 12-5 [184]` },
-  { round: `ConsR1`, weight: `184`, school: `Wyoming`, opponent: `Purdue`, line: `Bout 321: Eddie Neitenbach (Wyoming) def. Matt Ramos (Purdue), Fall 1:08 [184]` },
-  { round: `ConsR1`, weight: `184`, school: `Indiana`, opponent: `Hofstra`, line: `Bout 322: Donnell Washington (Indiana) def. Ross McFarland (Hofstra), Dec 10-8 [184]` },
-  { round: `ConsR1`, weight: `184`, school: `North Dakota State`, opponent: `Ohio State`, line: `Bout 323: Aidan Brenot (North Dakota State) def. Ryder Rogotzke (Ohio State), Dec 13-7 [184]` },
-  { round: `ConsR1`, weight: `184`, school: `Pennsylvania`, opponent: `Missouri`, line: `Bout 324: Maximus Hale (Pennsylvania) def. Colton Hawks (Missouri), Dec 7-2 [184]` },
-  { round: `ConsR1`, weight: `197`, school: `Stanford`, opponent: `Army West Point`, line: `Bout 325: Nikolas Stemmet (Stanford) def. Wolfgang Frable (Army West Point), Dec 9-8 [197]` },
-  { round: `ConsR1`, weight: `197`, school: `Illinois`, opponent: `Citadel`, line: `Bout 326: Zac Braunagel (Illinois) def. Luke Surber (Citadel), MD 14-3 [197]` },
-  { round: `ConsR1`, weight: `197`, school: `Campbell`, opponent: `Navy`, line: `Bout 327: Levi Hopkins (Campbell) def. Payton Thomas (Navy), MD 14-4 [197]` },
-  { round: `ConsR1`, weight: `197`, school: `Nebraska`, opponent: `Lock Haven`, line: `Bout 328: Camden McDanel (Nebraska) def. Tucker Hogan (Lock Haven), MD 13-2 [197]` },
-  { round: `ConsR1`, weight: `197`, school: `South Dakota State`, opponent: `Illinois`, line: `Bout 329: Zach Glazier (South Dakota State) def. Lucas Byrd (Illinois), Dec 4-3 [197]` },
-  { round: `ConsR1`, weight: `197`, school: `Cornell`, opponent: `Drexel`, line: `Bout 330: Michael Dellagatta (Cornell) def. Mickey OMalley (Drexel), MD 10-0 [197]` },
-  { round: `ConsR1`, weight: `197`, school: `Northern Iowa`, opponent: `Minnesota`, line: `Bout 331: Wyatt Voelker (Northern Iowa) def. Isaiah Salazar (Minnesota), SV-1 4-1 [197]` },
-  { round: `ConsR1`, weight: `197`, school: `Bucknell`, opponent: `Michigan State`, line: `Bout 332: Dillon Bechtold (Bucknell) def. Remy Cotton (Michigan State), Fall 0:58 [197]` },
-  { round: `ConsR1`, weight: `285`, school: `CSU Bakersfield`, opponent: `Purdue`, line: `Bout 333: Jake Andrews (CSU Bakersfield) def. Hayden Filipovich (Purdue), Dec 4-2 [285]` },
-  { round: `ConsR1`, weight: `285`, school: `South Dakota State`, opponent: `North Carolina`, line: `Bout 334: Luke Rasmussen (South Dakota State) def. Nolan Neves (North Carolina), Dec 10-6 [285]` },
-  { round: `ConsR1`, weight: `285`, school: `Indiana`, opponent: `Iowa State`, line: `Bout 335: Jacob Bullock (Indiana) def. Daniel Herrera (Iowa State), Dec 7-1 [285]` },
-  { round: `ConsR1`, weight: `285`, school: `Cornell`, opponent: `Ohio`, line: `Bout 336: Ashton Davis (Cornell) def. Jordan Greer (Ohio), Dec 7-1 [285]` },
-  { round: `ConsR1`, weight: `285`, school: `Binghamton`, opponent: `Penn State`, line: `Bout 337: Cory Day (Binghamton) def. Braeden Davis (Penn State), Fall 5:58 [285]` },
-  { round: `ConsR1`, weight: `285`, school: `Virginia Tech`, opponent: `Duke`, line: `Bout 338: Jimmy Mullen (Virginia Tech) def. Connor Barket (Duke), Dec 9-6 [285]` },
-  { round: `ConsR1`, weight: `285`, school: `Stanford`, opponent: `Cleveland State`, line: `Bout 339: Peter Ming (Stanford) def. Daniel Bucknavich (Cleveland State), Dec 4-2 [285]` },
-  { round: `ConsR1`, weight: `285`, school: `Northern Iowa`, opponent: `Michigan State`, line: `Bout 340: Lance Runyon (Northern Iowa) def. Max Vanadia (Michigan State), MD 11-2 [285]` },
-  { round: `QtrFinals`, weight: `125`, school: `Lehigh`, opponent: `Penn State`, line: `Bout 341: Sheldon Seymour (Lehigh) def. Luke Lilledahl (Penn State), TB-1 2-2 [125]` },
-  { round: `QtrFinals`, weight: `125`, school: `NC State`, opponent: `Rutgers`, line: `Bout 342: Vincent Robinson (NC State) def. Dean Peterson (Rutgers), Dec 4-2 [125]` },
-  { round: `QtrFinals`, weight: `125`, school: `Virginia Tech`, opponent: `West Virginia`, line: `Bout 343: Eddie Ventresca (Virginia Tech) def. Jett Strickenberger (West Virginia), SV-1 4-1 [125]` },
-  { round: `QtrFinals`, weight: `125`, school: `Oklahoma State`, opponent: `Purdue`, line: `Bout 344: Troy Spratley (Oklahoma State) def. Matt Ramos (Purdue), Dec 5-2 [125]` },
-  { round: `QtrFinals`, weight: `133`, school: `Illinois`, opponent: `Penn State`, line: `Bout 345: Lucas Byrd (Illinois) def. Braeden Davis (Penn State), MD 12-1 [133]` },
-  { round: `QtrFinals`, weight: `133`, school: `Cal Poly`, opponent: `Indiana`, line: `Bout 346: Zeth Romney (Cal Poly) def. Angelo Rini (Indiana), Dec 8-2 [133]` },
-  { round: `QtrFinals`, weight: `133`, school: `Wisconsin`, opponent: `Virginia Tech`, line: `Bout 347: Zan Fugitt (Wisconsin) def. Connor McGonagle (Virginia Tech), Fall 2:30 [133]` },
-  { round: `QtrFinals`, weight: `133`, school: `Iowa`, opponent: `Ohio State`, line: `Bout 348: Drake Ayala (Iowa) def. Nic Bouzakis (Ohio State), MD 23-10 [133]` },
-  { round: `QtrFinals`, weight: `141`, school: `Nebraska`, opponent: `Iowa State`, line: `Bout 349: Brock Hardy (Nebraska) def. Jacob Frost (Iowa State), Fall 4:13 [141]` },
-  { round: `QtrFinals`, weight: `141`, school: `Northern Iowa`, opponent: `Navy`, line: `Bout 350: Cael Happel (Northern Iowa) def. Josh Koderhandt (Navy), TB-1 2-1 [141]` },
-  { round: `QtrFinals`, weight: `141`, school: `Ohio State`, opponent: `Minnesota`, line: `Bout 351: Jesse Mendez (Ohio State) def. Vance VomBaur (Minnesota), MD 17-5 [141]` },
-  { round: `QtrFinals`, weight: `141`, school: `Penn State`, opponent: `Pennsylvania`, line: `Bout 352: Beau Bartlett (Penn State) def. CJ Composto (Pennsylvania), Dec 5-0 [141]` },
-  { round: `QtrFinals`, weight: `149`, school: `Virginia Tech`, opponent: `Little Rock`, line: `Bout 353: Caleb Henson (Virginia Tech) def. Jordan Williams (Little Rock), SV-1 8-5 [149]` },
-  { round: `QtrFinals`, weight: `149`, school: `Ohio State`, opponent: `Oregon State`, line: `Bout 354: Dylan DEmilio (Ohio State) def. Ethan Stiles (Oregon State), Dec 7-3 [149]` },
-  { round: `QtrFinals`, weight: `149`, school: `Penn State`, opponent: `North Carolina`, line: `Bout 355: Shayne Van Ness (Penn State) def. Lachlan McNeil (North Carolina), Dec 7-2 [149]` },
-  { round: `QtrFinals`, weight: `149`, school: `Nebraska`, opponent: `Illinois`, line: `Bout 356: Ridge Lovett (Nebraska) def. Kannon Webster (Illinois), MD 12-0 [149]` },
-  { round: `QtrFinals`, weight: `157`, school: `Purdue`, opponent: `Penn State`, line: `Bout 357: Joey Blaze (Purdue) def. Tyler Kasak (Penn State), Dec 5-4 [157]` },
-  { round: `QtrFinals`, weight: `157`, school: `Northwestern`, opponent: `Oklahoma State`, line: `Bout 358: Trevor Chumbley (Northwestern) def. Caleb Fish (Oklahoma State), Dec 6-4 [157]` },
-  { round: `QtrFinals`, weight: `157`, school: `Nebraska`, opponent: `Little Rock`, line: `Bout 359: Antrell Taylor (Nebraska) def. Matty Bianchi (Little Rock), Dec 4-3 [157]` },
-  { round: `QtrFinals`, weight: `157`, school: `Cornell`, opponent: `Northern Colorado`, line: `Bout 360: Meyer Shapiro (Cornell) def. Vinny Zerban (Northern Colorado), Dec 9-4 [157]` },
-  { round: `QtrFinals`, weight: `165`, school: `Penn State`, opponent: `Oklahoma State`, line: `Bout 361: Mitchell Mesenbrink (Penn State) def. Cameron Amine (Oklahoma State), Dec 5-0 [165]` },
-  { round: `QtrFinals`, weight: `165`, school: `Nebraska`, opponent: `Utah Valley`, line: `Bout 362: Christopher Minto (Nebraska) def. Terrell Barraclough (Utah Valley), Dec 8-7 [165]` },
-  { round: `QtrFinals`, weight: `165`, school: `Iowa`, opponent: `Michigan`, line: `Bout 363: Mike Caliendo (Iowa) def. Beau Mantanona (Michigan), Dec 7-2 [165]` },
-  { round: `QtrFinals`, weight: `165`, school: `West Virginia`, opponent: `Stanford`, line: `Bout 364: Peyton Hall (West Virginia) def. Hunter Garvin (Stanford), Dec 6-5 [165]` },
-  { round: `QtrFinals`, weight: `174`, school: `Missouri`, opponent: `Virginia Tech`, line: `Bout 365: Keegan OToole (Missouri) def. Lennox Wolak (Virginia Tech), MD 13-1 [174]` },
-  { round: `QtrFinals`, weight: `174`, school: `South Dakota State`, opponent: `Cornell`, line: `Bout 366: Cade DeVos (South Dakota State) def. Simon Ruiz (Cornell), Dec 4-3 [174]` },
-  { round: `QtrFinals`, weight: `174`, school: `Oklahoma State`, opponent: `Iowa`, line: `Bout 367: Dean Hamiti (Oklahoma State) def. Patrick Kennedy (Iowa), Dec 8-6 [174]` },
-  { round: `QtrFinals`, weight: `174`, school: `Penn State`, opponent: `Navy`, line: `Bout 368: Levi Haines (Penn State) def. Danny Wask (Navy), Dec 7-2 [174]` },
-  { round: `QtrFinals`, weight: `184`, school: `Penn State`, opponent: `Maryland`, line: `Bout 369: Carter Starocci (Penn State) def. Jaxon Smith (Maryland), MD 9-1 [184]` },
-  { round: `QtrFinals`, weight: `184`, school: `Oklahoma State`, opponent: `Nebraska`, line: `Bout 370: Dustin Plott (Oklahoma State) def. Silas Allred (Nebraska), Dec 12-5 [184]` },
-  { round: `QtrFinals`, weight: `184`, school: `Minnesota`, opponent: `Cornell`, line: `Bout 371: Max McEnelly (Minnesota) def. Chris Foca (Cornell), Dec 10-7 [184]` },
-  { round: `QtrFinals`, weight: `184`, school: `Northern Iowa`, opponent: `Illinois`, line: `Bout 372: Parker Keckeisen (Northern Iowa) def. Edmond Ruth (Illinois), MD 13-5;18-3 [184]` },
-  { round: `QtrFinals`, weight: `197`, school: `Michigan`, opponent: `Indiana`, line: `Bout 373: Jacob Cardenas (Michigan) def. Gabe Sollars (Indiana), Dec 10-5 [197]` },
-  { round: `QtrFinals`, weight: `197`, school: `Penn State`, opponent: `Lehigh`, line: `Bout 374: Josh Barr (Penn State) def. Michael Beard (Lehigh), MD 14-3 [197]` },
-  { round: `QtrFinals`, weight: `197`, school: `CSU Bakersfield`, opponent: `Pittsburgh`, line: `Bout 375: AJ Ferrari (CSU Bakersfield) def. Mac Stout (Pittsburgh), Dec 2-0 [197]` },
-  { round: `QtrFinals`, weight: `197`, school: `Iowa`, opponent: `Ohio State`, line: `Bout 376: Stephen Buchanan (Iowa) def. Seth Shumate (Ohio State), TF 6:35 [197]` },
-  { round: `QtrFinals`, weight: `285`, school: `Minnesota`, opponent: `Arizona State`, line: `Bout 377: Gable Steveson (Minnesota) def. Cohlton Schultz (Arizona State), TF 6:23 [285]` },
-  { round: `QtrFinals`, weight: `285`, school: `Lehigh`, opponent: `Iowa`, line: `Bout 378: Owen Trephan (Lehigh) def. Ben Kueter (Iowa), Dec 4-2 [285]` },
-  { round: `QtrFinals`, weight: `285`, school: `Penn State`, opponent: `Michigan`, line: `Bout 379: Greg Kerkvliet (Penn State) def. Joshua Heindselman (Michigan), Dec 5-0 [285]` },
-  { round: `QtrFinals`, weight: `285`, school: `Oklahoma State`, opponent: `NC State`, line: `Bout 380: Wyatt Hendrickson (Oklahoma State) def. Isaac Trumble (NC State), Fall 2:15 [285]` },
-  { round: `ConsR2`, weight: `125`, school: `Indiana`, opponent: `Pennsylvania`, line: `Bout 381: Jacob Moran (Indiana) def. Max Gallagher (Pennsylvania), Dec 10-4 [125]` },
-  { round: `ConsR2`, weight: `125`, school: `Northern Colorado`, opponent: `Cal Poly`, line: `Bout 382: Stevo Poulin (Northern Colorado) def. Charlie Farmer (Cal Poly), Dec 7-4 [125]` },
-  { round: `ConsR2`, weight: `125`, school: `Wisconsin`, opponent: `Oklahoma`, line: `Bout 383: Nicolar Rivera (Wisconsin) def. Antonio Lorenzo (Oklahoma), Dec 5-0 [125]` },
-  { round: `ConsR2`, weight: `125`, school: `North Carolina`, opponent: `Ohio State`, line: `Bout 384: Spencer Moore (North Carolina) def. Brendan McCrone (Ohio State), Dec 4-1 [125]` },
-  { round: `ConsR2`, weight: `125`, school: `Minnesota`, opponent: `Princeton`, line: `Bout 385: Cooper Flynn (Minnesota) def. Marc-Anthony McGowan (Princeton), Dec 2-1 [125]` },
-  { round: `ConsR2`, weight: `125`, school: `Northern Iowa`, opponent: `Arizona State`, line: `Bout 386: Trever Anderson (Northern Iowa) def. Richard Figueroa (Arizona State), MD 17-8 [125]` },
-  { round: `ConsR2`, weight: `125`, school: `Nebraska`, opponent: `South Dakota State`, line: `Bout 387: Caleb Smith (Nebraska) def. Tanner Jordan (South Dakota State), SV-1 7-4 [125]` },
-  { round: `ConsR2`, weight: `125`, school: `Northern Illinois`, opponent: `Oregon State`, line: `Bout 388: Blake West (Northern Illinois) def. Maximo Renteria (Oregon State), Dec 10-8 [125]` },
-  { round: `ConsR2`, weight: `133`, school: `Nebraska`, opponent: `Northern Iowa`, line: `Bout 389: Jacob Van Dee (Nebraska) def. Julian Farber (Northern Iowa), Dec 4-2 [133]` },
-  { round: `ConsR2`, weight: `133`, school: `Central Michigan`, opponent: `Bucknell`, line: `Bout 390: Sean Spidle (Central Michigan) def. Kurt Phipps (Bucknell), Dec 3-0 [133]` },
-  { round: `ConsR2`, weight: `133`, school: `Iowa State`, opponent: `North Carolina`, line: `Bout 391: Evan Frost (Iowa State) def. Ethan Oakley (North Carolina), Dec 8-4 [133]` },
-  { round: `ConsR2`, weight: `133`, school: `Little Rock`, opponent: `Cornell`, line: `Bout 392: Nasir Bailey (Little Rock) def. Tyler Ferrara (Cornell), Dec 2-1 [133]` },
-  { round: `ConsR2`, weight: `133`, school: `Stanford`, opponent: `South Dakota State`, line: `Bout 393: Tyler Knox (Stanford) def. Derrick Cardinal (South Dakota State), MD 9-0 [133]` },
-  { round: `ConsR2`, weight: `133`, school: `Minnesota`, opponent: `Northern Colorado`, line: `Bout 394: Tyler Wells (Minnesota) def. Dominick Serrano (Northern Colorado), SV-1 4-1 [133]` },
-  { round: `ConsR2`, weight: `133`, school: `Rutgers`, opponent: `Maryland`, line: `Bout 395: Dylan Shawver (Rutgers) def. Braxton Brown (Maryland), SV-1 4-1 [133]` },
-  { round: `ConsR2`, weight: `133`, school: `Lock Haven`, opponent: `Pennsylvania`, line: `Bout 396: Anthony Noto (Lock Haven) def. Ryan Miller (Pennsylvania), Dec 9-5 [133]` },
-  { round: `ConsR2`, weight: `141`, school: `South Dakota State`, opponent: `Oregon State`, line: `Bout 397: Julian Tagg (South Dakota State) def. Nash Singleton (Oregon State), Dec 10-3 [141]` },
-  { round: `ConsR2`, weight: `141`, school: `Oklahoma State`, opponent: `Stanford`, line: `Bout 398: Tagen Jamison (Oklahoma State) def. Jason Miranda (Stanford), Fall 5:46 [141]` },
-  { round: `ConsR2`, weight: `141`, school: `Illinois`, opponent: `Virginia`, line: `Bout 399: Danny Pucino (Illinois) def. Dylan Cedeno (Virginia), Fall 4:15 [141]` },
-  { round: `ConsR2`, weight: `141`, school: `Michigan`, opponent: `North Carolina`, line: `Bout 400: Sergio Lemley (Michigan) def. Jayden Scott (North Carolina), Dec 2-1 [141]` },
-  { round: `ConsR2`, weight: `141`, school: `Oklahoma`, opponent: `Cornell`, line: `Bout 401: Mosha Schwartz (Oklahoma) def. Joshua Saunders (Cornell), Dec 13-8 [141]` },
-  { round: `ConsR2`, weight: `141`, school: `Bucknell`, opponent: `Purdue`, line: `Bout 402: Dylan Chappell (Bucknell) def. Greyson Clark (Purdue), Dec 8-5 [141]` },
-  { round: `ConsR2`, weight: `141`, school: `Princeton`, opponent: `Northern Colorado`, line: `Bout 403: Eligh Rivera (Princeton) def. Andrew Alirez (Northern Colorado), Dec 11-6 [141]` },
-  { round: `ConsR2`, weight: `141`, school: `Rutgers`, opponent: `Lock Haven`, line: `Bout 404: Joseph Olivieri (Rutgers) def. Wyatt Henson (Lock Haven), Dec 5-2 [141]` },
-  { round: `ConsR2`, weight: `149`, school: `Oklahoma State`, opponent: `Princeton`, line: `Bout 405: Teague Travis (Oklahoma State) def. Ty Whalen (Princeton), MD 12-2 [149]` },
-  { round: `ConsR2`, weight: `149`, school: `Lehigh`, opponent: `Northern Iowa`, line: `Bout 406: Malyke Hines (Lehigh) def. Colin Realbuto (Northern Iowa), Dec 10-7 [149]` },
-  { round: `ConsR2`, weight: `149`, school: `Rider`, opponent: `Oklahoma`, line: `Bout 407: Sammy Alvarez (Rider) def. Willie McDougald (Oklahoma), SV-1 4-1 [149]` },
-  { round: `ConsR2`, weight: `149`, school: `Iowa State`, opponent: `Rutgers`, line: `Bout 408: Paniro Johnson (Iowa State) def. Andrew Clark (Rutgers), Dec 4-3 [149]` },
-  { round: `ConsR2`, weight: `149`, school: `Virginia`, opponent: `Cal Poly`, line: `Bout 409: Jack Gioffre (Virginia) def. Chance Lamer (Cal Poly), MD 12-2;20-5 [149]` },
-  { round: `ConsR2`, weight: `149`, school: `North Dakota State`, opponent: `Iowa`, line: `Bout 410: Gavin Drexler (North Dakota State) def. Kyle Parco (Iowa), M. For. [149]` },
-  { round: `ConsR2`, weight: `149`, school: `Pennsylvania`, opponent: `The Citadel`, line: `Bout 411: Cross Wasilewski (Pennsylvania) def. Carson DesRosier (The Citadel), Dec 7-3 [149]` },
-  { round: `ConsR2`, weight: `149`, school: `Cornell`, opponent: `Stanford`, line: `Bout 412: Ethan Fernandez (Cornell) def. Jaden Abas (Stanford), Fall 1:21 [149]` },
-  { round: `ConsR2`, weight: `157`, school: `George Mason`, opponent: `Central Michigan`, line: `Bout 413: DJ McGee (George Mason) def. Johnny Lovett (Central Michigan), Dec 7-2 [157]` },
-  { round: `ConsR2`, weight: `157`, school: `Michigan`, opponent: `Pittsburgh`, line: `Bout 414: Chase Saldate (Michigan) def. Dylan Evans (Pittsburgh), Dec 8-2 [157]` },
-  { round: `ConsR2`, weight: `157`, school: `Northern Iowa`, opponent: `Lehigh`, line: `Bout 415: Ryder Downey (Northern Iowa) def. Logan Rozynski (Lehigh), Dec 1-0 [157]` },
-  { round: `ConsR2`, weight: `157`, school: `Pennsylvania`, opponent: `Harvard`, line: `Bout 416: Jude Swisher (Pennsylvania) def. James Harrington (Harvard), TF 5:09 ;19-4 [157]` },
-  { round: `ConsR2`, weight: `157`, school: `South Dakota State`, opponent: `Virginia Tech`, line: `Bout 417: Cobe Siebrecht (South Dakota State) def. Rafael Hipolito (Virginia Tech), Fall 4:47 [157]` },
-  { round: `ConsR2`, weight: `157`, school: `Ohio State`, opponent: `NC State`, line: `Bout 418: Brandon Cannon (Ohio State) def. Ed Scott (NC State), Dec 8-3 [157]` },
-  { round: `ConsR2`, weight: `157`, school: `Minnesota`, opponent: `Maryland`, line: `Bout 419: Tommy Askey (Minnesota) def. Ethen Miller (Maryland), TB-1 1-1 [157]` },
-  { round: `ConsR2`, weight: `157`, school: `Iowa State`, opponent: `Chattanooga`, line: `Bout 420: Cody Chittum (Iowa State) def. Noah Castillo (Chattanooga), Dec 5-3 [157]` },
-  { round: `ConsR2`, weight: `165`, school: `Northwestern`, opponent: `Central Michigan`, line: `Bout 421: Maxx Mayfield (Northwestern) def. Chandler Amaker (Central Michigan), TB-1 2-2 [165]` },
-  { round: `ConsR2`, weight: `165`, school: `Virginia`, opponent: `Minnesota`, line: `Bout 422: Nick Hamilton (Virginia) def. Andrew Sparks (Minnesota), Dec 4-2 [165]` },
-  { round: `ConsR2`, weight: `165`, school: `Illinois`, opponent: `Virginia Tech`, line: `Bout 423: Braeden Scoles (Illinois) def. Mac Church (Virginia Tech), MD 10-1 [165]` },
-  { round: `ConsR2`, weight: `165`, school: `Northern Iowa`, opponent: `Army West Point`, line: `Bout 424: Jack Thomsen (Northern Iowa) def. Gunner Filipowicz (Army West Point), MD 13-5 [165]` },
-  { round: `ConsR2`, weight: `165`, school: `Iowa State`, opponent: `Appalachian State`, line: `Bout 425: Aiden Riggins (Iowa State) def. Will Miller (Appalachian State), MD 9-1 [165]` },
-  { round: `ConsR2`, weight: `165`, school: `Cornell`, opponent: `Indiana`, line: `Bout 426: Julian Ramirez (Cornell) def. Tyler Lillard (Indiana), Dec 6-1 [165]` },
-  { round: `ConsR2`, weight: `165`, school: `Missouri`, opponent: `The Citadel`, line: `Bout 427: Cam Steed (Missouri) def. Thomas Snipes (The Citadel), Fall 2:37 [165]` },
-  { round: `ConsR2`, weight: `165`, school: `Hofstra`, opponent: `Arizona State`, line: `Bout 428: Kyle Mosher (Hofstra) def. Nicco Ruiz (Arizona State), Fall 3:50 [165]` },
-  { round: `ConsR2`, weight: `174`, school: `Chattanooga`, opponent: `Oklahoma`, line: `Bout 429: Sergio Desiante (Chattanooga) def. Gaven Sax (Oklahoma), Dec 4-2 [174]` },
-  { round: `ConsR2`, weight: `174`, school: `Nebraska`, opponent: `Iowa State`, line: `Bout 430: Lenny Pinto (Nebraska) def. MJ Gaitan (Iowa State), TF 1:53 ;18-1 [174]` },
-  { round: `ConsR2`, weight: `174`, school: `Binghamton`, opponent: `Minnesota`, line: `Bout 431: Brevin Cassella (Binghamton) def. Clayton Whiting (Minnesota), MD 8-0 [174]` },
-  { round: `ConsR2`, weight: `174`, school: `NC State`, opponent: `Illinois`, line: `Bout 432: Matthew Singleton (NC State) def. Dan Braunagel (Illinois), MD 14-6 [174]` },
-  { round: `ConsR2`, weight: `174`, school: `Ohio`, opponent: `Northern Iowa`, line: `Bout 433: Garrett Thompson (Ohio) def. Jared Simma (Northern Iowa), Dec 8-1 [174]` },
-  { round: `ConsR2`, weight: `174`, school: `Pennsylvania`, opponent: `North Carolina`, line: `Bout 434: Nick Incontrera (Pennsylvania) def. Joshua Ogunsanya (North Carolina), Dec 8-4 [174]` },
-  { round: `ConsR2`, weight: `174`, school: `Army West Point`, opponent: `Purdue`, line: `Bout 435: Dalton Harkins (Army West Point) def. Brody Baumann (Purdue), Dec 6-5 [174]` },
-  { round: `ConsR2`, weight: `174`, school: `Pittsburgh`, opponent: `Stanford`, line: `Bout 436: Luca Augustine (Pittsburgh) def. Lorenzo Norman (Stanford), Dec 4-3 [174]` },
-  { round: `ConsR2`, weight: `184`, school: `NC State`, opponent: `North Carolina`, line: `Bout 437: Dylan Fishback (NC State) def. Gavin Kane (North Carolina), Dec 6-4 [184]` },
-  { round: `ConsR2`, weight: `184`, school: `Rider`, opponent: `Edinboro`, line: `Bout 438: Isaac Dean (Rider) def. Jared McGill (Edinboro), SV-2 6-3 [184]` },
-  { round: `ConsR2`, weight: `184`, school: `Iowa`, opponent: `George Mason`, line: `Bout 439: Gabe Arnold (Iowa) def. Malachi DuVall (George Mason), Dec 8-4 [184]` },
-  { round: `ConsR2`, weight: `184`, school: `Oklahoma`, opponent: `Princeton`, line: `Bout 440: DJ Parker (Oklahoma) def. Kole Mulhauser (Princeton), TF 5:16 ;16-1 [184]` },
-  { round: `ConsR2`, weight: `184`, school: `Wyoming`, opponent: `Columbia`, line: `Bout 441: Eddie Neitenbach (Wyoming) def. Nick Fine (Columbia), SV-1 9-6 [184]` },
-  { round: `ConsR2`, weight: `184`, school: `Indiana`, opponent: `South Dakota State`, line: `Bout 442: Donnell Washington (Indiana) def. Bennett Berge (South Dakota State), MD 12-0 [184]` },
-  { round: `ConsR2`, weight: `184`, school: `North Dakota State`, opponent: `Pittsburgh`, line: `Bout 443: Aidan Brenot (North Dakota State) def. Reece Heller (Pittsburgh), Fall 2:35 [184]` },
-  { round: `ConsR2`, weight: `184`, school: `Rutgers`, opponent: `Pennsylvania`, line: `Bout 444: Shane Cartagena-Walsh (Rutgers) def. Maximus Hale (Pennsylvania), Dec 6-4 [184]` },
-  { round: `ConsR2`, weight: `197`, school: `Wyoming`, opponent: `Stanford`, line: `Bout 445: Joseph Novak (Wyoming) def. Nikolas Stemmet (Stanford), Fall 4:23 [197]` },
-  { round: `ConsR2`, weight: `197`, school: `Illinois`, opponent: `Rider`, line: `Bout 446: Zac Braunagel (Illinois) def. Brock Zurawski (Rider), MD 10-2 [197]` },
-  { round: `ConsR2`, weight: `197`, school: `Princeton`, opponent: `Campbell`, line: `Bout 447: Luke Stout (Princeton) def. Levi Hopkins (Campbell), TF 7:00 ;22-6 [197]` },
-  { round: `ConsR2`, weight: `197`, school: `Nebraska`, opponent: `Virginia Tech`, line: `Bout 448: Camden McDanel (Nebraska) def. Andy Smith (Virginia Tech), Dec 4-1 [197]` },
-  { round: `ConsR2`, weight: `197`, school: `Oregon State`, opponent: `South Dakota State`, line: `Bout 449: Trey Munoz (Oregon State) def. Zach Glazier (South Dakota State), SV-1 4-1 [197]` },
-  { round: `ConsR2`, weight: `197`, school: `Little Rock`, opponent: `Cornell`, line: `Bout 450: Stephen Little (Little Rock) def. Michael Dellagatta (Cornell), MD 16-5 [197]` },
-  { round: `ConsR2`, weight: `197`, school: `Northern Iowa`, opponent: `The Citadel`, line: `Bout 451: Wyatt Voelker (Northern Iowa) def. Patrick Brophy (The Citadel), Dec 8-6 [197]` },
-  { round: `ConsR2`, weight: `197`, school: `Bucknell`, opponent: `Northwestern`, line: `Bout 452: Dillon Bechtold (Bucknell) def. Evan Bates (Northwestern), Dec 4-1 [197]` },
-  { round: `ConsR2`, weight: `285`, school: `Cal Poly`, opponent: `CSU Bakersfield`, line: `Bout 453: Trevor Tinker (Cal Poly) def. Jake Andrews (CSU Bakersfield), Dec 2-0 [285]` },
-  { round: `ConsR2`, weight: `285`, school: `Pittsburgh`, opponent: `South Dakota State`, line: `Bout 454: Dayton Pitzer (Pittsburgh) def. Luke Rasmussen (South Dakota State), MD 9-0 [285]` },
-  { round: `ConsR2`, weight: `285`, school: `Indiana`, opponent: `Army West Point`, line: `Bout 455: Jacob Bullock (Indiana) def. Brady Colbert (Army West Point), Dec 8-1 [285]` },
-  { round: `ConsR2`, weight: `285`, school: `Lock Haven`, opponent: `Cornell`, line: `Bout 456: Gavin Hoffman (Lock Haven) def. Ashton Davis (Cornell), MD 14-5 [285]` },
-  { round: `ConsR2`, weight: `285`, school: `Maryland`, opponent: `Binghamton`, line: `Bout 457: Seth Nevills (Maryland) def. Cory Day (Binghamton), TF 5:47 ;17-2 [285]` },
-  { round: `ConsR2`, weight: `285`, school: `Ohio State`, opponent: `Virginia Tech`, line: `Bout 458: Nick Feldman (Ohio State) def. Jimmy Mullen (Virginia Tech), MD 12-1 [285]` },
-  { round: `ConsR2`, weight: `285`, school: `Illinois`, opponent: `Stanford`, line: `Bout 459: Luke Luffman (Illinois) def. Peter Ming (Stanford), Dec 7-6 [285]` },
-  { round: `ConsR2`, weight: `285`, school: `Rutgers`, opponent: `Northern Iowa`, line: `Bout 460: Yaraslau Slavikouski (Rutgers) def. Lance Runyon (Northern Iowa), Dec 4-3 [285]` },
-  { round: `ConsR3`, weight: `125`, school: `Northern Colorado`, opponent: `Indiana`, line: `Bout 461: Stevo Poulin (Northern Colorado) def. Jacob Moran (Indiana), Dec 1-0 [125]` },
-  { round: `ConsR3`, weight: `125`, school: `Wisconsin`, opponent: `North Carolina`, line: `Bout 462: Nicolar Rivera (Wisconsin) def. Spencer Moore (North Carolina), MD 11-3 [125]` },
-  { round: `ConsR3`, weight: `125`, school: `Northern Iowa`, opponent: `Minnesota`, line: `Bout 463: Trever Anderson (Northern Iowa) def. Cooper Flynn (Minnesota), Dec 4-3 [125]` },
-  { round: `ConsR3`, weight: `125`, school: `Nebraska`, opponent: `Northern Illinois`, line: `Bout 464: Caleb Smith (Nebraska) def. Blake West (Northern Illinois), Dec 4-1 [125]` },
-  { round: `ConsR3`, weight: `133`, school: `Nebraska`, opponent: `Central Michigan`, line: `Bout 465: Jacob Van Dee (Nebraska) def. Sean Spidle (Central Michigan), Dec 9-3 [133]` },
-  { round: `ConsR3`, weight: `133`, school: `Iowa State`, opponent: `Little Rock`, line: `Bout 466: Evan Frost (Iowa State) def. Nasir Bailey (Little Rock), Dec 5-3 [133]` },
-  { round: `ConsR3`, weight: `133`, school: `Stanford`, opponent: `Minnesota`, line: `Bout 467: Tyler Knox (Stanford) def. Tyler Wells (Minnesota), Dec 1-0 [133]` },
-  { round: `ConsR3`, weight: `133`, school: `Rutgers`, opponent: `Lock Haven`, line: `Bout 468: Dylan Shawver (Rutgers) def. Anthony Noto (Lock Haven), TB-1 9-5 [133]` },
-  { round: `ConsR3`, weight: `141`, school: `Oklahoma State`, opponent: `South Dakota State`, line: `Bout 469: Tagen Jamison (Oklahoma State) def. Julian Tagg (South Dakota State), TF 6:54 ;17-2 [141]` },
-  { round: `ConsR3`, weight: `141`, school: `Michigan`, opponent: `Illinois`, line: `Bout 470: Sergio Lemley (Michigan) def. Danny Pucino (Illinois), SV-1 4-1 [141]` },
-  { round: `ConsR3`, weight: `141`, school: `Bucknell`, opponent: `Oklahoma`, line: `Bout 471: Dylan Chappell (Bucknell) def. Mosha Schwartz (Oklahoma), Fall 6:18 [141]` },
-  { round: `ConsR3`, weight: `141`, school: `Rutgers`, opponent: `Princeton`, line: `Bout 472: Joseph Olivieri (Rutgers) def. Eligh Rivera (Princeton), Dec 7-2 [141]` },
-  { round: `ConsR3`, weight: `149`, school: `Lehigh`, opponent: `Oklahoma State`, line: `Bout 473: Malyke Hines (Lehigh) def. Teague Travis (Oklahoma State), Dec 12-6 [149]` },
-  { round: `ConsR3`, weight: `149`, school: `Rider`, opponent: `Iowa State`, line: `Bout 474: Sammy Alvarez (Rider) def. Paniro Johnson (Iowa State), Dec 2-0 [149]` },
-  { round: `ConsR3`, weight: `149`, school: `North Dakota State`, opponent: `Virginia`, line: `Bout 475: Gavin Drexler (North Dakota State) def. Jack Gioffre (Virginia), Dec 12-9 [149]` },
-  { round: `ConsR3`, weight: `149`, school: `Pennsylvania`, opponent: `Cornell`, line: `Bout 476: Cross Wasilewski (Pennsylvania) def. Ethan Fernandez (Cornell), Dec 4-1 [149]` },
-  { round: `ConsR3`, weight: `157`, school: `Michigan`, opponent: `George Mason`, line: `Bout 477: Chase Saldate (Michigan) def. DJ McGee (George Mason), Fall 1:49 [157]` },
-  { round: `ConsR3`, weight: `157`, school: `Pennsylvania`, opponent: `Northern Iowa`, line: `Bout 478: Jude Swisher (Pennsylvania) def. Ryder Downey (Northern Iowa), Dec 4-2 [157]` },
-  { round: `ConsR3`, weight: `157`, school: `Ohio State`, opponent: `South Dakota State`, line: `Bout 479: Brandon Cannon (Ohio State) def. Cobe Siebrecht (South Dakota State), Dec 14-7 [157]` },
-  { round: `ConsR3`, weight: `157`, school: `Minnesota`, opponent: `Iowa State`, line: `Bout 480: Tommy Askey (Minnesota) def. Cody Chittum (Iowa State), Dec 4-3 [157]` },
-  { round: `ConsR3`, weight: `165`, school: `Virginia`, opponent: `Northwestern`, line: `Bout 481: Nick Hamilton (Virginia) def. Maxx Mayfield (Northwestern), SV-1 4-1 [165]` },
-  { round: `ConsR3`, weight: `165`, school: `Illinois`, opponent: `Northern Iowa`, line: `Bout 482: Braeden Scoles (Illinois) def. Jack Thomsen (Northern Iowa), Fall 2:02 [165]` },
-  { round: `ConsR3`, weight: `165`, school: `Cornell`, opponent: `Iowa State`, line: `Bout 483: Julian Ramirez (Cornell) def. Aiden Riggins (Iowa State), Fall 1:53 [165]` },
-  { round: `ConsR3`, weight: `165`, school: `Missouri`, opponent: `Hofstra`, line: `Bout 484: Cam Steed (Missouri) def. Kyle Mosher (Hofstra), Fall 2:15 [165]` },
-  { round: `ConsR3`, weight: `174`, school: `Nebraska`, opponent: `Chattanooga`, line: `Bout 485: Lenny Pinto (Nebraska) def. Sergio Desiante (Chattanooga), MD 15-7 [174]` },
-  { round: `ConsR3`, weight: `174`, school: `NC State`, opponent: `Binghamton`, line: `Bout 486: Matthew Singleton (NC State) def. Brevin Cassella (Binghamton), Dec 5-3 [174]` },
-  { round: `ConsR3`, weight: `174`, school: `Pennsylvania`, opponent: `Ohio`, line: `Bout 487: Nick Incontrera (Pennsylvania) def. Garrett Thompson (Ohio), MD 8-0 [174]` },
-  { round: `ConsR3`, weight: `174`, school: `Pittsburgh`, opponent: `Army West Point`, line: `Bout 488: Luca Augustine (Pittsburgh) def. Dalton Harkins (Army West Point), SV-1 4-1 [174]` },
-  { round: `ConsR3`, weight: `184`, school: `NC State`, opponent: `Rider`, line: `Bout 489: Dylan Fishback (NC State) def. Isaac Dean (Rider), SV-1 4-1 [184]` },
-  { round: `ConsR3`, weight: `184`, school: `Oklahoma`, opponent: `Iowa`, line: `Bout 490: DJ Parker (Oklahoma) def. Gabe Arnold (Iowa), Fall 0:48 [184]` },
-  { round: `ConsR3`, weight: `184`, school: `Indiana`, opponent: `Wyoming`, line: `Bout 491: Donnell Washington (Indiana) def. Eddie Neitenbach (Wyoming), TF 2:41 ;19-4 [184]` },
-  { round: `ConsR3`, weight: `184`, school: `North Dakota State`, opponent: `Rutgers`, line: `Bout 492: Aidan Brenot (North Dakota State) def. Shane Cartagena-Walsh (Rutgers), SV-1 4-1 [184]` },
-  { round: `ConsR3`, weight: `197`, school: `Wyoming`, opponent: `Illinois`, line: `Bout 493: Joseph Novak (Wyoming) def. Zac Braunagel (Illinois), Fall 5:31 [197]` },
-  { round: `ConsR3`, weight: `197`, school: `Nebraska`, opponent: `Princeton`, line: `Bout 494: Camden McDanel (Nebraska) def. Luke Stout (Princeton), Dec 9-3 [197]` },
-  { round: `ConsR3`, weight: `197`, school: `Little Rock`, opponent: `Oregon State`, line: `Bout 495: Stephen Little (Little Rock) def. Trey Munoz (Oregon State), Dec 4-2 [197]` },
-  { round: `ConsR3`, weight: `197`, school: `Northern Iowa`, opponent: `Bucknell`, line: `Bout 496: Wyatt Voelker (Northern Iowa) def. Dillon Bechtold (Bucknell), Dec 8-6 [197]` },
-  { round: `ConsR3`, weight: `285`, school: `Pittsburgh`, opponent: `Cal Poly`, line: `Bout 497: Dayton Pitzer (Pittsburgh) def. Trevor Tinker (Cal Poly), Fall 3:51 [285]` },
-  { round: `ConsR3`, weight: `285`, school: `Lock Haven`, opponent: `Indiana`, line: `Bout 498: Gavin Hoffman (Lock Haven) def. Jacob Bullock (Indiana), Dec 4-1 [285]` },
-  { round: `ConsR3`, weight: `285`, school: `Ohio State`, opponent: `Maryland`, line: `Bout 499: Nick Feldman (Ohio State) def. Seth Nevills (Maryland), Fall 6:57 [285]` },
-  { round: `ConsR3`, weight: `285`, school: `Illinois`, opponent: `Rutgers`, line: `Bout 500: Luke Luffman (Illinois) def. Yaraslau Slavikouski (Rutgers), SV-1 4-1 [285]` },
-  { round: `SemiFinals`, weight: `125`, school: `NC State`, opponent: `Lehigh`, line: `Bout 501: Vincent Robinson (NC State) def. Sheldon Seymour (Lehigh), Dec 4-2 [125]` },
-  { round: `SemiFinals`, weight: `125`, school: `Oklahoma State`, opponent: `Virginia Tech`, line: `Bout 502: Troy Spratley (Oklahoma State) def. Eddie Ventresca (Virginia Tech), TB-1 6-4 [125]` },
-  { round: `SemiFinals`, weight: `133`, school: `Illinois`, opponent: `Cal Poly`, line: `Bout 503: Lucas Byrd (Illinois) def. Zeth Romney (Cal Poly), Dec 2-0 [133]` },
-  { round: `SemiFinals`, weight: `133`, school: `Iowa`, opponent: `Wisconsin`, line: `Bout 504: Drake Ayala (Iowa) def. Zan Fugitt (Wisconsin), Dec 6-1 [133]` },
-  { round: `SemiFinals`, weight: `141`, school: `Nebraska`, opponent: `Northern Iowa`, line: `Bout 505: Brock Hardy (Nebraska) def. Cael Happel (Northern Iowa), Dec 11-4 [141]` },
-  { round: `SemiFinals`, weight: `141`, school: `Ohio State`, opponent: `Penn State`, line: `Bout 506: Jesse Mendez (Ohio State) def. Beau Bartlett (Penn State), TB-1 2-1 [141]` },
-  { round: `SemiFinals`, weight: `149`, school: `Virginia Tech`, opponent: `Ohio State`, line: `Bout 507: Caleb Henson (Virginia Tech) def. Dylan DEmilio (Ohio State), Dec 6-2 [149]` },
-  { round: `SemiFinals`, weight: `149`, school: `Nebraska`, opponent: `Penn State`, line: `Bout 508: Ridge Lovett (Nebraska) def. Shayne Van Ness (Penn State), Dec 14-8 [149]` },
-  { round: `SemiFinals`, weight: `157`, school: `Purdue`, opponent: `Northwestern`, line: `Bout 509: Joey Blaze (Purdue) def. Trevor Chumbley (Northwestern), Dec 4-2 [157]` },
-  { round: `SemiFinals`, weight: `157`, school: `Nebraska`, opponent: `Cornell`, line: `Bout 510: Antrell Taylor (Nebraska) def. Meyer Shapiro (Cornell), Dec 7-2 [157]` },
-  { round: `SemiFinals`, weight: `165`, school: `Penn State`, opponent: `Nebraska`, line: `Bout 511: Mitchell Mesenbrink (Penn State) def. Christopher Minto (Nebraska), MD 13-2 [165]` },
-  { round: `SemiFinals`, weight: `165`, school: `Iowa`, opponent: `West Virginia`, line: `Bout 512: Mike Caliendo (Iowa) def. Peyton Hall (West Virginia), Dec 14-10 [165]` },
-  { round: `SemiFinals`, weight: `174`, school: `Missouri`, opponent: `South Dakota State`, line: `Bout 513: Keegan OToole (Missouri) def. Cade DeVos (South Dakota State), Dec 7-6 [174]` },
-  { round: `SemiFinals`, weight: `174`, school: `Oklahoma State`, opponent: `Penn State`, line: `Bout 514: Dean Hamiti (Oklahoma State) def. Levi Haines (Penn State), Dec 4-2 [174]` },
-  { round: `SemiFinals`, weight: `184`, school: `Penn State`, opponent: `Oklahoma State`, line: `Bout 515: Carter Starocci (Penn State) def. Dustin Plott (Oklahoma State), Dec 9-3 [184]` },
-  { round: `SemiFinals`, weight: `184`, school: `Northern Iowa`, opponent: `Minnesota`, line: `Bout 516: Parker Keckeisen (Northern Iowa) def. Max McEnelly (Minnesota), SV-1 4-1 [184]` },
-  { round: `SemiFinals`, weight: `197`, school: `Penn State`, opponent: `Michigan`, line: `Bout 517: Josh Barr (Penn State) def. Jacob Cardenas (Michigan), Dec 5-3 [197]` },
-  { round: `SemiFinals`, weight: `197`, school: `Iowa`, opponent: `CSU Bakersfield`, line: `Bout 518: Stephen Buchanan (Iowa) def. AJ Ferrari (CSU Bakersfield), Dec 3-0 [197]` },
-  { round: `SemiFinals`, weight: `285`, school: `Minnesota`, opponent: `Lehigh`, line: `Bout 519: Gable Steveson (Minnesota) def. Owen Trephan (Lehigh), MD 13-5 [285]` },
-  { round: `SemiFinals`, weight: `285`, school: `Oklahoma State`, opponent: `Penn State`, line: `Bout 520: Wyatt Hendrickson (Oklahoma State) def. Greg Kerkvliet (Penn State), Dec 8-2 [285]` },
-  { round: `ConsR4`, weight: `125`, school: `Northern Colorado`, opponent: `Rutgers`, line: `Bout 521: Stevo Poulin (Northern Colorado) def. Dean Peterson (Rutgers), Dec 6-4 [125]` },
-  { round: `ConsR4`, weight: `125`, school: `Penn State`, opponent: `Wisconsin`, line: `Bout 522: Luke Lilledahl (Penn State) def. Nicolar Rivera (Wisconsin), Dec 7-3 [125]` },
-  { round: `ConsR4`, weight: `125`, school: `Purdue`, opponent: `Northern Iowa`, line: `Bout 523: Matt Ramos (Purdue) def. Trever Anderson (Northern Iowa), Dec 8-2 [125]` },
-  { round: `ConsR4`, weight: `125`, school: `Nebraska`, opponent: `West Virginia`, line: `Bout 524: Caleb Smith (Nebraska) def. Jett Strickenberger (West Virginia), SV-1 12-9 [125]` },
-  { round: `ConsR4`, weight: `133`, school: `Nebraska`, opponent: `Indiana`, line: `Bout 525: Jacob Van Dee (Nebraska) def. Angelo Rini (Indiana), MD 8-0 [133]` },
-  { round: `ConsR4`, weight: `133`, school: `Penn State`, opponent: `Iowa State`, line: `Bout 526: Braeden Davis (Penn State) def. Evan Frost (Iowa State), Dec 4-2 [133]` },
-  { round: `ConsR4`, weight: `133`, school: `Stanford`, opponent: `Ohio State`, line: `Bout 527: Tyler Knox (Stanford) def. Nic Bouzakis (Ohio State), Dec 5-0 [133]` },
-  { round: `ConsR4`, weight: `133`, school: `Virginia Tech`, opponent: `Rutgers`, line: `Bout 528: Connor McGonagle (Virginia Tech) def. Dylan Shawver (Rutgers), Dec 5-1 [133]` },
-  { round: `ConsR4`, weight: `141`, school: `Navy`, opponent: `Oklahoma State`, line: `Bout 529: Josh Koderhandt (Navy) def. Tagen Jamison (Oklahoma State), SV-1 4-1 [141]` },
-  { round: `ConsR4`, weight: `141`, school: `Iowa State`, opponent: `Michigan`, line: `Bout 530: Jacob Frost (Iowa State) def. Sergio Lemley (Michigan), Dec 9-8 [141]` },
-  { round: `ConsR4`, weight: `141`, school: `Pennsylvania`, opponent: `Bucknell`, line: `Bout 531: CJ Composto (Pennsylvania) def. Dylan Chappell (Bucknell), Dec 4-0 [141]` },
-  { round: `ConsR4`, weight: `141`, school: `Minnesota`, opponent: `Rutgers`, line: `Bout 532: Vance VomBaur (Minnesota) def. Joseph Olivieri (Rutgers), Dec 5-3 [141]` },
-  { round: `ConsR4`, weight: `149`, school: `Oregon State`, opponent: `Lehigh`, line: `Bout 533: Ethan Stiles (Oregon State) def. Malyke Hines (Lehigh), Fall 2:12 [149]` },
-  { round: `ConsR4`, weight: `149`, school: `Rider`, opponent: `Little Rock`, line: `Bout 534: Sammy Alvarez (Rider) def. Jordan Williams (Little Rock), Dec 5-0 [149]` },
-  { round: `ConsR4`, weight: `149`, school: `North Dakota State`, opponent: `Illinois`, line: `Bout 535: Gavin Drexler (North Dakota State) def. Kannon Webster (Illinois), Dec 4-0 [149]` },
-  { round: `ConsR4`, weight: `149`, school: `North Carolina`, opponent: `Pennsylvania`, line: `Bout 536: Lachlan McNeil (North Carolina) def. Cross Wasilewski (Pennsylvania), Dec 4-2 [149]` },
-  { round: `ConsR4`, weight: `157`, school: `Oklahoma State`, opponent: `Michigan`, line: `Bout 537: Caleb Fish (Oklahoma State) def. Chase Saldate (Michigan), SV-1 7-4 [157]` },
-  { round: `ConsR4`, weight: `157`, school: `Penn State`, opponent: `Pennsylvania`, line: `Bout 538: Tyler Kasak (Penn State) def. Jude Swisher (Pennsylvania), Dec 5-4 [157]` },
-  { round: `ConsR4`, weight: `157`, school: `Northern Colorado`, opponent: `Ohio State`, line: `Bout 539: Vinny Zerban (Northern Colorado) def. Brandon Cannon (Ohio State), Dec 11-6 [157]` },
-  { round: `ConsR4`, weight: `157`, school: `Little Rock`, opponent: `Minnesota`, line: `Bout 540: Matty Bianchi (Little Rock) def. Tommy Askey (Minnesota), TB-1 2-1 [157]` },
-  { round: `ConsR4`, weight: `165`, school: `Utah Valley`, opponent: `Virginia`, line: `Bout 541: Terrell Barraclough (Utah Valley) def. Nick Hamilton (Virginia), Dec 5-0 [165]` },
-  { round: `ConsR4`, weight: `165`, school: `Oklahoma State`, opponent: `Illinois`, line: `Bout 542: Cameron Amine (Oklahoma State) def. Braeden Scoles (Illinois), SV-1 8-1 [165]` },
-  { round: `ConsR4`, weight: `165`, school: `Stanford`, opponent: `Cornell`, line: `Bout 543: Hunter Garvin (Stanford) def. Julian Ramirez (Cornell), Dec 16-12 [165]` },
-  { round: `ConsR4`, weight: `165`, school: `Missouri`, opponent: `Michigan`, line: `Bout 544: Cam Steed (Missouri) def. Beau Mantanona (Michigan), SV-1 4-1 [165]` },
-  { round: `ConsR4`, weight: `174`, school: `Cornell`, opponent: `Nebraska`, line: `Bout 545: Simon Ruiz (Cornell) def. Lenny Pinto (Nebraska), Dec 2-1 [174]` },
-  { round: `ConsR4`, weight: `174`, school: `NC State`, opponent: `Virginia Tech`, line: `Bout 546: Matthew Singleton (NC State) def. Lennox Wolak (Virginia Tech), Dec 13-8 [174]` },
-  { round: `ConsR4`, weight: `174`, school: `Navy`, opponent: `Pennsylvania`, line: `Bout 547: Danny Wask (Navy) def. Nick Incontrera (Pennsylvania), Dec 5-3 [174]` },
-  { round: `ConsR4`, weight: `174`, school: `Iowa`, opponent: `Pittsburgh`, line: `Bout 548: Patrick Kennedy (Iowa) def. Luca Augustine (Pittsburgh), Dec 7-6 [174]` },
-  { round: `ConsR4`, weight: `184`, school: `Nebraska`, opponent: `NC State`, line: `Bout 549: Silas Allred (Nebraska) def. Dylan Fishback (NC State), Dec 4-0 [184]` },
-  { round: `ConsR4`, weight: `184`, school: `Maryland`, opponent: `Oklahoma`, line: `Bout 550: Jaxon Smith (Maryland) def. DJ Parker (Oklahoma), Dec 4-2 [184]` },
-  { round: `ConsR4`, weight: `184`, school: `Indiana`, opponent: `Illinois`, line: `Bout 551: Donnell Washington (Indiana) def. Edmond Ruth (Illinois), Dec 8-4 [184]` },
-  { round: `ConsR4`, weight: `184`, school: `Cornell`, opponent: `North Dakota State`, line: `Bout 552: Chris Foca (Cornell) def. Aidan Brenot (North Dakota State), Dec 2-0 [184]` },
-  { round: `ConsR4`, weight: `197`, school: `Wyoming`, opponent: `Lehigh`, line: `Bout 553: Joseph Novak (Wyoming) def. Michael Beard (Lehigh), MD 13-4 [197]` },
-  { round: `ConsR4`, weight: `197`, school: `Nebraska`, opponent: `Indiana`, line: `Bout 554: Camden McDanel (Nebraska) def. Gabe Sollars (Indiana), Dec 7-3 [197]` },
-  { round: `ConsR4`, weight: `197`, school: `Little Rock`, opponent: `Ohio State`, line: `Bout 555: Stephen Little (Little Rock) def. Seth Shumate (Ohio State), TF 7:00 ;15-0 [197]` },
-  { round: `ConsR4`, weight: `197`, school: `Pittsburgh`, opponent: `Northern Iowa`, line: `Bout 556: Mac Stout (Pittsburgh) def. Wyatt Voelker (Northern Iowa), Dec 4-2 [197]` },
-  { round: `ConsR4`, weight: `285`, school: `Iowa`, opponent: `Pittsburgh`, line: `Bout 557: Ben Kueter (Iowa) def. Dayton Pitzer (Pittsburgh), Dec 5-1 [285]` },
-  { round: `ConsR4`, weight: `285`, school: `Arizona State`, opponent: `Lock Haven`, line: `Bout 558: Cohlton Schultz (Arizona State) def. Gavin Hoffman (Lock Haven), MD 15-5 [285]` },
-  { round: `ConsR4`, weight: `285`, school: `NC State`, opponent: `Ohio State`, line: `Bout 559: Isaac Trumble (NC State) def. Nick Feldman (Ohio State), Dec 5-3 [285]` },
-  { round: `ConsR4`, weight: `285`, school: `Michigan`, opponent: `Illinois`, line: `Bout 560: Joshua Heindselman (Michigan) def. Luke Luffman (Illinois), TB-1 2-1 [285]` },
-  { round: `ConsQtr`, weight: `125`, school: `Penn State`, opponent: `Northern Colorado`, line: `Bout 561: Luke Lilledahl (Penn State) def. Stevo Poulin (Northern Colorado), Dec 3-0 [125]` },
-  { round: `ConsQtr`, weight: `125`, school: `Purdue`, opponent: `Nebraska`, line: `Bout 562: Matt Ramos (Purdue) def. Caleb Smith (Nebraska), Dec 5-4 [125]` },
-  { round: `ConsQtr`, weight: `133`, school: `Penn State`, opponent: `Nebraska`, line: `Bout 563: Braeden Davis (Penn State) def. Jacob Van Dee (Nebraska), Dec 4-2 [133]` },
-  { round: `ConsQtr`, weight: `133`, school: `Virginia Tech`, opponent: `Stanford`, line: `Bout 564: Connor McGonagle (Virginia Tech) def. Tyler Knox (Stanford), Dec 1-0 [133]` },
-  { round: `ConsQtr`, weight: `141`, school: `Navy`, opponent: `Iowa State`, line: `Bout 565: Josh Koderhandt (Navy) def. Jacob Frost (Iowa State), Fall 0:59 [141]` },
-  { round: `ConsQtr`, weight: `141`, school: `Pennsylvania`, opponent: `Minnesota`, line: `Bout 566: CJ Composto (Pennsylvania) def. Vance VomBaur (Minnesota), Dec 8-6 [141]` },
-  { round: `ConsQtr`, weight: `149`, school: `Oregon State`, opponent: `Rider`, line: `Bout 567: Ethan Stiles (Oregon State) def. Sammy Alvarez (Rider), Dec 4-2 [149]` },
-  { round: `ConsQtr`, weight: `149`, school: `North Carolina`, opponent: `North Dakota State`, line: `Bout 568: Lachlan McNeil (North Carolina) def. Gavin Drexler (North Dakota State), MD 10-2 [149]` },
-  { round: `ConsQtr`, weight: `157`, school: `Penn State`, opponent: `Oklahoma State`, line: `Bout 569: Tyler Kasak (Penn State) def. Caleb Fish (Oklahoma State), Fall 4:19 [157]` },
-  { round: `ConsQtr`, weight: `157`, school: `Northern Colorado`, opponent: `Little Rock`, line: `Bout 570: Vinny Zerban (Northern Colorado) def. Matty Bianchi (Little Rock), SV-1 4-1 [157]` },
-  { round: `ConsQtr`, weight: `165`, school: `Utah Valley`, opponent: `Oklahoma State`, line: `Bout 571: Terrell Barraclough (Utah Valley) def. Cameron Amine (Oklahoma State), Dec 9-7 [165]` },
-  { round: `ConsQtr`, weight: `165`, school: `Stanford`, opponent: `Missouri`, line: `Bout 572: Hunter Garvin (Stanford) def. Cam Steed (Missouri), Dec 4-0 [165]` },
-  { round: `ConsQtr`, weight: `174`, school: `Cornell`, opponent: `NC State`, line: `Bout 573: Simon Ruiz (Cornell) def. Matthew Singleton (NC State), MD 10-0 [174]` },
-  { round: `ConsQtr`, weight: `174`, school: `Iowa`, opponent: `Navy`, line: `Bout 574: Patrick Kennedy (Iowa) def. Danny Wask (Navy), Dec 7-3 [174]` },
-  { round: `ConsQtr`, weight: `184`, school: `Maryland`, opponent: `Nebraska`, line: `Bout 575: Jaxon Smith (Maryland) def. Silas Allred (Nebraska), Dec 8-1 [184]` },
-  { round: `ConsQtr`, weight: `184`, school: `Cornell`, opponent: `Indiana`, line: `Bout 576: Chris Foca (Cornell) def. Donnell Washington (Indiana), TF 4:32 ;20-4 [184]` },
-  { round: `ConsQtr`, weight: `197`, school: `Wyoming`, opponent: `Nebraska`, line: `Bout 577: Joseph Novak (Wyoming) def. Camden McDanel (Nebraska), Dec 4-2 [197]` },
-  { round: `ConsQtr`, weight: `197`, school: `Little Rock`, opponent: `Pittsburgh`, line: `Bout 578: Stephen Little (Little Rock) def. Mac Stout (Pittsburgh), SV-1 4-1 [197]` },
-  { round: `ConsQtr`, weight: `285`, school: `Arizona State`, opponent: `Iowa`, line: `Bout 579: Cohlton Schultz (Arizona State) def. Ben Kueter (Iowa), MD 10-2 [285]` },
-  { round: `ConsQtr`, weight: `285`, school: `NC State`, opponent: `Michigan`, line: `Bout 580: Isaac Trumble (NC State) def. Joshua Heindselman (Michigan), MD 9-0 [285]` },
-  { round: `ConsSemi`, weight: `125`, school: `Penn State`, opponent: `Virginia Tech`, line: `Bout 581: Luke Lilledahl (Penn State) def. Eddie Ventresca (Virginia Tech), SV-1 4-1 [125]` },
-  { round: `ConsSemi`, weight: `125`, school: `Purdue`, opponent: `Lehigh`, line: `Bout 582: Matt Ramos (Purdue) def. Sheldon Seymour (Lehigh), Dec 9-2 [125]` },
-  { round: `ConsSemi`, weight: `133`, school: `Wisconsin`, opponent: `Penn State`, line: `Bout 583: Zan Fugitt (Wisconsin) def. Braeden Davis (Penn State), Dec 8-5 [133]` },
-  { round: `ConsSemi`, weight: `133`, school: `Cal Poly`, opponent: `Virginia Tech`, line: `Bout 584: Zeth Romney (Cal Poly) def. Connor McGonagle (Virginia Tech), Dec 7-2 [133]` },
-  { round: `ConsSemi`, weight: `141`, school: `Penn State`, opponent: `Navy`, line: `Bout 585: Beau Bartlett (Penn State) def. Josh Koderhandt (Navy), SV-1 11-6 [141]` },
-  { round: `ConsSemi`, weight: `141`, school: `Pennsylvania`, opponent: `Northern Iowa`, line: `Bout 586: CJ Composto (Pennsylvania) def. Cael Happel (Northern Iowa), Dec 7-2 [141]` },
-  { round: `ConsSemi`, weight: `149`, school: `Penn State`, opponent: `Oregon State`, line: `Bout 587: Shayne Van Ness (Penn State) def. Ethan Stiles (Oregon State), Fall 1:06 [149]` },
-  { round: `ConsSemi`, weight: `149`, school: `Ohio State`, opponent: `North Carolina`, line: `Bout 588: Dylan DEmilio (Ohio State) def. Lachlan McNeil (North Carolina), Dec 7-1 [149]` },
-  { round: `ConsSemi`, weight: `157`, school: `Penn State`, opponent: `Cornell`, line: `Bout 589: Tyler Kasak (Penn State) def. Meyer Shapiro (Cornell), Dec 4-2 [157]` },
-  { round: `ConsSemi`, weight: `157`, school: `Northwestern`, opponent: `Northern Colorado`, line: `Bout 590: Trevor Chumbley (Northwestern) def. Vinny Zerban (Northern Colorado), Dec 5-3 [157]` },
-  { round: `ConsSemi`, weight: `165`, school: `West Virginia`, opponent: `Utah Valley`, line: `Bout 591: Peyton Hall (West Virginia) def. Terrell Barraclough (Utah Valley), Dec 7-5 [165]` },
-  { round: `ConsSemi`, weight: `165`, school: `Nebraska`, opponent: `Stanford`, line: `Bout 592: Christopher Minto (Nebraska) def. Hunter Garvin (Stanford), Dec 8-4 [165]` },
-  { round: `ConsSemi`, weight: `174`, school: `Penn State`, opponent: `Cornell`, line: `Bout 593: Levi Haines (Penn State) def. Simon Ruiz (Cornell), Dec 4-1 [174]` },
-  { round: `ConsSemi`, weight: `174`, school: `Iowa`, opponent: `South Dakota State`, line: `Bout 594: Patrick Kennedy (Iowa) def. Cade DeVos (South Dakota State), SV-1 4-1 [174]` },
-  { round: `ConsSemi`, weight: `184`, school: `Minnesota`, opponent: `Maryland`, line: `Bout 595: Max McEnelly (Minnesota) def. Jaxon Smith (Maryland), SV-1 4-1 [184]` },
-  { round: `ConsSemi`, weight: `184`, school: `Oklahoma State`, opponent: `Cornell`, line: `Bout 596: Dustin Plott (Oklahoma State) def. Chris Foca (Cornell), Dec 2-1 [184]` },
-  { round: `ConsSemi`, weight: `197`, school: `CSU Bakersfield`, opponent: `Wyoming`, line: `Bout 597: AJ Ferrari (CSU Bakersfield) def. Joseph Novak (Wyoming), Dec 5-3 [197]` },
-  { round: `ConsSemi`, weight: `197`, school: `Michigan`, opponent: `Little Rock`, line: `Bout 598: Jacob Cardenas (Michigan) def. Stephen Little (Little Rock), Dec 5-2 [197]` },
-  { round: `ConsSemi`, weight: `285`, school: `Arizona State`, opponent: `Penn State`, line: `Bout 599: Cohlton Schultz (Arizona State) def. Greg Kerkvliet (Penn State), MFFL [285]` },
-  { round: `ConsSemi`, weight: `285`, school: `NC State`, opponent: `Lehigh`, line: `Bout 600: Isaac Trumble (NC State) def. Owen Trephan (Lehigh), Dec 4-3 [285]` },
-  { round: `7thPlace`, weight: `125`, school: `Nebraska`, opponent: `Northern Colorado`, line: `Bout 601: Caleb Smith (Nebraska) def. Stevo Poulin (Northern Colorado), MD 18-5 [125]` },
-  { round: `7thPlace`, weight: `133`, school: `Nebraska`, opponent: `Stanford`, line: `Bout 602: Jacob Van Dee (Nebraska) def. Tyler Knox (Stanford), Dec 7-2 [133]` },
-  { round: `7thPlace`, weight: `141`, school: `Iowa State`, opponent: `Minnesota`, line: `Bout 603: Jacob Frost (Iowa State) def. Vance VomBaur (Minnesota), MD 17-3 [141]` },
-  { round: `7thPlace`, weight: `149`, school: `Rider`, opponent: `North Dakota State`, line: `Bout 604: Sammy Alvarez (Rider) def. Gavin Drexler (North Dakota State), SV-1 9-6 [149]` },
-  { round: `7thPlace`, weight: `157`, school: `Little Rock`, opponent: `Oklahoma State`, line: `Bout 605: Matty Bianchi (Little Rock) def. Caleb Fish (Oklahoma State), Dec 4-2 [157]` },
-  { round: `7thPlace`, weight: `165`, school: `Missouri`, opponent: `Oklahoma State`, line: `Bout 606: Cam Steed (Missouri) def. Cameron Amine (Oklahoma State), Fall 2:08 [165]` },
-  { round: `7thPlace`, weight: `174`, school: `NC State`, opponent: `Navy`, line: `Bout 607: Matthew Singleton (NC State) def. Danny Wask (Navy), Dec 3-1 [174]` },
-  { round: `7thPlace`, weight: `184`, school: `Nebraska`, opponent: `Indiana`, line: `Bout 608: Silas Allred (Nebraska) def. Donnell Washington (Indiana), Dec 4-2 [184]` },
-  { round: `7thPlace`, weight: `197`, school: `Pittsburgh`, opponent: `Nebraska`, line: `Bout 609: Mac Stout (Pittsburgh) def. Camden McDanel (Nebraska), MD 12-3 [197]` },
-  { round: `7thPlace`, weight: `285`, school: `Michigan`, opponent: `Iowa`, line: `Bout 610: Joshua Heindselman (Michigan) def. Ben Kueter (Iowa), Dec 2-1 [285]` },
-  { round: `5thPlace`, weight: `125`, school: `Virginia Tech`, opponent: `Lehigh`, line: `Bout 611: Eddie Ventresca (Virginia Tech) def. Sheldon Seymour (Lehigh), Dec 11-4 [125]` },
-  { round: `5thPlace`, weight: `133`, school: `Penn State`, opponent: `Virginia Tech`, line: `Bout 612: Braeden Davis (Penn State) def. Connor McGonagle (Virginia Tech), Fall 2:33 [133]` },
-  { round: `5thPlace`, weight: `141`, school: `Northern Iowa`, opponent: `Navy`, line: `Bout 613: Cael Happel (Northern Iowa) def. Josh Koderhandt (Navy), Dec 7-2 [141]` },
-  { round: `5thPlace`, weight: `149`, school: `North Carolina`, opponent: `Oregon State`, line: `Bout 614: Lachlan McNeil (North Carolina) def. Ethan Stiles (Oregon State), Dec 8-4 [149]` },
-  { round: `5thPlace`, weight: `157`, school: `Cornell`, opponent: `Northern Colorado`, line: `Bout 615: Meyer Shapiro (Cornell) def. Vinny Zerban (Northern Colorado), MD 11-0 [157]` },
-  { round: `5thPlace`, weight: `165`, school: `Utah Valley`, opponent: `Stanford`, line: `Bout 616: Terrell Barraclough (Utah Valley) def. Hunter Garvin (Stanford), Dec 1-0 [165]` },
-  { round: `5thPlace`, weight: `174`, school: `Cornell`, opponent: `South Dakota State`, line: `Bout 617: Simon Ruiz (Cornell) def. Cade DeVos (South Dakota State), Dec 2-1 [174]` },
-  { round: `5thPlace`, weight: `184`, school: `Cornell`, opponent: `Maryland`, line: `Bout 618: Chris Foca (Cornell) def. Jaxon Smith (Maryland), Dec 7-4 [184]` },
-  { round: `5thPlace`, weight: `197`, school: `Wyoming`, opponent: `Little Rock`, line: `Bout 619: Joseph Novak (Wyoming) def. Stephen Little (Little Rock), MD 8-0 [197]` },
-  { round: `5thPlace`, weight: `285`, school: `Lehigh`, opponent: `Penn State`, line: `Bout 620: Owen Trephan (Lehigh) def. Greg Kerkvliet (Penn State), M. For. [285]` },
-  { round: `3rdPlace`, weight: `125`, school: `Penn State`, opponent: `Purdue`, line: `Bout 621: Luke Lilledahl (Penn State) def. Matt Ramos (Purdue), Fall 6:18 [125]` },
-  { round: `3rdPlace`, weight: `133`, school: `Cal Poly`, opponent: `Wisconsin`, line: `Bout 622: Zeth Romney (Cal Poly) def. Zan Fugitt (Wisconsin), Dec 7-3 [133]` },
-  { round: `3rdPlace`, weight: `141`, school: `Penn State`, opponent: `Pennsylvania`, line: `Bout 623: Beau Bartlett (Penn State) def. CJ Composto (Pennsylvania), MD 11-2 [141]` },
-  { round: `3rdPlace`, weight: `149`, school: `Penn State`, opponent: `Ohio State`, line: `Bout 624: Shayne Van Ness (Penn State) def. Dylan DEmilio (Ohio State), MD 15-4 [149]` },
-  { round: `3rdPlace`, weight: `157`, school: `Penn State`, opponent: `Northwestern`, line: `Bout 625: Tyler Kasak (Penn State) def. Trevor Chumbley (Northwestern), MD 8-0 [157]` },
-  { round: `3rdPlace`, weight: `165`, school: `West Virginia`, opponent: `Nebraska`, line: `Bout 626: Peyton Hall (West Virginia) def. Christopher Minto (Nebraska), MD 13-5 [165]` },
-  { round: `3rdPlace`, weight: `174`, school: `Penn State`, opponent: `Iowa`, line: `Bout 627: Levi Haines (Penn State) def. Patrick Kennedy (Iowa), MD 11-3 [174]` },
-  { round: `3rdPlace`, weight: `184`, school: `Minnesota`, opponent: `Oklahoma State`, line: `Bout 628: Max McEnelly (Minnesota) def. Dustin Plott (Oklahoma State), Dec 6-5 [184]` },
-  { round: `3rdPlace`, weight: `197`, school: `CSU Bakersfield`, opponent: `Michigan`, line: `Bout 629: AJ Ferrari (CSU Bakersfield) def. Jacob Cardenas (Michigan), Dec 2-0 [197]` },
-  { round: `3rdPlace`, weight: `285`, school: `Arizona State`, opponent: `NC State`, line: `Bout 630: Cohlton Schultz (Arizona State) def. Isaac Trumble (NC State), Dec 5-3 [285]` },
-  { round: `Finals`, weight: `125`, school: `NC State`, opponent: `Oklahoma State`, line: `Bout 631: Vincent Robinson (NC State) def. Troy Spratley (Oklahoma State), TB-1 2-1 [125]` },
-  { round: `Finals`, weight: `133`, school: `Illinois`, opponent: `Iowa`, line: `Bout 632: Lucas Byrd (Illinois) def. Drake Ayala (Iowa), TB-2 ;RT [133]` },
-  { round: `Finals`, weight: `141`, school: `Ohio State`, opponent: `Nebraska`, line: `Bout 633: Jesse Mendez (Ohio State) def. Brock Hardy (Nebraska), Dec 12-9 [141]` },
-  { round: `Finals`, weight: `149`, school: `Nebraska`, opponent: `Virginia Tech`, line: `Bout 634: Ridge Lovett (Nebraska) def. Caleb Henson (Virginia Tech), Dec 1-0 [149]` },
-  { round: `Finals`, weight: `157`, school: `Nebraska`, opponent: `Purdue`, line: `Bout 635: Antrell Taylor (Nebraska) def. Joey Blaze (Purdue), Dec 4-2 [157]` },
-  { round: `Finals`, weight: `165`, school: `Penn State`, opponent: `Iowa`, line: `Bout 636: Mitchell Mesenbrink (Penn State) def. Mike Caliendo (Iowa), Dec 8-2 [165]` },
-  { round: `Finals`, weight: `174`, school: `Oklahoma State`, opponent: `Missouri`, line: `Bout 637: Dean Hamiti (Oklahoma State) def. Keegan OToole (Missouri), SV-1 4-1 [174]` },
-  { round: `Finals`, weight: `184`, school: `Penn State`, opponent: `Northern Iowa`, line: `Bout 638: Carter Starocci (Penn State) def. Parker Keckeisen (Northern Iowa), Dec 4-3 [184]` },
-  { round: `Finals`, weight: `197`, school: `Iowa`, opponent: `Penn State`, line: `Bout 639: Stephen Buchanan (Iowa) def. Josh Barr (Penn State), Dec 5-2 [197]` },
-  { round: `Finals`, weight: `285`, school: `Oklahoma State`, opponent: `Minnesota`, line: `Bout 640: Wyatt Hendrickson (Oklahoma State) def. Gable Steveson (Minnesota), Dec 5-4 [285]` },
-
+{
+  winner: "Marcello Milani",
+  loser: "Caleb Weiand",
+  round: "Prelims",
+  weight: "125",
+  school: "Cornell",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Hunter Leake",
+  loser: "Nolan Wertanen",
+  round: "Prelims",
+  weight: "133",
+  school: "California Baptist",
+  result: "Fall 2:28"
+},
+{
+  winner: "Nash Singleton",
+  loser: "Lorenzo Frezza",
+  round: "Prelims",
+  weight: "141",
+  school: "Oregon State",
+  result: "MD 8-0"
+},
+{
+  winner: "Teague Travis",
+  loser: "Wynton Denkins",
+  round: "Prelims",
+  weight: "149",
+  school: "Oklahoma State",
+  result: "MD 11-1"
+},
+{
+  winner: "Landen Johnson",
+  loser: "Richard Fedalen",
+  round: "Prelims",
+  weight: "157",
+  school: "Northern Illinois",
+  result: "Dec 5-3"
+},
+{
+  winner: "Chandler Amaker",
+  loser: "Jared Keslar",
+  round: "Prelims",
+  weight: "165",
+  school: "Central Michigan",
+  result: "SV-1 8-5"
+},
+{
+  winner: "Michael Wilson",
+  loser: "Jack McGill",
+  round: "Prelims",
+  weight: "174",
+  school: "Rider",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Caden Rogers",
+  loser: "TJ McDonnell",
+  round: "Prelims",
+  weight: "184",
+  school: "Lehigh",
+  result: "Dec 6-3"
+},
+{
+  winner: "Wolfgang Frable",
+  loser: "Carson Floyd",
+  round: "Prelims",
+  weight: "197",
+  school: "Army West Point",
+  result: "Dec 12-8"
+},
+{
+  winner: "Hayden Filipovich",
+  loser: "Stephan Monchery",
+  round: "Prelims",
+  weight: "285",
+  school: "Purdue",
+  result: "MD 9-0"
+},
+{
+  winner: "Luke Lilledahl",
+  loser: "Marcello Milani",
+  round: "ChampR1",
+  weight: "125",
+  school: "Penn State",
+  result: "TF 4:25 ;19-4"
+},
+{
+  winner: "Blake West",
+  loser: "Max Gallagher",
+  round: "ChampR1",
+  weight: "125",
+  school: "Northern Illinois",
+  result: "Dec 6-5"
+},
+{
+  winner: "Caleb Smith",
+  loser: "Nick Babin",
+  round: "ChampR1",
+  weight: "125",
+  school: "Nebraska",
+  result: "SV-1 3-0"
+},
+{
+  winner: "Sheldon Seymour",
+  loser: "Charlie Farmer",
+  round: "ChampR1",
+  weight: "125",
+  school: "Lehigh",
+  result: "Dec 7-0"
+},
+{
+  winner: "Richard Figueroa",
+  loser: "Koda Holeman",
+  round: "ChampR1",
+  weight: "125",
+  school: "Arizona State",
+  result: "Dec 12-7"
+},
+{
+  winner: "Dean Peterson",
+  loser: "Antonio Lorenzo",
+  round: "ChampR1",
+  weight: "125",
+  school: "Rutgers",
+  result: "Dec 6-5"
+},
+{
+  winner: "Marc-Anthony McGowan",
+  loser: "Brendan McCrone",
+  round: "ChampR1",
+  weight: "125",
+  school: "Princeton",
+  result: "Dec 4-3"
+},
+{
+  winner: "Vincent Robinson",
+  loser: "Joey Cruz",
+  round: "ChampR1",
+  weight: "125",
+  school: "NC State",
+  result: "MD 12-1"
+},
+{
+  winner: "Eddie Ventresca",
+  loser: "Gylon Sims",
+  round: "ChampR1",
+  weight: "125",
+  school: "Virginia Tech",
+  result: "Dec 5-1"
+},
+{
+  winner: "Spencer Moore",
+  loser: "Cooper Flynn",
+  round: "ChampR1",
+  weight: "125",
+  school: "North Carolina",
+  result: "Dec 2-0"
+},
+{
+  winner: "Nicolar Rivera",
+  loser: "Trever Anderson",
+  round: "ChampR1",
+  weight: "125",
+  school: "Wisconsin",
+  result: "Dec 4-2"
+},
+{
+  winner: "Jett Strickenberger",
+  loser: "Tristan Daugherty",
+  round: "ChampR1",
+  weight: "125",
+  school: "West Virginia",
+  result: "Dec 7-2"
+},
+{
+  winner: "Troy Spratley",
+  loser: "Keyveon Roller",
+  round: "ChampR1",
+  weight: "125",
+  school: "Oklahoma State",
+  result: "TF 4:18 ;15-0"
+},
+{
+  winner: "Stevo Poulin",
+  loser: "Tanner Jordan",
+  round: "ChampR1",
+  weight: "125",
+  school: "Northern Colorado",
+  result: "Dec 9-5"
+},
+{
+  winner: "Jacob Moran",
+  loser: "Maximo Renteria",
+  round: "ChampR1",
+  weight: "125",
+  school: "Indiana",
+  result: "Dec 7-6"
+},
+{
+  winner: "Matt Ramos",
+  loser: "Richard Castro-Sandoval",
+  round: "ChampR1",
+  weight: "125",
+  school: "Purdue",
+  result: "MD 11-3"
+},
+{
+  winner: "Lucas Byrd",
+  loser: "Hunter Leake",
+  round: "ChampR1",
+  weight: "133",
+  school: "Illinois",
+  result: "Dec 3-2"
+},
+{
+  winner: "Ryan Miller",
+  loser: "Jacob Van Dee",
+  round: "ChampR1",
+  weight: "133",
+  school: "Pennsylvania",
+  result: "Dec 8-4"
+},
+{
+  winner: "Braxton Brown",
+  loser: "Kyle Burwick",
+  round: "ChampR1",
+  weight: "133",
+  school: "Maryland",
+  result: "Dec 3-2"
+},
+{
+  winner: "Braeden Davis",
+  loser: "Kurt Phipps",
+  round: "ChampR1",
+  weight: "133",
+  school: "Penn State",
+  result: "MD 12-4"
+},
+{
+  winner: "Dominick Serrano",
+  loser: "Colton Camacho",
+  round: "ChampR1",
+  weight: "133",
+  school: "Northern Colorado",
+  result: "Dec 8-6"
+},
+{
+  winner: "Angelo Rini",
+  loser: "Ethan Oakley",
+  round: "ChampR1",
+  weight: "133",
+  school: "Indiana",
+  result: "Dec 7-1"
+},
+{
+  winner: "Tyler Knox",
+  loser: "Blake Boarman",
+  round: "ChampR1",
+  weight: "133",
+  school: "Stanford",
+  result: "SV-1 6-3"
+},
+{
+  winner: "Zeth Romney",
+  loser: "Tyler Ferrara",
+  round: "ChampR1",
+  weight: "133",
+  school: "Cal Poly",
+  result: "Dec 7-3"
+},
+{
+  winner: "Nasir Bailey",
+  loser: "Derrick Cardinal",
+  round: "ChampR1",
+  weight: "133",
+  school: "Little Rock",
+  result: "Dec 9-8"
+},
+{
+  winner: "Zan Fugitt",
+  loser: "Takeo Davis",
+  round: "ChampR1",
+  weight: "133",
+  school: "Wisconsin",
+  result: "Dec 12-5"
+},
+{
+  winner: "Evan Frost",
+  loser: "Tyler Wells",
+  round: "ChampR1",
+  weight: "133",
+  school: "Iowa State",
+  result: "Dec 2-0"
+},
+{
+  winner: "Connor McGonagle",
+  loser: "Ethan Berginc",
+  round: "ChampR1",
+  weight: "133",
+  school: "Virginia Tech",
+  result: "Dec 1-0"
+},
+{
+  winner: "Nic Bouzakis",
+  loser: "Kai Orine",
+  round: "ChampR1",
+  weight: "133",
+  school: "Ohio State",
+  result: "Fall 2:12"
+},
+{
+  winner: "Sean Spidle",
+  loser: "Dylan Shawver",
+  round: "ChampR1",
+  weight: "133",
+  school: "Central Michigan",
+  result: "Dec 4-1"
+},
+{
+  winner: "Julian Farber",
+  loser: "Anthony Noto",
+  round: "ChampR1",
+  weight: "133",
+  school: "Northern Iowa",
+  result: "Dec 9-8"
+},
+{
+  winner: "Drake Ayala",
+  loser: "Kade Moore",
+  round: "ChampR1",
+  weight: "133",
+  school: "Iowa",
+  result: "TF 5:30 ;21-5"
+},
+{
+  winner: "Brock Hardy",
+  loser: "Nash Singleton",
+  round: "ChampR1",
+  weight: "141",
+  school: "Nebraska",
+  result: "MD 12-3"
+},
+{
+  winner: "Wyatt Henson",
+  loser: "Shannon Hanna",
+  round: "ChampR1",
+  weight: "141",
+  school: "Lock Haven",
+  result: "MD 9-1"
+},
+{
+  winner: "Jacob Frost",
+  loser: "Jason Miranda",
+  round: "ChampR1",
+  weight: "141",
+  school: "Iowa State",
+  result: "TF 6:29 ;16-1"
+},
+{
+  winner: "Andrew Alirez",
+  loser: "AJ Rallo",
+  round: "ChampR1",
+  weight: "141",
+  school: "Northern Colorado",
+  result: "Dec 5-0"
+},
+{
+  winner: "Cael Happel",
+  loser: "Danny Pucino",
+  round: "ChampR1",
+  weight: "141",
+  school: "Northern Iowa",
+  result: "Fall 5:51"
+},
+{
+  winner: "Dylan Chappell",
+  loser: "Sam Latona",
+  round: "ChampR1",
+  weight: "141",
+  school: "Bucknell",
+  result: "Dec 7-4"
+},
+{
+  winner: "Joshua Saunders",
+  loser: "Todd Carter",
+  round: "ChampR1",
+  weight: "141",
+  school: "Cornell",
+  result: "Dec 8-2"
+},
+{
+  winner: "Josh Koderhandt",
+  loser: "Jayden Scott",
+  round: "ChampR1",
+  weight: "141",
+  school: "Navy",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Jesse Mendez",
+  loser: "Briar Priest",
+  round: "ChampR1",
+  weight: "141",
+  school: "Ohio State",
+  result: "TF 5:41 ;21-5"
+},
+{
+  winner: "Sergio Lemley",
+  loser: "Mosha Schwartz",
+  round: "ChampR1",
+  weight: "141",
+  school: "Michigan",
+  result: "Fall 6:23"
+},
+{
+  winner: "Dylan Cedeno",
+  loser: "Jordan Soriano",
+  round: "ChampR1",
+  weight: "141",
+  school: "Virginia",
+  result: "MD 11-1"
+},
+{
+  winner: "Vance VomBaur",
+  loser: "Greyson Clark",
+  round: "ChampR1",
+  weight: "141",
+  school: "Minnesota",
+  result: "Dec 2-0"
+},
+{
+  winner: "Tagen Jamison",
+  loser: "Eligh Rivera",
+  round: "ChampR1",
+  weight: "141",
+  school: "Oklahoma State",
+  result: "Dec 5-1"
+},
+{
+  winner: "CJ Composto",
+  loser: "Josh Edmond",
+  round: "ChampR1",
+  weight: "141",
+  school: "Pennsylvania",
+  result: "SV-1 8-5"
+},
+{
+  winner: "Julian Tagg",
+  loser: "Joseph Olivieri",
+  round: "ChampR1",
+  weight: "141",
+  school: "South Dakota State",
+  result: "MD 13-3"
+},
+{
+  winner: "Beau Bartlett",
+  loser: "Jordan Titus",
+  round: "ChampR1",
+  weight: "141",
+  school: "Penn State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Caleb Henson",
+  loser: "Teague Travis",
+  round: "ChampR1",
+  weight: "149",
+  school: "Virginia Tech",
+  result: "Dec 4-0"
+},
+{
+  winner: "Jaden Abas",
+  loser: "Trae McDaniel",
+  round: "ChampR1",
+  weight: "149",
+  school: "Stanford",
+  result: "Dec 11-7"
+},
+{
+  winner: "Cross Wasilewski",
+  loser: "Mason Shrader",
+  round: "ChampR1",
+  weight: "149",
+  school: "Pennsylvania",
+  result: "Fall 6:04"
+},
+{
+  winner: "Jordan Williams",
+  loser: "Malyke Hines",
+  round: "ChampR1",
+  weight: "149",
+  school: "Little Rock",
+  result: "Fall 1:43"
+},
+{
+  winner: "Kyle Parco",
+  loser: "Dylan Gilcher",
+  round: "ChampR1",
+  weight: "149",
+  school: "Iowa",
+  result: "Dec 7-2"
+},
+{
+  winner: "Ethan Stiles",
+  loser: "Willie McDougald",
+  round: "ChampR1",
+  weight: "149",
+  school: "Oregon State",
+  result: "Dec 6-4"
+},
+{
+  winner: "Dylan D`Emilio",
+  loser: "Koy Buesgens",
+  round: "ChampR1",
+  weight: "149",
+  school: "Ohio State",
+  result: "Dec 5-1"
+},
+{
+  winner: "Jack Gioffre",
+  loser: "Paniro Johnson",
+  round: "ChampR1",
+  weight: "149",
+  school: "Virginia",
+  result: "TB-1 5-2"
+},
+{
+  winner: "Shayne Van Ness",
+  loser: "Gabe Willochell",
+  round: "ChampR1",
+  weight: "149",
+  school: "Penn State",
+  result: "Fall 4:12"
+},
+{
+  winner: "Andrew Clark",
+  loser: "Chance Lamer",
+  round: "ChampR1",
+  weight: "149",
+  school: "Rutgers",
+  result: "Dec 8-3"
+},
+{
+  winner: "Sammy Alvarez",
+  loser: "Gavin Drexler",
+  round: "ChampR1",
+  weight: "149",
+  school: "Rider",
+  result: "Dec 4-2"
+},
+{
+  winner: "Lachlan McNeil",
+  loser: "Kaden Cassidy",
+  round: "ChampR1",
+  weight: "149",
+  school: "North Carolina",
+  result: "MD 10-0"
+},
+{
+  winner: "Kannon Webster",
+  loser: "Kal Miller",
+  round: "ChampR1",
+  weight: "149",
+  school: "Illinois",
+  result: "MD 8-0"
+},
+{
+  winner: "Colin Realbuto",
+  loser: "Carson DesRosier",
+  round: "ChampR1",
+  weight: "149",
+  school: "Northern Iowa",
+  result: "Dec 11-6"
+},
+{
+  winner: "Ty Whalen",
+  loser: "Ethan Fernandez",
+  round: "ChampR1",
+  weight: "149",
+  school: "Princeton",
+  result: "Dec 4-0"
+},
+{
+  winner: "Ridge Lovett",
+  loser: "Sam Cartella",
+  round: "ChampR1",
+  weight: "149",
+  school: "Nebraska",
+  result: "Dec 10-8"
+},
+{
+  winner: "Tyler Kasak",
+  loser: "Landen Johnson",
+  round: "ChampR1",
+  weight: "157",
+  school: "Penn State",
+  result: "Fall 1:39"
+},
+{
+  winner: "Cody Chittum",
+  loser: "DJ McGee",
+  round: "ChampR1",
+  weight: "157",
+  school: "Iowa State",
+  result: "Dec 8-1"
+},
+{
+  winner: "Tommy Askey",
+  loser: "Dylan Evans",
+  round: "ChampR1",
+  weight: "157",
+  school: "Minnesota",
+  result: "Dec 7-2"
+},
+{
+  winner: "Joey Blaze",
+  loser: "Sonny Santiago",
+  round: "ChampR1",
+  weight: "157",
+  school: "Purdue",
+  result: "Dec 7-0"
+},
+{
+  winner: "Brandon Cannon",
+  loser: "Christopher Hamblin",
+  round: "ChampR1",
+  weight: "157",
+  school: "Ohio State",
+  result: "Dec 9-5"
+},
+{
+  winner: "Caleb Fish",
+  loser: "Logan Rozynski",
+  round: "ChampR1",
+  weight: "157",
+  school: "Oklahoma State",
+  result: "Dec 2-0"
+},
+{
+  winner: "Trevor Chumbley",
+  loser: "Jared Hill",
+  round: "ChampR1",
+  weight: "157",
+  school: "Northwestern",
+  result: "Dec 2-0"
+},
+{
+  winner: "Rafael Hipolito",
+  loser: "James Harrington",
+  round: "ChampR1",
+  weight: "157",
+  school: "Virginia Tech",
+  result: "Dec 10-3"
+},
+{
+  winner: "Antrell Taylor",
+  loser: "James Conway",
+  round: "ChampR1",
+  weight: "157",
+  school: "Nebraska",
+  result: "TF 7:00 ;20-4"
+},
+{
+  winner: "Jude Swisher",
+  loser: "Cobe Siebrecht",
+  round: "ChampR1",
+  weight: "157",
+  school: "Pennsylvania",
+  result: "Fall 1:56"
+},
+{
+  winner: "Matty Bianchi",
+  loser: "Ed Scott",
+  round: "ChampR1",
+  weight: "157",
+  school: "Little Rock",
+  result: "SV-1 5-2"
+},
+{
+  winner: "Ryder Downey",
+  loser: "Grigor Cholakyan",
+  round: "ChampR1",
+  weight: "157",
+  school: "Northern Iowa",
+  result: "MD 12-1"
+},
+{
+  winner: "Vinny Zerban",
+  loser: "Blake Saito",
+  round: "ChampR1",
+  weight: "157",
+  school: "Northern Colorado",
+  result: "Fall 6:49"
+},
+{
+  winner: "Chase Saldate",
+  loser: "Ethen Miller",
+  round: "ChampR1",
+  weight: "157",
+  school: "Michigan",
+  result: "Fall 6:50"
+},
+{
+  winner: "Johnny Lovett",
+  loser: "Jacori Teemer",
+  round: "ChampR1",
+  weight: "157",
+  school: "Central Michigan",
+  result: "MD 11-3"
+},
+{
+  winner: "Meyer Shapiro",
+  loser: "Noah Castillo",
+  round: "ChampR1",
+  weight: "157",
+  school: "Cornell",
+  result: "TF 4:30 ;20-2"
+},
+{
+  winner: "Mitchell Mesenbrink",
+  loser: "Chandler Amaker",
+  round: "ChampR1",
+  weight: "165",
+  school: "Penn State",
+  result: "TF 3:32 ;16-0"
+},
+{
+  winner: "Kyle Mosher",
+  loser: "Noah Mulvaney",
+  round: "ChampR1",
+  weight: "165",
+  school: "Hofstra",
+  result: "Fall 3:29"
+},
+{
+  winner: "Cam Steed",
+  loser: "Cesar Alvan",
+  round: "ChampR1",
+  weight: "165",
+  school: "Missouri",
+  result: "Dec 5-4"
+},
+{
+  winner: "Cameron Amine",
+  loser: "Nick Hamilton",
+  round: "ChampR1",
+  weight: "165",
+  school: "Oklahoma State",
+  result: "Dec 2-0"
+},
+{
+  winner: "Julian Ramirez",
+  loser: "Mac Church",
+  round: "ChampR1",
+  weight: "165",
+  school: "Cornell",
+  result: "MD 11-2"
+},
+{
+  winner: "Christopher Minto",
+  loser: "Joseph Bianchi",
+  round: "ChampR1",
+  weight: "165",
+  school: "Nebraska",
+  result: "MD 13-1"
+},
+{
+  winner: "Will Miller",
+  loser: "Gunner Filipowicz",
+  round: "ChampR1",
+  weight: "165",
+  school: "Appalachian State",
+  result: "Fall 4:59"
+},
+{
+  winner: "Terrell Barraclough",
+  loser: "Derek Fields",
+  round: "ChampR1",
+  weight: "165",
+  school: "Utah Valley",
+  result: "TF 7:00 ;15-0"
+},
+{
+  winner: "Mike Caliendo",
+  loser: "Aiden Riggins",
+  round: "ChampR1",
+  weight: "165",
+  school: "Iowa",
+  result: "MD 11-3"
+},
+{
+  winner: "Jack Thomsen",
+  loser: "Drake Rhodes",
+  round: "ChampR1",
+  weight: "165",
+  school: "Northern Iowa",
+  result: "Dec 13-8"
+},
+{
+  winner: "Braeden Scoles",
+  loser: "Enrique Munguia",
+  round: "ChampR1",
+  weight: "165",
+  school: "Illinois",
+  result: "Fall 4:27"
+},
+{
+  winner: "Beau Mantanona",
+  loser: "Tyler Lillard",
+  round: "ChampR1",
+  weight: "165",
+  school: "Michigan",
+  result: "Dec 7-3"
+},
+{
+  winner: "Hunter Garvin",
+  loser: "Paddy Gallagher",
+  round: "ChampR1",
+  weight: "165",
+  school: "Stanford",
+  result: "Dec 7-2"
+},
+{
+  winner: "Andrew Sparks",
+  loser: "Thomas Snipes",
+  round: "ChampR1",
+  weight: "165",
+  school: "Minnesota",
+  result: "Dec 4-2"
+},
+{
+  winner: "Maxx Mayfield",
+  loser: "Nicco Ruiz",
+  round: "ChampR1",
+  weight: "165",
+  school: "Northwestern",
+  result: "Dec 7-6"
+},
+{
+  winner: "Peyton Hall",
+  loser: "Cody Goebel",
+  round: "ChampR1",
+  weight: "165",
+  school: "West Virginia",
+  result: "TF 5:22 ;19-1"
+},
+{
+  winner: "Keegan O`Toole",
+  loser: "Michael Wilson",
+  round: "ChampR1",
+  weight: "174",
+  school: "Missouri",
+  result: "Fall 4:24"
+},
+{
+  winner: "Lorenzo Norman",
+  loser: "Sergio Desiante",
+  round: "ChampR1",
+  weight: "174",
+  school: "Stanford",
+  result: "MD 14-3"
+},
+{
+  winner: "Lennox Wolak",
+  loser: "Carson Kharchla",
+  round: "ChampR1",
+  weight: "174",
+  school: "Virginia Tech",
+  result: "Dec 4-2"
+},
+{
+  winner: "Dalton Harkins",
+  loser: "Lenny Pinto",
+  round: "ChampR1",
+  weight: "174",
+  school: "Army West Point",
+  result: "Dec 6-1"
+},
+{
+  winner: "Simon Ruiz",
+  loser: "Clayton Whiting",
+  round: "ChampR1",
+  weight: "174",
+  school: "Cornell",
+  result: "TF 7:00 ;17-2"
+},
+{
+  winner: "Joshua Ogunsanya",
+  loser: "Myles Takats",
+  round: "ChampR1",
+  weight: "174",
+  school: "North Carolina",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Cade DeVos",
+  loser: "Dan Braunagel",
+  round: "ChampR1",
+  weight: "174",
+  school: "South Dakota State",
+  result: "Dec 5-4"
+},
+{
+  winner: "Garrett Thompson",
+  loser: "Jackson Turley",
+  round: "ChampR1",
+  weight: "174",
+  school: "Ohio",
+  result: "TF 4:11 ;16-1"
+},
+{
+  winner: "Dean Hamiti",
+  loser: "Avery Bassett",
+  round: "ChampR1",
+  weight: "174",
+  school: "Oklahoma State",
+  result: "TF 5:09 ;18-1"
+},
+{
+  winner: "Matthew Singleton",
+  loser: "Jared Simma",
+  round: "ChampR1",
+  weight: "174",
+  school: "NC State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Patrick Kennedy",
+  loser: "Nick Incontrera",
+  round: "ChampR1",
+  weight: "174",
+  school: "Iowa",
+  result: "Dec 4-2"
+},
+{
+  winner: "Brevin Cassella",
+  loser: "Jasiah Queen",
+  round: "ChampR1",
+  weight: "174",
+  school: "Binghamton",
+  result: "Dec 3-1"
+},
+{
+  winner: "Danny Wask",
+  loser: "Brody Baumann",
+  round: "ChampR1",
+  weight: "174",
+  school: "Navy",
+  result: "TF 6:41 ;15-0"
+},
+{
+  winner: "MJ Gaitan",
+  loser: "Luca Augustine",
+  round: "ChampR1",
+  weight: "174",
+  school: "Iowa State",
+  result: "MD 13-2"
+},
+{
+  winner: "Gaven Sax",
+  loser: "Alex Cramer",
+  round: "ChampR1",
+  weight: "174",
+  school: "Oklahoma",
+  result: "Dec 5-0"
+},
+{
+  winner: "Levi Haines",
+  loser: "Branson John",
+  round: "ChampR1",
+  weight: "174",
+  school: "Penn State",
+  result: "Fall 2:46"
+},
+{
+  winner: "Carter Starocci",
+  loser: "Caden Rogers",
+  round: "ChampR1",
+  weight: "184",
+  school: "Penn State",
+  result: "TF 6:20 ;18-2"
+},
+{
+  winner: "Shane Cartagena-Walsh",
+  loser: "Gavin Kane",
+  round: "ChampR1",
+  weight: "184",
+  school: "Rutgers",
+  result: "MD 11-3"
+},
+{
+  winner: "Reece Heller",
+  loser: "Devan Hendricks",
+  round: "ChampR1",
+  weight: "184",
+  school: "Pittsburgh",
+  result: "Dec 2-0"
+},
+{
+  winner: "Jaxon Smith",
+  loser: "Jared McGill",
+  round: "ChampR1",
+  weight: "184",
+  school: "Maryland",
+  result: "Fall 2:48"
+},
+{
+  winner: "Bennett Berge",
+  loser: "Dennis Robin",
+  round: "ChampR1",
+  weight: "184",
+  school: "South Dakota State",
+  result: "Dec 8-2"
+},
+{
+  winner: "Silas Allred",
+  loser: "Malachi DuVall",
+  round: "ChampR1",
+  weight: "184",
+  school: "Nebraska",
+  result: "Fall 6:38"
+},
+{
+  winner: "Nick Fine",
+  loser: "Evan Bockman",
+  round: "ChampR1",
+  weight: "184",
+  school: "Columbia",
+  result: "Fall 6:49"
+},
+{
+  winner: "Dustin Plott",
+  loser: "Kole Mulhauser",
+  round: "ChampR1",
+  weight: "184",
+  school: "Oklahoma State",
+  result: "TF 5:42 ;18-1"
+},
+{
+  winner: "Max McEnelly",
+  loser: "Colin Fegley",
+  round: "ChampR1",
+  weight: "184",
+  school: "Minnesota",
+  result: "TF 3:52 ;19-4"
+},
+{
+  winner: "DJ Parker",
+  loser: "Eddie Neitenbach",
+  round: "ChampR1",
+  weight: "184",
+  school: "Oklahoma",
+  result: "MD 10-0"
+},
+{
+  winner: "Gabe Arnold",
+  loser: "Donnell Washington",
+  round: "ChampR1",
+  weight: "184",
+  school: "Iowa",
+  result: "Dec 4-1"
+},
+{
+  winner: "Chris Foca",
+  loser: "Ross McFarland",
+  round: "ChampR1",
+  weight: "184",
+  school: "Cornell",
+  result: "Dec 5-3"
+},
+{
+  winner: "Isaac Dean",
+  loser: "Ryder Rogotzke",
+  round: "ChampR1",
+  weight: "184",
+  school: "Rider",
+  result: "Dec 7-3"
+},
+{
+  winner: "Edmond Ruth",
+  loser: "Aidan Brenot",
+  round: "ChampR1",
+  weight: "184",
+  school: "Illinois",
+  result: "MD 10-2"
+},
+{
+  winner: "Dylan Fishback",
+  loser: "Maximus Hale",
+  round: "ChampR1",
+  weight: "184",
+  school: "NC State",
+  result: "Dec 10-3"
+},
+{
+  winner: "Parker Keckeisen",
+  loser: "Colton Hawks",
+  round: "ChampR1",
+  weight: "184",
+  school: "Northern Iowa",
+  result: "TF 6:35 ;19-4"
+},
+{
+  winner: "Jacob Cardenas",
+  loser: "Wolfgang Frable",
+  round: "ChampR1",
+  weight: "197",
+  school: "Michigan",
+  result: "MD 10-0"
+},
+{
+  winner: "Evan Bates",
+  loser: "Nikolas Stemmet",
+  round: "ChampR1",
+  weight: "197",
+  school: "Northwestern",
+  result: "Dec 13-10"
+},
+{
+  winner: "Gabe Sollars",
+  loser: "Zac Braunagel",
+  round: "ChampR1",
+  weight: "197",
+  school: "Indiana",
+  result: "Dec 6-5"
+},
+{
+  winner: "Patrick Brophy",
+  loser: "Luke Surber",
+  round: "ChampR1",
+  weight: "197",
+  school: "The Citadel",
+  result: "MD 18-7"
+},
+{
+  winner: "Michael Beard",
+  loser: "Payton Thomas",
+  round: "ChampR1",
+  weight: "197",
+  school: "Lehigh",
+  result: "TF 3:45 ;19-4"
+},
+{
+  winner: "Stephen Little",
+  loser: "Levi Hopkins",
+  round: "ChampR1",
+  weight: "197",
+  school: "Little Rock",
+  result: "Dec 10-6"
+},
+{
+  winner: "Trey Munoz",
+  loser: "Camden McDanel",
+  round: "ChampR1",
+  weight: "197",
+  school: "Oregon State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Josh Barr",
+  loser: "Tucker Hogan",
+  round: "ChampR1",
+  weight: "197",
+  school: "Penn State",
+  result: "MD 9-1"
+},
+{
+  winner: "AJ Ferrari",
+  loser: "Ian Bush",
+  round: "ChampR1",
+  weight: "197",
+  school: "CSU Bakersfield",
+  result: "Dec 8-1"
+},
+{
+  winner: "Andy Smith",
+  loser: "Zach Glazier",
+  round: "ChampR1",
+  weight: "197",
+  school: "Virginia Tech",
+  result: "Dec 4-2"
+},
+{
+  winner: "Luke Stout",
+  loser: "Mickey O`Malley",
+  round: "ChampR1",
+  weight: "197",
+  school: "Princeton",
+  result: "Dec 4-3"
+},
+{
+  winner: "Mac Stout",
+  loser: "Michael Dellagatta",
+  round: "ChampR1",
+  weight: "197",
+  school: "Pittsburgh",
+  result: "MD 12-0"
+},
+{
+  winner: "Brock Zurawski",
+  loser: "Wyatt Voelker",
+  round: "ChampR1",
+  weight: "197",
+  school: "Rider",
+  result: "SV-1 5-2"
+},
+{
+  winner: "Seth Shumate",
+  loser: "Isaiah Salazar",
+  round: "ChampR1",
+  weight: "197",
+  school: "Ohio State",
+  result: "Fall 4:12"
+},
+{
+  winner: "Joseph Novak",
+  loser: "Dillon Bechtold",
+  round: "ChampR1",
+  weight: "197",
+  school: "Wyoming",
+  result: "Dec 8-1"
+},
+{
+  winner: "Stephen Buchanan",
+  loser: "Remy Cotton",
+  round: "ChampR1",
+  weight: "197",
+  school: "Iowa",
+  result: "MD 22-9"
+},
+{
+  winner: "Gable Steveson",
+  loser: "Hayden Filipovich",
+  round: "ChampR1",
+  weight: "285",
+  school: "Minnesota",
+  result: "Fall 1:25"
+},
+{
+  winner: "Yaraslau Slavikouski",
+  loser: "Jake Andrews",
+  round: "ChampR1",
+  weight: "285",
+  school: "Rutgers",
+  result: "Dec 4-2"
+},
+{
+  winner: "Cohlton Schultz",
+  loser: "Nolan Neves",
+  round: "ChampR1",
+  weight: "285",
+  school: "Arizona State",
+  result: "MD 8-0"
+},
+{
+  winner: "Luke Luffman",
+  loser: "Luke Rasmussen",
+  round: "ChampR1",
+  weight: "285",
+  school: "Illinois",
+  result: "Dec 8-2"
+},
+{
+  winner: "Ben Kueter",
+  loser: "Daniel Herrera",
+  round: "ChampR1",
+  weight: "285",
+  school: "Iowa",
+  result: "Dec 6-0"
+},
+{
+  winner: "Nick Feldman",
+  loser: "Jacob Bullock",
+  round: "ChampR1",
+  weight: "285",
+  school: "Ohio State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Seth Nevills",
+  loser: "Jordan Greer",
+  round: "ChampR1",
+  weight: "285",
+  school: "Maryland",
+  result: "Dec 5-0"
+},
+{
+  winner: "Owen Trephan",
+  loser: "Ashton Davis",
+  round: "ChampR1",
+  weight: "285",
+  school: "Lehigh",
+  result: "TF 5:40 ;17-2"
+},
+{
+  winner: "Greg Kerkvliet",
+  loser: "Sam Mitchell",
+  round: "ChampR1",
+  weight: "285",
+  school: "Penn State",
+  result: "TF 5:31 ;15-0"
+},
+{
+  winner: "Gavin Hoffman",
+  loser: "Cory Day",
+  round: "ChampR1",
+  weight: "285",
+  school: "Lock Haven",
+  result: "MD 10-2"
+},
+{
+  winner: "Brady Colbert",
+  loser: "Jimmy Mullen",
+  round: "ChampR1",
+  weight: "285",
+  school: "Army West Point",
+  result: "Dec 8-1"
+},
+{
+  winner: "Joshua Heindselman",
+  loser: "Connor Barket",
+  round: "ChampR1",
+  weight: "285",
+  school: "Michigan",
+  result: "Fall 1:03"
+},
+{
+  winner: "Isaac Trumble",
+  loser: "Peter Ming",
+  round: "ChampR1",
+  weight: "285",
+  school: "NC State",
+  result: "TF 6:12 ;18-2"
+},
+{
+  winner: "Dayton Pitzer",
+  loser: "Daniel Bucknavich",
+  round: "ChampR1",
+  weight: "285",
+  school: "Pittsburgh",
+  result: "Dec 6-2"
+},
+{
+  winner: "Trevor Tinker",
+  loser: "Lance Runyon",
+  round: "ChampR1",
+  weight: "285",
+  school: "Cal Poly",
+  result: "MD 15-2"
+},
+{
+  winner: "Wyatt Hendrickson",
+  loser: "Max Vanadia",
+  round: "ChampR1",
+  weight: "285",
+  school: "Oklahoma State",
+  result: "Fall 1:18"
+},
+{
+  winner: "Luke Lilledahl",
+  loser: "Blake West",
+  round: "ChampR2",
+  weight: "125",
+  school: "Penn State",
+  result: "TF 6:53 ;19-3"
+},
+{
+  winner: "Sheldon Seymour",
+  loser: "Caleb Smith",
+  round: "ChampR2",
+  weight: "125",
+  school: "Lehigh",
+  result: "Dec 7-3"
+},
+{
+  winner: "Dean Peterson",
+  loser: "Richard Figueroa",
+  round: "ChampR2",
+  weight: "125",
+  school: "Rutgers",
+  result: "Fall 5:42"
+},
+{
+  winner: "Vincent Robinson",
+  loser: "Marc-Anthony McGowan",
+  round: "ChampR2",
+  weight: "125",
+  school: "NC State",
+  result: "Dec 6-4"
+},
+{
+  winner: "Eddie Ventresca",
+  loser: "Spencer Moore",
+  round: "ChampR2",
+  weight: "125",
+  school: "Virginia Tech",
+  result: "Dec 6-3"
+},
+{
+  winner: "Jett Strickenberger",
+  loser: "Nicolar Rivera",
+  round: "ChampR2",
+  weight: "125",
+  school: "West Virginia",
+  result: "MD 18-6"
+},
+{
+  winner: "Troy Spratley",
+  loser: "Stevo Poulin",
+  round: "ChampR2",
+  weight: "125",
+  school: "Oklahoma State",
+  result: "Dec 2-1"
+},
+{
+  winner: "Matt Ramos",
+  loser: "Jacob Moran",
+  round: "ChampR2",
+  weight: "125",
+  school: "Purdue",
+  result: "MD 8-0"
+},
+{
+  winner: "Lucas Byrd",
+  loser: "Ryan Miller",
+  round: "ChampR2",
+  weight: "133",
+  school: "Illinois",
+  result: "MD 9-0"
+},
+{
+  winner: "Braeden Davis",
+  loser: "Braxton Brown",
+  round: "ChampR2",
+  weight: "133",
+  school: "Penn State",
+  result: "Dec 5-3"
+},
+{
+  winner: "Angelo Rini",
+  loser: "Dominick Serrano",
+  round: "ChampR2",
+  weight: "133",
+  school: "Indiana",
+  result: "MD 15-7"
+},
+{
+  winner: "Zeth Romney",
+  loser: "Tyler Knox",
+  round: "ChampR2",
+  weight: "133",
+  school: "Cal Poly",
+  result: "Dec 4-2"
+},
+{
+  winner: "Zan Fugitt",
+  loser: "Nasir Bailey",
+  round: "ChampR2",
+  weight: "133",
+  school: "Wisconsin",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Connor McGonagle",
+  loser: "Evan Frost",
+  round: "ChampR2",
+  weight: "133",
+  school: "Virginia Tech",
+  result: "Dec 5-0"
+},
+{
+  winner: "Nic Bouzakis",
+  loser: "Sean Spidle",
+  round: "ChampR2",
+  weight: "133",
+  school: "Ohio State",
+  result: "Dec 9-4"
+},
+{
+  winner: "Drake Ayala",
+  loser: "Julian Farber",
+  round: "ChampR2",
+  weight: "133",
+  school: "Iowa",
+  result: "MD 13-4"
+},
+{
+  winner: "Brock Hardy",
+  loser: "Wyatt Henson",
+  round: "ChampR2",
+  weight: "141",
+  school: "Nebraska",
+  result: "TF 6:17 ;19-3"
+},
+{
+  winner: "Jacob Frost",
+  loser: "Andrew Alirez",
+  round: "ChampR2",
+  weight: "141",
+  school: "Iowa State",
+  result: "Dec 6-1"
+},
+{
+  winner: "Cael Happel",
+  loser: "Dylan Chappell",
+  round: "ChampR2",
+  weight: "141",
+  school: "Northern Iowa",
+  result: "Dec 5-4"
+},
+{
+  winner: "Josh Koderhandt",
+  loser: "Joshua Saunders",
+  round: "ChampR2",
+  weight: "141",
+  school: "Navy",
+  result: "Fall 3:32"
+},
+{
+  winner: "Jesse Mendez",
+  loser: "Sergio Lemley",
+  round: "ChampR2",
+  weight: "141",
+  school: "Ohio State",
+  result: "MD 11-2"
+},
+{
+  winner: "Vance VomBaur",
+  loser: "Dylan Cedeno",
+  round: "ChampR2",
+  weight: "141",
+  school: "Minnesota",
+  result: "Dec 4-0"
+},
+{
+  winner: "CJ Composto",
+  loser: "Tagen Jamison",
+  round: "ChampR2",
+  weight: "141",
+  school: "Pennsylvania",
+  result: "Dec 6-4"
+},
+{
+  winner: "Beau Bartlett",
+  loser: "Julian Tagg",
+  round: "ChampR2",
+  weight: "141",
+  school: "Penn State",
+  result: "Dec 4-1"
+},
+{
+  winner: "Caleb Henson",
+  loser: "Jaden Abas",
+  round: "ChampR2",
+  weight: "149",
+  school: "Virginia Tech",
+  result: "Dec 5-1"
+},
+{
+  winner: "Jordan Williams",
+  loser: "Cross Wasilewski",
+  round: "ChampR2",
+  weight: "149",
+  school: "Little Rock",
+  result: "Dec 10-3"
+},
+{
+  winner: "Ethan Stiles",
+  loser: "Kyle Parco",
+  round: "ChampR2",
+  weight: "149",
+  school: "Oregon State",
+  result: "MD 8-0"
+},
+{
+  winner: "Dylan D`Emilio",
+  loser: "Jack Gioffre",
+  round: "ChampR2",
+  weight: "149",
+  school: "Ohio State",
+  result: "Dec 8-5"
+},
+{
+  winner: "Shayne Van Ness",
+  loser: "Andrew Clark",
+  round: "ChampR2",
+  weight: "149",
+  school: "Penn State",
+  result: "MD 11-1"
+},
+{
+  winner: "Lachlan McNeil",
+  loser: "Sammy Alvarez",
+  round: "ChampR2",
+  weight: "149",
+  school: "North Carolina",
+  result: "Dec 4-2"
+},
+{
+  winner: "Kannon Webster",
+  loser: "Colin Realbuto",
+  round: "ChampR2",
+  weight: "149",
+  school: "Illinois",
+  result: "Dec 8-3"
+},
+{
+  winner: "Ridge Lovett",
+  loser: "Ty Whalen",
+  round: "ChampR2",
+  weight: "149",
+  school: "Nebraska",
+  result: "TF 6:09 ;15-0"
+},
+{
+  winner: "Tyler Kasak",
+  loser: "Cody Chittum",
+  round: "ChampR2",
+  weight: "157",
+  school: "Penn State",
+  result: "Dec 8-3"
+},
+{
+  winner: "Joey Blaze",
+  loser: "Tommy Askey",
+  round: "ChampR2",
+  weight: "157",
+  school: "Purdue",
+  result: "TB-1 2-2"
+},
+{
+  winner: "Caleb Fish",
+  loser: "Brandon Cannon",
+  round: "ChampR2",
+  weight: "157",
+  school: "Oklahoma State",
+  result: "SV-1 10-7"
+},
+{
+  winner: "Trevor Chumbley",
+  loser: "Rafael Hipolito",
+  round: "ChampR2",
+  weight: "157",
+  school: "Northwestern",
+  result: "TB-1 2-1"
+},
+{
+  winner: "Antrell Taylor",
+  loser: "Jude Swisher",
+  round: "ChampR2",
+  weight: "157",
+  school: "Nebraska",
+  result: "Fall 2:16"
+},
+{
+  winner: "Matty Bianchi",
+  loser: "Ryder Downey",
+  round: "ChampR2",
+  weight: "157",
+  school: "Little Rock",
+  result: "Dec 5-4"
+},
+{
+  winner: "Vinny Zerban",
+  loser: "Chase Saldate",
+  round: "ChampR2",
+  weight: "157",
+  school: "Northern Colorado",
+  result: "Dec 5-1"
+},
+{
+  winner: "Meyer Shapiro",
+  loser: "Johnny Lovett",
+  round: "ChampR2",
+  weight: "157",
+  school: "Cornell",
+  result: "Dec 10-4"
+},
+{
+  winner: "Mitchell Mesenbrink",
+  loser: "Kyle Mosher",
+  round: "ChampR2",
+  weight: "165",
+  school: "Penn State",
+  result: "TF 4:16 ;22-6"
+},
+{
+  winner: "Cameron Amine",
+  loser: "Cam Steed",
+  round: "ChampR2",
+  weight: "165",
+  school: "Oklahoma State",
+  result: "Dec 3-1"
+},
+{
+  winner: "Christopher Minto",
+  loser: "Julian Ramirez",
+  round: "ChampR2",
+  weight: "165",
+  school: "Nebraska",
+  result: "MD 11-1"
+},
+{
+  winner: "Terrell Barraclough",
+  loser: "Will Miller",
+  round: "ChampR2",
+  weight: "165",
+  school: "Utah Valley",
+  result: "MD 11-1"
+},
+{
+  winner: "Mike Caliendo",
+  loser: "Jack Thomsen",
+  round: "ChampR2",
+  weight: "165",
+  school: "Iowa",
+  result: "MD 15-3"
+},
+{
+  winner: "Beau Mantanona",
+  loser: "Braeden Scoles",
+  round: "ChampR2",
+  weight: "165",
+  school: "Michigan",
+  result: "Dec 8-5"
+},
+{
+  winner: "Hunter Garvin",
+  loser: "Andrew Sparks",
+  round: "ChampR2",
+  weight: "165",
+  school: "Stanford",
+  result: "MD 14-4"
+},
+{
+  winner: "Peyton Hall",
+  loser: "Maxx Mayfield",
+  round: "ChampR2",
+  weight: "165",
+  school: "West Virginia",
+  result: "TF 5:36 ;20-4"
+},
+{
+  winner: "Keegan O`Toole",
+  loser: "Lorenzo Norman",
+  round: "ChampR2",
+  weight: "174",
+  school: "Missouri",
+  result: "Dec 10-8"
+},
+{
+  winner: "Lennox Wolak",
+  loser: "Dalton Harkins",
+  round: "ChampR2",
+  weight: "174",
+  school: "Virginia Tech",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Simon Ruiz",
+  loser: "Joshua Ogunsanya",
+  round: "ChampR2",
+  weight: "174",
+  school: "Cornell",
+  result: "Dec 4-2"
+},
+{
+  winner: "Cade DeVos",
+  loser: "Garrett Thompson",
+  round: "ChampR2",
+  weight: "174",
+  school: "South Dakota State",
+  result: "Dec 9-3"
+},
+{
+  winner: "Dean Hamiti",
+  loser: "Matthew Singleton",
+  round: "ChampR2",
+  weight: "174",
+  school: "Oklahoma State",
+  result: "MD 15-3"
+},
+{
+  winner: "Patrick Kennedy",
+  loser: "Brevin Cassella",
+  round: "ChampR2",
+  weight: "174",
+  school: "Iowa",
+  result: "Dec 3-0"
+},
+{
+  winner: "Danny Wask",
+  loser: "MJ Gaitan",
+  round: "ChampR2",
+  weight: "174",
+  school: "Navy",
+  result: "MD 12-4"
+},
+{
+  winner: "Levi Haines",
+  loser: "Gaven Sax",
+  round: "ChampR2",
+  weight: "174",
+  school: "Penn State",
+  result: "Dec 4-0"
+},
+{
+  winner: "Carter Starocci",
+  loser: "Shane Cartagena-Walsh",
+  round: "ChampR2",
+  weight: "184",
+  school: "Penn State",
+  result: "TF 4:24 ;15-0"
+},
+{
+  winner: "Jaxon Smith",
+  loser: "Reece Heller",
+  round: "ChampR2",
+  weight: "184",
+  school: "Maryland",
+  result: "Fall 2:45"
+},
+{
+  winner: "Silas Allred",
+  loser: "Bennett Berge",
+  round: "ChampR2",
+  weight: "184",
+  school: "Nebraska",
+  result: "Fall 6:42"
+},
+{
+  winner: "Dustin Plott",
+  loser: "Nick Fine",
+  round: "ChampR2",
+  weight: "184",
+  school: "Oklahoma State",
+  result: "MD 12-2"
+},
+{
+  winner: "Max McEnelly",
+  loser: "DJ Parker",
+  round: "ChampR2",
+  weight: "184",
+  school: "Minnesota",
+  result: "MD 11-3"
+},
+{
+  winner: "Chris Foca",
+  loser: "Gabe Arnold",
+  round: "ChampR2",
+  weight: "184",
+  school: "Cornell",
+  result: "MD 12-1"
+},
+{
+  winner: "Edmond Ruth",
+  loser: "Isaac Dean",
+  round: "ChampR2",
+  weight: "184",
+  school: "Illinois",
+  result: "TB-2 ;RT"
+},
+{
+  winner: "Parker Keckeisen",
+  loser: "Dylan Fishback",
+  round: "ChampR2",
+  weight: "184",
+  school: "Northern Iowa",
+  result: "MD 14-3"
+},
+{
+  winner: "Jacob Cardenas",
+  loser: "Evan Bates",
+  round: "ChampR2",
+  weight: "197",
+  school: "Michigan",
+  result: "Dec 4-1"
+},
+{
+  winner: "Gabe Sollars",
+  loser: "Patrick Brophy",
+  round: "ChampR2",
+  weight: "197",
+  school: "Indiana",
+  result: "MD 13-4"
+},
+{
+  winner: "Michael Beard",
+  loser: "Stephen Little",
+  round: "ChampR2",
+  weight: "197",
+  school: "Lehigh",
+  result: "Dec 4-1"
+},
+{
+  winner: "Josh Barr",
+  loser: "Trey Munoz",
+  round: "ChampR2",
+  weight: "197",
+  school: "Penn State",
+  result: "SV-1 5-2"
+},
+{
+  winner: "AJ Ferrari",
+  loser: "Andy Smith",
+  round: "ChampR2",
+  weight: "197",
+  school: "CSU Bakersfield",
+  result: "Dec 5-1"
+},
+{
+  winner: "Mac Stout",
+  loser: "Luke Stout",
+  round: "ChampR2",
+  weight: "197",
+  school: "Pittsburgh",
+  result: "Dec 4-2"
+},
+{
+  winner: "Seth Shumate",
+  loser: "Brock Zurawski",
+  round: "ChampR2",
+  weight: "197",
+  school: "Ohio State",
+  result: "Dec 11-6"
+},
+{
+  winner: "Stephen Buchanan",
+  loser: "Joseph Novak",
+  round: "ChampR2",
+  weight: "197",
+  school: "Iowa",
+  result: "TF 7:00 ;16-1"
+},
+{
+  winner: "Gable Steveson",
+  loser: "Yaraslau Slavikouski",
+  round: "ChampR2",
+  weight: "285",
+  school: "Minnesota",
+  result: "Fall"
+},
+{
+  winner: "Cohlton Schultz",
+  loser: "Luke Luffman",
+  round: "ChampR2",
+  weight: "285",
+  school: "Arizona State",
+  result: "Dec 7-0"
+},
+{
+  winner: "Ben Kueter",
+  loser: "Nick Feldman",
+  round: "ChampR2",
+  weight: "285",
+  school: "Iowa",
+  result: "Dec 8-2"
+},
+{
+  winner: "Owen Trephan",
+  loser: "Seth Nevills",
+  round: "ChampR2",
+  weight: "285",
+  school: "Lehigh",
+  result: "Dec 8-3"
+},
+{
+  winner: "Greg Kerkvliet",
+  loser: "Gavin Hoffman",
+  round: "ChampR2",
+  weight: "285",
+  school: "Penn State",
+  result: "Dec 4-0"
+},
+{
+  winner: "Joshua Heindselman",
+  loser: "Brady Colbert",
+  round: "ChampR2",
+  weight: "285",
+  school: "Michigan",
+  result: "TF 4:29 ;17-2"
+},
+{
+  winner: "Isaac Trumble",
+  loser: "Dayton Pitzer",
+  round: "ChampR2",
+  weight: "285",
+  school: "NC State",
+  result: "Dec 5-2"
+},
+{
+  winner: "Wyatt Hendrickson",
+  loser: "Trevor Tinker",
+  round: "ChampR2",
+  weight: "285",
+  school: "Oklahoma State",
+  result: "Fall 3:52"
+},
+{
+  winner: "Caleb Weiand",
+  loser: "Gylon Sims",
+  round: "ConsPrelims",
+  weight: "125",
+  school: "Michigan State",
+  result: "Dec 8-4"
+},
+{
+  winner: "Derrick Cardinal",
+  loser: "Nolan Wertanen",
+  round: "ConsPrelims",
+  weight: "133",
+  school: "South Dakota State",
+  result: "Dec 10-7"
+},
+{
+  winner: "Briar Priest",
+  loser: "Lorenzo Frezza",
+  round: "ConsPrelims",
+  weight: "141",
+  school: "Pittsburgh",
+  result: "Dec 5-0"
+},
+{
+  winner: "Wynton Denkins",
+  loser: "Gabe Willochell",
+  round: "ConsPrelims",
+  weight: "149",
+  school: "Campbell",
+  result: "SV-1 17-14"
+},
+{
+  winner: "James Conway",
+  loser: "Richard Fedalen",
+  round: "ConsPrelims",
+  weight: "157",
+  school: "Missouri",
+  result: "Dec 7-3"
+},
+{
+  winner: "Aiden Riggins",
+  loser: "Jared Keslar",
+  round: "ConsPrelims",
+  weight: "165",
+  school: "Iowa State",
+  result: "Dec 7-6"
+},
+{
+  winner: "Avery Bassett",
+  loser: "Jack McGill",
+  round: "ConsPrelims",
+  weight: "174",
+  school: "Lock Haven",
+  result: "Dec 4-3"
+},
+{
+  winner: "TJ McDonnell",
+  loser: "Colin Fegley",
+  round: "ConsPrelims",
+  weight: "184",
+  school: "Oregon State",
+  result: "TF-1.5 5:27"
+},
+{
+  winner: "Ian Bush",
+  loser: "Carson Floyd",
+  round: "ConsPrelims",
+  weight: "197",
+  school: "West Virginia",
+  result: "Dec 5-4"
+},
+{
+  winner: "Sam Mitchell",
+  loser: "Stephan Monchery",
+  round: "ConsPrelims",
+  weight: "285",
+  school: "Wyoming",
+  result: "Dec 5-0"
+},
+{
+  winner: "Max Gallagher",
+  loser: "Marcello Milani",
+  round: "ConsR1",
+  weight: "125",
+  school: "Pennsylvania",
+  result: "Dec 5-1"
+},
+{
+  winner: "Charlie Farmer",
+  loser: "Nick Babin",
+  round: "ConsR1",
+  weight: "125",
+  school: "Army West Point",
+  result: "Dec 7-4"
+},
+{
+  winner: "Antonio Lorenzo",
+  loser: "Koda Holeman",
+  round: "ConsR1",
+  weight: "125",
+  school: "Oklahoma",
+  result: "MD 8-0"
+},
+{
+  winner: "Brendan McCrone",
+  loser: "Joey Cruz",
+  round: "ConsR1",
+  weight: "125",
+  school: "Ohio State",
+  result: "MD 12-4"
+},
+{
+  winner: "Cooper Flynn",
+  loser: "Caleb Weiand",
+  round: "ConsR1",
+  weight: "125",
+  school: "Minnesota",
+  result: "Fall 2:48"
+},
+{
+  winner: "Trever Anderson",
+  loser: "Tristan Daugherty",
+  round: "ConsR1",
+  weight: "125",
+  school: "Northern Iowa",
+  result: "Dec 2-0"
+},
+{
+  winner: "Tanner Jordan",
+  loser: "Keyveon Roller",
+  round: "ConsR1",
+  weight: "125",
+  school: "South Dakota State",
+  result: "MD 11-2"
+},
+{
+  winner: "Maximo Renteria",
+  loser: "Richard Castro-Sandoval",
+  round: "ConsR1",
+  weight: "125",
+  school: "Oregon State",
+  result: "Dec 7-2"
+},
+{
+  winner: "Jacob Van Dee",
+  loser: "Hunter Leake",
+  round: "ConsR1",
+  weight: "133",
+  school: "Nebraska",
+  result: "MD 13-2"
+},
+{
+  winner: "Kurt Phipps",
+  loser: "Kyle Burwick",
+  round: "ConsR1",
+  weight: "133",
+  school: "Bucknell",
+  result: "Dec 6-5"
+},
+{
+  winner: "Ethan Oakley",
+  loser: "Colton Camacho",
+  round: "ConsR1",
+  weight: "133",
+  school: "North Carolina",
+  result: "Dec 15-11"
+},
+{
+  winner: "Tyler Ferrara",
+  loser: "Blake Boarman",
+  round: "ConsR1",
+  weight: "133",
+  school: "Cornell",
+  result: "Dec 5-3"
+},
+{
+  winner: "Derrick Cardinal",
+  loser: "Sheldon Seymour",
+  round: "ConsR1",
+  weight: "133",
+  school: "South Dakota State",
+  result: "Dec 5-4"
+},
+{
+  winner: "Tyler Wells",
+  loser: "Ethan Berginc",
+  round: "ConsR1",
+  weight: "133",
+  school: "Minnesota",
+  result: "Dec 5-1"
+},
+{
+  winner: "Dylan Shawver",
+  loser: "Kai Orine",
+  round: "ConsR1",
+  weight: "133",
+  school: "Rutgers",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Anthony Noto",
+  loser: "Kade Moore",
+  round: "ConsR1",
+  weight: "133",
+  school: "Lock Haven",
+  result: "Dec 8-2"
+},
+{
+  winner: "Nash Singleton",
+  loser: "Shannon Hanna",
+  round: "ConsR1",
+  weight: "141",
+  school: "Oregon State",
+  result: "TB-1 2-1"
+},
+{
+  winner: "Jason Miranda",
+  loser: "AJ Rallo",
+  round: "ConsR1",
+  weight: "141",
+  school: "Stanford",
+  result: "Dec 4-1"
+},
+{
+  winner: "Danny Pucino",
+  loser: "Sam Latona",
+  round: "ConsR1",
+  weight: "141",
+  school: "Illinois",
+  result: "Dec 12-8"
+},
+{
+  winner: "Jayden Scott",
+  loser: "Todd Carter",
+  round: "ConsR1",
+  weight: "141",
+  school: "North Carolina",
+  result: "Dec 5-4"
+},
+{
+  winner: "Mosha Schwartz",
+  loser: "Dean Peterson",
+  round: "ConsR1",
+  weight: "141",
+  school: "Oklahoma",
+  result: "Dec 9-5"
+},
+{
+  winner: "Greyson Clark",
+  loser: "Jordan Soriano",
+  round: "ConsR1",
+  weight: "141",
+  school: "Purdue",
+  result: "MD 13-3"
+},
+{
+  winner: "Eligh Rivera",
+  loser: "Josh Edmond",
+  round: "ConsR1",
+  weight: "141",
+  school: "Princeton",
+  result: "SV-1 8-5"
+},
+{
+  winner: "Joseph Olivieri",
+  loser: "Jordan Titus",
+  round: "ConsR1",
+  weight: "141",
+  school: "Rutgers",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Teague Travis",
+  loser: "Trae McDaniel",
+  round: "ConsR1",
+  weight: "149",
+  school: "Oklahoma State",
+  result: "MD 17-4"
+},
+{
+  winner: "Malyke Hines",
+  loser: "Mason Shrader",
+  round: "ConsR1",
+  weight: "149",
+  school: "Lehigh",
+  result: "Dec 7-3"
+},
+{
+  winner: "Willie McDougald",
+  loser: "Dylan Gilcher",
+  round: "ConsR1",
+  weight: "149",
+  school: "Oklahoma",
+  result: "SV-1 8-5"
+},
+{
+  winner: "Paniro Johnson",
+  loser: "Koy Buesgens",
+  round: "ConsR1",
+  weight: "149",
+  school: "Iowa State",
+  result: "TB-1 1-1"
+},
+{
+  winner: "Chance Lamer",
+  loser: "Vincent Robinson",
+  round: "ConsR1",
+  weight: "149",
+  school: "Cal Poly",
+  result: "MD 11-3"
+},
+{
+  winner: "Gavin Drexler",
+  loser: "Kaden Cassidy",
+  round: "ConsR1",
+  weight: "149",
+  school: "North Dakota State",
+  result: "MD 13-1"
+},
+{
+  winner: "Carson DesRosier",
+  loser: "Kal Miller",
+  round: "ConsR1",
+  weight: "149",
+  school: "The Citadel",
+  result: "Dec 5-4"
+},
+{
+  winner: "Ethan Fernandez",
+  loser: "Sam Cartella",
+  round: "ConsR1",
+  weight: "149",
+  school: "Cornell",
+  result: "Dec 3-2"
+},
+{
+  winner: "DJ McGee",
+  loser: "Landen Johnson",
+  round: "ConsR1",
+  weight: "157",
+  school: "George Mason",
+  result: "Dec 3-2"
+},
+{
+  winner: "Dylan Evans",
+  loser: "Sonny Santiago",
+  round: "ConsR1",
+  weight: "157",
+  school: "Pittsburgh",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Logan Rozynski",
+  loser: "Christopher Hamblin",
+  round: "ConsR1",
+  weight: "157",
+  school: "Lehigh",
+  result: "Dec 7-3;19-3"
+},
+{
+  winner: "James Harrington",
+  loser: "Jared Hill",
+  round: "ConsR1",
+  weight: "157",
+  school: "Harvard",
+  result: "Fall 5:46"
+},
+{
+  winner: "Cobe Siebrecht",
+  loser: "Eddie Ventresca",
+  round: "ConsR1",
+  weight: "157",
+  school: "South Dakota State",
+  result: "Dec 7-5"
+},
+{
+  winner: "Ed Scott",
+  loser: "Grigor Cholakyan",
+  round: "ConsR1",
+  weight: "157",
+  school: "NC State",
+  result: "TF 6:08 ;19-4"
+},
+{
+  winner: "Ethen Miller",
+  loser: "Blake Saito",
+  round: "ConsR1",
+  weight: "157",
+  school: "Maryland",
+  result: "MD 14-2"
+},
+{
+  winner: "Noah Castillo",
+  loser: "Jacori Teemer",
+  round: "ConsR1",
+  weight: "157",
+  school: "Chattanooga",
+  result: "Dec 8-5"
+},
+{
+  winner: "Chandler Amaker",
+  loser: "Noah Mulvaney",
+  round: "ConsR1",
+  weight: "165",
+  school: "Central Michigan",
+  result: "Dec 8-6"
+},
+{
+  winner: "Nick Hamilton",
+  loser: "Cesar Alvan",
+  round: "ConsR1",
+  weight: "165",
+  school: "Virginia",
+  result: "Dec 10-3"
+},
+{
+  winner: "Mac Church",
+  loser: "Joseph Bianchi",
+  round: "ConsR1",
+  weight: "165",
+  school: "Virginia Tech",
+  result: "MD 12-4"
+},
+{
+  winner: "Gunner Filipowicz",
+  loser: "Derek Fields",
+  round: "ConsR1",
+  weight: "165",
+  school: "Army West Point",
+  result: "Dec 9-8"
+},
+{
+  winner: "Aiden Riggins",
+  loser: "Jett Strickenberger",
+  round: "ConsR1",
+  weight: "165",
+  school: "Iowa State",
+  result: "Dec 9-3;RT"
+},
+{
+  winner: "Tyler Lillard",
+  loser: "Enrique Munguia",
+  round: "ConsR1",
+  weight: "165",
+  school: "Indiana",
+  result: "Fall 3:49"
+},
+{
+  winner: "Thomas Snipes",
+  loser: "Paddy Gallagher",
+  round: "ConsR1",
+  weight: "165",
+  school: "The Citadel",
+  result: "TB-2"
+},
+{
+  winner: "Nicco Ruiz",
+  loser: "Cody Goebel",
+  round: "ConsR1",
+  weight: "165",
+  school: "Arizona State",
+  result: "MD 16-3;17-2"
+},
+{
+  winner: "Sergio Desiante",
+  loser: "Michael Wilson",
+  round: "ConsR1",
+  weight: "174",
+  school: "Chattanooga",
+  result: "TF 4:22"
+},
+{
+  winner: "Lenny Pinto",
+  loser: "Carson Kharchla",
+  round: "ConsR1",
+  weight: "174",
+  school: "Nebraska",
+  result: "SV-1 12-7"
+},
+{
+  winner: "Clayton Whiting",
+  loser: "Myles Takats",
+  round: "ConsR1",
+  weight: "174",
+  school: "Minnesota",
+  result: "Dec 11-9"
+},
+{
+  winner: "Dan Braunagel",
+  loser: "Jackson Turley",
+  round: "ConsR1",
+  weight: "174",
+  school: "Illinois",
+  result: "MD 18-9"
+},
+{
+  winner: "Jared Simma",
+  loser: "Troy Spratley",
+  round: "ConsR1",
+  weight: "174",
+  school: "Northern Iowa",
+  result: "MD 11-0"
+},
+{
+  winner: "Nick Incontrera",
+  loser: "Jasiah Queen",
+  round: "ConsR1",
+  weight: "174",
+  school: "Pennsylvania",
+  result: "Dec 3-0"
+},
+{
+  winner: "Brody Baumann",
+  loser: "Luca Augustine",
+  round: "ConsR1",
+  weight: "174",
+  school: "Purdue",
+  result: "Dec 3-2"
+},
+{
+  winner: "Luca Augustine",
+  loser: "Alex Cramer",
+  round: "ConsR1",
+  weight: "174",
+  school: "Pittsburgh",
+  result: "MD 11-2"
+},
+{
+  winner: "Gavin Kane",
+  loser: "Caden Rogers",
+  round: "ConsR1",
+  weight: "184",
+  school: "North Carolina",
+  result: "MD 9-1"
+},
+{
+  winner: "Jared McGill",
+  loser: "Devan Hendricks",
+  round: "ConsR1",
+  weight: "184",
+  school: "Edinboro",
+  result: "Dec 6-0"
+},
+{
+  winner: "Malachi DuVall",
+  loser: "Dennis Robin",
+  round: "ConsR1",
+  weight: "184",
+  school: "George Mason",
+  result: "MD 13-0"
+},
+{
+  winner: "Kole Mulhauser",
+  loser: "Evan Bockman",
+  round: "ConsR1",
+  weight: "184",
+  school: "Princeton",
+  result: "Dec 12-5"
+},
+{
+  winner: "Eddie Neitenbach",
+  loser: "Matt Ramos",
+  round: "ConsR1",
+  weight: "184",
+  school: "Wyoming",
+  result: "Fall 1:08"
+},
+{
+  winner: "Donnell Washington",
+  loser: "Ross McFarland",
+  round: "ConsR1",
+  weight: "184",
+  school: "Indiana",
+  result: "Dec 10-8"
+},
+{
+  winner: "Aidan Brenot",
+  loser: "Ryder Rogotzke",
+  round: "ConsR1",
+  weight: "184",
+  school: "North Dakota State",
+  result: "Dec 13-7"
+},
+{
+  winner: "Maximus Hale",
+  loser: "Colton Hawks",
+  round: "ConsR1",
+  weight: "184",
+  school: "Pennsylvania",
+  result: "Dec 7-2"
+},
+{
+  winner: "Nikolas Stemmet",
+  loser: "Wolfgang Frable",
+  round: "ConsR1",
+  weight: "197",
+  school: "Stanford",
+  result: "Dec 9-8"
+},
+{
+  winner: "Zac Braunagel",
+  loser: "Luke Surber",
+  round: "ConsR1",
+  weight: "197",
+  school: "Illinois",
+  result: "MD 14-3"
+},
+{
+  winner: "Levi Hopkins",
+  loser: "Payton Thomas",
+  round: "ConsR1",
+  weight: "197",
+  school: "Campbell",
+  result: "MD 14-4"
+},
+{
+  winner: "Camden McDanel",
+  loser: "Tucker Hogan",
+  round: "ConsR1",
+  weight: "197",
+  school: "Nebraska",
+  result: "MD 13-2"
+},
+{
+  winner: "Zach Glazier",
+  loser: "Lucas Byrd",
+  round: "ConsR1",
+  weight: "197",
+  school: "South Dakota State",
+  result: "Dec 4-3"
+},
+{
+  winner: "Michael Dellagatta",
+  loser: "Mickey O`Malley",
+  round: "ConsR1",
+  weight: "197",
+  school: "Cornell",
+  result: "MD 10-0"
+},
+{
+  winner: "Wyatt Voelker",
+  loser: "Isaiah Salazar",
+  round: "ConsR1",
+  weight: "197",
+  school: "Northern Iowa",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Dillon Bechtold",
+  loser: "Remy Cotton",
+  round: "ConsR1",
+  weight: "197",
+  school: "Bucknell",
+  result: "Fall 0:58"
+},
+{
+  winner: "Jake Andrews",
+  loser: "Hayden Filipovich",
+  round: "ConsR1",
+  weight: "285",
+  school: "CSU Bakersfield",
+  result: "Dec 4-2"
+},
+{
+  winner: "Luke Rasmussen",
+  loser: "Nolan Neves",
+  round: "ConsR1",
+  weight: "285",
+  school: "South Dakota State",
+  result: "Dec 10-6"
+},
+{
+  winner: "Jacob Bullock",
+  loser: "Daniel Herrera",
+  round: "ConsR1",
+  weight: "285",
+  school: "Indiana",
+  result: "Dec 7-1"
+},
+{
+  winner: "Ashton Davis",
+  loser: "Jordan Greer",
+  round: "ConsR1",
+  weight: "285",
+  school: "Cornell",
+  result: "Dec 7-1"
+},
+{
+  winner: "Cory Day",
+  loser: "Braeden Davis",
+  round: "ConsR1",
+  weight: "285",
+  school: "Binghamton",
+  result: "Fall 5:58"
+},
+{
+  winner: "Jimmy Mullen",
+  loser: "Connor Barket",
+  round: "ConsR1",
+  weight: "285",
+  school: "Virginia Tech",
+  result: "Dec 9-6"
+},
+{
+  winner: "Peter Ming",
+  loser: "Daniel Bucknavich",
+  round: "ConsR1",
+  weight: "285",
+  school: "Stanford",
+  result: "Dec 4-2"
+},
+{
+  winner: "Lance Runyon",
+  loser: "Max Vanadia",
+  round: "ConsR1",
+  weight: "285",
+  school: "Northern Iowa",
+  result: "MD 11-2"
+},
+{
+  winner: "Sheldon Seymour",
+  loser: "Luke Lilledahl",
+  round: "QtrFinals",
+  weight: "125",
+  school: "Lehigh",
+  result: "TB-1 2-2"
+},
+{
+  winner: "Vincent Robinson",
+  loser: "Dean Peterson",
+  round: "QtrFinals",
+  weight: "125",
+  school: "NC State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Eddie Ventresca",
+  loser: "Jett Strickenberger",
+  round: "QtrFinals",
+  weight: "125",
+  school: "Virginia Tech",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Troy Spratley",
+  loser: "Matt Ramos",
+  round: "QtrFinals",
+  weight: "125",
+  school: "Oklahoma State",
+  result: "Dec 5-2"
+},
+{
+  winner: "Lucas Byrd",
+  loser: "Braeden Davis",
+  round: "QtrFinals",
+  weight: "133",
+  school: "Illinois",
+  result: "MD 12-1"
+},
+{
+  winner: "Zeth Romney",
+  loser: "Angelo Rini",
+  round: "QtrFinals",
+  weight: "133",
+  school: "Cal Poly",
+  result: "Dec 8-2"
+},
+{
+  winner: "Zan Fugitt",
+  loser: "Connor McGonagle",
+  round: "QtrFinals",
+  weight: "133",
+  school: "Wisconsin",
+  result: "Fall 2:30"
+},
+{
+  winner: "Drake Ayala",
+  loser: "Nic Bouzakis",
+  round: "QtrFinals",
+  weight: "133",
+  school: "Iowa",
+  result: "MD 23-10"
+},
+{
+  winner: "Brock Hardy",
+  loser: "Jacob Frost",
+  round: "QtrFinals",
+  weight: "141",
+  school: "Nebraska",
+  result: "Fall 4:13"
+},
+{
+  winner: "Cael Happel",
+  loser: "Josh Koderhandt",
+  round: "QtrFinals",
+  weight: "141",
+  school: "Northern Iowa",
+  result: "TB-1 2-1"
+},
+{
+  winner: "Jesse Mendez",
+  loser: "Vance VomBaur",
+  round: "QtrFinals",
+  weight: "141",
+  school: "Ohio State",
+  result: "MD 17-5"
+},
+{
+  winner: "Beau Bartlett",
+  loser: "CJ Composto",
+  round: "QtrFinals",
+  weight: "141",
+  school: "Penn State",
+  result: "Dec 5-0"
+},
+{
+  winner: "Caleb Henson",
+  loser: "Jordan Williams",
+  round: "QtrFinals",
+  weight: "149",
+  school: "Virginia Tech",
+  result: "SV-1 8-5"
+},
+{
+  winner: "Dylan D`Emilio",
+  loser: "Ethan Stiles",
+  round: "QtrFinals",
+  weight: "149",
+  school: "Ohio State",
+  result: "Dec 7-3"
+},
+{
+  winner: "Shayne Van Ness",
+  loser: "Lachlan McNeil",
+  round: "QtrFinals",
+  weight: "149",
+  school: "Penn State",
+  result: "Dec 7-2"
+},
+{
+  winner: "Ridge Lovett",
+  loser: "Kannon Webster",
+  round: "QtrFinals",
+  weight: "149",
+  school: "Nebraska",
+  result: "MD 12-0"
+},
+{
+  winner: "Joey Blaze",
+  loser: "Tyler Kasak",
+  round: "QtrFinals",
+  weight: "157",
+  school: "Purdue",
+  result: "Dec 5-4"
+},
+{
+  winner: "Trevor Chumbley",
+  loser: "Caleb Fish",
+  round: "QtrFinals",
+  weight: "157",
+  school: "Northwestern",
+  result: "Dec 6-4"
+},
+{
+  winner: "Antrell Taylor",
+  loser: "Matty Bianchi",
+  round: "QtrFinals",
+  weight: "157",
+  school: "Nebraska",
+  result: "Dec 4-3"
+},
+{
+  winner: "Meyer Shapiro",
+  loser: "Vinny Zerban",
+  round: "QtrFinals",
+  weight: "157",
+  school: "Cornell",
+  result: "Dec 9-4"
+},
+{
+  winner: "Mitchell Mesenbrink",
+  loser: "Cameron Amine",
+  round: "QtrFinals",
+  weight: "165",
+  school: "Penn State",
+  result: "Dec 5-0"
+},
+{
+  winner: "Christopher Minto",
+  loser: "Terrell Barraclough",
+  round: "QtrFinals",
+  weight: "165",
+  school: "Nebraska",
+  result: "Dec 8-7"
+},
+{
+  winner: "Mike Caliendo",
+  loser: "Beau Mantanona",
+  round: "QtrFinals",
+  weight: "165",
+  school: "Iowa",
+  result: "Dec 7-2"
+},
+{
+  winner: "Peyton Hall",
+  loser: "Hunter Garvin",
+  round: "QtrFinals",
+  weight: "165",
+  school: "West Virginia",
+  result: "Dec 6-5"
+},
+{
+  winner: "Keegan O`Toole",
+  loser: "Lennox Wolak",
+  round: "QtrFinals",
+  weight: "174",
+  school: "Missouri",
+  result: "MD 13-1"
+},
+{
+  winner: "Cade DeVos",
+  loser: "Simon Ruiz",
+  round: "QtrFinals",
+  weight: "174",
+  school: "South Dakota State",
+  result: "Dec 4-3"
+},
+{
+  winner: "Dean Hamiti",
+  loser: "Patrick Kennedy",
+  round: "QtrFinals",
+  weight: "174",
+  school: "Oklahoma State",
+  result: "Dec 8-6"
+},
+{
+  winner: "Levi Haines",
+  loser: "Danny Wask",
+  round: "QtrFinals",
+  weight: "174",
+  school: "Penn State",
+  result: "Dec 7-2"
+},
+{
+  winner: "Carter Starocci",
+  loser: "Jaxon Smith",
+  round: "QtrFinals",
+  weight: "184",
+  school: "Penn State",
+  result: "MD 9-1"
+},
+{
+  winner: "Dustin Plott",
+  loser: "Silas Allred",
+  round: "QtrFinals",
+  weight: "184",
+  school: "Oklahoma State",
+  result: "Dec 12-5"
+},
+{
+  winner: "Max McEnelly",
+  loser: "Chris Foca",
+  round: "QtrFinals",
+  weight: "184",
+  school: "Minnesota",
+  result: "Dec 10-7"
+},
+{
+  winner: "Parker Keckeisen",
+  loser: "Edmond Ruth",
+  round: "QtrFinals",
+  weight: "184",
+  school: "Northern Iowa",
+  result: "MD 13-5;18-3"
+},
+{
+  winner: "Jacob Cardenas",
+  loser: "Gabe Sollars",
+  round: "QtrFinals",
+  weight: "197",
+  school: "Michigan",
+  result: "Dec 10-5"
+},
+{
+  winner: "Josh Barr",
+  loser: "Michael Beard",
+  round: "QtrFinals",
+  weight: "197",
+  school: "Penn State",
+  result: "MD 14-3"
+},
+{
+  winner: "AJ Ferrari",
+  loser: "Mac Stout",
+  round: "QtrFinals",
+  weight: "197",
+  school: "CSU Bakersfield",
+  result: "Dec 2-0"
+},
+{
+  winner: "Stephen Buchanan",
+  loser: "Seth Shumate",
+  round: "QtrFinals",
+  weight: "197",
+  school: "Iowa",
+  result: "TF 6:35"
+},
+{
+  winner: "Gable Steveson",
+  loser: "Cohlton Schultz",
+  round: "QtrFinals",
+  weight: "285",
+  school: "Minnesota",
+  result: "TF 6:23"
+},
+{
+  winner: "Owen Trephan",
+  loser: "Ben Kueter",
+  round: "QtrFinals",
+  weight: "285",
+  school: "Lehigh",
+  result: "Dec 4-2"
+},
+{
+  winner: "Greg Kerkvliet",
+  loser: "Joshua Heindselman",
+  round: "QtrFinals",
+  weight: "285",
+  school: "Penn State",
+  result: "Dec 5-0"
+},
+{
+  winner: "Wyatt Hendrickson",
+  loser: "Isaac Trumble",
+  round: "QtrFinals",
+  weight: "285",
+  school: "Oklahoma State",
+  result: "Fall 2:15"
+},
+{
+  winner: "Jacob Moran",
+  loser: "Max Gallagher",
+  round: "ConsR2",
+  weight: "125",
+  school: "Indiana",
+  result: "Dec 10-4"
+},
+{
+  winner: "Stevo Poulin",
+  loser: "Charlie Farmer",
+  round: "ConsR2",
+  weight: "125",
+  school: "Northern Colorado",
+  result: "Dec 7-4"
+},
+{
+  winner: "Nicolar Rivera",
+  loser: "Antonio Lorenzo",
+  round: "ConsR2",
+  weight: "125",
+  school: "Wisconsin",
+  result: "Dec 5-0"
+},
+{
+  winner: "Spencer Moore",
+  loser: "Brendan McCrone",
+  round: "ConsR2",
+  weight: "125",
+  school: "North Carolina",
+  result: "Dec 4-1"
+},
+{
+  winner: "Cooper Flynn",
+  loser: "Marc-Anthony McGowan",
+  round: "ConsR2",
+  weight: "125",
+  school: "Minnesota",
+  result: "Dec 2-1"
+},
+{
+  winner: "Trever Anderson",
+  loser: "Richard Figueroa",
+  round: "ConsR2",
+  weight: "125",
+  school: "Northern Iowa",
+  result: "MD 17-8"
+},
+{
+  winner: "Caleb Smith",
+  loser: "Tanner Jordan",
+  round: "ConsR2",
+  weight: "125",
+  school: "Nebraska",
+  result: "SV-1 7-4"
+},
+{
+  winner: "Blake West",
+  loser: "Maximo Renteria",
+  round: "ConsR2",
+  weight: "125",
+  school: "Northern Illinois",
+  result: "Dec 10-8"
+},
+{
+  winner: "Jacob Van Dee",
+  loser: "Julian Farber",
+  round: "ConsR2",
+  weight: "133",
+  school: "Nebraska",
+  result: "Dec 4-2"
+},
+{
+  winner: "Sean Spidle",
+  loser: "Kurt Phipps",
+  round: "ConsR2",
+  weight: "133",
+  school: "Central Michigan",
+  result: "Dec 3-0"
+},
+{
+  winner: "Evan Frost",
+  loser: "Ethan Oakley",
+  round: "ConsR2",
+  weight: "133",
+  school: "Iowa State",
+  result: "Dec 8-4"
+},
+{
+  winner: "Nasir Bailey",
+  loser: "Tyler Ferrara",
+  round: "ConsR2",
+  weight: "133",
+  school: "Little Rock",
+  result: "Dec 2-1"
+},
+{
+  winner: "Tyler Knox",
+  loser: "Derrick Cardinal",
+  round: "ConsR2",
+  weight: "133",
+  school: "Stanford",
+  result: "MD 9-0"
+},
+{
+  winner: "Tyler Wells",
+  loser: "Dominick Serrano",
+  round: "ConsR2",
+  weight: "133",
+  school: "Minnesota",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Dylan Shawver",
+  loser: "Braxton Brown",
+  round: "ConsR2",
+  weight: "133",
+  school: "Rutgers",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Anthony Noto",
+  loser: "Ryan Miller",
+  round: "ConsR2",
+  weight: "133",
+  school: "Lock Haven",
+  result: "Dec 9-5"
+},
+{
+  winner: "Julian Tagg",
+  loser: "Nash Singleton",
+  round: "ConsR2",
+  weight: "141",
+  school: "South Dakota State",
+  result: "Dec 10-3"
+},
+{
+  winner: "Tagen Jamison",
+  loser: "Jason Miranda",
+  round: "ConsR2",
+  weight: "141",
+  school: "Oklahoma State",
+  result: "Fall 5:46"
+},
+{
+  winner: "Danny Pucino",
+  loser: "Dylan Cedeno",
+  round: "ConsR2",
+  weight: "141",
+  school: "Illinois",
+  result: "Fall 4:15"
+},
+{
+  winner: "Sergio Lemley",
+  loser: "Jayden Scott",
+  round: "ConsR2",
+  weight: "141",
+  school: "Michigan",
+  result: "Dec 2-1"
+},
+{
+  winner: "Mosha Schwartz",
+  loser: "Joshua Saunders",
+  round: "ConsR2",
+  weight: "141",
+  school: "Oklahoma",
+  result: "Dec 13-8"
+},
+{
+  winner: "Dylan Chappell",
+  loser: "Greyson Clark",
+  round: "ConsR2",
+  weight: "141",
+  school: "Bucknell",
+  result: "Dec 8-5"
+},
+{
+  winner: "Eligh Rivera",
+  loser: "Andrew Alirez",
+  round: "ConsR2",
+  weight: "141",
+  school: "Princeton",
+  result: "Dec 11-6"
+},
+{
+  winner: "Joseph Olivieri",
+  loser: "Wyatt Henson",
+  round: "ConsR2",
+  weight: "141",
+  school: "Rutgers",
+  result: "Dec 5-2"
+},
+{
+  winner: "Teague Travis",
+  loser: "Ty Whalen",
+  round: "ConsR2",
+  weight: "149",
+  school: "Oklahoma State",
+  result: "MD 12-2"
+},
+{
+  winner: "Malyke Hines",
+  loser: "Colin Realbuto",
+  round: "ConsR2",
+  weight: "149",
+  school: "Lehigh",
+  result: "Dec 10-7"
+},
+{
+  winner: "Sammy Alvarez",
+  loser: "Willie McDougald",
+  round: "ConsR2",
+  weight: "149",
+  school: "Rider",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Paniro Johnson",
+  loser: "Andrew Clark",
+  round: "ConsR2",
+  weight: "149",
+  school: "Iowa State",
+  result: "Dec 4-3"
+},
+{
+  winner: "Jack Gioffre",
+  loser: "Chance Lamer",
+  round: "ConsR2",
+  weight: "149",
+  school: "Virginia",
+  result: "MD 12-2;20-5"
+},
+{
+  winner: "Gavin Drexler",
+  loser: "Kyle Parco",
+  round: "ConsR2",
+  weight: "149",
+  school: "North Dakota State",
+  result: "M. For."
+},
+{
+  winner: "Cross Wasilewski",
+  loser: "Carson DesRosier",
+  round: "ConsR2",
+  weight: "149",
+  school: "Pennsylvania",
+  result: "Dec 7-3"
+},
+{
+  winner: "Ethan Fernandez",
+  loser: "Jaden Abas",
+  round: "ConsR2",
+  weight: "149",
+  school: "Cornell",
+  result: "Fall 1:21"
+},
+{
+  winner: "DJ McGee",
+  loser: "Johnny Lovett",
+  round: "ConsR2",
+  weight: "157",
+  school: "George Mason",
+  result: "Dec 7-2"
+},
+{
+  winner: "Chase Saldate",
+  loser: "Dylan Evans",
+  round: "ConsR2",
+  weight: "157",
+  school: "Michigan",
+  result: "Dec 8-2"
+},
+{
+  winner: "Ryder Downey",
+  loser: "Logan Rozynski",
+  round: "ConsR2",
+  weight: "157",
+  school: "Northern Iowa",
+  result: "Dec 1-0"
+},
+{
+  winner: "Jude Swisher",
+  loser: "James Harrington",
+  round: "ConsR2",
+  weight: "157",
+  school: "Pennsylvania",
+  result: "TF 5:09 ;19-4"
+},
+{
+  winner: "Cobe Siebrecht",
+  loser: "Rafael Hipolito",
+  round: "ConsR2",
+  weight: "157",
+  school: "South Dakota State",
+  result: "Fall 4:47"
+},
+{
+  winner: "Brandon Cannon",
+  loser: "Ed Scott",
+  round: "ConsR2",
+  weight: "157",
+  school: "Ohio State",
+  result: "Dec 8-3"
+},
+{
+  winner: "Tommy Askey",
+  loser: "Ethen Miller",
+  round: "ConsR2",
+  weight: "157",
+  school: "Minnesota",
+  result: "TB-1 1-1"
+},
+{
+  winner: "Cody Chittum",
+  loser: "Noah Castillo",
+  round: "ConsR2",
+  weight: "157",
+  school: "Iowa State",
+  result: "Dec 5-3"
+},
+{
+  winner: "Maxx Mayfield",
+  loser: "Chandler Amaker",
+  round: "ConsR2",
+  weight: "165",
+  school: "Northwestern",
+  result: "TB-1 2-2"
+},
+{
+  winner: "Nick Hamilton",
+  loser: "Andrew Sparks",
+  round: "ConsR2",
+  weight: "165",
+  school: "Virginia",
+  result: "Dec 4-2"
+},
+{
+  winner: "Braeden Scoles",
+  loser: "Mac Church",
+  round: "ConsR2",
+  weight: "165",
+  school: "Illinois",
+  result: "MD 10-1"
+},
+{
+  winner: "Jack Thomsen",
+  loser: "Gunner Filipowicz",
+  round: "ConsR2",
+  weight: "165",
+  school: "Northern Iowa",
+  result: "MD 13-5"
+},
+{
+  winner: "Aiden Riggins",
+  loser: "Will Miller",
+  round: "ConsR2",
+  weight: "165",
+  school: "Iowa State",
+  result: "MD 9-1"
+},
+{
+  winner: "Julian Ramirez",
+  loser: "Tyler Lillard",
+  round: "ConsR2",
+  weight: "165",
+  school: "Cornell",
+  result: "Dec 6-1"
+},
+{
+  winner: "Cam Steed",
+  loser: "Thomas Snipes",
+  round: "ConsR2",
+  weight: "165",
+  school: "Missouri",
+  result: "Fall 2:37"
+},
+{
+  winner: "Kyle Mosher",
+  loser: "Nicco Ruiz",
+  round: "ConsR2",
+  weight: "165",
+  school: "Hofstra",
+  result: "Fall 3:50"
+},
+{
+  winner: "Sergio Desiante",
+  loser: "Gaven Sax",
+  round: "ConsR2",
+  weight: "174",
+  school: "Chattanooga",
+  result: "Dec 4-2"
+},
+{
+  winner: "Lenny Pinto",
+  loser: "MJ Gaitan",
+  round: "ConsR2",
+  weight: "174",
+  school: "Nebraska",
+  result: "TF 1:53 ;18-1"
+},
+{
+  winner: "Brevin Cassella",
+  loser: "Clayton Whiting",
+  round: "ConsR2",
+  weight: "174",
+  school: "Binghamton",
+  result: "MD 8-0"
+},
+{
+  winner: "Matthew Singleton",
+  loser: "Dan Braunagel",
+  round: "ConsR2",
+  weight: "174",
+  school: "NC State",
+  result: "MD 14-6"
+},
+{
+  winner: "Garrett Thompson",
+  loser: "Jared Simma",
+  round: "ConsR2",
+  weight: "174",
+  school: "Ohio",
+  result: "Dec 8-1"
+},
+{
+  winner: "Nick Incontrera",
+  loser: "Joshua Ogunsanya",
+  round: "ConsR2",
+  weight: "174",
+  school: "Pennsylvania",
+  result: "Dec 8-4"
+},
+{
+  winner: "Dalton Harkins",
+  loser: "Brody Baumann",
+  round: "ConsR2",
+  weight: "174",
+  school: "Army West Point",
+  result: "Dec 6-5"
+},
+{
+  winner: "Luca Augustine",
+  loser: "Lorenzo Norman",
+  round: "ConsR2",
+  weight: "174",
+  school: "Pittsburgh",
+  result: "Dec 4-3"
+},
+{
+  winner: "Dylan Fishback",
+  loser: "Gavin Kane",
+  round: "ConsR2",
+  weight: "184",
+  school: "NC State",
+  result: "Dec 6-4"
+},
+{
+  winner: "Isaac Dean",
+  loser: "Jared McGill",
+  round: "ConsR2",
+  weight: "184",
+  school: "Rider",
+  result: "SV-2 6-3"
+},
+{
+  winner: "Gabe Arnold",
+  loser: "Malachi DuVall",
+  round: "ConsR2",
+  weight: "184",
+  school: "Iowa",
+  result: "Dec 8-4"
+},
+{
+  winner: "DJ Parker",
+  loser: "Kole Mulhauser",
+  round: "ConsR2",
+  weight: "184",
+  school: "Oklahoma",
+  result: "TF 5:16 ;16-1"
+},
+{
+  winner: "Eddie Neitenbach",
+  loser: "Nick Fine",
+  round: "ConsR2",
+  weight: "184",
+  school: "Wyoming",
+  result: "SV-1 9-6"
+},
+{
+  winner: "Donnell Washington",
+  loser: "Bennett Berge",
+  round: "ConsR2",
+  weight: "184",
+  school: "Indiana",
+  result: "MD 12-0"
+},
+{
+  winner: "Aidan Brenot",
+  loser: "Reece Heller",
+  round: "ConsR2",
+  weight: "184",
+  school: "North Dakota State",
+  result: "Fall 2:35"
+},
+{
+  winner: "Shane Cartagena-Walsh",
+  loser: "Maximus Hale",
+  round: "ConsR2",
+  weight: "184",
+  school: "Rutgers",
+  result: "Dec 6-4"
+},
+{
+  winner: "Joseph Novak",
+  loser: "Nikolas Stemmet",
+  round: "ConsR2",
+  weight: "197",
+  school: "Wyoming",
+  result: "Fall 4:23"
+},
+{
+  winner: "Zac Braunagel",
+  loser: "Brock Zurawski",
+  round: "ConsR2",
+  weight: "197",
+  school: "Illinois",
+  result: "MD 10-2"
+},
+{
+  winner: "Luke Stout",
+  loser: "Levi Hopkins",
+  round: "ConsR2",
+  weight: "197",
+  school: "Princeton",
+  result: "TF 7:00 ;22-6"
+},
+{
+  winner: "Camden McDanel",
+  loser: "Andy Smith",
+  round: "ConsR2",
+  weight: "197",
+  school: "Nebraska",
+  result: "Dec 4-1"
+},
+{
+  winner: "Trey Munoz",
+  loser: "Zach Glazier",
+  round: "ConsR2",
+  weight: "197",
+  school: "Oregon State",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Stephen Little",
+  loser: "Michael Dellagatta",
+  round: "ConsR2",
+  weight: "197",
+  school: "Little Rock",
+  result: "MD 16-5"
+},
+{
+  winner: "Wyatt Voelker",
+  loser: "Patrick Brophy",
+  round: "ConsR2",
+  weight: "197",
+  school: "Northern Iowa",
+  result: "Dec 8-6"
+},
+{
+  winner: "Dillon Bechtold",
+  loser: "Evan Bates",
+  round: "ConsR2",
+  weight: "197",
+  school: "Bucknell",
+  result: "Dec 4-1"
+},
+{
+  winner: "Trevor Tinker",
+  loser: "Jake Andrews",
+  round: "ConsR2",
+  weight: "285",
+  school: "Cal Poly",
+  result: "Dec 2-0"
+},
+{
+  winner: "Dayton Pitzer",
+  loser: "Luke Rasmussen",
+  round: "ConsR2",
+  weight: "285",
+  school: "Pittsburgh",
+  result: "MD 9-0"
+},
+{
+  winner: "Jacob Bullock",
+  loser: "Brady Colbert",
+  round: "ConsR2",
+  weight: "285",
+  school: "Indiana",
+  result: "Dec 8-1"
+},
+{
+  winner: "Gavin Hoffman",
+  loser: "Ashton Davis",
+  round: "ConsR2",
+  weight: "285",
+  school: "Lock Haven",
+  result: "MD 14-5"
+},
+{
+  winner: "Seth Nevills",
+  loser: "Cory Day",
+  round: "ConsR2",
+  weight: "285",
+  school: "Maryland",
+  result: "TF 5:47 ;17-2"
+},
+{
+  winner: "Nick Feldman",
+  loser: "Jimmy Mullen",
+  round: "ConsR2",
+  weight: "285",
+  school: "Ohio State",
+  result: "MD 12-1"
+},
+{
+  winner: "Luke Luffman",
+  loser: "Peter Ming",
+  round: "ConsR2",
+  weight: "285",
+  school: "Illinois",
+  result: "Dec 7-6"
+},
+{
+  winner: "Yaraslau Slavikouski",
+  loser: "Lance Runyon",
+  round: "ConsR2",
+  weight: "285",
+  school: "Rutgers",
+  result: "Dec 4-3"
+},
+{
+  winner: "Stevo Poulin",
+  loser: "Jacob Moran",
+  round: "ConsR3",
+  weight: "125",
+  school: "Northern Colorado",
+  result: "Dec 1-0"
+},
+{
+  winner: "Nicolar Rivera",
+  loser: "Spencer Moore",
+  round: "ConsR3",
+  weight: "125",
+  school: "Wisconsin",
+  result: "MD 11-3"
+},
+{
+  winner: "Trever Anderson",
+  loser: "Cooper Flynn",
+  round: "ConsR3",
+  weight: "125",
+  school: "Northern Iowa",
+  result: "Dec 4-3"
+},
+{
+  winner: "Caleb Smith",
+  loser: "Blake West",
+  round: "ConsR3",
+  weight: "125",
+  school: "Nebraska",
+  result: "Dec 4-1"
+},
+{
+  winner: "Jacob Van Dee",
+  loser: "Sean Spidle",
+  round: "ConsR3",
+  weight: "133",
+  school: "Nebraska",
+  result: "Dec 9-3"
+},
+{
+  winner: "Evan Frost",
+  loser: "Nasir Bailey",
+  round: "ConsR3",
+  weight: "133",
+  school: "Iowa State",
+  result: "Dec 5-3"
+},
+{
+  winner: "Tyler Knox",
+  loser: "Tyler Wells",
+  round: "ConsR3",
+  weight: "133",
+  school: "Stanford",
+  result: "Dec 1-0"
+},
+{
+  winner: "Dylan Shawver",
+  loser: "Anthony Noto",
+  round: "ConsR3",
+  weight: "133",
+  school: "Rutgers",
+  result: "TB-1 9-5"
+},
+{
+  winner: "Tagen Jamison",
+  loser: "Julian Tagg",
+  round: "ConsR3",
+  weight: "141",
+  school: "Oklahoma State",
+  result: "TF 6:54 ;17-2"
+},
+{
+  winner: "Sergio Lemley",
+  loser: "Danny Pucino",
+  round: "ConsR3",
+  weight: "141",
+  school: "Michigan",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Dylan Chappell",
+  loser: "Mosha Schwartz",
+  round: "ConsR3",
+  weight: "141",
+  school: "Bucknell",
+  result: "Fall 6:18"
+},
+{
+  winner: "Joseph Olivieri",
+  loser: "Eligh Rivera",
+  round: "ConsR3",
+  weight: "141",
+  school: "Rutgers",
+  result: "Dec 7-2"
+},
+{
+  winner: "Malyke Hines",
+  loser: "Teague Travis",
+  round: "ConsR3",
+  weight: "149",
+  school: "Lehigh",
+  result: "Dec 12-6"
+},
+{
+  winner: "Sammy Alvarez",
+  loser: "Paniro Johnson",
+  round: "ConsR3",
+  weight: "149",
+  school: "Rider",
+  result: "Dec 2-0"
+},
+{
+  winner: "Gavin Drexler",
+  loser: "Jack Gioffre",
+  round: "ConsR3",
+  weight: "149",
+  school: "North Dakota State",
+  result: "Dec 12-9"
+},
+{
+  winner: "Cross Wasilewski",
+  loser: "Ethan Fernandez",
+  round: "ConsR3",
+  weight: "149",
+  school: "Pennsylvania",
+  result: "Dec 4-1"
+},
+{
+  winner: "Chase Saldate",
+  loser: "DJ McGee",
+  round: "ConsR3",
+  weight: "157",
+  school: "Michigan",
+  result: "Fall 1:49"
+},
+{
+  winner: "Jude Swisher",
+  loser: "Ryder Downey",
+  round: "ConsR3",
+  weight: "157",
+  school: "Pennsylvania",
+  result: "Dec 4-2"
+},
+{
+  winner: "Brandon Cannon",
+  loser: "Cobe Siebrecht",
+  round: "ConsR3",
+  weight: "157",
+  school: "Ohio State",
+  result: "Dec 14-7"
+},
+{
+  winner: "Tommy Askey",
+  loser: "Cody Chittum",
+  round: "ConsR3",
+  weight: "157",
+  school: "Minnesota",
+  result: "Dec 4-3"
+},
+{
+  winner: "Nick Hamilton",
+  loser: "Maxx Mayfield",
+  round: "ConsR3",
+  weight: "165",
+  school: "Virginia",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Braeden Scoles",
+  loser: "Jack Thomsen",
+  round: "ConsR3",
+  weight: "165",
+  school: "Illinois",
+  result: "Fall 2:02"
+},
+{
+  winner: "Julian Ramirez",
+  loser: "Aiden Riggins",
+  round: "ConsR3",
+  weight: "165",
+  school: "Cornell",
+  result: "Fall 1:53"
+},
+{
+  winner: "Cam Steed",
+  loser: "Kyle Mosher",
+  round: "ConsR3",
+  weight: "165",
+  school: "Missouri",
+  result: "Fall 2:15"
+},
+{
+  winner: "Lenny Pinto",
+  loser: "Sergio Desiante",
+  round: "ConsR3",
+  weight: "174",
+  school: "Nebraska",
+  result: "MD 15-7"
+},
+{
+  winner: "Matthew Singleton",
+  loser: "Brevin Cassella",
+  round: "ConsR3",
+  weight: "174",
+  school: "NC State",
+  result: "Dec 5-3"
+},
+{
+  winner: "Nick Incontrera",
+  loser: "Garrett Thompson",
+  round: "ConsR3",
+  weight: "174",
+  school: "Pennsylvania",
+  result: "MD 8-0"
+},
+{
+  winner: "Luca Augustine",
+  loser: "Dalton Harkins",
+  round: "ConsR3",
+  weight: "174",
+  school: "Pittsburgh",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Dylan Fishback",
+  loser: "Isaac Dean",
+  round: "ConsR3",
+  weight: "184",
+  school: "NC State",
+  result: "SV-1 4-1"
+},
+{
+  winner: "DJ Parker",
+  loser: "Gabe Arnold",
+  round: "ConsR3",
+  weight: "184",
+  school: "Oklahoma",
+  result: "Fall 0:48"
+},
+{
+  winner: "Donnell Washington",
+  loser: "Eddie Neitenbach",
+  round: "ConsR3",
+  weight: "184",
+  school: "Indiana",
+  result: "TF 2:41 ;19-4"
+},
+{
+  winner: "Aidan Brenot",
+  loser: "Shane Cartagena-Walsh",
+  round: "ConsR3",
+  weight: "184",
+  school: "North Dakota State",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Joseph Novak",
+  loser: "Zac Braunagel",
+  round: "ConsR3",
+  weight: "197",
+  school: "Wyoming",
+  result: "Fall 5:31"
+},
+{
+  winner: "Camden McDanel",
+  loser: "Luke Stout",
+  round: "ConsR3",
+  weight: "197",
+  school: "Nebraska",
+  result: "Dec 9-3"
+},
+{
+  winner: "Stephen Little",
+  loser: "Trey Munoz",
+  round: "ConsR3",
+  weight: "197",
+  school: "Little Rock",
+  result: "Dec 4-2"
+},
+{
+  winner: "Wyatt Voelker",
+  loser: "Dillon Bechtold",
+  round: "ConsR3",
+  weight: "197",
+  school: "Northern Iowa",
+  result: "Dec 8-6"
+},
+{
+  winner: "Dayton Pitzer",
+  loser: "Trevor Tinker",
+  round: "ConsR3",
+  weight: "285",
+  school: "Pittsburgh",
+  result: "Fall 3:51"
+},
+{
+  winner: "Gavin Hoffman",
+  loser: "Jacob Bullock",
+  round: "ConsR3",
+  weight: "285",
+  school: "Lock Haven",
+  result: "Dec 4-1"
+},
+{
+  winner: "Nick Feldman",
+  loser: "Seth Nevills",
+  round: "ConsR3",
+  weight: "285",
+  school: "Ohio State",
+  result: "Fall 6:57"
+},
+{
+  winner: "Luke Luffman",
+  loser: "Yaraslau Slavikouski",
+  round: "ConsR3",
+  weight: "285",
+  school: "Illinois",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Vincent Robinson",
+  loser: "Sheldon Seymour",
+  round: "SemiFinals",
+  weight: "125",
+  school: "NC State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Troy Spratley",
+  loser: "Eddie Ventresca",
+  round: "SemiFinals",
+  weight: "125",
+  school: "Oklahoma State",
+  result: "TB-1 6-4"
+},
+{
+  winner: "Lucas Byrd",
+  loser: "Zeth Romney",
+  round: "SemiFinals",
+  weight: "133",
+  school: "Illinois",
+  result: "Dec 2-0"
+},
+{
+  winner: "Drake Ayala",
+  loser: "Zan Fugitt",
+  round: "SemiFinals",
+  weight: "133",
+  school: "Iowa",
+  result: "Dec 6-1"
+},
+{
+  winner: "Brock Hardy",
+  loser: "Cael Happel",
+  round: "SemiFinals",
+  weight: "141",
+  school: "Nebraska",
+  result: "Dec 11-4"
+},
+{
+  winner: "Jesse Mendez",
+  loser: "Beau Bartlett",
+  round: "SemiFinals",
+  weight: "141",
+  school: "Ohio State",
+  result: "TB-1 2-1"
+},
+{
+  winner: "Caleb Henson",
+  loser: "Dylan D`Emilio",
+  round: "SemiFinals",
+  weight: "149",
+  school: "Virginia Tech",
+  result: "Dec 6-2"
+},
+{
+  winner: "Ridge Lovett",
+  loser: "Shayne Van Ness",
+  round: "SemiFinals",
+  weight: "149",
+  school: "Nebraska",
+  result: "Dec 14-8"
+},
+{
+  winner: "Joey Blaze",
+  loser: "Trevor Chumbley",
+  round: "SemiFinals",
+  weight: "157",
+  school: "Purdue",
+  result: "Dec 4-2"
+},
+{
+  winner: "Antrell Taylor",
+  loser: "Meyer Shapiro",
+  round: "SemiFinals",
+  weight: "157",
+  school: "Nebraska",
+  result: "Dec 7-2"
+},
+{
+  winner: "Mitchell Mesenbrink",
+  loser: "Christopher Minto",
+  round: "SemiFinals",
+  weight: "165",
+  school: "Penn State",
+  result: "MD 13-2"
+},
+{
+  winner: "Mike Caliendo",
+  loser: "Peyton Hall",
+  round: "SemiFinals",
+  weight: "165",
+  school: "Iowa",
+  result: "Dec 14-10"
+},
+{
+  winner: "Keegan O`Toole",
+  loser: "Cade DeVos",
+  round: "SemiFinals",
+  weight: "174",
+  school: "Missouri",
+  result: "Dec 7-6"
+},
+{
+  winner: "Dean Hamiti",
+  loser: "Levi Haines",
+  round: "SemiFinals",
+  weight: "174",
+  school: "Oklahoma State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Carter Starocci",
+  loser: "Dustin Plott",
+  round: "SemiFinals",
+  weight: "184",
+  school: "Penn State",
+  result: "Dec 9-3"
+},
+{
+  winner: "Parker Keckeisen",
+  loser: "Max McEnelly",
+  round: "SemiFinals",
+  weight: "184",
+  school: "Northern Iowa",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Josh Barr",
+  loser: "Jacob Cardenas",
+  round: "SemiFinals",
+  weight: "197",
+  school: "Penn State",
+  result: "Dec 5-3"
+},
+{
+  winner: "Stephen Buchanan",
+  loser: "AJ Ferrari",
+  round: "SemiFinals",
+  weight: "197",
+  school: "Iowa",
+  result: "Dec 3-0"
+},
+{
+  winner: "Gable Steveson",
+  loser: "Owen Trephan",
+  round: "SemiFinals",
+  weight: "285",
+  school: "Minnesota",
+  result: "MD 13-5"
+},
+{
+  winner: "Wyatt Hendrickson",
+  loser: "Greg Kerkvliet",
+  round: "SemiFinals",
+  weight: "285",
+  school: "Oklahoma State",
+  result: "Dec 8-2"
+},
+{
+  winner: "Stevo Poulin",
+  loser: "Dean Peterson",
+  round: "ConsR4",
+  weight: "125",
+  school: "Northern Colorado",
+  result: "Dec 6-4"
+},
+{
+  winner: "Luke Lilledahl",
+  loser: "Nicolar Rivera",
+  round: "ConsR4",
+  weight: "125",
+  school: "Penn State",
+  result: "Dec 7-3"
+},
+{
+  winner: "Matt Ramos",
+  loser: "Trever Anderson",
+  round: "ConsR4",
+  weight: "125",
+  school: "Purdue",
+  result: "Dec 8-2"
+},
+{
+  winner: "Caleb Smith",
+  loser: "Jett Strickenberger",
+  round: "ConsR4",
+  weight: "125",
+  school: "Nebraska",
+  result: "SV-1 12-9"
+},
+{
+  winner: "Jacob Van Dee",
+  loser: "Angelo Rini",
+  round: "ConsR4",
+  weight: "133",
+  school: "Nebraska",
+  result: "MD 8-0"
+},
+{
+  winner: "Braeden Davis",
+  loser: "Evan Frost",
+  round: "ConsR4",
+  weight: "133",
+  school: "Penn State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Tyler Knox",
+  loser: "Nic Bouzakis",
+  round: "ConsR4",
+  weight: "133",
+  school: "Stanford",
+  result: "Dec 5-0"
+},
+{
+  winner: "Connor McGonagle",
+  loser: "Dylan Shawver",
+  round: "ConsR4",
+  weight: "133",
+  school: "Virginia Tech",
+  result: "Dec 5-1"
+},
+{
+  winner: "Josh Koderhandt",
+  loser: "Tagen Jamison",
+  round: "ConsR4",
+  weight: "141",
+  school: "Navy",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Jacob Frost",
+  loser: "Sergio Lemley",
+  round: "ConsR4",
+  weight: "141",
+  school: "Iowa State",
+  result: "Dec 9-8"
+},
+{
+  winner: "CJ Composto",
+  loser: "Dylan Chappell",
+  round: "ConsR4",
+  weight: "141",
+  school: "Pennsylvania",
+  result: "Dec 4-0"
+},
+{
+  winner: "Vance VomBaur",
+  loser: "Joseph Olivieri",
+  round: "ConsR4",
+  weight: "141",
+  school: "Minnesota",
+  result: "Dec 5-3"
+},
+{
+  winner: "Ethan Stiles",
+  loser: "Malyke Hines",
+  round: "ConsR4",
+  weight: "149",
+  school: "Oregon State",
+  result: "Fall 2:12"
+},
+{
+  winner: "Sammy Alvarez",
+  loser: "Jordan Williams",
+  round: "ConsR4",
+  weight: "149",
+  school: "Rider",
+  result: "Dec 5-0"
+},
+{
+  winner: "Gavin Drexler",
+  loser: "Kannon Webster",
+  round: "ConsR4",
+  weight: "149",
+  school: "North Dakota State",
+  result: "Dec 4-0"
+},
+{
+  winner: "Lachlan McNeil",
+  loser: "Cross Wasilewski",
+  round: "ConsR4",
+  weight: "149",
+  school: "North Carolina",
+  result: "Dec 4-2"
+},
+{
+  winner: "Caleb Fish",
+  loser: "Chase Saldate",
+  round: "ConsR4",
+  weight: "157",
+  school: "Oklahoma State",
+  result: "SV-1 7-4"
+},
+{
+  winner: "Tyler Kasak",
+  loser: "Jude Swisher",
+  round: "ConsR4",
+  weight: "157",
+  school: "Penn State",
+  result: "Dec 5-4"
+},
+{
+  winner: "Vinny Zerban",
+  loser: "Brandon Cannon",
+  round: "ConsR4",
+  weight: "157",
+  school: "Northern Colorado",
+  result: "Dec 11-6"
+},
+{
+  winner: "Matty Bianchi",
+  loser: "Tommy Askey",
+  round: "ConsR4",
+  weight: "157",
+  school: "Little Rock",
+  result: "TB-1 2-1"
+},
+{
+  winner: "Terrell Barraclough",
+  loser: "Nick Hamilton",
+  round: "ConsR4",
+  weight: "165",
+  school: "Utah Valley",
+  result: "Dec 5-0"
+},
+{
+  winner: "Cameron Amine",
+  loser: "Braeden Scoles",
+  round: "ConsR4",
+  weight: "165",
+  school: "Oklahoma State",
+  result: "SV-1 8-1"
+},
+{
+  winner: "Hunter Garvin",
+  loser: "Julian Ramirez",
+  round: "ConsR4",
+  weight: "165",
+  school: "Stanford",
+  result: "Dec 16-12"
+},
+{
+  winner: "Cam Steed",
+  loser: "Beau Mantanona",
+  round: "ConsR4",
+  weight: "165",
+  school: "Missouri",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Simon Ruiz",
+  loser: "Lenny Pinto",
+  round: "ConsR4",
+  weight: "174",
+  school: "Cornell",
+  result: "Dec 2-1"
+},
+{
+  winner: "Matthew Singleton",
+  loser: "Lennox Wolak",
+  round: "ConsR4",
+  weight: "174",
+  school: "NC State",
+  result: "Dec 13-8"
+},
+{
+  winner: "Danny Wask",
+  loser: "Nick Incontrera",
+  round: "ConsR4",
+  weight: "174",
+  school: "Navy",
+  result: "Dec 5-3"
+},
+{
+  winner: "Patrick Kennedy",
+  loser: "Luca Augustine",
+  round: "ConsR4",
+  weight: "174",
+  school: "Iowa",
+  result: "Dec 7-6"
+},
+{
+  winner: "Silas Allred",
+  loser: "Dylan Fishback",
+  round: "ConsR4",
+  weight: "184",
+  school: "Nebraska",
+  result: "Dec 4-0"
+},
+{
+  winner: "Jaxon Smith",
+  loser: "DJ Parker",
+  round: "ConsR4",
+  weight: "184",
+  school: "Maryland",
+  result: "Dec 4-2"
+},
+{
+  winner: "Donnell Washington",
+  loser: "Edmond Ruth",
+  round: "ConsR4",
+  weight: "184",
+  school: "Indiana",
+  result: "Dec 8-4"
+},
+{
+  winner: "Chris Foca",
+  loser: "Aidan Brenot",
+  round: "ConsR4",
+  weight: "184",
+  school: "Cornell",
+  result: "Dec 2-0"
+},
+{
+  winner: "Joseph Novak",
+  loser: "Michael Beard",
+  round: "ConsR4",
+  weight: "197",
+  school: "Wyoming",
+  result: "MD 13-4"
+},
+{
+  winner: "Camden McDanel",
+  loser: "Gabe Sollars",
+  round: "ConsR4",
+  weight: "197",
+  school: "Nebraska",
+  result: "Dec 7-3"
+},
+{
+  winner: "Stephen Little",
+  loser: "Seth Shumate",
+  round: "ConsR4",
+  weight: "197",
+  school: "Little Rock",
+  result: "TF 7:00 ;15-0"
+},
+{
+  winner: "Mac Stout",
+  loser: "Wyatt Voelker",
+  round: "ConsR4",
+  weight: "197",
+  school: "Pittsburgh",
+  result: "Dec 4-2"
+},
+{
+  winner: "Ben Kueter",
+  loser: "Dayton Pitzer",
+  round: "ConsR4",
+  weight: "285",
+  school: "Iowa",
+  result: "Dec 5-1"
+},
+{
+  winner: "Cohlton Schultz",
+  loser: "Gavin Hoffman",
+  round: "ConsR4",
+  weight: "285",
+  school: "Arizona State",
+  result: "MD 15-5"
+},
+{
+  winner: "Isaac Trumble",
+  loser: "Nick Feldman",
+  round: "ConsR4",
+  weight: "285",
+  school: "NC State",
+  result: "Dec 5-3"
+},
+{
+  winner: "Joshua Heindselman",
+  loser: "Luke Luffman",
+  round: "ConsR4",
+  weight: "285",
+  school: "Michigan",
+  result: "TB-1 2-1"
+},
+{
+  winner: "Luke Lilledahl",
+  loser: "Stevo Poulin",
+  round: "ConsQtr",
+  weight: "125",
+  school: "Penn State",
+  result: "Dec 3-0"
+},
+{
+  winner: "Matt Ramos",
+  loser: "Caleb Smith",
+  round: "ConsQtr",
+  weight: "125",
+  school: "Purdue",
+  result: "Dec 5-4"
+},
+{
+  winner: "Braeden Davis",
+  loser: "Jacob Van Dee",
+  round: "ConsQtr",
+  weight: "133",
+  school: "Penn State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Connor McGonagle",
+  loser: "Tyler Knox",
+  round: "ConsQtr",
+  weight: "133",
+  school: "Virginia Tech",
+  result: "Dec 1-0"
+},
+{
+  winner: "Josh Koderhandt",
+  loser: "Jacob Frost",
+  round: "ConsQtr",
+  weight: "141",
+  school: "Navy",
+  result: "Fall 0:59"
+},
+{
+  winner: "CJ Composto",
+  loser: "Vance VomBaur",
+  round: "ConsQtr",
+  weight: "141",
+  school: "Pennsylvania",
+  result: "Dec 8-6"
+},
+{
+  winner: "Ethan Stiles",
+  loser: "Sammy Alvarez",
+  round: "ConsQtr",
+  weight: "149",
+  school: "Oregon State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Lachlan McNeil",
+  loser: "Gavin Drexler",
+  round: "ConsQtr",
+  weight: "149",
+  school: "North Carolina",
+  result: "MD 10-2"
+},
+{
+  winner: "Tyler Kasak",
+  loser: "Caleb Fish",
+  round: "ConsQtr",
+  weight: "157",
+  school: "Penn State",
+  result: "Fall 4:19"
+},
+{
+  winner: "Vinny Zerban",
+  loser: "Matty Bianchi",
+  round: "ConsQtr",
+  weight: "157",
+  school: "Northern Colorado",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Terrell Barraclough",
+  loser: "Cameron Amine",
+  round: "ConsQtr",
+  weight: "165",
+  school: "Utah Valley",
+  result: "Dec 9-7"
+},
+{
+  winner: "Hunter Garvin",
+  loser: "Cam Steed",
+  round: "ConsQtr",
+  weight: "165",
+  school: "Stanford",
+  result: "Dec 4-0"
+},
+{
+  winner: "Simon Ruiz",
+  loser: "Matthew Singleton",
+  round: "ConsQtr",
+  weight: "174",
+  school: "Cornell",
+  result: "MD 10-0"
+},
+{
+  winner: "Patrick Kennedy",
+  loser: "Danny Wask",
+  round: "ConsQtr",
+  weight: "174",
+  school: "Iowa",
+  result: "Dec 7-3"
+},
+{
+  winner: "Jaxon Smith",
+  loser: "Silas Allred",
+  round: "ConsQtr",
+  weight: "184",
+  school: "Maryland",
+  result: "Dec 8-1"
+},
+{
+  winner: "Chris Foca",
+  loser: "Donnell Washington",
+  round: "ConsQtr",
+  weight: "184",
+  school: "Cornell",
+  result: "TF 4:32 ;20-4"
+},
+{
+  winner: "Joseph Novak",
+  loser: "Camden McDanel",
+  round: "ConsQtr",
+  weight: "197",
+  school: "Wyoming",
+  result: "Dec 4-2"
+},
+{
+  winner: "Stephen Little",
+  loser: "Mac Stout",
+  round: "ConsQtr",
+  weight: "197",
+  school: "Little Rock",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Cohlton Schultz",
+  loser: "Ben Kueter",
+  round: "ConsQtr",
+  weight: "285",
+  school: "Arizona State",
+  result: "MD 10-2"
+},
+{
+  winner: "Isaac Trumble",
+  loser: "Joshua Heindselman",
+  round: "ConsQtr",
+  weight: "285",
+  school: "NC State",
+  result: "MD 9-0"
+},
+{
+  winner: "Luke Lilledahl",
+  loser: "Eddie Ventresca",
+  round: "ConsSemi",
+  weight: "125",
+  school: "Penn State",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Matt Ramos",
+  loser: "Sheldon Seymour",
+  round: "ConsSemi",
+  weight: "125",
+  school: "Purdue",
+  result: "Dec 9-2"
+},
+{
+  winner: "Zan Fugitt",
+  loser: "Braeden Davis",
+  round: "ConsSemi",
+  weight: "133",
+  school: "Wisconsin",
+  result: "Dec 8-5"
+},
+{
+  winner: "Zeth Romney",
+  loser: "Connor McGonagle",
+  round: "ConsSemi",
+  weight: "133",
+  school: "Cal Poly",
+  result: "Dec 7-2"
+},
+{
+  winner: "Beau Bartlett",
+  loser: "Josh Koderhandt",
+  round: "ConsSemi",
+  weight: "141",
+  school: "Penn State",
+  result: "SV-1 11-6"
+},
+{
+  winner: "CJ Composto",
+  loser: "Cael Happel",
+  round: "ConsSemi",
+  weight: "141",
+  school: "Pennsylvania",
+  result: "Dec 7-2"
+},
+{
+  winner: "Shayne Van Ness",
+  loser: "Ethan Stiles",
+  round: "ConsSemi",
+  weight: "149",
+  school: "Penn State",
+  result: "Fall 1:06"
+},
+{
+  winner: "Dylan D`Emilio",
+  loser: "Lachlan McNeil",
+  round: "ConsSemi",
+  weight: "149",
+  school: "Ohio State",
+  result: "Dec 7-1"
+},
+{
+  winner: "Tyler Kasak",
+  loser: "Meyer Shapiro",
+  round: "ConsSemi",
+  weight: "157",
+  school: "Penn State",
+  result: "Dec 4-2"
+},
+{
+  winner: "Trevor Chumbley",
+  loser: "Vinny Zerban",
+  round: "ConsSemi",
+  weight: "157",
+  school: "Northwestern",
+  result: "Dec 5-3"
+},
+{
+  winner: "Peyton Hall",
+  loser: "Terrell Barraclough",
+  round: "ConsSemi",
+  weight: "165",
+  school: "West Virginia",
+  result: "Dec 7-5"
+},
+{
+  winner: "Christopher Minto",
+  loser: "Hunter Garvin",
+  round: "ConsSemi",
+  weight: "165",
+  school: "Nebraska",
+  result: "Dec 8-4"
+},
+{
+  winner: "Levi Haines",
+  loser: "Simon Ruiz",
+  round: "ConsSemi",
+  weight: "174",
+  school: "Penn State",
+  result: "Dec 4-1"
+},
+{
+  winner: "Patrick Kennedy",
+  loser: "Cade DeVos",
+  round: "ConsSemi",
+  weight: "174",
+  school: "Iowa",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Max McEnelly",
+  loser: "Jaxon Smith",
+  round: "ConsSemi",
+  weight: "184",
+  school: "Minnesota",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Dustin Plott",
+  loser: "Chris Foca",
+  round: "ConsSemi",
+  weight: "184",
+  school: "Oklahoma State",
+  result: "Dec 2-1"
+},
+{
+  winner: "AJ Ferrari",
+  loser: "Joseph Novak",
+  round: "ConsSemi",
+  weight: "197",
+  school: "CSU Bakersfield",
+  result: "Dec 5-3"
+},
+{
+  winner: "Jacob Cardenas",
+  loser: "Stephen Little",
+  round: "ConsSemi",
+  weight: "197",
+  school: "Michigan",
+  result: "Dec 5-2"
+},
+{
+  winner: "Cohlton Schultz",
+  loser: "Greg Kerkvliet",
+  round: "ConsSemi",
+  weight: "285",
+  school: "Arizona State",
+  result: "MFFL"
+},
+{
+  winner: "Isaac Trumble",
+  loser: "Owen Trephan",
+  round: "ConsSemi",
+  weight: "285",
+  school: "NC State",
+  result: "Dec 4-3"
+},
+{
+  winner: "Caleb Smith",
+  loser: "Stevo Poulin",
+  round: "7thPlace",
+  weight: "125",
+  school: "Nebraska",
+  result: "MD 18-5"
+},
+{
+  winner: "Jacob Van Dee",
+  loser: "Tyler Knox",
+  round: "7thPlace",
+  weight: "133",
+  school: "Nebraska",
+  result: "Dec 7-2"
+},
+{
+  winner: "Jacob Frost",
+  loser: "Vance VomBaur",
+  round: "7thPlace",
+  weight: "141",
+  school: "Iowa State",
+  result: "MD 17-3"
+},
+{
+  winner: "Sammy Alvarez",
+  loser: "Gavin Drexler",
+  round: "7thPlace",
+  weight: "149",
+  school: "Rider",
+  result: "SV-1 9-6"
+},
+{
+  winner: "Matty Bianchi",
+  loser: "Caleb Fish",
+  round: "7thPlace",
+  weight: "157",
+  school: "Little Rock",
+  result: "Dec 4-2"
+},
+{
+  winner: "Cam Steed",
+  loser: "Cameron Amine",
+  round: "7thPlace",
+  weight: "165",
+  school: "Missouri",
+  result: "Fall 2:08"
+},
+{
+  winner: "Matthew Singleton",
+  loser: "Danny Wask",
+  round: "7thPlace",
+  weight: "174",
+  school: "NC State",
+  result: "Dec 3-1"
+},
+{
+  winner: "Silas Allred",
+  loser: "Donnell Washington",
+  round: "7thPlace",
+  weight: "184",
+  school: "Nebraska",
+  result: "Dec 4-2"
+},
+{
+  winner: "Mac Stout",
+  loser: "Camden McDanel",
+  round: "7thPlace",
+  weight: "197",
+  school: "Pittsburgh",
+  result: "MD 12-3"
+},
+{
+  winner: "Joshua Heindselman",
+  loser: "Ben Kueter",
+  round: "7thPlace",
+  weight: "285",
+  school: "Michigan",
+  result: "Dec 2-1"
+},
+{
+  winner: "Eddie Ventresca",
+  loser: "Sheldon Seymour",
+  round: "5thPlace",
+  weight: "125",
+  school: "Virginia Tech",
+  result: "Dec 11-4"
+},
+{
+  winner: "Braeden Davis",
+  loser: "Connor McGonagle",
+  round: "5thPlace",
+  weight: "133",
+  school: "Penn State",
+  result: "Fall 2:33"
+},
+{
+  winner: "Cael Happel",
+  loser: "Josh Koderhandt",
+  round: "5thPlace",
+  weight: "141",
+  school: "Northern Iowa",
+  result: "Dec 7-2"
+},
+{
+  winner: "Lachlan McNeil",
+  loser: "Ethan Stiles",
+  round: "5thPlace",
+  weight: "149",
+  school: "North Carolina",
+  result: "Dec 8-4"
+},
+{
+  winner: "Meyer Shapiro",
+  loser: "Vinny Zerban",
+  round: "5thPlace",
+  weight: "157",
+  school: "Cornell",
+  result: "MD 11-0"
+},
+{
+  winner: "Terrell Barraclough",
+  loser: "Hunter Garvin",
+  round: "5thPlace",
+  weight: "165",
+  school: "Utah Valley",
+  result: "Dec 1-0"
+},
+{
+  winner: "Simon Ruiz",
+  loser: "Cade DeVos",
+  round: "5thPlace",
+  weight: "174",
+  school: "Cornell",
+  result: "Dec 2-1"
+},
+{
+  winner: "Chris Foca",
+  loser: "Jaxon Smith",
+  round: "5thPlace",
+  weight: "184",
+  school: "Cornell",
+  result: "Dec 7-4"
+},
+{
+  winner: "Joseph Novak",
+  loser: "Stephen Little",
+  round: "5thPlace",
+  weight: "197",
+  school: "Wyoming",
+  result: "MD 8-0"
+},
+{
+  winner: "Owen Trephan",
+  loser: "Greg Kerkvliet",
+  round: "5thPlace",
+  weight: "285",
+  school: "Lehigh",
+  result: "M. For."
+},
+{
+  winner: "Luke Lilledahl",
+  loser: "Matt Ramos",
+  round: "3rdPlace",
+  weight: "125",
+  school: "Penn State",
+  result: "Fall 6:18"
+},
+{
+  winner: "Zeth Romney",
+  loser: "Zan Fugitt",
+  round: "3rdPlace",
+  weight: "133",
+  school: "Cal Poly",
+  result: "Dec 7-3"
+},
+{
+  winner: "Beau Bartlett",
+  loser: "CJ Composto",
+  round: "3rdPlace",
+  weight: "141",
+  school: "Penn State",
+  result: "MD 11-2"
+},
+{
+  winner: "Shayne Van Ness",
+  loser: "Dylan D`Emilio",
+  round: "3rdPlace",
+  weight: "149",
+  school: "Penn State",
+  result: "MD 15-4"
+},
+{
+  winner: "Tyler Kasak",
+  loser: "Trevor Chumbley",
+  round: "3rdPlace",
+  weight: "157",
+  school: "Penn State",
+  result: "MD 8-0"
+},
+{
+  winner: "Peyton Hall",
+  loser: "Christopher Minto",
+  round: "3rdPlace",
+  weight: "165",
+  school: "West Virginia",
+  result: "MD 13-5"
+},
+{
+  winner: "Levi Haines",
+  loser: "Patrick Kennedy",
+  round: "3rdPlace",
+  weight: "174",
+  school: "Penn State",
+  result: "MD 11-3"
+},
+{
+  winner: "Max McEnelly",
+  loser: "Dustin Plott",
+  round: "3rdPlace",
+  weight: "184",
+  school: "Minnesota",
+  result: "Dec 6-5"
+},
+{
+  winner: "AJ Ferrari",
+  loser: "Jacob Cardenas",
+  round: "3rdPlace",
+  weight: "197",
+  school: "CSU Bakersfield",
+  result: "Dec 2-0"
+},
+{
+  winner: "Cohlton Schultz",
+  loser: "Isaac Trumble",
+  round: "3rdPlace",
+  weight: "285",
+  school: "Arizona State",
+  result: "Dec 5-3"
+},
+{
+  winner: "Vincent Robinson",
+  loser: "Troy Spratley",
+  round: "Finals",
+  weight: "125",
+  school: "NC State",
+  result: "TB-1 2-1"
+},
+{
+  winner: "Lucas Byrd",
+  loser: "Drake Ayala",
+  round: "Finals",
+  weight: "133",
+  school: "Illinois",
+  result: "TB-2 ;RT"
+},
+{
+  winner: "Jesse Mendez",
+  loser: "Brock Hardy",
+  round: "Finals",
+  weight: "141",
+  school: "Ohio State",
+  result: "Dec 12-9"
+},
+{
+  winner: "Ridge Lovett",
+  loser: "Caleb Henson",
+  round: "Finals",
+  weight: "149",
+  school: "Nebraska",
+  result: "Dec 1-0"
+},
+{
+  winner: "Antrell Taylor",
+  loser: "Joey Blaze",
+  round: "Finals",
+  weight: "157",
+  school: "Nebraska",
+  result: "Dec 4-2"
+},
+{
+  winner: "Mitchell Mesenbrink",
+  loser: "Mike Caliendo",
+  round: "Finals",
+  weight: "165",
+  school: "Penn State",
+  result: "Dec 8-2"
+},
+{
+  winner: "Dean Hamiti",
+  loser: "Keegan O`Toole",
+  round: "Finals",
+  weight: "174",
+  school: "Oklahoma State",
+  result: "SV-1 4-1"
+},
+{
+  winner: "Carter Starocci",
+  loser: "Parker Keckeisen",
+  round: "Finals",
+  weight: "184",
+  school: "Penn State",
+  result: "Dec 4-3"
+},
+{
+  winner: "Stephen Buchanan",
+  loser: "Josh Barr",
+  round: "Finals",
+  weight: "197",
+  school: "Iowa",
+  result: "Dec 5-2"
+},
+{
+  winner: "Wyatt Hendrickson",
+  loser: "Gable Steveson",
+  round: "Finals",
+  weight: "285",
+  school: "Oklahoma State",
+  result: "Dec 5-4"
+}
 ];
 
 console.log("results2025.js loaded!");
@@ -672,7 +5150,7 @@ function filterAndRender() {
     filtered.forEach(match => {
       const matchHtml = `
         <div class="border-b py-2">
-          <p class="font-semibold">${match.winner} def. ${match.loser}</p>
+          <p class="font-semibold">${match.winner} def. ${match.loser} (${match.result})</p>
           <p class="text-sm text-gray-600">${match.round} | ${match.weight} | ${match.school}</p>
         </div>
       `;
@@ -681,10 +5159,8 @@ function filterAndRender() {
   }
 }
 
-// Initial render
 filterAndRender();
 
-// Add event listeners to all filters
 document.getElementById("roundSelect").addEventListener("change", filterAndRender);
 document.getElementById("weightSelect").addEventListener("change", filterAndRender);
 document.getElementById("schoolSelect").addEventListener("change", filterAndRender);
