@@ -32,7 +32,7 @@
 
     const script = document.createElement('script');
     script.id = 'results-script';
-    script.src = `results.js?v=${timestamp}`; // auto versioned
+    script.src = `results$(year).js?v=${timestamp}`; // auto versioned
     document.body.appendChild(script);
   }
 
