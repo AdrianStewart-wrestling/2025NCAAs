@@ -5799,19 +5799,23 @@ function filterAndRender() {
   }
 }
 
-filterAndRender();
-
-document.getElementById("roundSelect").addEventListener("change", filterAndRender);
-document.getElementById("weightSelect").addEventListener("change", filterAndRender);
-document.getElementById("schoolSelect").addEventListener("change", filterAndRender);
-document.getElementById("searchInput").addEventListener("input", filterAndRender);
-
 function updateTeamStats() {
+  const selectedTeam = document.getElementById("teamSelect").value;
+  const container = document.getElementById("teamStats");
+
+  if (selectedTeam === "All") {
+    container.innerHTML = ""; // Hide stats
+    return;
+  }
+
   const stats = {};
 
   resultData.forEach(match => {
-    if (!stats[match.school]) {
-      stats[match.school] = {
+    const team = match.school;
+    if (team !== selectedTeam) return;
+
+    if (!stats[team]) {
+      stats[team] = {
         totalWins: 0,
         falls: 0,
         techs: 0,
@@ -5819,21 +5823,30 @@ function updateTeamStats() {
       };
     }
 
-    stats[match.school].totalWins++;
+    stats[team].totalWins++;
 
     const resultText = match.result.toLowerCase();
-    if (resultText.includes("fall")) stats[match.school].falls++;
-    else if (resultText.includes("tf") || resultText.includes("tech")) stats[match.school].techs++;
-    else if (resultText.includes("md") || resultText.includes("major")) stats[match.school].majors++;
+    if (resultText.includes("fall")) stats[team].falls++;
+    else if (resultText.includes("tf") || resultText.includes("tech")) stats[team].techs++;
+    else if (resultText.includes("md") || resultText.includes("major")) stats[team].majors++;
   });
 
-  const container = document.getElementById("teamStats");
   let html = "<h2 class='text-lg font-bold mb-2'>🏆 Team Stats</h2>";
-  Object.entries(stats).forEach(([school, stat]) => {
-    html += `<p><strong>${school}</strong>: ${stat.totalWins} wins, ${stat.falls} falls, ${stat.techs} techs, ${stat.majors} majors</p>`;
-  });
+  if (Object.keys(stats).length === 0) {
+    html += "<p class='italic text-gray-500'>No stats available for this team.</p>";
+  } else {
+    Object.entries(stats).forEach(([school, stat]) => {
+      html += `<p><strong>${school}</strong>: ${stat.totalWins} wins, ${stat.falls} falls, ${stat.techs} techs, ${stat.majors} majors</p>`;
+    });
+  }
 
   container.innerHTML = html;
 }
 
-updateTeamStats();
+filterAndRender();
+
+document.getElementById("roundSelect").addEventListener("change", filterAndRender);
+document.getElementById("weightSelect").addEventListener("change", filterAndRender);
+document.getElementById("schoolSelect").addEventListener("change", filterAndRender);
+document.getElementById("searchInput").addEventListener("input", filterAndRender);
+document.getElementById("teamSelect").addEventListener("change", updateTeamStats);
