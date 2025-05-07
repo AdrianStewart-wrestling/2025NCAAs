@@ -5857,9 +5857,12 @@ function updateTeamStats() {
   container.innerHTML = html;
 }
 
-filterAndRender();
+// Don't call filterAndRender on load
+// Call only on filter use
 document.getElementById("roundSelect").addEventListener("change", filterAndRender);
 document.getElementById("weightSelect").addEventListener("change", filterAndRender);
 document.getElementById("schoolSelect").addEventListener("change", filterAndRender);
 document.getElementById("searchInput").addEventListener("input", filterAndRender);
 document.getElementById("teamSelect").addEventListener("change", updateTeamStats);
+
+document.getElementById("resultsContainer").innerHTML = "<p class='italic text-gray-500'>Select a filter to view match results.</p>";
