@@ -1,5 +1,5 @@
 const resultData = [
-  { round: `Prelims`, weight: `125`, school: `Cornell`, opponent: `Michigan State`, line: `Bout 1: Marcello Milani (Cornell) def. Caleb Weiand (Michigan State), SV-1 4-1 [125]` },
+  { round: `Prelims`, weight: `125`, school: `Bucknell`, opponent: `Fu State`, line: `Bout 1: Homie Slice (Buckneell) def. Willie Makeit (Fu State), SV-1 4-1 [125]` },
   { round: `Prelims`, weight: `133`, school: `California Baptist`, opponent: `Michigan`, line: `Bout 2: Hunter Leake (California Baptist) def. Nolan Wertanen (Michigan), Fall 2:28 [133]` },
   { round: `Prelims`, weight: `141`, school: `Oregon State`, opponent: `Columbia`, line: `Bout 3: Nash Singleton (Oregon State) def. Lorenzo Frezza (Columbia), MD 8-0 [141]` },
   { round: `Prelims`, weight: `149`, school: `Oklahoma State`, opponent: `Campbell`, line: `Bout 4: Teague Travis (Oklahoma State) def. Wynton Denkins (Campbell), MD 11-1 [149]` },
