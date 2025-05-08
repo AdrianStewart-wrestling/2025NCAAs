@@ -1,4 +1,4 @@
-const resultData = [
+const resultData =  [
 {
   round: "Prelims",
   bout: "1",
@@ -6510,3 +6510,11 @@ document.getElementById("teamSelect").addEventListener("change", updateTeamStats
 
 
     resultsContainer.innerHTML = "<p class='italic text-gray-500'>Select a filter to view match results.</p>";
+
+(function waitForDisplayResults() {
+  if (typeof displayResults === "function") {
+    displayResults(resultData);
+  } else {
+    setTimeout(waitForDisplayResults, 50);
+  }
+})();
