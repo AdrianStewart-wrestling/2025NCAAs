@@ -1,0 +1,48 @@
+{
+  "year": 1929,
+  "location": "Columbus, OH",
+  "team_champion": "Oklahoma State",
+  "team_points": 26,
+  "individual_champions": [
+    {
+      "weight_class": "115 lbs",
+      "wrestler": "Joe Sapora",
+      "school": "Illinois"
+    },
+    {
+      "weight_class": "125 lbs",
+      "wrestler": "Laurance Mantooth",
+      "school": "Oklahoma"
+    },
+    {
+      "weight_class": "135 lbs",
+      "wrestler": "George Minot",
+      "school": "Illinois"
+    },
+    {
+      "weight_class": "145 lbs",
+      "wrestler": "George Bancroft",
+      "school": "Oklahoma State"
+    },
+    {
+      "weight_class": "155 lbs",
+      "wrestler": "Jack VanBebber",
+      "school": "Oklahoma State"
+    },
+    {
+      "weight_class": "165 lbs",
+      "wrestler": "Conrad Caldwell",
+      "school": "Oklahoma State"
+    },
+    {
+      "weight_class": "175 lbs",
+      "wrestler": "Glenn Stafford",
+      "school": "Cornell"
+    },
+    {
+      "weight_class": "UNL",
+      "wrestler": "Earl McCready",
+      "school": "Oklahoma State"
+    }
+  ]
+}

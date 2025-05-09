@@ -1,0 +1,42 @@
+{
+  "year": 1928,
+  "location": "Ames, IA",
+  "team_champion": "Oklahoma State",
+  "individual_champions": [
+    {
+      "weight_class": "115 lbs",
+      "wrestler": "Harold DeMarsh",
+      "school": "Oklahoma State"
+    },
+    {
+      "weight_class": "125 lbs",
+      "wrestler": "Ralph Lupton",
+      "school": "Northwestern"
+    },
+    {
+      "weight_class": "135 lbs",
+      "wrestler": "Arthur Holding",
+      "school": "Iowa State"
+    },
+    {
+      "weight_class": "145 lbs",
+      "wrestler": "Melvin Clodfelter",
+      "school": "Oklahoma State"
+    },
+    {
+      "weight_class": "158 lbs",
+      "wrestler": "Leslie Beers",
+      "school": "Iowa"
+    },
+    {
+      "weight_class": "175 lbs",
+      "wrestler": "George Rule",
+      "school": "Oklahoma State"
+    },
+    {
+      "weight_class": "UNL",
+      "wrestler": "Earl McCready",
+      "school": "Oklahoma State"
+    }
+  ]
+}
