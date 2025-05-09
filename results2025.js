@@ -6435,6 +6435,7 @@ function filterAndRender() {
   resultsContainer.innerHTML = "";
   if (filtered.length === 0) {
     resultsContainer.innerHTML = "<p class='italic text-gray-500'>No results found.</p>";
+    return;
   }
 
   const grouped = {};
@@ -6471,6 +6472,7 @@ function updateTeamStats() {
 
   resultData.forEach(match => {
     const schools = [match.winnerSchool, match.loserSchool];
+    if (!schools.includes(selectedTeam)) return;
 
     if (!stats[selectedTeam]) {
       stats[selectedTeam] = {
@@ -6510,3 +6512,11 @@ document.getElementById("teamSelect").addEventListener("change", updateTeamStats
 
 
     resultsContainer.innerHTML = "<p class='italic text-gray-500'>Select a filter to view match results.</p>";
+
+(function waitForDisplayResults() {
+  if (typeof displayResults === 'function') {
+    displayResults(results2025);
+  } else {
+    setTimeout(waitForDisplayResults, 50);
+  }
+})();
