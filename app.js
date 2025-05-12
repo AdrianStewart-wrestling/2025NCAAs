@@ -1,143 +1,84 @@
-let currentResults = [];
 
-function groupBy(array, key) {
-  return array.reduce((result, item) => {
-    const groupKey = item[key];
-    (result[groupKey] = result[groupKey] || []).push(item);
-    return result;
-  }, {});
-}
+function populateDropdowns(results) {
+  const roundSelect = document.getElementById("roundSelect");
+  const weightSelect = document.getElementById("weightSelect");
+  const schoolSelect = document.getElementById("schoolSelect");
+  const teamSelect = document.getElementById("teamSelect");
 
-const roundOrder = [
-  "Prelims", "ChampR1", "ChampR2", "ConsPrelims", "ConsR1",
-  "QtrFinals", "ConsR2", "ConsR3", "SemiFinals", "ConsR4",
-  "ConsQtr", "ConsSemi", "7thPlace", "5thPlace", "3rdPlace", "Finals"
-];
+  const rounds = [...new Set(results.map(r => r.round).filter(Boolean))].sort();
+  const weights = [...new Set(results.map(r => r.weight).filter(Boolean))].sort((a, b) => parseInt(a) - parseInt(b));
 
-function displayResults(results) {
-  currentResults = results;
-  const container = document.getElementById("resultsContainer");
-  container.innerHTML = "";
-
-  const grouped = groupBy(results, "round");
-  const sortedRounds = Object.keys(grouped).sort((a, b) => {
-    const aIndex = roundOrder.indexOf(a);
-    const bIndex = roundOrder.indexOf(b);
-    return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
+  const schools = new Set();
+  results.forEach(match => {
+    if (match.winner_school) schools.add(match.winner_school);
+    if (match.loser_school) schools.add(match.loser_school);
   });
+  const sortedSchools = Array.from(schools).sort();
 
-  sortedRounds.forEach(round => {
-    const roundHeader = document.createElement("h3");
-    roundHeader.className = "text-base font-bold text-blue-800 mt-4 mb-1";
-    roundHeader.textContent = round;
-    container.appendChild(roundHeader);
+  roundSelect.innerHTML = '<option value="All">All</option>' + rounds.map(r => `<option value="${r}">${r}</option>`).join("");
+  weightSelect.innerHTML = '<option value="All">All</option>' + weights.map(w => `<option value="${w}">${w}</option>`).join("");
+  schoolSelect.innerHTML = '<option value="All">All</option>' + sortedSchools.map(s => `<option value="${s}">${s}</option>`).join("");
+  teamSelect.innerHTML = '<option value="All">Select a Team</option>' + sortedSchools.map(s => `<option value="${s}">${s}</option>`).join("");
 
-    grouped[round]
-      .sort((a, b) => parseInt(a.bout) - parseInt(b.bout))
-      .forEach(match => {
-        const line = `Bout ${match.bout}: ${match.weight} - ${match.winner} (${match.winnerSchool}) defeated ${match.loser} (${match.loserSchool}) ${match.result}`;
-        const p = document.createElement("p");
-        p.className = "text-sm ml-4";
-        p.textContent = line;
-        container.appendChild(p);
-      });
-  });
+  roundSelect.onchange = filterResults;
+  weightSelect.onchange = filterResults;
+  schoolSelect.onchange = filterResults;
+  teamSelect.onchange = showTeamStats;
 
-  document.querySelectorAll(".team-link").forEach(el => {
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-      const team = el.dataset.team;
-      showTeamPage(team);
-    });
-  });
-}
-
-function displayTeamStats(schoolName) {
-  const teamMatches = currentResults.filter(m =>
-    m.winnerSchool === schoolName || m.loserSchool === schoolName
-  );
-
-  let wins = 0, losses = 0, falls = 0, techs = 0, majors = 0;
-
-  teamMatches.forEach(match => {
-    if (match.winnerSchool === schoolName) {
-      wins++;
-      if (match.result.includes("Fall")) falls++;
-      else if (match.result.includes("TF")) techs++;
-      else if (match.result.includes("MD")) majors++;
-    } else if (match.loserSchool === schoolName) {
-      losses++;
-    }
-  });
-
-  const statsDiv = document.getElementById("teamStats");
-  statsDiv.innerHTML = `🏆 Team Stats<br><br>${schoolName}: ${wins}W - ${losses}L, ${falls} falls, ${techs} techs, ${majors} majors`;
-}
-
-function showTeamPage(schoolName) {
-  const waitForResults = () => {
-    if (Array.isArray(currentResults) && currentResults.length > 0) {
-      displayTeamStats(schoolName);
-    } else {
-      setTimeout(waitForResults, 50);
-    }
-  };
-  waitForResults();
+  // Hide match list by default
+  document.getElementById("resultsContainer").innerHTML = "<em>Select filters above to view results.</em>";
 }
 
 function filterResults() {
-  const roundFilter = document.getElementById("roundFilter").value;
-  const weightFilter = document.getElementById("weightFilter").value;
-  const schoolFilter = document.getElementById("schoolFilter").value;
-  const searchValue = document.getElementById("searchInput").value.toLowerCase();
+  const round = document.getElementById("roundSelect").value;
+  const weight = document.getElementById("weightSelect").value;
+  const school = document.getElementById("schoolSelect").value;
 
-  const filtered = currentResults.filter(match => {
-    return (
-      (roundFilter === "All" || match.round === roundFilter) &&
-      (weightFilter === "All" || match.weight === weightFilter) &&
-      (schoolFilter === "All" || match.winnerSchool === schoolFilter || match.loserSchool === schoolFilter) &&
-      (match.winner.toLowerCase().includes(searchValue) ||
-       match.loser.toLowerCase().includes(searchValue) ||
-       match.bout.toLowerCase().includes(searchValue) ||
-       match.weight.toLowerCase().includes(searchValue) ||
-       match.winnerSchool.toLowerCase().includes(searchValue) ||
-       match.loserSchool.toLowerCase().includes(searchValue))
-    );
+  const filtered = resultData.filter(match => {
+    const matchRound = round === "All" || match.round === round;
+    const matchWeight = weight === "All" || match.weight === weight;
+    const matchSchool = school === "All" ||
+      match.winner_school === school ||
+      match.loser_school === school;
+
+    return matchRound && matchWeight && matchSchool;
   });
 
+  if (round === "All" && weight === "All" && school === "All") {
+    document.getElementById("resultsContainer").innerHTML = "<em>Select filters above to view results.</em>";
+  } else {
+    displayResults(filtered);
+  }
+}
+
+function showTeamStats() {
+  const selectedTeam = document.getElementById("teamSelect").value;
+  const container = document.getElementById("teamStats");
+
+  if (selectedTeam === "All") {
+    container.innerHTML = "";
+    return;
+  }
+
+  const stats = { wins: 0, falls: 0, techs: 0, majors: 0 };
+  resultData.forEach(match => {
+    if (match.winner_school === selectedTeam) {
+      stats.wins++;
+      if (/fall/i.test(match.result)) stats.falls++;
+      else if (/tech|tf/i.test(match.result)) stats.techs++;
+      else if (/md|major/i.test(match.result)) stats.majors++;
+    }
+  });
+
+  container.innerHTML = `<h3>${selectedTeam} Stats</h3>
+    ${stats.wins} Wins, ${stats.falls} Fall, ${stats.techs} TF, ${stats.majors} MD`;
+}
+
+function displayResults(results) {
   const container = document.getElementById("resultsContainer");
-  container.innerHTML = "";
-
-  const grouped = groupBy(filtered, "round");
-
-  const roundOrder = [
-    "Prelims", "ChampR1", "ChampR2", "ConsPrelims", "ConsR1",
-    "QtrFinals", "ConsR2", "ConsR3", "SemiFinals", "ConsR4",
-    "ConsQtr", "ConsSemi", "7thPlace", "5thPlace", "3rdPlace", "Finals"
-  ];
-
-  const sortedRounds = roundOrder.filter(r => grouped[r]);
-        
-
-    const aIndex = roundOrder.indexOf(a);
-    const bIndex = roundOrder.indexOf(b);
-    return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
-  });
-
-  sortedRounds.forEach(round => {
-    const roundHeader = document.createElement("h3");
-    roundHeader.className = "text-base font-bold text-blue-800 mt-4 mb-1";
-    roundHeader.textContent = round;
-    container.appendChild(roundHeader);
-
-    grouped[round]
-      .sort((a, b) => parseInt(a.bout) - parseInt(b.bout))
-      .forEach(match => {
-        const line = `Bout ${match.bout}: ${match.weight} - ${match.winner} (${match.winnerSchool}) defeated ${match.loser} (${match.loserSchool}) ${match.result}`;
-        const p = document.createElement("p");
-        p.className = "text-sm ml-4";
-        p.textContent = line;
-        container.appendChild(p);
-      });
-  });
+  container.innerHTML = results.map(match => {
+    const winnerSchool = match.winner_school || "Unknown";
+    const loserSchool = match.loser_school || "Unknown";
+    return `<div>${match.bout}. ${match.winner} (${winnerSchool}) defeated ${match.loser} (${loserSchool}) [${match.result}]</div>`;
+  }).join('');
 }
